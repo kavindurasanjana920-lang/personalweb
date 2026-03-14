@@ -2,7 +2,6 @@ import BlurFade from "@/components/magicui/blur-fade";
 import { allPosts } from "content-collections";
 import Link from "next/link";
 import type { Metadata } from "next";
-import { paginate, normalizePage } from "@/lib/pagination";
 import { ChevronRight } from "lucide-react";
 
 export const metadata: Metadata = {
@@ -19,16 +18,9 @@ export const metadata: Metadata = {
   },
 };
 
-const PAGE_SIZE = 5;
 const BLUR_FADE_DELAY = 0.04;
 
-export default async function BlogPage({
-  searchParams,
-}: {
-  searchParams: Promise<{ page?: string }>;
-}) {
-  const { page: pageParam } = await searchParams;
-
+export default function BlogPage() {
   const posts = allPosts;
   const sortedPosts = [...posts].sort((a, b) => {
     if (new Date(a.publishedAt) > new Date(b.publishedAt)) {
@@ -37,12 +29,7 @@ export default async function BlogPage({
     return 1;
   });
 
-  const totalPages = Math.ceil(sortedPosts.length / PAGE_SIZE);
-  const currentPage = normalizePage(pageParam, totalPages);
-  const { items: paginatedPosts, pagination } = paginate(sortedPosts, {
-    page: currentPage,
-    pageSize: PAGE_SIZE,
-  });
+  const paginatedPosts = sortedPosts;
 
   return (
     <section id="blog">
@@ -59,7 +46,7 @@ export default async function BlogPage({
             <div className="flex flex-col gap-5">
               {paginatedPosts.map((post, id) => {
                 const slug = post._meta.path.replace(/\.mdx$/, "");
-                const indexNumber = (pagination.page - 1) * PAGE_SIZE + id + 1;
+                const indexNumber = id + 1;
                 return (
                   <BlurFade delay={BLUR_FADE_DELAY * 3 + id * 0.05} key={slug}>
                     <Link
@@ -90,42 +77,6 @@ export default async function BlogPage({
             </div>
           </BlurFade>
 
-          {/* Pagination Controls */}
-          {pagination.totalPages > 1 && (
-            <BlurFade delay={BLUR_FADE_DELAY * 4}>
-              <div className="flex gap-3 flex-row items-center justify-between mt-8">
-                <div className="text-sm text-muted-foreground">
-                  Page {pagination.page} of {pagination.totalPages}
-                </div>
-                <div className="flex gap-2 sm:justify-end">
-                  {pagination.hasPreviousPage ? (
-                    <Link
-                      href={`/blog?page=${pagination.page - 1}`}
-                      className="h-8 w-fit px-2 flex items-center justify-center text-sm border border-border rounded-lg hover:bg-accent/50 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
-                    >
-                      Previous
-                    </Link>
-                  ) : (
-                    <span className="h-8 w-fit px-2 flex items-center justify-center text-sm border border-border rounded-lg opacity-50 cursor-not-allowed">
-                      Previous
-                    </span>
-                  )}
-                  {pagination.hasNextPage ? (
-                    <Link
-                      href={`/blog?page=${pagination.page + 1}`}
-                      className="h-8 w-fit px-2 flex items-center justify-center text-sm border border-border rounded-lg hover:bg-accent/50 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
-                    >
-                      Next
-                    </Link>
-                  ) : (
-                    <span className="h-8 w-fit px-2 flex items-center justify-center text-sm border border-border rounded-lg opacity-50 cursor-not-allowed">
-                      Next
-                    </span>
-                  )}
-                </div>
-              </div>
-            </BlurFade>
-          )}
         </>
       ) : (
         <BlurFade delay={BLUR_FADE_DELAY * 2}>
