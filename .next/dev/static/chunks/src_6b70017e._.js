@@ -2260,14 +2260,14 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$s
 ;
 ;
 const DATA = {
-    name: "Dillion Verma",
+    name: "Kavindu Rasanjana",
     initials: "DV",
     url: "https://dillion.io",
-    location: "San Francisco, CA",
-    locationLink: "https://www.google.com/maps/place/sanfrancisco",
-    description: "Software Engineer turned Entrepreneur. I love building things and helping people. Very active on Twitter.",
+    location: "Colombo, SL",
+    locationLink: "https://www.google.com/maps/place/colombo",
+    description: "Software Automation Engineer, Building Scalable AI Systems, Open to Collaborateions Passionate about AI, Software Development, and Tech Innovation",
     summary: "At the end of 2022, I quit my job as a software engineer to go fulltime into building and scaling my own SaaS businesses. In the past, [I pursued a double degree in computer science and business](/#education), [interned at big tech companies in Silicon Valley](https://www.youtube.com/watch?v=d-LJ2e5qKdE), and [competed in over 21 hackathons for fun](/#hackathons). I also had the pleasure of being a part of the first ever in-person cohort of buildspace called [buildspace sf1](https://buildspace.so/sf1).",
-    avatarUrl: "/me.png",
+    avatarUrl: "/kavindu.png",
     skills: [
         {
             name: "React",

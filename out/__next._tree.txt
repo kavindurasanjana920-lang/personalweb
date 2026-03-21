@@ -1,4 +1,4 @@
-:HL["/_next/static/chunks/909543ad498db70f.css","style"]
+:HL["/_next/static/chunks/50878650ce60b808.css","style"]
 :HL["/_next/static/media/797e433ab948586e-s.p.dbea232f.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
 :HL["/_next/static/media/caa3a2e1cccd8315-s.p.853070df.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
 :HL["/buildspace.jpg","image"]
@@ -25,4 +25,4 @@
 :HL["https://pub-83c5db439b40468498f97946200806f7.r2.dev/hackline/qhacks.png","image"]
 :HL["https://pub-83c5db439b40468498f97946200806f7.r2.dev/hackline/terrible-hacks-v.png","image"]
 :HL["https://pub-83c5db439b40468498f97946200806f7.r2.dev/hackline/portal-hackathon.png","image"]
-0:{"buildId":"8EvaHAP83IsdO9FXzu3Nx","tree":{"name":"","paramType":null,"paramKey":"","hasRuntimePrefetch":false,"slots":{"children":{"name":"__PAGE__","paramType":null,"paramKey":"__PAGE__","hasRuntimePrefetch":false,"slots":null,"isRootLayout":false}},"isRootLayout":true},"staleTime":300}
+0:{"buildId":"b15uNf6hyDor_JGVym1WF","tree":{"name":"","paramType":null,"paramKey":"","hasRuntimePrefetch":false,"slots":{"children":{"name":"__PAGE__","paramType":null,"paramKey":"__PAGE__","hasRuntimePrefetch":false,"slots":null,"isRootLayout":false}},"isRootLayout":true},"staleTime":300}

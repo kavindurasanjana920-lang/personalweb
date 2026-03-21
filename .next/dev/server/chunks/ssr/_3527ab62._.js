@@ -1572,14 +1572,14 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$s
 ;
 ;
 const DATA = {
-    name: "Dillion Verma",
+    name: "Kavindu Rasanjana",
     initials: "DV",
     url: "https://dillion.io",
-    location: "San Francisco, CA",
-    locationLink: "https://www.google.com/maps/place/sanfrancisco",
-    description: "Software Engineer turned Entrepreneur. I love building things and helping people. Very active on Twitter.",
+    location: "Colombo, SL",
+    locationLink: "https://www.google.com/maps/place/colombo",
+    description: "Software Automation Engineer, Building Scalable AI Systems, Open to Collaborateions Passionate about AI, Software Development, and Tech Innovation",
     summary: "At the end of 2022, I quit my job as a software engineer to go fulltime into building and scaling my own SaaS businesses. In the past, [I pursued a double degree in computer science and business](/#education), [interned at big tech companies in Silicon Valley](https://www.youtube.com/watch?v=d-LJ2e5qKdE), and [competed in over 21 hackathons for fun](/#hackathons). I also had the pleasure of being a part of the first ever in-person cohort of buildspace called [buildspace sf1](https://buildspace.so/sf1).",
-    avatarUrl: "/me.png",
+    avatarUrl: "/kavindu.png",
     skills: [
         {
             name: "React",
@@ -2467,6 +2467,8 @@ __turbopack_context__.s([
     ()=>contentType,
     "default",
     ()=>Image,
+    "dynamic",
+    ()=>dynamic,
     "runtime",
     ()=>runtime,
     "size",
@@ -2484,6 +2486,7 @@ const __TURBOPACK__import$2e$meta__ = {
 ;
 ;
 const runtime = "edge";
+const dynamic = "force-static";
 const alt = __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$data$2f$resume$2e$tsx__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["DATA"].name;
 const size = {
     width: 1200,
@@ -2600,12 +2603,12 @@ async function Image() {
                                 style: styles.image
                             }, void 0, false, {
                                 fileName: "[project]/src/app/opengraph-image.tsx",
-                                lineNumber: 122,
+                                lineNumber: 123,
                                 columnNumber: 37
                             }, this)
                         }, void 0, false, {
                             fileName: "[project]/src/app/opengraph-image.tsx",
-                            lineNumber: 121,
+                            lineNumber: 122,
                             columnNumber: 33
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2616,7 +2619,7 @@ async function Image() {
                                     children: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$data$2f$resume$2e$tsx__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["DATA"].name
                                 }, void 0, false, {
                                     fileName: "[project]/src/app/opengraph-image.tsx",
-                                    lineNumber: 126,
+                                    lineNumber: 127,
                                     columnNumber: 33
                                 }, this),
                                 __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$data$2f$resume$2e$tsx__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["DATA"].description && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2624,29 +2627,29 @@ async function Image() {
                                     children: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$data$2f$resume$2e$tsx__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["DATA"].description
                                 }, void 0, false, {
                                     fileName: "[project]/src/app/opengraph-image.tsx",
-                                    lineNumber: 128,
+                                    lineNumber: 129,
                                     columnNumber: 37
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/src/app/opengraph-image.tsx",
-                            lineNumber: 125,
+                            lineNumber: 126,
                             columnNumber: 29
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/src/app/opengraph-image.tsx",
-                    lineNumber: 119,
+                    lineNumber: 120,
                     columnNumber: 25
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/src/app/opengraph-image.tsx",
-                lineNumber: 118,
+                lineNumber: 119,
                 columnNumber: 21
             }, this)
         }, void 0, false, {
             fileName: "[project]/src/app/opengraph-image.tsx",
-            lineNumber: 117,
+            lineNumber: 118,
             columnNumber: 17
         }, this), {
             ...size,
@@ -2693,6 +2696,7 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist
 const imageModule = {
     alt: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$app$2f$opengraph$2d$image$2e$tsx__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["alt"],
     contentType: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$app$2f$opengraph$2d$image$2e$tsx__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["contentType"],
+    dynamic: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$app$2f$opengraph$2d$image$2e$tsx__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["dynamic"],
     runtime: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$app$2f$opengraph$2d$image$2e$tsx__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["runtime"],
     size: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$app$2f$opengraph$2d$image$2e$tsx__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["size"]
 };
@@ -2703,7 +2707,7 @@ async function __TURBOPACK__default__export__(props) {
         const data = {
             alt: imageMetadata.alt,
             type: imageMetadata.contentType || 'image/png',
-            url: imageUrl + (idParam ? '/' + idParam : '') + "?265d5ff17bf9e1db"
+            url: imageUrl + (idParam ? '/' + idParam : '') + "?b90f8c397b2b0c39"
         };
         const { size } = imageMetadata;
         if (size) {
