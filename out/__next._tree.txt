@@ -25,4 +25,4 @@
 :HL["https://pub-83c5db439b40468498f97946200806f7.r2.dev/hackline/qhacks.png","image"]
 :HL["https://pub-83c5db439b40468498f97946200806f7.r2.dev/hackline/terrible-hacks-v.png","image"]
 :HL["https://pub-83c5db439b40468498f97946200806f7.r2.dev/hackline/portal-hackathon.png","image"]
-0:{"buildId":"b15uNf6hyDor_JGVym1WF","tree":{"name":"","paramType":null,"paramKey":"","hasRuntimePrefetch":false,"slots":{"children":{"name":"__PAGE__","paramType":null,"paramKey":"__PAGE__","hasRuntimePrefetch":false,"slots":null,"isRootLayout":false}},"isRootLayout":true},"staleTime":300}
+0:{"buildId":"oIWk4Yt65sC41CJIEEIzd","tree":{"name":"","paramType":null,"paramKey":"","hasRuntimePrefetch":false,"slots":{"children":{"name":"__PAGE__","paramType":null,"paramKey":"__PAGE__","hasRuntimePrefetch":false,"slots":null,"isRootLayout":false}},"isRootLayout":true},"staleTime":300}

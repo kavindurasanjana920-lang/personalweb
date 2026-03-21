@@ -14,7 +14,7 @@ import { Csharp } from "@/components/ui/svgs/csharp";
 
 export const DATA = {
   name: "Kavindu Rasanjana",
-  initials: "DV",
+  initials: "KR",
   url: "https://dillion.io",
   location: "Colombo, SL",
   locationLink: "https://www.google.com/maps/place/colombo",
@@ -83,16 +83,28 @@ export const DATA = {
 
   work: [
     {
-      company: "Atomic Finance",
-      href: "https://atomic.finance",
+      company: "Parallax Technologies",
+      href: "https://parallaxtec.com/",
       badges: [],
       location: "Remote",
-      title: "Bitcoin Protocol Engineer",
-      logoUrl: "/atomic.png",
-      start: "May 2021",
-      end: "Oct 2022",
+      title: "Software Automation Engineer",
+      logoUrl: "/group-1.png",
+      start: "Feb 2026",
+      end: "Present",
       description:
-        "Implemented the Bitcoin discreet log contract (DLC) protocol specifications as an open source Typescript SDK. Dockerized all microservices and setup production kubernetes cluster. Architected a data lake using AWS S3 and Athena for historical backtesting of bitcoin trading strategies. Built a mobile app using react native and typescript.",
+        "Designed and developed AI-driven automation pipelines that embed advanced cognitive capabilities into core software systems to eliminate manual bottlenecks. By prioritizing Artificial Intelligence over traditional logic, I transform complex business processes into self-regulating workflows using various automation tools and cloud infrastructure. This approach bridges the gap between high-level strategy and automated execution, delivering scalable, low-touch technical solutions that drive long-term operational efficiency.",
+    },
+    {
+      company: "Parallax Technologies",
+      href: "https://parallaxtec.com/",
+      badges: [],
+      location: "Remote",
+      title: "Trainee Software Engineer",
+      logoUrl: "/group-1.png",
+      start: "Aug 2025",
+      end: "Feb 2026",
+      description:
+        "Contributed to the full SDLC by building responsive user interfaces with React.js and robust backend systems using Laravel and MySQL. I collaborated closely on UI/UX design and performed SEO optimization to improve product visibility and user engagement. This comprehensive approach ensured the delivery of high-performance, user-centric applications from initial concept through to deployment.",
     },
     {
       company: "Shopify",
