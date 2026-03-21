@@ -11,11 +11,13 @@ import { Keras } from "@/components/ui/svgs/keras";
 import { Huggingface } from "@/components/ui/svgs/huggingface";
 import { Openai } from "@/components/ui/svgs/openai";
 import { Ragai } from "@/components/ui/svgs/ragai";
+import { Agenticai } from "@/components/ui/svgs/agenticai";
 import { Azure } from "@/components/ui/svgs/azure";
 import { N8n } from "@/components/ui/svgs/n8n";
 import { Zapier } from "@/components/ui/svgs/zapier";
 import { Git } from "@/components/ui/svgs/git";
 import { Flutter } from "@/components/ui/svgs/flutter";
+import { Wordpress } from "@/components/ui/svgs/wordpress";
 import { Mysql } from "@/components/ui/svgs/mysql";
 import { Docker } from "@/components/ui/svgs/docker";
 import { Kubernetes } from "@/components/ui/svgs/kubernetes";
@@ -42,12 +44,14 @@ export const DATA = {
     { name: "Keras", icon: Keras },
     { name: "Hugging Face", icon: Huggingface },
     { name: "OpenAI", icon: Openai },
+    { name: "Agentic AI", icon: Agenticai },
     { name: "RAG AI", icon: Ragai },
     { name: "Azure", icon: Azure },
     { name: "n8n", icon: N8n },
     { name: "Zapier", icon: Zapier },
     { name: "Git", icon: Git },
     { name: "Flutter", icon: Flutter },
+    { name: "WordPress", icon: Wordpress },
     { name: "MySQL", icon: Mysql },
     { name: "Docker", icon: Docker },
     { name: "Kubernetes", icon: Kubernetes },
@@ -184,32 +188,32 @@ export const DATA = {
   ],
   projects: [
     {
-      title: "Chat Collect",
-      href: "https://chatcollect.com",
-      dates: "Jan 2024 - Feb 2024",
+      title: "Scoreness",
+      href: "https://scoreness.com/",
+      dates: "March 2025 - June 2024",
       active: true,
       description:
         "With the release of the [OpenAI GPT Store](https://openai.com/blog/introducing-the-gpt-store), I decided to build a SaaS which allows users to collect email addresses from their GPT users. This is a great way to build an audience and monetize your GPT API usage.",
       technologies: [
-        "Next.js",
-        "Typescript",
-        "PostgreSQL",
-        "Prisma",
+        "React.js",
         "TailwindCSS",
-        "Stripe",
-        "Shadcn UI",
-        "Magic UI",
+        "Figma",
+        "Laravel",
+        "MySQL",
+        "Genie",
+        "Teaxt.lk",
+        "Geolocation API",
       ],
       links: [
         {
           type: "Website",
-          href: "https://chatcollect.com",
+          href: "https://scoreness.com/",
           icon: <Icons.globe className="size-3" />,
         },
       ],
-      image: "",
+      image: "/Saas Landing Pages (5).svg",
       video:
-        "https://pub-83c5db439b40468498f97946200806f7.r2.dev/chat-collect.mp4",
+        "",
     },
     {
       title: "Magic UI",
