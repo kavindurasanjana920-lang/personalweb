@@ -1,10 +1,9 @@
 :HL["/_next/static/chunks/50878650ce60b808.css","style"]
 :HL["/_next/static/media/797e433ab948586e-s.p.dbea232f.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
 :HL["/_next/static/media/caa3a2e1cccd8315-s.p.853070df.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
-:HL["/buildspace.jpg","image"]
-:HL["/waterloo.png","image"]
-:HL["/laurier.png","image"]
-:HL["/ib.png","image"]
+:HL["/horizon-campus-logo.png","image"]
+:HL["/uom-logo.png","image"]
+:HL["/mtf-logo.png","image"]
 :HL["https://pub-83c5db439b40468498f97946200806f7.r2.dev/hackline/hack-western.png","image"]
 :HL["https://pub-83c5db439b40468498f97946200806f7.r2.dev/hackline/hack-the-north.png","image"]
 :HL["https://pub-83c5db439b40468498f97946200806f7.r2.dev/hackline/firstnet.png","image"]
@@ -25,4 +24,4 @@
 :HL["https://pub-83c5db439b40468498f97946200806f7.r2.dev/hackline/qhacks.png","image"]
 :HL["https://pub-83c5db439b40468498f97946200806f7.r2.dev/hackline/terrible-hacks-v.png","image"]
 :HL["https://pub-83c5db439b40468498f97946200806f7.r2.dev/hackline/portal-hackathon.png","image"]
-0:{"buildId":"oIWk4Yt65sC41CJIEEIzd","tree":{"name":"","paramType":null,"paramKey":"","hasRuntimePrefetch":false,"slots":{"children":{"name":"__PAGE__","paramType":null,"paramKey":"__PAGE__","hasRuntimePrefetch":false,"slots":null,"isRootLayout":false}},"isRootLayout":true},"staleTime":300}
+0:{"buildId":"CRS6-rQaK0-pmajUv6pv1","tree":{"name":"","paramType":null,"paramKey":"","hasRuntimePrefetch":false,"slots":{"children":{"name":"__PAGE__","paramType":null,"paramKey":"__PAGE__","hasRuntimePrefetch":false,"slots":null,"isRootLayout":false}},"isRootLayout":true},"staleTime":300}

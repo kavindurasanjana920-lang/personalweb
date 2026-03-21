@@ -1175,7 +1175,7 @@ function Page() {
                                         lineNumber: 79,
                                         columnNumber: 17
                                     }, this)
-                                }, education.school, false, {
+                                }, `${education.school}-${index}`, false, {
                                     fileName: "[project]/src/app/page.tsx",
                                     lineNumber: 75,
                                     columnNumber: 15

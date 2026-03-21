@@ -73,7 +73,7 @@ export default function Page() {
           <div className="flex flex-col gap-8">
             {DATA.education.map((education, index) => (
               <BlurFade
-                key={education.school}
+                key={`${education.school}-${index}`}
                 delay={BLUR_FADE_DELAY * 8 + index * 0.05}
               >
                 <Link

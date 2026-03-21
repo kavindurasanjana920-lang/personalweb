@@ -2192,7 +2192,7 @@ const DATA = {
     url: "https://dillion.io",
     location: "Colombo, SL",
     locationLink: "https://www.google.com/maps/place/colombo",
-    description: "Software Automation Engineer, Building Scalable AI Systems, Open to Collaborateions Passionate about AI, Software Development, and Tech Innovation",
+    description: "Software Automation Engineer, Building Scalable AI Systems, Open to Collaborateions Passionate about AI, Software Development, and Tech Innovation.",
     summary: "At the end of 2022, I quit my job as a software engineer to go fulltime into building and scaling my own SaaS businesses. In the past, [I pursued a double degree in computer science and business](/#education), [interned at big tech companies in Silicon Valley](https://www.youtube.com/watch?v=d-LJ2e5qKdE), and [competed in over 21 hackathons for fun](/#hackathons). I also had the pleasure of being a part of the first ever in-person cohort of buildspace called [buildspace sf1](https://buildspace.so/sf1).",
     avatarUrl: "/kavindu.png",
     skills: [
@@ -2291,7 +2291,7 @@ const DATA = {
     },
     work: [
         {
-            company: "Parallax Technologies",
+            company: "Parallax Tec",
             href: "https://parallaxtec.com/",
             badges: [],
             location: "Remote",
@@ -2302,7 +2302,7 @@ const DATA = {
             description: "Designed and developed AI-driven automation pipelines that embed advanced cognitive capabilities into core software systems to eliminate manual bottlenecks. By prioritizing Artificial Intelligence over traditional logic, I transform complex business processes into self-regulating workflows using various automation tools and cloud infrastructure. This approach bridges the gap between high-level strategy and automated execution, delivering scalable, low-touch technical solutions that drive long-term operational efficiency."
         },
         {
-            company: "Parallax Technologies",
+            company: "Parallax Tec",
             href: "https://parallaxtec.com/",
             badges: [],
             location: "Remote",
@@ -2310,96 +2310,63 @@ const DATA = {
             logoUrl: "/group-1.png",
             start: "Aug 2025",
             end: "Feb 2026",
-            description: "Contributed to the full SDLC by building responsive user interfaces with React.js and robust backend systems using Laravel and MySQL. I collaborated closely on UI/UX design and performed SEO optimization to improve product visibility and user engagement. This comprehensive approach ensured the delivery of high-performance, user-centric applications from initial concept through to deployment."
+            description: "Contributed to the full SDLC by building responsive user interfaces with React.js and robust backend systems using Laravel and MySQL. I worked hands-on with UI/UX design, built automation workflows using n8n, and developed integrations through the Meta Developer platform. I also integrated various analytics tools to support data-driven decisions and built monitoring systems to track user behaviour and sales pipelines. This end-to-end approach ensured the delivery of high-performance, user-centric applications from initial concept through to deployment."
         },
         {
-            company: "Shopify",
+            company: "Parallax Tec",
+            href: "https://parallaxtec.com/",
             badges: [],
-            href: "https://shopify.com",
             location: "Remote",
-            title: "Software Engineer",
-            logoUrl: "/shopify.svg",
-            start: "January 2021",
-            end: "April 2021",
-            description: "Implemented a custom Kubernetes controller in Go to automate the deployment of MySQL and ProxySQL custom resources in order to enable 2,000+ internal developers to instantly deploy their app databases to production. Wrote several scripts in Go to automate MySQL database failovers while maintaining master-slave replication topologies and keeping Zookeeper nodes consistent with changes."
+            title: "Intern Software Engineer",
+            logoUrl: "/group-1.png",
+            start: "Aug 2024",
+            end: "Aug 2025",
+            description: "Developed and maintained high-performance web applications using PHP, Laravel, and WordPress for a diverse range of client-facing and internal projects. I managed database systems with MySQL for web applications, applied rigorous version control workflows, and implemented Google Marketing Platform (GMP) to drive data-informed improvements. This role centered on delivering scalable, maintainable code while ensuring seamless integration across various enterprise-level digital platforms."
         },
         {
-            company: "Nvidia",
-            href: "https://nvidia.com/",
+            company: "Fiverr",
+            href: "https://www.fiverr.com/",
             badges: [],
-            location: "Santa Clara, CA",
-            title: "Software Engineer",
-            logoUrl: "/nvidia.png",
-            start: "January 2020",
-            end: "April 2020",
-            description: "Architected and wrote the entire MVP of the GeForce Now Cloud Gaming internal admin and A/B testing dashboard using React, Redux, TypeScript, and Python."
-        },
-        {
-            company: "Splunk",
-            href: "https://splunk.com",
-            badges: [],
-            location: "San Jose, CA",
-            title: "Software Engineer",
-            logoUrl: "/splunk.svg",
-            start: "January 2019",
-            end: "April 2019",
-            description: "Co-developed a prototype iOS app with another intern in Swift for the new Splunk Phantom security orchestration product (later publicly demoed and launched at .conf annual conference in Las Vegas). Implemented a realtime service for the iOS app in Django (Python) and C++; serialized data using protobufs transmitted over gRPC resulting in an approximate 500% increase in data throughput."
-        },
-        {
-            company: "Lime",
-            href: "https://li.me/",
-            badges: [],
-            location: "San Francisco, CA",
-            title: "Software Engineer",
-            logoUrl: "/lime.svg",
-            start: "January 2018",
-            end: "April 2018",
-            description: "Proposed and implemented an internal ruby API for sending/receiving commands to scooters over LTE networks. Developed a fully automated bike firmware update system to handle asynchronous firmware updates of over 100,000+ scooters worldwide, and provide progress reports in real-time using React, Ruby on Rails, PostgreSQL and AWS EC2 saving hundreds of developer hours."
-        },
-        {
-            company: "Mitre Media",
-            href: "https://mitremedia.com/",
-            badges: [],
-            location: "Toronto, ON",
-            title: "Software Engineer",
-            logoUrl: "/mitremedia.png",
-            start: "May 2017",
-            end: "August 2017",
-            description: "Designed and implemented a robust password encryption and browser cookie storage system in Ruby on Rails. Leveraged the Yahoo finance API to develop the dividend.com equity screener"
+            location: "Colomob, SL",
+            title: "Web  Developer",
+            logoUrl: "/fiverr-logo.png",
+            start: "Jan 2024",
+            end: "Present",
+            description: "Delivered end-to-end web solutions for international clients across industries including FinTech, e-commerce, matrimony, and professional services. Successfully managed and delivered 7+ live full-stack projects, handling full client communication, scoping, and execution from start to finish."
         }
     ],
     education: [
         {
-            school: "Buildspace",
-            href: "https://buildspace.so",
-            degree: "s3, s4, sf1, s5",
-            logoUrl: "/buildspace.jpg",
-            start: "2023",
+            school: "Horizon Campus",
+            href: "https://horizoncampus.edu.lk/",
+            degree: "Bachelor’s Degree in Information Technology",
+            logoUrl: "/horizon-campus-logo.png",
+            start: "2022",
+            end: "2025"
+        },
+        {
+            school: "University of Moratuwa",
+            href: "https://uom.lk/",
+            degree: "Bachelor's Degree of Information Technology",
+            logoUrl: "/uom-logo.png",
+            start: "2022",
+            end: "2025"
+        },
+        {
+            school: "MTF Institute of Management",
+            href: "https://gtf.pt/en",
+            degree: "Professional Diploma of Marketing Manager Business Partner",
+            logoUrl: "/mtf-logo.png",
+            start: "2024",
             end: "2024"
         },
         {
-            school: "University of Waterloo",
-            href: "https://uwaterloo.ca",
-            degree: "Bachelor's Degree of Computer Science (BCS)",
-            logoUrl: "/waterloo.png",
-            start: "2016",
-            end: "2021"
-        },
-        {
-            school: "Wilfrid Laurier University",
-            href: "https://wlu.ca",
-            degree: "Bachelor's Degree of Business Administration (BBA)",
-            logoUrl: "/laurier.png",
-            start: "2016",
-            end: "2021"
-        },
-        {
-            school: "International Baccalaureate",
-            href: "https://ibo.org",
-            degree: "IB Diploma",
-            logoUrl: "/ib.png",
-            start: "2012",
-            end: "2016"
+            school: "MTF Institute of Management",
+            href: "https://gtf.pt/en",
+            degree: "Diploma of Microsoft Dynamics 365 CRM Business Architect",
+            logoUrl: "/mtf-logo.png",
+            start: "2024",
+            end: "2024"
         }
     ],
     projects: [
@@ -2427,7 +2394,7 @@ const DATA = {
                         className: "size-3"
                     }, void 0, false, {
                         fileName: "[project]/src/data/resume.tsx",
-                        lineNumber: 226,
+                        lineNumber: 191,
                         columnNumber: 17
                     }, ("TURBOPACK compile-time value", void 0))
                 }
@@ -2459,7 +2426,7 @@ const DATA = {
                         className: "size-3"
                     }, void 0, false, {
                         fileName: "[project]/src/data/resume.tsx",
-                        lineNumber: 254,
+                        lineNumber: 219,
                         columnNumber: 17
                     }, ("TURBOPACK compile-time value", void 0))
                 },
@@ -2470,7 +2437,7 @@ const DATA = {
                         className: "size-3"
                     }, void 0, false, {
                         fileName: "[project]/src/data/resume.tsx",
-                        lineNumber: 259,
+                        lineNumber: 224,
                         columnNumber: 17
                     }, ("TURBOPACK compile-time value", void 0))
                 }
@@ -2503,7 +2470,7 @@ const DATA = {
                         className: "size-3"
                     }, void 0, false, {
                         fileName: "[project]/src/data/resume.tsx",
-                        lineNumber: 287,
+                        lineNumber: 252,
                         columnNumber: 17
                     }, ("TURBOPACK compile-time value", void 0))
                 },
@@ -2514,7 +2481,7 @@ const DATA = {
                         className: "size-3"
                     }, void 0, false, {
                         fileName: "[project]/src/data/resume.tsx",
-                        lineNumber: 292,
+                        lineNumber: 257,
                         columnNumber: 17
                     }, ("TURBOPACK compile-time value", void 0))
                 }
@@ -2547,7 +2514,7 @@ const DATA = {
                         className: "size-3"
                     }, void 0, false, {
                         fileName: "[project]/src/data/resume.tsx",
-                        lineNumber: 320,
+                        lineNumber: 285,
                         columnNumber: 17
                     }, ("TURBOPACK compile-time value", void 0))
                 }
@@ -2597,7 +2564,7 @@ const DATA = {
                         className: "h-4 w-4"
                     }, void 0, false, {
                         fileName: "[project]/src/data/resume.tsx",
-                        lineNumber: 373,
+                        lineNumber: 338,
                         columnNumber: 17
                     }, ("TURBOPACK compile-time value", void 0)),
                     href: "https://github.com/cryptotrends/cryptotrends"
@@ -2619,7 +2586,7 @@ const DATA = {
                         className: "h-4 w-4"
                     }, void 0, false, {
                         fileName: "[project]/src/data/resume.tsx",
-                        lineNumber: 391,
+                        lineNumber: 356,
                         columnNumber: 17
                     }, ("TURBOPACK compile-time value", void 0)),
                     href: "https://devpost.com/software/my6footprint"
@@ -2630,7 +2597,7 @@ const DATA = {
                         className: "h-4 w-4"
                     }, void 0, false, {
                         fileName: "[project]/src/data/resume.tsx",
-                        lineNumber: 396,
+                        lineNumber: 361,
                         columnNumber: 17
                     }, ("TURBOPACK compile-time value", void 0)),
                     href: "https://github.com/Wallet6/my6footprint-machine-learning"
@@ -2641,7 +2608,7 @@ const DATA = {
                         className: "h-4 w-4"
                     }, void 0, false, {
                         fileName: "[project]/src/data/resume.tsx",
-                        lineNumber: 401,
+                        lineNumber: 366,
                         columnNumber: 17
                     }, ("TURBOPACK compile-time value", void 0)),
                     href: "https://github.com/Wallet6/CarbonWallet"
@@ -2652,7 +2619,7 @@ const DATA = {
                         className: "h-4 w-4"
                     }, void 0, false, {
                         fileName: "[project]/src/data/resume.tsx",
-                        lineNumber: 406,
+                        lineNumber: 371,
                         columnNumber: 17
                     }, ("TURBOPACK compile-time value", void 0)),
                     href: "https://github.com/Wallet6/wallet6-server"
@@ -2672,7 +2639,7 @@ const DATA = {
                         className: "h-4 w-4"
                     }, void 0, false, {
                         fileName: "[project]/src/data/resume.tsx",
-                        lineNumber: 422,
+                        lineNumber: 387,
                         columnNumber: 17
                     }, ("TURBOPACK compile-time value", void 0)),
                     href: "https://github.com/ethdocnet"
@@ -2693,7 +2660,7 @@ const DATA = {
                         className: "h-4 w-4"
                     }, void 0, false, {
                         fileName: "[project]/src/data/resume.tsx",
-                        lineNumber: 439,
+                        lineNumber: 404,
                         columnNumber: 17
                     }, ("TURBOPACK compile-time value", void 0)),
                     href: "https://github.com/justinmichaud/htn2017"
@@ -2704,7 +2671,7 @@ const DATA = {
                         className: "h-4 w-4"
                     }, void 0, false, {
                         fileName: "[project]/src/data/resume.tsx",
-                        lineNumber: 444,
+                        lineNumber: 409,
                         columnNumber: 17
                     }, ("TURBOPACK compile-time value", void 0)),
                     href: "https://github.com/dillionverma/RTSPClient"
@@ -2725,7 +2692,7 @@ const DATA = {
                         className: "h-4 w-4"
                     }, void 0, false, {
                         fileName: "[project]/src/data/resume.tsx",
-                        lineNumber: 461,
+                        lineNumber: 426,
                         columnNumber: 17
                     }, ("TURBOPACK compile-time value", void 0)),
                     href: "https://github.com/ShareShip/ShareShip"
@@ -2736,7 +2703,7 @@ const DATA = {
                         className: "h-4 w-4"
                     }, void 0, false, {
                         fileName: "[project]/src/data/resume.tsx",
-                        lineNumber: 466,
+                        lineNumber: 431,
                         columnNumber: 17
                     }, ("TURBOPACK compile-time value", void 0)),
                     href: "https://share-ship.herokuapp.com/"
@@ -2756,7 +2723,7 @@ const DATA = {
                         className: "h-4 w-4"
                     }, void 0, false, {
                         fileName: "[project]/src/data/resume.tsx",
-                        lineNumber: 482,
+                        lineNumber: 447,
                         columnNumber: 17
                     }, ("TURBOPACK compile-time value", void 0)),
                     href: "https://github.com/nsagirlfriend/nsagirlfriend"
@@ -2777,7 +2744,7 @@ const DATA = {
                         className: "h-4 w-4"
                     }, void 0, false, {
                         fileName: "[project]/src/data/resume.tsx",
-                        lineNumber: 499,
+                        lineNumber: 464,
                         columnNumber: 17
                     }, ("TURBOPACK compile-time value", void 0)),
                     href: "https://syncedreview.com/2017/06/26/global-ai-hackathon-in-toronto/"
@@ -2788,7 +2755,7 @@ const DATA = {
                         className: "h-4 w-4"
                     }, void 0, false, {
                         fileName: "[project]/src/data/resume.tsx",
-                        lineNumber: 504,
+                        lineNumber: 469,
                         columnNumber: 17
                     }, ("TURBOPACK compile-time value", void 0)),
                     href: "https://github.com/TinySamosas/"
@@ -2817,7 +2784,7 @@ const DATA = {
                         className: "h-4 w-4"
                     }, void 0, false, {
                         fileName: "[project]/src/data/resume.tsx",
-                        lineNumber: 531,
+                        lineNumber: 496,
                         columnNumber: 17
                     }, ("TURBOPACK compile-time value", void 0)),
                     href: "https://github.com/dillionverma/genecis"
@@ -2838,11 +2805,61 @@ const DATA = {
                         className: "h-4 w-4"
                     }, void 0, false, {
                         fileName: "[project]/src/data/resume.tsx",
-                        lineNumber: 547,
+                        lineNumber: 512,
                         columnNumber: 17
                     }, ("TURBOPACK compile-time value", void 0)),
                     href: "https://medium.com/make-school/the-winners-of-make-schools-student-app-competition-2017-a6b0e72f190a"
                 },
+                {
+                    title: "Devpost",
+                    icon: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$icons$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Icons"].globe, {
+                        className: "h-4 w-4"
+                    }, void 0, false, {
+                        fileName: "[project]/src/data/resume.tsx",
+                        lineNumber: 517,
+                        columnNumber: 17
+                    }, ("TURBOPACK compile-time value", void 0)),
+                    href: "https://devpost.com/software/pocketdoc-react-native"
+                },
+                {
+                    title: "YouTube",
+                    icon: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$icons$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Icons"].youtube, {
+                        className: "h-4 w-4"
+                    }, void 0, false, {
+                        fileName: "[project]/src/data/resume.tsx",
+                        lineNumber: 522,
+                        columnNumber: 17
+                    }, ("TURBOPACK compile-time value", void 0)),
+                    href: "https://www.youtube.com/watch?v=XwFdn5Rmx68"
+                },
+                {
+                    title: "Source",
+                    icon: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$icons$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Icons"].github, {
+                        className: "h-4 w-4"
+                    }, void 0, false, {
+                        fileName: "[project]/src/data/resume.tsx",
+                        lineNumber: 527,
+                        columnNumber: 17
+                    }, ("TURBOPACK compile-time value", void 0)),
+                    href: "https://github.com/dillionverma/pocketdoc-react-native"
+                }
+            ]
+        },
+        {
+            title: "HackMining",
+            dates: "May 12th - 14th, 2017",
+            location: "Toronto, Ontario",
+            description: "Developed neural network to optimize a mining process",
+            image: "https://pub-83c5db439b40468498f97946200806f7.r2.dev/hackline/hack-mining.png",
+            links: []
+        },
+        {
+            title: "Waterloo Equithon",
+            dates: "May 5th - 7th, 2017",
+            location: "Waterloo, Ontario",
+            description: "Developed Pocketdoc, an app in which you take a picture of a physical wound, and the app returns common solutions or cures to the injuries or diseases.",
+            image: "https://pub-83c5db439b40468498f97946200806f7.r2.dev/hackline/waterloo-equithon.png",
+            links: [
                 {
                     title: "Devpost",
                     icon: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$icons$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Icons"].globe, {
@@ -2879,56 +2896,6 @@ const DATA = {
             ]
         },
         {
-            title: "HackMining",
-            dates: "May 12th - 14th, 2017",
-            location: "Toronto, Ontario",
-            description: "Developed neural network to optimize a mining process",
-            image: "https://pub-83c5db439b40468498f97946200806f7.r2.dev/hackline/hack-mining.png",
-            links: []
-        },
-        {
-            title: "Waterloo Equithon",
-            dates: "May 5th - 7th, 2017",
-            location: "Waterloo, Ontario",
-            description: "Developed Pocketdoc, an app in which you take a picture of a physical wound, and the app returns common solutions or cures to the injuries or diseases.",
-            image: "https://pub-83c5db439b40468498f97946200806f7.r2.dev/hackline/waterloo-equithon.png",
-            links: [
-                {
-                    title: "Devpost",
-                    icon: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$icons$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Icons"].globe, {
-                        className: "h-4 w-4"
-                    }, void 0, false, {
-                        fileName: "[project]/src/data/resume.tsx",
-                        lineNumber: 587,
-                        columnNumber: 17
-                    }, ("TURBOPACK compile-time value", void 0)),
-                    href: "https://devpost.com/software/pocketdoc-react-native"
-                },
-                {
-                    title: "YouTube",
-                    icon: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$icons$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Icons"].youtube, {
-                        className: "h-4 w-4"
-                    }, void 0, false, {
-                        fileName: "[project]/src/data/resume.tsx",
-                        lineNumber: 592,
-                        columnNumber: 17
-                    }, ("TURBOPACK compile-time value", void 0)),
-                    href: "https://www.youtube.com/watch?v=XwFdn5Rmx68"
-                },
-                {
-                    title: "Source",
-                    icon: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$icons$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Icons"].github, {
-                        className: "h-4 w-4"
-                    }, void 0, false, {
-                        fileName: "[project]/src/data/resume.tsx",
-                        lineNumber: 597,
-                        columnNumber: 17
-                    }, ("TURBOPACK compile-time value", void 0)),
-                    href: "https://github.com/dillionverma/pocketdoc-react-native"
-                }
-            ]
-        },
-        {
             title: "SpaceApps Waterloo",
             dates: "April 28th - 30th, 2017",
             location: "Waterloo, Ontario",
@@ -2941,7 +2908,7 @@ const DATA = {
                         className: "h-4 w-4"
                     }, void 0, false, {
                         fileName: "[project]/src/data/resume.tsx",
-                        lineNumber: 613,
+                        lineNumber: 578,
                         columnNumber: 17
                     }, ("TURBOPACK compile-time value", void 0)),
                     href: "https://github.com/dillionverma/earthwatch"
@@ -2962,7 +2929,7 @@ const DATA = {
                         className: "h-4 w-4"
                     }, void 0, false, {
                         fileName: "[project]/src/data/resume.tsx",
-                        lineNumber: 630,
+                        lineNumber: 595,
                         columnNumber: 17
                     }, ("TURBOPACK compile-time value", void 0)),
                     href: "https://github.com/dillionverma/threejs-planes"
@@ -2984,7 +2951,7 @@ const DATA = {
                         className: "h-4 w-4"
                     }, void 0, false, {
                         fileName: "[project]/src/data/resume.tsx",
-                        lineNumber: 648,
+                        lineNumber: 613,
                         columnNumber: 17
                     }, ("TURBOPACK compile-time value", void 0)),
                     href: "https://github.com/mattBlackDesign/recipic-ionic"
@@ -2995,7 +2962,7 @@ const DATA = {
                         className: "h-4 w-4"
                     }, void 0, false, {
                         fileName: "[project]/src/data/resume.tsx",
-                        lineNumber: 653,
+                        lineNumber: 618,
                         columnNumber: 17
                     }, ("TURBOPACK compile-time value", void 0)),
                     href: "https://github.com/mattBlackDesign/recipic-rails"
@@ -3016,7 +2983,7 @@ const DATA = {
                         className: "h-4 w-4"
                     }, void 0, false, {
                         fileName: "[project]/src/data/resume.tsx",
-                        lineNumber: 670,
+                        lineNumber: 635,
                         columnNumber: 17
                     }, ("TURBOPACK compile-time value", void 0)),
                     href: "https://github.com/dillionverma/human-huntr-react-native"
@@ -3027,7 +2994,7 @@ const DATA = {
                         className: "h-4 w-4"
                     }, void 0, false, {
                         fileName: "[project]/src/data/resume.tsx",
-                        lineNumber: 675,
+                        lineNumber: 640,
                         columnNumber: 17
                     }, ("TURBOPACK compile-time value", void 0)),
                     href: "https://github.com/mattBlackDesign/human-huntr-rails"
@@ -3047,7 +3014,7 @@ const DATA = {
                         className: "h-4 w-4"
                     }, void 0, false, {
                         fileName: "[project]/src/data/resume.tsx",
-                        lineNumber: 691,
+                        lineNumber: 656,
                         columnNumber: 17
                     }, ("TURBOPACK compile-time value", void 0)),
                     href: "https://github.com/justinmichaud/TerribleHacks2016-Windows11"
@@ -3067,7 +3034,7 @@ const DATA = {
                         className: "h-4 w-4"
                     }, void 0, false, {
                         fileName: "[project]/src/data/resume.tsx",
-                        lineNumber: 707,
+                        lineNumber: 672,
                         columnNumber: 17
                     }, ("TURBOPACK compile-time value", void 0)),
                     href: "https://github.com/UWPortalSDK/crowmark"

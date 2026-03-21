@@ -2,15 +2,23 @@ import { Icons } from "@/components/icons";
 import { HomeIcon, NotebookIcon } from "lucide-react";
 import { ReactLight } from "@/components/ui/svgs/reactLight";
 import { NextjsIconDark } from "@/components/ui/svgs/nextjsIconDark";
-import { Typescript } from "@/components/ui/svgs/typescript";
-import { Nodejs } from "@/components/ui/svgs/nodejs";
+import { Laravel } from "@/components/ui/svgs/laravel";
 import { Python } from "@/components/ui/svgs/python";
-import { Golang } from "@/components/ui/svgs/golang";
-import { Postgresql } from "@/components/ui/svgs/postgresql";
+import { Tensorflow } from "@/components/ui/svgs/tensorflow";
+import { Pytorch } from "@/components/ui/svgs/pytorch";
+import { Scikitlearn } from "@/components/ui/svgs/scikitlearn";
+import { Keras } from "@/components/ui/svgs/keras";
+import { Huggingface } from "@/components/ui/svgs/huggingface";
+import { Openai } from "@/components/ui/svgs/openai";
+import { Ragai } from "@/components/ui/svgs/ragai";
+import { Azure } from "@/components/ui/svgs/azure";
+import { N8n } from "@/components/ui/svgs/n8n";
+import { Zapier } from "@/components/ui/svgs/zapier";
+import { Git } from "@/components/ui/svgs/git";
+import { Flutter } from "@/components/ui/svgs/flutter";
+import { Mysql } from "@/components/ui/svgs/mysql";
 import { Docker } from "@/components/ui/svgs/docker";
 import { Kubernetes } from "@/components/ui/svgs/kubernetes";
-import { Java } from "@/components/ui/svgs/java";
-import { Csharp } from "@/components/ui/svgs/csharp";
 
 export const DATA = {
   name: "Kavindu Rasanjana",
@@ -19,22 +27,30 @@ export const DATA = {
   location: "Colombo, SL",
   locationLink: "https://www.google.com/maps/place/colombo",
   description:
-    "Software Automation Engineer, Building Scalable AI Systems, Open to Collaborateions Passionate about AI, Software Development, and Tech Innovation",
+    "Software Automation Engineer, Building Scalable AI Systems, Open to Collaborateions Passionate about AI, Software Development, and Tech Innovation.",
   summary:
     "At the end of 2022, I quit my job as a software engineer to go fulltime into building and scaling my own SaaS businesses. In the past, [I pursued a double degree in computer science and business](/#education), [interned at big tech companies in Silicon Valley](https://www.youtube.com/watch?v=d-LJ2e5qKdE), and [competed in over 21 hackathons for fun](/#hackathons). I also had the pleasure of being a part of the first ever in-person cohort of buildspace called [buildspace sf1](https://buildspace.so/sf1).",
   avatarUrl: "/kavindu.png",
   skills: [
     { name: "React", icon: ReactLight },
     { name: "Next.js", icon: NextjsIconDark },
-    { name: "Typescript", icon: Typescript },
-    { name: "Node.js", icon: Nodejs },
+    { name: "Laravel", icon: Laravel },
     { name: "Python", icon: Python },
-    { name: "Go", icon: Golang },
-    { name: "Postgres", icon: Postgresql },
+    { name: "TensorFlow", icon: Tensorflow },
+    { name: "PyTorch", icon: Pytorch },
+    { name: "Scikit-learn", icon: Scikitlearn },
+    { name: "Keras", icon: Keras },
+    { name: "Hugging Face", icon: Huggingface },
+    { name: "OpenAI", icon: Openai },
+    { name: "RAG AI", icon: Ragai },
+    { name: "Azure", icon: Azure },
+    { name: "n8n", icon: N8n },
+    { name: "Zapier", icon: Zapier },
+    { name: "Git", icon: Git },
+    { name: "Flutter", icon: Flutter },
+    { name: "MySQL", icon: Mysql },
     { name: "Docker", icon: Docker },
     { name: "Kubernetes", icon: Kubernetes },
-    { name: "Java", icon: Java },
-    { name: "C++", icon: Csharp },
   ],
   navbar: [
     { href: "/", icon: HomeIcon, label: "Home" },
@@ -83,7 +99,7 @@ export const DATA = {
 
   work: [
     {
-      company: "Parallax Technologies",
+      company: "Parallax Tec",
       href: "https://parallaxtec.com/",
       badges: [],
       location: "Remote",
@@ -95,7 +111,7 @@ export const DATA = {
         "Designed and developed AI-driven automation pipelines that embed advanced cognitive capabilities into core software systems to eliminate manual bottlenecks. By prioritizing Artificial Intelligence over traditional logic, I transform complex business processes into self-regulating workflows using various automation tools and cloud infrastructure. This approach bridges the gap between high-level strategy and automated execution, delivering scalable, low-touch technical solutions that drive long-term operational efficiency.",
     },
     {
-      company: "Parallax Technologies",
+      company: "Parallax Tec",
       href: "https://parallaxtec.com/",
       badges: [],
       location: "Remote",
@@ -104,101 +120,66 @@ export const DATA = {
       start: "Aug 2025",
       end: "Feb 2026",
       description:
-        "Contributed to the full SDLC by building responsive user interfaces with React.js and robust backend systems using Laravel and MySQL. I collaborated closely on UI/UX design and performed SEO optimization to improve product visibility and user engagement. This comprehensive approach ensured the delivery of high-performance, user-centric applications from initial concept through to deployment.",
+        "Contributed to the full SDLC by building responsive user interfaces with React.js and robust backend systems using Laravel and MySQL. I worked hands-on with UI/UX design, built automation workflows using n8n, and developed integrations through the Meta Developer platform. I also integrated various analytics tools to support data-driven decisions and built monitoring systems to track user behaviour and sales pipelines. This end-to-end approach ensured the delivery of high-performance, user-centric applications from initial concept through to deployment.",
     },
     {
-      company: "Shopify",
+      company: "Parallax Tec",
+      href: "https://parallaxtec.com/",
       badges: [],
-      href: "https://shopify.com",
       location: "Remote",
-      title: "Software Engineer",
-      logoUrl: "/shopify.svg",
-      start: "January 2021",
-      end: "April 2021",
+      title: "Intern Software Engineer",
+      logoUrl: "/group-1.png",
+      start: "Aug 2024",
+      end: "Aug 2025",
       description:
-        "Implemented a custom Kubernetes controller in Go to automate the deployment of MySQL and ProxySQL custom resources in order to enable 2,000+ internal developers to instantly deploy their app databases to production. Wrote several scripts in Go to automate MySQL database failovers while maintaining master-slave replication topologies and keeping Zookeeper nodes consistent with changes.",
+        "Developed and maintained high-performance web applications using PHP, Laravel, and WordPress for a diverse range of client-facing and internal projects. I managed database systems with MySQL for web applications, applied rigorous version control workflows, and implemented Google Marketing Platform (GMP) to drive data-informed improvements. This role centered on delivering scalable, maintainable code while ensuring seamless integration across various enterprise-level digital platforms.",
     },
     {
-      company: "Nvidia",
-      href: "https://nvidia.com/",
+      company: "Fiverr",
+      href: "https://www.fiverr.com/",
       badges: [],
-      location: "Santa Clara, CA",
-      title: "Software Engineer",
-      logoUrl: "/nvidia.png",
-      start: "January 2020",
-      end: "April 2020",
+      location: "Colomob, SL",
+      title: "Web  Developer",
+      logoUrl: "/fiverr-logo.png",
+      start: "Jan 2024",
+      end: "Present",
       description:
-        "Architected and wrote the entire MVP of the GeForce Now Cloud Gaming internal admin and A/B testing dashboard using React, Redux, TypeScript, and Python.",
+        "Delivered end-to-end web solutions for international clients across industries including FinTech, e-commerce, matrimony, and professional services. Successfully managed and delivered 7+ live full-stack projects, handling full client communication, scoping, and execution from start to finish.",
     },
-    {
-      company: "Splunk",
-      href: "https://splunk.com",
-      badges: [],
-      location: "San Jose, CA",
-      title: "Software Engineer",
-      logoUrl: "/splunk.svg",
-      start: "January 2019",
-      end: "April 2019",
-      description:
-        "Co-developed a prototype iOS app with another intern in Swift for the new Splunk Phantom security orchestration product (later publicly demoed and launched at .conf annual conference in Las Vegas). Implemented a realtime service for the iOS app in Django (Python) and C++; serialized data using protobufs transmitted over gRPC resulting in an approximate 500% increase in data throughput.",
-    },
-    {
-      company: "Lime",
-      href: "https://li.me/",
-      badges: [],
-      location: "San Francisco, CA",
-      title: "Software Engineer",
-      logoUrl: "/lime.svg",
-      start: "January 2018",
-      end: "April 2018",
-      description:
-        "Proposed and implemented an internal ruby API for sending/receiving commands to scooters over LTE networks. Developed a fully automated bike firmware update system to handle asynchronous firmware updates of over 100,000+ scooters worldwide, and provide progress reports in real-time using React, Ruby on Rails, PostgreSQL and AWS EC2 saving hundreds of developer hours.",
-    },
-    {
-      company: "Mitre Media",
-      href: "https://mitremedia.com/",
-      badges: [],
-      location: "Toronto, ON",
-      title: "Software Engineer",
-      logoUrl: "/mitremedia.png",
-      start: "May 2017",
-      end: "August 2017",
-      description:
-        "Designed and implemented a robust password encryption and browser cookie storage system in Ruby on Rails. Leveraged the Yahoo finance API to develop the dividend.com equity screener",
-    },
+ 
   ],
   education: [
     {
-      school: "Buildspace",
-      href: "https://buildspace.so",
-      degree: "s3, s4, sf1, s5",
-      logoUrl: "/buildspace.jpg",
-      start: "2023",
+      school: "Horizon Campus",
+      href: "https://horizoncampus.edu.lk/",
+      degree: "Bachelor’s Degree in Information Technology",
+      logoUrl: "/horizon-campus-logo.png",
+      start: "2022",
+      end: "2025",
+    },
+    {
+      school: "University of Moratuwa",
+      href: "https://uom.lk/",
+      degree: "Bachelor's Degree of Information Technology",
+      logoUrl: "/uom-logo.png",
+      start: "2022",
+      end: "2025",
+    },
+    {
+      school: "MTF Institute of Management",
+      href: "https://gtf.pt/en",
+      degree: "Professional Diploma of Marketing Manager Business Partner",
+      logoUrl: "/mtf-logo.png",
+      start: "2024",
       end: "2024",
     },
     {
-      school: "University of Waterloo",
-      href: "https://uwaterloo.ca",
-      degree: "Bachelor's Degree of Computer Science (BCS)",
-      logoUrl: "/waterloo.png",
-      start: "2016",
-      end: "2021",
-    },
-    {
-      school: "Wilfrid Laurier University",
-      href: "https://wlu.ca",
-      degree: "Bachelor's Degree of Business Administration (BBA)",
-      logoUrl: "/laurier.png",
-      start: "2016",
-      end: "2021",
-    },
-    {
-      school: "International Baccalaureate",
-      href: "https://ibo.org",
-      degree: "IB Diploma",
-      logoUrl: "/ib.png",
-      start: "2012",
-      end: "2016",
+      school: "MTF Institute of Management",
+      href: "https://gtf.pt/en",
+      degree: "Diploma of Microsoft Dynamics 365 CRM Business Architect",
+      logoUrl: "/mtf-logo.png",
+      start: "2024",
+      end: "2024",
     },
   ],
   projects: [
