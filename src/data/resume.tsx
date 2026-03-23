@@ -23,7 +23,7 @@ import { Docker } from "@/components/ui/svgs/docker";
 import { Kubernetes } from "@/components/ui/svgs/kubernetes";
 
 export const DATA = {
-  name: "Kavindu Rasanjana",
+  name: "TrackMate",
   initials: "KR",
   url: "https://dillion.io",
   location: "Colombo, SL",

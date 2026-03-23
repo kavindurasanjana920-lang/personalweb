@@ -24,16 +24,13 @@ export default function ContactSection() {
           Contact Us
         </h2>
         <p className="mx-auto max-w-lg text-muted-foreground text-balance">
-          Have a question or need support? Contact us directly via{" "}
-          <Link
-            href={DATA.contact.social.X.url}
-            target="_blank"
-            rel="noopener noreferrer"
+          Have a question or need support? Contact us directly by{' '}
+          <a
+            href="tel:+94117697000"
             className="text-blue-500 hover:underline underline-offset-4 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 rounded-sm"
           >
-            Twitter
-          </Link>{" "}
-          and we&apos;ll get back to you as soon as possible.
+            call
+          </a>{' '}and we&apos;ll get back to you as soon as possible.
         </p>
       </div>
     </div>

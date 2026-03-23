@@ -61,9 +61,9 @@ export default function HeroSection({ className }: HeroSectionProps) {
 
         </div>
       </div>
-      <div className="pointer-events-none absolute top-[42%] left-1/2 z-0 h-[430px] w-full max-w-[1100px] -translate-x-1/2 -translate-y-1/2 transition-opacity duration-300 group-hover:opacity-100">
-        <Glow variant="center" />
-      </div>
+          <div className="pointer-events-none absolute top-[42%] left-1/2 z-0 h-[430px] w-[100vw] max-w-[1100px] -translate-x-1/2 -translate-y-1/2 transition-opacity duration-300 group-hover:opacity-100 overflow-x-clip sm:w-full sm:overflow-visible">
+            <Glow variant="center" />
+          </div>
     </section>
   );
 }

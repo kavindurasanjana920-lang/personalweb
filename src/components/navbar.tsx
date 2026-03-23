@@ -10,18 +10,38 @@ import {
 import {
   Facebook,
   Home,
-  Linkedin,
   Mail,
-  Play,
   Store,
+  Youtube,
 } from "lucide-react";
+
+function GooglePlayIcon({ className }: { className?: string }) {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      aria-hidden="true"
+    >
+      <path d="M5 4.5v15l10.5-7.5L5 4.5Z" fill="currentColor" />
+      <path
+        d="M16.2 11.3 19 9.4c.8-.5.8-1.7 0-2.2L7.3 1.9a1.2 1.2 0 0 0-1.7 1.1v18a1.2 1.2 0 0 0 1.7 1.1L19 16.8c.8-.4.8-1.6 0-2.1l-2.8-1.9"
+        stroke="currentColor"
+        strokeWidth="1.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+  );
+}
 
 const NAV_ITEMS = [
   { href: "/", label: "Home", icon: Home },
   { href: "https://facebook.com", label: "Facebook", icon: Facebook },
-  { href: "https://linkedin.com", label: "LinkedIn", icon: Linkedin },
-  { href: "https://play.google.com", label: "Playstore", icon: Play },
-  { href: "https://www.apple.com/app-store/", label: "Appstore", icon: Store },
+  { href: "https://www.youtube.com/@Storemate", label: "YouTube", icon: Youtube },
+  { href: "https://play.google.com/store/apps/details?id=com.parallax.storemate_oms", label: "Playstore", icon: GooglePlayIcon },
+  { href: "https://apps.apple.com/gh/app/trackmate/id6754271406", label: "Appstore", icon: Store },
   { href: "#contact", label: "Contact Us", icon: Mail },
 ];
 
