@@ -141,7 +141,7 @@ self.__SERVER_FILES_MANIFEST={
       "isExperimentalCompile": false
     }
   },
-  "appDir": "C:\\Users\\kavin\\Downloads\\portfolio-nextjs-16-tailwindcss-v4\\portfolio-nextjs-16-tailwindcss-v4",
+  "appDir": "E:\\portfolio-nextjs-16-tailwindcss-v4\\portfolio-nextjs-16-tailwindcss-v4\\portfolio-nextjs-16-tailwindcss-v4",
   "relativeAppDir": "",
   "files": [
     ".next\\routes-manifest.json",

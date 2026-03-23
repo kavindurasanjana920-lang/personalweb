@@ -190,10 +190,10 @@ export const DATA = {
     {
       title: "Scoreness",
       href: "https://scoreness.com/",
-      dates: "March 2025 - June 2024",
+      dates: "March 2025 - June 2025",
       active: true,
       description:
-        "With the release of the [OpenAI GPT Store](https://openai.com/blog/introducing-the-gpt-store), I decided to build a SaaS which allows users to collect email addresses from their GPT users. This is a great way to build an audience and monetize your GPT API usage.",
+        "A comprehensive review platform built with React.js and Laravel, featuring automated business listing workflows, verified review submissions, scam reporting, and a side-by-side business comparison tool.",
       technologies: [
         "React.js",
         "TailwindCSS",
@@ -201,7 +201,7 @@ export const DATA = {
         "Laravel",
         "MySQL",
         "Genie",
-        "Teaxt.lk",
+        "OAuth",
         "Geolocation API",
       ],
       links: [
@@ -211,41 +211,36 @@ export const DATA = {
           icon: <Icons.globe className="size-3" />,
         },
       ],
-      image: "/Saas Landing Pages (5).svg",
+      image: "/Scoreness.svg",
       video:
         "",
     },
     {
-      title: "Magic UI",
-      href: "https://magicui.design",
-      dates: "June 2023 - Present",
+      title: "Nextrimo",
+      href: "https://nextrimo.com/",
+      dates: "May 2025 - Sep 2025",
       active: true,
       description:
-        "Designed, developed and sold animated UI components for developers.",
+        "A matrimony platform with matchmaking search, real-time messaging, profile privacy, and secure online payments — built with Laravel and MySQL.",
       technologies: [
-        "Next.js",
-        "Typescript",
-        "PostgreSQL",
-        "Prisma",
+        "HTML",
         "TailwindCSS",
-        "Stripe",
-        "Shadcn UI",
-        "Magic UI",
+        "JavaScript",
+        "Laravel",
+        "MySQL",
+        "Genie",
+        "OAuth",
+        "Booststrap",
       ],
       links: [
         {
           type: "Website",
-          href: "https://magicui.design",
+          href: "https://nextrimo.com/",
           icon: <Icons.globe className="size-3" />,
         },
-        {
-          type: "Source",
-          href: "https://github.com/magicuidesign/magicui",
-          icon: <Icons.github className="size-3" />,
-        },
       ],
-      image: "",
-      video: "https://cdn.magicui.design/bento-grid.mp4",
+      image: "/Nextrimo.jpg",
+      video: "",
     },
     {
       title: "llm.report",
