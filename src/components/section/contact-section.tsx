@@ -34,13 +34,13 @@ export default function ContactSection() {
 
         <div className="flex flex-col gap-3 text-left">
           <p className="text-xs font-semibold uppercase tracking-[0.2em] text-muted-foreground">
-            Mobile App
+            TrackMate App
           </p>
           <h2 className="text-2xl font-bold tracking-tight sm:text-3xl">
-            Shop smarter with the Nextrimo app
+            Track every parcel with the TrackMate app
           </h2>
           <p className="max-w-2xl text-muted-foreground">
-            Track packages, view courier updates, and manage deliveries on the go.
+            Get real-time parcel updates, delivery milestones, and courier status in one simple tracking app.
           </p>
 
           <div className="mt-2 flex flex-wrap gap-3">
