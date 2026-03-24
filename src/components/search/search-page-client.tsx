@@ -178,7 +178,7 @@ export default function SearchPageClient() {
   };
 
   return (
-    <main className="mx-auto w-full max-w-3xl space-y-6">
+    <main className="mx-auto w-full max-w-3xl space-y-6 px-4 sm:px-0">
       <div className="flex items-center justify-between">
         <Link
           href="/"

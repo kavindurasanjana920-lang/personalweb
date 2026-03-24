@@ -176,7 +176,7 @@ export default function TrackingDetailsClient() {
   }, [waybill]);
 
   return (
-    <main className="mx-auto w-full max-w-3xl space-y-6 px-3 text-slate-800 dark:text-zinc-100 sm:px-0">
+    <main className="mx-auto w-full max-w-3xl space-y-6 px-4 text-slate-800 dark:text-zinc-100 sm:px-0">
       <div className="flex items-center justify-between">
         <Link
           href={waybill ? `/search/?q=${encodeURIComponent(waybill)}` : "/search/"}
