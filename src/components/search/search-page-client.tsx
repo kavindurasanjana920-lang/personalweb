@@ -115,7 +115,7 @@ export default function SearchPageClient() {
   const router = useRouter();
   const searchParams = useSearchParams();
 
-  const initialQuery = useMemo(() => searchParams.get("q")?.toUpperCase() ?? "", [searchParams]);
+  const initialQuery = useMemo(() => searchParams.get("q") ?? "", [searchParams]);
 
   const [searchInput, setSearchInput] = useState(initialQuery);
   const [loading, setLoading] = useState(false);
@@ -152,8 +152,9 @@ export default function SearchPageClient() {
 
   useEffect(() => {
     if (initialQuery) {
-      setSearchInput(initialQuery);
-      void runSearch(initialQuery);
+      const normalized = initialQuery.toUpperCase();
+      setSearchInput(normalized);
+      void runSearch(normalized);
     }
   }, [initialQuery]);
 
@@ -197,8 +198,10 @@ export default function SearchPageClient() {
             <input
               type="text"
               value={searchInput}
-              onChange={(e) => setSearchInput(e.target.value.toUpperCase())}
+              onChange={(e) => setSearchInput(e.target.value)}
               placeholder="Enter tracking number"
+              autoComplete="off"
+              spellCheck={false}
               className="h-12 w-full bg-transparent text-base outline-none sm:text-lg"
             />
           </div>

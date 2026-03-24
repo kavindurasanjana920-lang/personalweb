@@ -68,19 +68,27 @@ export default function HeroSection({ className }: HeroSectionProps) {
             Enter your tracking number to get real-time updates.
           </p>
 
-          <form onSubmit={handleSearch} className="w-full max-w-2xl space-y-4">
+          <form
+            onSubmit={handleSearch}
+            action="/search/"
+            method="GET"
+            className="w-full max-w-2xl space-y-4"
+          >
             <div className="rounded-2xl border bg-background/90 p-2 backdrop-blur">
-              <div className="flex items-center gap-2">
+              <div className="relative z-20 flex items-center gap-2 pointer-events-auto">
                 <div className="grid h-12 w-12 place-items-center text-muted-foreground">
                   <Search className="size-5" />
                 </div>
                 <input
                   type="text"
+                  name="q"
                   value={searchInput}
-                  onChange={(e) => setSearchInput(e.target.value.toUpperCase())}
+                  onChange={(e) => setSearchInput(e.target.value)}
                   placeholder="Enter tracking number..."
                   aria-label="Tracking number"
-                  className="h-12 flex-1 bg-transparent text-base outline-none"
+                  autoComplete="off"
+                  spellCheck={false}
+                  className="h-12 flex-1 bg-transparent text-base outline-none pointer-events-auto"
                 />
                 <Button
                   type="submit"
