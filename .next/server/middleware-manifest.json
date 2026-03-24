@@ -1,0 +1,167 @@
+{
+  "version": 3,
+  "middleware": {},
+  "sortedMiddleware": [],
+  "functions": {
+    "/blog/[slug]/opengraph-image/route": {
+      "files": [
+        "server/middleware-build-manifest.js",
+        "server/interception-route-rewrite-manifest.js",
+        "required-server-files.js",
+        "server/server-reference-manifest.js",
+        "server/app/blog/[slug]/opengraph-image/route_client-reference-manifest.js",
+        "server/edge/chunks/_next-internal_server_app_blog_[slug]_opengraph-image_route_actions_5c82de90.js",
+        "server/edge/chunks/[root-of-the-server]__0b38117e._.js",
+        "server/edge/chunks/node_modules_next_dist_esm_build_templates_edge-app-route_a328c922.js",
+        "server/edge/chunks/[root-of-the-server]__c17ce01d._.js",
+        "server/edge/chunks/node_modules_next_dist_compiled_@vercel_og_16be1ace._.js",
+        "server/edge/chunks/turbopack-node_modules_next_dist_esm_build_templates_edge-wrapper_5f6d1c4a.js"
+      ],
+      "name": "app/blog/[slug]/opengraph-image/route",
+      "page": "/blog/[slug]/opengraph-image/route",
+      "matchers": [
+        {
+          "regexp": "^/blog/(?P<nxtPslug>[^/]+?)/opengraph-image(?:/)?$",
+          "originalSource": "/blog/[slug]/opengraph-image"
+        }
+      ],
+      "wasm": [
+        {
+          "name": "wasm_fdb56e4cc5936d29",
+          "filePath": "server/edge/chunks/node_modules_next_dist_compiled_@vercel_og_resvg_23ace1ce.wasm"
+        },
+        {
+          "name": "wasm_1ccdc983b1fd9f87",
+          "filePath": "server/edge/chunks/node_modules_next_dist_compiled_@vercel_og_yoga_23ace1ce.wasm"
+        }
+      ],
+      "assets": [
+        {
+          "name": "server/edge/assets/CabinetGrotesk-Medium.51c46af4.ttf",
+          "filePath": "server/edge/assets/CabinetGrotesk-Medium.51c46af4.ttf"
+        },
+        {
+          "name": "server/edge/assets/ClashDisplay-Semibold.c5d4e33f.ttf",
+          "filePath": "server/edge/assets/ClashDisplay-Semibold.c5d4e33f.ttf"
+        },
+        {
+          "name": "server/edge/assets/noto-sans-v27-latin-regular.bdfa676c.ttf",
+          "filePath": "server/edge/assets/noto-sans-v27-latin-regular.bdfa676c.ttf"
+        }
+      ],
+      "env": {
+        "__NEXT_BUILD_ID": "sTcAWSxcp6eMZZgzp-1Lj",
+        "NEXT_SERVER_ACTIONS_ENCRYPTION_KEY": "aLoucSxJdCaYZvID6KIolT7RyhI/02aQG4O2ArEqJbE=",
+        "__NEXT_PREVIEW_MODE_ID": "b76a1da16e813bd71d80c7b951691850",
+        "__NEXT_PREVIEW_MODE_ENCRYPTION_KEY": "c8d951db0c243023ae8686b82cc2bb16969fdb149a071282c7ecfbede1707566",
+        "__NEXT_PREVIEW_MODE_SIGNING_KEY": "a3e25cba0f9e67b197e4078f98687f770d607320e4315818e5beff46d9404436"
+      }
+    },
+    "/blog/opengraph-image/route": {
+      "files": [
+        "server/middleware-build-manifest.js",
+        "server/interception-route-rewrite-manifest.js",
+        "required-server-files.js",
+        "server/server-reference-manifest.js",
+        "server/app/blog/opengraph-image/route_client-reference-manifest.js",
+        "server/edge/chunks/_next-internal_server_app_blog_opengraph-image_route_actions_959ac924.js",
+        "server/edge/chunks/[root-of-the-server]__1ec5710b._.js",
+        "server/edge/chunks/[root-of-the-server]__c17ce01d._.js",
+        "server/edge/chunks/node_modules_next_dist_compiled_@vercel_og_16be1ace._.js",
+        "server/edge/chunks/turbopack-node_modules_next_dist_esm_build_templates_edge-wrapper_ab41278a.js"
+      ],
+      "name": "app/blog/opengraph-image/route",
+      "page": "/blog/opengraph-image/route",
+      "matchers": [
+        {
+          "regexp": "^/blog/opengraph-image(?:/)?$",
+          "originalSource": "/blog/opengraph-image"
+        }
+      ],
+      "wasm": [
+        {
+          "name": "wasm_fdb56e4cc5936d29",
+          "filePath": "server/edge/chunks/node_modules_next_dist_compiled_@vercel_og_resvg_23ace1ce.wasm"
+        },
+        {
+          "name": "wasm_1ccdc983b1fd9f87",
+          "filePath": "server/edge/chunks/node_modules_next_dist_compiled_@vercel_og_yoga_23ace1ce.wasm"
+        }
+      ],
+      "assets": [
+        {
+          "name": "server/edge/assets/CabinetGrotesk-Medium.51c46af4.ttf",
+          "filePath": "server/edge/assets/CabinetGrotesk-Medium.51c46af4.ttf"
+        },
+        {
+          "name": "server/edge/assets/ClashDisplay-Semibold.c5d4e33f.ttf",
+          "filePath": "server/edge/assets/ClashDisplay-Semibold.c5d4e33f.ttf"
+        },
+        {
+          "name": "server/edge/assets/noto-sans-v27-latin-regular.bdfa676c.ttf",
+          "filePath": "server/edge/assets/noto-sans-v27-latin-regular.bdfa676c.ttf"
+        }
+      ],
+      "env": {
+        "__NEXT_BUILD_ID": "sTcAWSxcp6eMZZgzp-1Lj",
+        "NEXT_SERVER_ACTIONS_ENCRYPTION_KEY": "aLoucSxJdCaYZvID6KIolT7RyhI/02aQG4O2ArEqJbE=",
+        "__NEXT_PREVIEW_MODE_ID": "b76a1da16e813bd71d80c7b951691850",
+        "__NEXT_PREVIEW_MODE_ENCRYPTION_KEY": "c8d951db0c243023ae8686b82cc2bb16969fdb149a071282c7ecfbede1707566",
+        "__NEXT_PREVIEW_MODE_SIGNING_KEY": "a3e25cba0f9e67b197e4078f98687f770d607320e4315818e5beff46d9404436"
+      }
+    },
+    "/opengraph-image/route": {
+      "files": [
+        "server/middleware-build-manifest.js",
+        "server/interception-route-rewrite-manifest.js",
+        "required-server-files.js",
+        "server/server-reference-manifest.js",
+        "server/app/opengraph-image/route_client-reference-manifest.js",
+        "server/edge/chunks/_next-internal_server_app_opengraph-image_route_actions_238d033d.js",
+        "server/edge/chunks/[root-of-the-server]__0621039e._.js",
+        "server/edge/chunks/[root-of-the-server]__c17ce01d._.js",
+        "server/edge/chunks/node_modules_next_dist_compiled_@vercel_og_16be1ace._.js",
+        "server/edge/chunks/turbopack-node_modules_next_dist_esm_build_templates_edge-wrapper_cddfff26.js"
+      ],
+      "name": "app/opengraph-image/route",
+      "page": "/opengraph-image/route",
+      "matchers": [
+        {
+          "regexp": "^/opengraph-image(?:/)?$",
+          "originalSource": "/opengraph-image"
+        }
+      ],
+      "wasm": [
+        {
+          "name": "wasm_fdb56e4cc5936d29",
+          "filePath": "server/edge/chunks/node_modules_next_dist_compiled_@vercel_og_resvg_23ace1ce.wasm"
+        },
+        {
+          "name": "wasm_1ccdc983b1fd9f87",
+          "filePath": "server/edge/chunks/node_modules_next_dist_compiled_@vercel_og_yoga_23ace1ce.wasm"
+        }
+      ],
+      "assets": [
+        {
+          "name": "server/edge/assets/CabinetGrotesk-Medium.51c46af4.ttf",
+          "filePath": "server/edge/assets/CabinetGrotesk-Medium.51c46af4.ttf"
+        },
+        {
+          "name": "server/edge/assets/ClashDisplay-Semibold.c5d4e33f.ttf",
+          "filePath": "server/edge/assets/ClashDisplay-Semibold.c5d4e33f.ttf"
+        },
+        {
+          "name": "server/edge/assets/noto-sans-v27-latin-regular.bdfa676c.ttf",
+          "filePath": "server/edge/assets/noto-sans-v27-latin-regular.bdfa676c.ttf"
+        }
+      ],
+      "env": {
+        "__NEXT_BUILD_ID": "sTcAWSxcp6eMZZgzp-1Lj",
+        "NEXT_SERVER_ACTIONS_ENCRYPTION_KEY": "aLoucSxJdCaYZvID6KIolT7RyhI/02aQG4O2ArEqJbE=",
+        "__NEXT_PREVIEW_MODE_ID": "b76a1da16e813bd71d80c7b951691850",
+        "__NEXT_PREVIEW_MODE_ENCRYPTION_KEY": "c8d951db0c243023ae8686b82cc2bb16969fdb149a071282c7ecfbede1707566",
+        "__NEXT_PREVIEW_MODE_SIGNING_KEY": "a3e25cba0f9e67b197e4078f98687f770d607320e4315818e5beff46d9404436"
+      }
+    }
+  }
+}
