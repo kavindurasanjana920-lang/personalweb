@@ -2,7 +2,6 @@
 
 import { Search } from "lucide-react";
 import Image from "next/image";
-import { useState } from "react";
 import { useRouter } from "next/navigation";
 
 import { Button } from "@/components/ui/button";
@@ -15,10 +14,13 @@ interface HeroSectionProps {
 
 export default function HeroSection({ className }: HeroSectionProps) {
   const router = useRouter();
-  const [searchInput, setSearchInput] = useState("");
 
   const handleSearch = async (e: React.FormEvent) => {
     e.preventDefault();
+
+    const formData = new FormData(e.currentTarget as HTMLFormElement);
+    const rawWaybill = formData.get("q");
+    const searchInput = typeof rawWaybill === "string" ? rawWaybill : "";
 
     const waybillId = searchInput.trim().toUpperCase();
     if (!waybillId) {
@@ -82,8 +84,6 @@ export default function HeroSection({ className }: HeroSectionProps) {
                 <input
                   type="text"
                   name="q"
-                  value={searchInput}
-                  onChange={(e) => setSearchInput(e.target.value)}
                   placeholder="Enter tracking number..."
                   aria-label="Tracking number"
                   autoComplete="off"
