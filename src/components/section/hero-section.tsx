@@ -1,5 +1,9 @@
+"use client";
+
 import { Search } from "lucide-react";
 import Image from "next/image";
+import { useState } from "react";
+import { useRouter } from "next/navigation";
 
 import { Button } from "@/components/ui/button";
 import Glow from "@/components/ui/glow";
@@ -10,6 +14,19 @@ interface HeroSectionProps {
 }
 
 export default function HeroSection({ className }: HeroSectionProps) {
+  const router = useRouter();
+  const [searchInput, setSearchInput] = useState("");
+
+  const handleSearch = async (e: React.FormEvent) => {
+    e.preventDefault();
+
+    const waybillId = searchInput.trim().toUpperCase();
+    if (!waybillId) {
+      return;
+    }
+    router.push(`/search?q=${encodeURIComponent(waybillId)}`);
+  };
+
   return (
     <section className={cn("group relative isolate overflow-visible pt-6", className)}>
       <div className="relative z-10 mx-auto w-full max-w-3xl">
@@ -41,29 +58,34 @@ export default function HeroSection({ className }: HeroSectionProps) {
             Enter your tracking number to get real-time updates.
           </p>
 
-          <div className="w-full max-w-2xl rounded-2xl border bg-background/90 p-2 backdrop-blur">
-            <div className="flex items-center gap-2">
-              <div className="grid h-12 w-12 place-items-center text-muted-foreground">
-                <Search className="size-5" />
+          <form onSubmit={handleSearch} className="w-full max-w-2xl space-y-4">
+            <div className="rounded-2xl border bg-background/90 p-2 backdrop-blur">
+              <div className="flex items-center gap-2">
+                <div className="grid h-12 w-12 place-items-center text-muted-foreground">
+                  <Search className="size-5" />
+                </div>
+                <input
+                  type="text"
+                  value={searchInput}
+                  onChange={(e) => setSearchInput(e.target.value.toUpperCase())}
+                  placeholder="Enter tracking number..."
+                  aria-label="Tracking number"
+                  className="h-12 flex-1 bg-transparent text-base outline-none"
+                />
+                <Button
+                  type="submit"
+                  className="h-12 rounded-xl bg-orange-500 px-5 text-white hover:bg-orange-500/90"
+                >
+                  <Search className="size-5" />
+                </Button>
               </div>
-              <input
-                type="text"
-                readOnly
-                value="Enter tracking number..."
-                aria-label="Tracking number"
-                className="h-12 flex-1 bg-transparent text-base text-muted-foreground outline-none"
-              />
-              <Button className="h-12 rounded-xl bg-orange-500 px-5 text-white hover:bg-orange-500/90">
-                <Search className="size-5" />
-              </Button>
             </div>
-          </div>
-
+          </form>
         </div>
       </div>
-          <div className="pointer-events-none absolute top-[42%] left-1/2 z-0 h-[430px] w-[100vw] max-w-[1100px] -translate-x-1/2 -translate-y-1/2 transition-opacity duration-300 group-hover:opacity-100 overflow-x-clip sm:w-full sm:overflow-visible">
-            <Glow variant="center" />
-          </div>
+      <div className="pointer-events-none absolute top-[42%] left-1/2 z-0 h-[430px] w-[100vw] max-w-[1100px] -translate-x-1/2 -translate-y-1/2 transition-opacity duration-300 group-hover:opacity-100 overflow-x-clip sm:w-full sm:overflow-visible">
+        <Glow variant="center" />
+      </div>
     </section>
   );
 }

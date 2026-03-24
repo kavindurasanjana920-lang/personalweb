@@ -4,7 +4,6 @@ import { withContentCollections } from "@content-collections/next";
 const nextConfig = {
   reactStrictMode: true,
   devIndicators: false,
-  output: "export",
   images: {
     unoptimized: true,
   },

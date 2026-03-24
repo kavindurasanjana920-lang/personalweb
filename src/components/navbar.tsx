@@ -19,7 +19,6 @@ function GooglePlayIcon({ className }: { className?: string }) {
   return (
     <svg
       viewBox="0 0 24 24"
-      fill="none"
       xmlns="http://www.w3.org/2000/svg"
       className={className}
       aria-hidden="true"
@@ -27,10 +26,8 @@ function GooglePlayIcon({ className }: { className?: string }) {
       <path d="M5 4.5v15l10.5-7.5L5 4.5Z" fill="currentColor" />
       <path
         d="M16.2 11.3 19 9.4c.8-.5.8-1.7 0-2.2L7.3 1.9a1.2 1.2 0 0 0-1.7 1.1v18a1.2 1.2 0 0 0 1.7 1.1L19 16.8c.8-.4.8-1.6 0-2.1l-2.8-1.9"
-        stroke="currentColor"
-        strokeWidth="1.5"
-        strokeLinecap="round"
-        strokeLinejoin="round"
+        fill="currentColor"
+        fillOpacity="0.6"
       />
     </svg>
   );
