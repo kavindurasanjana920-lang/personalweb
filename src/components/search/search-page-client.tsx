@@ -41,7 +41,10 @@ interface ApiResponse {
 
 async function fetchTrackingData(waybillId: string): Promise<ApiResponse> {
   const encodedWaybill = encodeURIComponent(waybillId);
-  const endpoints = [`https://api.consumer.oms.parallaxtec.dev/api/tracking?waybill_id=${encodedWaybill}`];
+  const endpoints = [
+    `/api/tracking.php?waybill_id=${encodedWaybill}`,
+    `https://api.consumer.oms.parallaxtec.dev/api/tracking?waybill_id=${encodedWaybill}`,
+  ];
 
   let lastError = "Request failed";
 
