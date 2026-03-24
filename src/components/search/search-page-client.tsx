@@ -39,6 +39,43 @@ interface ApiResponse {
   error?: string;
 }
 
+async function fetchTrackingData(waybillId: string): Promise<ApiResponse> {
+  const encodedWaybill = encodeURIComponent(waybillId);
+  const endpoints = [
+    `/api/tracking?waybill_id=${encodedWaybill}`,
+    `https://api.consumer.oms.parallaxtec.dev/api/tracking?waybill_id=${encodedWaybill}`,
+  ];
+
+  let lastError: string | null = null;
+
+  for (const endpoint of endpoints) {
+    try {
+      const response = await fetch(endpoint, {
+        method: "GET",
+        headers: {
+          Accept: "application/json",
+        },
+      });
+
+      const rawText = await response.text();
+      const parsed = JSON.parse(rawText) as ApiResponse;
+
+      if (response.ok && parsed.success && parsed.data) {
+        return parsed;
+      }
+
+      lastError = parsed.error || `Request failed (${response.status})`;
+    } catch (error) {
+      lastError = error instanceof Error ? error.message : "Request failed";
+    }
+  }
+
+  return {
+    success: false,
+    error: lastError || "No orders found",
+  };
+}
+
 function formatDate(dateString: string) {
   const date = new Date(dateString);
   if (Number.isNaN(date.getTime())) {
@@ -96,16 +133,8 @@ export default function SearchPageClient() {
     setResult(null);
 
     try {
-      const response = await fetch(`/api/tracking?waybill_id=${encodeURIComponent(waybillId)}`, {
-        method: "GET",
-        headers: {
-          Accept: "application/json",
-        },
-      });
-
-      const data: ApiResponse = await response.json();
-
-      if (!response.ok || !data.success || !data.data) {
+      const data = await fetchTrackingData(waybillId);
+      if (!data.success || !data.data) {
         throw new Error(data.error || "No orders found");
       }
 

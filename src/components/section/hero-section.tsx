@@ -24,7 +24,17 @@ export default function HeroSection({ className }: HeroSectionProps) {
     if (!waybillId) {
       return;
     }
-    router.push(`/search?q=${encodeURIComponent(waybillId)}`);
+
+    const target = `/search/?q=${encodeURIComponent(waybillId)}`;
+    router.push(target);
+
+    // Static hosts may not always preserve Next client routing behavior.
+    // Ensure navigation still happens by falling back to a direct URL change.
+    setTimeout(() => {
+      if (window.location.pathname !== "/search/") {
+        window.location.href = target;
+      }
+    }, 120);
   };
 
   return (
