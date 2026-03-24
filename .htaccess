@@ -10,6 +10,9 @@ Options -Indexes
   RewriteEngine On
   RewriteBase /
 
+  # Map /search/<waybill>/ to static search page with query params
+  RewriteRule ^search/([^/]+)/?$ /search/?q=$1 [QSA,L,NC]
+
   # Serve existing files and directories directly
   RewriteCond %{REQUEST_FILENAME} -f [OR]
   RewriteCond %{REQUEST_FILENAME} -d
