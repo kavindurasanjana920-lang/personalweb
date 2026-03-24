@@ -1,7 +1,6 @@
 {
   "/_global-error/page": "/_global-error",
   "/_not-found/page": "/_not-found",
-  "/api/tracking/route": "/api/tracking",
   "/blog/[slug]/opengraph-image/route": "/blog/[slug]/opengraph-image",
   "/blog/[slug]/page": "/blog/[slug]",
   "/blog/opengraph-image/route": "/blog/opengraph-image",
@@ -9,6 +8,6 @@
   "/favicon.ico/route": "/favicon.ico",
   "/opengraph-image/route": "/opengraph-image",
   "/page": "/",
-  "/search/[waybillId]/page": "/search/[waybillId]",
-  "/search/page": "/search"
+  "/search/page": "/search",
+  "/tracking/page": "/tracking"
 }

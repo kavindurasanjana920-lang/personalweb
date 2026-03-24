@@ -41,12 +41,9 @@ interface ApiResponse {
 
 async function fetchTrackingData(waybillId: string): Promise<ApiResponse> {
   const encodedWaybill = encodeURIComponent(waybillId);
-  const endpoints = [
-    `/api/tracking?waybill_id=${encodedWaybill}`,
-    `https://api.consumer.oms.parallaxtec.dev/api/tracking?waybill_id=${encodedWaybill}`,
-  ];
+  const endpoints = [`https://api.consumer.oms.parallaxtec.dev/api/tracking?waybill_id=${encodedWaybill}`];
 
-  let lastError: string | null = null;
+  let lastError = "Request failed";
 
   for (const endpoint of endpoints) {
     try {
@@ -72,7 +69,7 @@ async function fetchTrackingData(waybillId: string): Promise<ApiResponse> {
 
   return {
     success: false,
-    error: lastError || "No orders found",
+    error: lastError,
   };
 }
 
@@ -229,7 +226,7 @@ export default function SearchPageClient() {
 
             {result ? (
               <Link
-                href={`/search/${encodeURIComponent(result.waybill_id)}`}
+                href={`/tracking/?q=${encodeURIComponent(result.waybill_id)}`}
                 className="block overflow-hidden rounded-3xl border bg-card transition hover:shadow-sm"
               >
                 <div className="flex items-start justify-between gap-4 p-5 sm:p-6">

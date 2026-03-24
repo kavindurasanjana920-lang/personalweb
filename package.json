@@ -8,6 +8,7 @@
   "scripts": {
     "dev": "next dev --webpack",
     "build": "next build",
+    "build:hosting": "next build && cp .htaccess out/.htaccess",
     "start": "next start",
     "lint": "eslint",
     "lint:fix": "eslint --fix"

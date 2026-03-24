@@ -50,14 +50,6 @@
         "nxtPslug": "nxtPslug"
       },
       "namedRegex": "^/blog/(?<nxtPslug>[^/]+?)/opengraph\\-image(?:/)?$"
-    },
-    {
-      "page": "/search/[waybillId]",
-      "regex": "^/search/([^/]+?)(?:/)?$",
-      "routeKeys": {
-        "nxtPwaybillId": "nxtPwaybillId"
-      },
-      "namedRegex": "^/search/(?<nxtPwaybillId>[^/]+?)(?:/)?$"
     }
   ],
   "staticRoutes": [
@@ -78,12 +70,6 @@
       "regex": "^/_not\\-found(?:/)?$",
       "routeKeys": {},
       "namedRegex": "^/_not\\-found(?:/)?$"
-    },
-    {
-      "page": "/api/tracking",
-      "regex": "^/api/tracking(?:/)?$",
-      "routeKeys": {},
-      "namedRegex": "^/api/tracking(?:/)?$"
     },
     {
       "page": "/blog",
@@ -114,6 +100,12 @@
       "regex": "^/search(?:/)?$",
       "routeKeys": {},
       "namedRegex": "^/search(?:/)?$"
+    },
+    {
+      "page": "/tracking",
+      "regex": "^/tracking(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/tracking(?:/)?$"
     }
   ],
   "dataRoutes": [],
