@@ -45,7 +45,7 @@ const NAV_ITEMS = [
 export default function Navbar() {
   return (
     <div className="pointer-events-none fixed inset-x-0 bottom-4 z-30">
-      <Dock className="z-50 pointer-events-auto relative h-14 p-2 w-fit mx-auto flex gap-2 border bg-card/90 backdrop-blur-3xl shadow-[0_0_10px_3px] shadow-primary/5">
+      <Dock className="z-50 pointer-events-auto relative h-14 p-2 w-fit mx-auto flex gap-2 border bg-card/90 backdrop-blur-3xl">
         {NAV_ITEMS.map((item) => {
           const isExternal = item.href.startsWith("http");
           return (
@@ -64,7 +64,7 @@ export default function Navbar() {
               <TooltipContent
                 side="top"
                 sideOffset={8}
-                className="rounded-xl bg-primary text-primary-foreground px-4 py-2 text-sm shadow-[0_10px_40px_-10px_rgba(0,0,0,0.3)] dark:shadow-[0_10px_40px_-10px_rgba(0,0,0,0.5)]"
+                className="rounded-xl bg-primary text-primary-foreground px-4 py-2 text-sm"
               >
                 <p>{item.label}</p>
                 <TooltipArrow className="fill-primary" />
@@ -85,7 +85,7 @@ export default function Navbar() {
           <TooltipContent
             side="top"
             sideOffset={8}
-            className="rounded-xl bg-primary text-primary-foreground px-4 py-2 text-sm shadow-[0_10px_40px_-10px_rgba(0,0,0,0.3)] dark:shadow-[0_10px_40px_-10px_rgba(0,0,0,0.5)]"
+            className="rounded-xl bg-primary text-primary-foreground px-4 py-2 text-sm"
           >
             <p>Theme</p>
             <TooltipArrow className="fill-primary" />

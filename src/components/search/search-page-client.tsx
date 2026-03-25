@@ -111,6 +111,11 @@ function formatStatusText(value: string) {
     .replace(/\b\w/g, (char) => char.toUpperCase());
 }
 
+function isSuccessStatus(value: string) {
+  const normalized = value.trim().toLowerCase();
+  return ["delivered", "success", "successful", "completed", "complete"].some((term) => normalized.includes(term));
+}
+
 export default function SearchPageClient() {
   const router = useRouter();
   const searchParams = useSearchParams();
@@ -252,7 +257,13 @@ export default function SearchPageClient() {
                 </div>
 
                 <div className="flex items-center justify-between gap-3 border-t p-4 sm:p-6">
-                  <div className="inline-flex items-center gap-2 rounded-2xl border border-orange-300/80 bg-orange-50 px-4 py-2 text-orange-600 dark:border-orange-700/60 dark:bg-orange-900/20 dark:text-orange-300">
+                  <div
+                    className={`inline-flex items-center gap-2 rounded-2xl border px-4 py-2 ${
+                      isSuccessStatus(result.current_status)
+                        ? "border-emerald-300/80 bg-emerald-50 text-emerald-700 dark:border-emerald-700/60 dark:bg-emerald-900/20 dark:text-emerald-300"
+                        : "border-orange-300/80 bg-orange-50 text-orange-600 dark:border-orange-700/60 dark:bg-orange-900/20 dark:text-orange-300"
+                    }`}
+                  >
                     <Package className="size-4" />
                     <span className="text-sm font-semibold">{formatStatusText(result.current_status)}</span>
                   </div>

@@ -29,7 +29,7 @@ export default function CourierPartnersSection() {
           {COURIER_LOGOS.map((logo) => (
             <div
               key={logo.src}
-              className="relative flex min-h-24 items-center justify-center overflow-hidden rounded-xl border bg-background/85 p-3 shadow-sm"
+              className="relative flex min-h-24 items-center justify-center overflow-hidden rounded-xl border bg-background/85 p-3"
             >
               {logo.darkSrc ? (
                 <>

@@ -8,7 +8,7 @@ export default function ContactSection() {
 
       <div className="relative flex flex-col items-start gap-6 sm:flex-row sm:items-center sm:gap-8">
         <div className="mx-auto sm:mx-0">
-          <div className="relative h-32 w-20 rounded-[1.4rem] border-2 border-emerald-600 bg-gradient-to-b from-emerald-50 to-emerald-100 p-1 shadow-sm dark:from-emerald-950/40 dark:to-emerald-900/40">
+          <div className="relative h-32 w-20 rounded-[1.4rem] border-2 border-emerald-600 bg-gradient-to-b from-emerald-50 to-emerald-100 p-1 dark:from-emerald-950/40 dark:to-emerald-900/40">
             <div className="mb-1 flex h-4 items-center justify-center rounded-full bg-emerald-500/90" />
             <div className="space-y-1 rounded-xl bg-background p-1.5">
               <div className="h-2 w-10 rounded bg-emerald-500/70" />

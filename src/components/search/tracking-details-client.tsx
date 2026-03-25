@@ -102,6 +102,11 @@ function formatStatusText(value: string) {
     .replace(/\b\w/g, (char) => char.toUpperCase());
 }
 
+function isSuccessStatus(value: string) {
+  const normalized = value.trim().toLowerCase();
+  return ["delivered", "success", "successful", "completed", "complete"].some((term) => normalized.includes(term));
+}
+
 function formatPartnerName(value: string) {
   const normalized = value.trim().toLowerCase();
   if (normalized === "transexpress") {
@@ -219,7 +224,13 @@ export default function TrackingDetailsClient() {
                   {formatPartnerName(result.delivery_partner?.name || "Delivery Partner")}
                 </p>
                 <p className="mt-2 text-base text-slate-500 dark:text-zinc-400">Order Placed on {formatDateTime(result.order_date)}</p>
-                <p className="mt-3 inline-flex items-center gap-2 rounded-2xl border border-[#ffd8a8] bg-[#fff4e8] px-4 py-2 text-[#de7b00] dark:border-[#5c3b16] dark:bg-[#2a1b09] dark:text-[#ffb25c]">
+                <p
+                  className={`mt-3 inline-flex items-center gap-2 rounded-2xl border px-4 py-2 ${
+                    isSuccessStatus(result.current_status)
+                      ? "border-emerald-300/80 bg-emerald-50 text-emerald-700 dark:border-emerald-700/60 dark:bg-emerald-900/20 dark:text-emerald-300"
+                      : "border-[#ffd8a8] bg-[#fff4e8] text-[#de7b00] dark:border-[#5c3b16] dark:bg-[#2a1b09] dark:text-[#ffb25c]"
+                  }`}
+                >
                   <Package className="size-4" />
                   <span className="text-sm font-semibold">{formatStatusText(result.current_status)}</span>
                 </p>
