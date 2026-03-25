@@ -2,7 +2,7 @@
 
 import { useEffect, useMemo, useState } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
-import { ArrowLeft, Package, Search } from "lucide-react";
+import { ArrowLeft, ArrowRight, Package, Search } from "lucide-react";
 import Link from "next/link";
 
 import { Button } from "@/components/ui/button";
@@ -256,7 +256,10 @@ export default function SearchPageClient() {
                     <Package className="size-4" />
                     <span className="text-sm font-semibold">{formatStatusText(result.current_status)}</span>
                   </div>
-                  <p className="text-base font-semibold tracking-wide text-muted-foreground sm:text-lg">#{result.waybill_id}</p>
+                  <div className="inline-flex items-center gap-1 text-base font-semibold tracking-wide text-orange-500 sm:text-lg">
+                    <span>Tracking history</span>
+                    <ArrowRight className="size-4" aria-hidden="true" />
+                  </div>
                 </div>
               </Link>
             ) : (
