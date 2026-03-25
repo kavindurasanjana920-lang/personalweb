@@ -251,12 +251,12 @@ export default function SearchPageClient() {
                   </div>
                 </div>
 
-                <div className="flex items-center justify-between border-t p-5 sm:p-6">
+                <div className="flex items-center justify-between gap-3 border-t p-5 sm:p-6">
                   <div className="inline-flex items-center gap-2 rounded-2xl border border-orange-300/80 bg-orange-50 px-4 py-2 text-orange-600 dark:border-orange-700/60 dark:bg-orange-900/20 dark:text-orange-300">
                     <Package className="size-4" />
                     <span className="text-sm font-semibold">{formatStatusText(result.current_status)}</span>
                   </div>
-                  <div className="inline-flex items-center gap-1 text-base font-semibold tracking-wide text-orange-500 sm:text-lg">
+                  <div className="inline-flex shrink-0 items-center gap-1 whitespace-nowrap text-sm font-semibold text-orange-500 sm:text-base">
                     <span>Tracking history</span>
                     <ArrowRight className="size-4" aria-hidden="true" />
                   </div>
