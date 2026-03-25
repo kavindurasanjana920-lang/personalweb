@@ -176,7 +176,7 @@ export default function TrackingDetailsClient() {
   }, [waybill]);
 
   return (
-    <main className="mx-auto w-full max-w-3xl space-y-6 px-4 text-slate-800 dark:text-zinc-100 sm:px-0">
+    <main className="mx-auto w-full max-w-3xl space-y-6 px-0 text-slate-800 dark:text-zinc-100 sm:px-0">
       <div className="flex items-center justify-between">
         <Link
           href={waybill ? `/search/?q=${encodeURIComponent(waybill)}` : "/search/"}
@@ -203,7 +203,7 @@ export default function TrackingDetailsClient() {
       ) : null}
 
       {!loading && error ? (
-        <div className="rounded-3xl border border-[#dfe3e8] bg-white px-6 py-12 text-center dark:border-zinc-800 dark:bg-zinc-900 sm:px-10">
+        <div className="rounded-3xl border border-[#dfe3e8] bg-white px-5 py-12 text-center dark:border-zinc-800 dark:bg-zinc-900 sm:px-10">
           <h2 className="mb-2 text-3xl font-bold text-slate-900 dark:text-zinc-100 sm:text-4xl">No Orders Found</h2>
           <p className="mx-auto max-w-md text-base text-slate-500 dark:text-zinc-400 sm:text-lg">{error}</p>
         </div>
@@ -211,7 +211,7 @@ export default function TrackingDetailsClient() {
 
       {!loading && result ? (
         <div className="space-y-5">
-          <section className="rounded-3xl border border-[#dfe3e8] bg-white p-6 dark:border-zinc-800 dark:bg-zinc-900 sm:p-7">
+          <section className="rounded-3xl border border-[#dfe3e8] bg-white p-5 dark:border-zinc-800 dark:bg-zinc-900 sm:p-7">
             <div className="flex items-start justify-between gap-4">
               <div>
                 <h2 className="text-2xl font-bold uppercase text-slate-900 dark:text-zinc-100 sm:text-3xl">{result.waybill_id}</h2>
@@ -232,7 +232,7 @@ export default function TrackingDetailsClient() {
             </div>
           </section>
 
-          <section className="rounded-3xl border border-[#dfe3e8] bg-white p-6 dark:border-zinc-800 dark:bg-zinc-900 sm:p-7">
+          <section className="rounded-3xl border border-[#dfe3e8] bg-white p-5 dark:border-zinc-800 dark:bg-zinc-900 sm:p-7">
             <h3 className="mb-4 inline-flex items-center gap-2 text-lg font-semibold text-slate-900 dark:text-zinc-100 sm:text-xl">
               <Clock3 className="size-5 text-[#de7b00]" />
               Tracking History
@@ -260,7 +260,7 @@ export default function TrackingDetailsClient() {
             </div>
           </section>
 
-          <section className="rounded-3xl border border-[#dfe3e8] bg-white p-6 dark:border-zinc-800 dark:bg-zinc-900 sm:p-7">
+          <section className="rounded-3xl border border-[#dfe3e8] bg-white p-5 dark:border-zinc-800 dark:bg-zinc-900 sm:p-7">
             <h3 className="mb-4 inline-flex items-center gap-2 text-lg font-semibold text-slate-900 dark:text-zinc-100 sm:text-xl">
               <Package className="size-5 text-[#de7b00]" />
               Package Details
@@ -294,7 +294,7 @@ export default function TrackingDetailsClient() {
             </div>
           </section>
 
-          <section className="rounded-3xl border border-[#dfe3e8] bg-white p-6 dark:border-zinc-800 dark:bg-zinc-900 sm:p-7">
+          <section className="rounded-3xl border border-[#dfe3e8] bg-white p-5 dark:border-zinc-800 dark:bg-zinc-900 sm:p-7">
             <h3 className="mb-4 inline-flex items-center gap-2 text-lg font-semibold text-slate-900 dark:text-zinc-100 sm:text-xl">
               <Truck className="size-5 text-[#de7b00]" />
               Delivery Partner

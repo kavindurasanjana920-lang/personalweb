@@ -178,7 +178,7 @@ export default function SearchPageClient() {
   };
 
   return (
-    <main className="mx-auto w-full max-w-3xl space-y-6 px-4 sm:px-0">
+    <main className="mx-auto w-full max-w-3xl space-y-6 px-0 sm:px-0">
       <div className="flex items-center justify-between">
         <Link
           href="/"
@@ -232,7 +232,7 @@ export default function SearchPageClient() {
                 href={`/tracking/?q=${encodeURIComponent(result.waybill_id)}`}
                 className="block overflow-hidden rounded-3xl border bg-card transition hover:shadow-sm"
               >
-                <div className="flex items-start justify-between gap-4 p-5 sm:p-6">
+                <div className="flex items-start justify-between gap-4 p-4 sm:p-6">
                   <div className="flex items-start gap-4">
                     <div className="grid size-14 place-items-center rounded-full bg-blue-50 text-blue-500 dark:bg-blue-900/30 dark:text-blue-300">
                       <Package className="size-7" />
@@ -251,7 +251,7 @@ export default function SearchPageClient() {
                   </div>
                 </div>
 
-                <div className="flex items-center justify-between gap-3 border-t p-5 sm:p-6">
+                <div className="flex items-center justify-between gap-3 border-t p-4 sm:p-6">
                   <div className="inline-flex items-center gap-2 rounded-2xl border border-orange-300/80 bg-orange-50 px-4 py-2 text-orange-600 dark:border-orange-700/60 dark:bg-orange-900/20 dark:text-orange-300">
                     <Package className="size-4" />
                     <span className="text-sm font-semibold">{formatStatusText(result.current_status)}</span>
@@ -263,7 +263,7 @@ export default function SearchPageClient() {
                 </div>
               </Link>
             ) : (
-              <div className="rounded-3xl border bg-card px-6 py-12 text-center sm:px-10">
+              <div className="rounded-3xl border bg-card px-5 py-12 text-center sm:px-10">
                 <div className="mx-auto mb-5 grid size-24 place-items-center rounded-full bg-muted/50">
                   <Search className="size-11 text-muted-foreground" />
                 </div>
