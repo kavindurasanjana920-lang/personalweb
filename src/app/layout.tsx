@@ -22,6 +22,11 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   metadataBase: new URL(DATA.url),
+  icons: {
+    icon: "/dark.png",
+    shortcut: "/dark.png",
+    apple: "/dark.png",
+  },
   title: {
     default: DATA.name,
     template: `%s | ${DATA.name}`,
