@@ -1,6 +1,5 @@
 import { DATA } from "@/data/resume";
 import type { MetadataRoute } from "next";
-import { allPosts } from "content-collections";
 
 export const dynamic = "force-static";
 
@@ -13,12 +12,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: new Date(),
       changeFrequency: "weekly",
       priority: 1,
-    },
-    {
-      url: `${baseUrl}/blog/`,
-      lastModified: new Date(),
-      changeFrequency: "weekly",
-      priority: 0.9,
     },
     {
       url: `${baseUrl}/search/`,
@@ -34,17 +27,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
   ];
 
-  const blogRoutes: MetadataRoute.Sitemap = allPosts.map((post) => {
-    const slug = post._meta.path.replace(/\.mdx$/, "");
-    const lastModified = post.updatedAt ?? post.publishedAt;
-
-    return {
-      url: `${baseUrl}/blog/${slug}/`,
-      lastModified: new Date(lastModified),
-      changeFrequency: "monthly",
-      priority: 0.8,
-    };
-  });
-
-  return [...staticRoutes, ...blogRoutes];
+  return staticRoutes;
 }
