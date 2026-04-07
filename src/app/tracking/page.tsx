@@ -1,6 +1,22 @@
 import { Suspense } from "react";
+import type { Metadata } from "next";
 
 import TrackingDetailsClient from "@/components/search/tracking-details-client";
+
+export const metadata: Metadata = {
+  title: "Track Delivery Status | Courier Tracking Updates",
+  description:
+    "Check live delivery milestones and parcel status with fast courier tracking updates for domex, transexpress, koombiyo, fadar, royal express, and more.",
+  keywords: [
+    "domex tracking",
+    "transexpress tracking",
+    "koombiyo tracking",
+    "fadar tracking",
+    "royal express tracking",
+    "pracle tracking",
+    "courier tracking",
+  ],
+};
 
 function TrackingDetailsFallback() {
   return (

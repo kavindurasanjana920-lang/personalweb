@@ -1,5 +1,19 @@
 import { Suspense } from "react";
+import type { Metadata } from "next";
 import SearchPageClient from "@/components/search/search-page-client";
+
+export const metadata: Metadata = {
+  title: "Search Courier Tracking | Domex, TransExpress, Koombiyo",
+  description:
+    "Search your waybill and track deliveries across multiple courier services including domex tracking, transexpress tracking, koombiyo tracking, and royal express tracking.",
+  keywords: [
+    "domex tracking",
+    "transexpress tracking",
+    "koombiyo tracking",
+    "royal express tracking",
+    "courier tracking",
+  ],
+};
 
 function SearchPageFallback() {
   return (

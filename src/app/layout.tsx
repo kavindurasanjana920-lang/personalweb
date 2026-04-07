@@ -22,6 +22,15 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   metadataBase: new URL(DATA.url),
+  keywords: [
+    "domex tracking",
+    "transexpress tracking",
+    "koombiyo tracking",
+    "fadar tracking",
+    "royal express tracking",
+    "pracle tracking",
+    "courier tracking",
+  ],
   icons: {
     icon: "/favicon.png?v=2",
     shortcut: "/favicon.png?v=2",
@@ -39,6 +48,14 @@ export const metadata: Metadata = {
     siteName: `${DATA.name}`,
     locale: "en_US",
     type: "website",
+    images: [
+      {
+        url: `${DATA.url}/dark.png`,
+        width: 768,
+        height: 768,
+        alt: `${DATA.name} logo`,
+      },
+    ],
   },
   robots: {
     index: true,
@@ -54,6 +71,7 @@ export const metadata: Metadata = {
   twitter: {
     title: `${DATA.name}`,
     card: "summary_large_image",
+    images: [`${DATA.url}/dark.png`],
   },
   verification: {
     google: "",

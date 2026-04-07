@@ -5,6 +5,7 @@ export const dynamic = "force-static";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = DATA.url.replace(/\/$/, "");
+  const siteImage = `${baseUrl}/dark.png`;
 
   const staticRoutes: MetadataRoute.Sitemap = [
     {
@@ -12,18 +13,21 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: new Date(),
       changeFrequency: "weekly",
       priority: 1,
+      images: [siteImage],
     },
     {
       url: `${baseUrl}/search/`,
       lastModified: new Date(),
       changeFrequency: "monthly",
       priority: 0.7,
+      images: [siteImage],
     },
     {
       url: `${baseUrl}/tracking/`,
       lastModified: new Date(),
       changeFrequency: "monthly",
       priority: 0.7,
+      images: [siteImage],
     },
   ];
 

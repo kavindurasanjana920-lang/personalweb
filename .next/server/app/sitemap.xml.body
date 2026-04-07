@@ -1,20 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
 <url>
 <loc>https://trackmate.lk/</loc>
-<lastmod>2026-04-07T10:55:50.752Z</lastmod>
+<image:image>
+<image:loc>https://trackmate.lk/dark.png</image:loc>
+</image:image>
+<lastmod>2026-04-07T11:12:26.941Z</lastmod>
 <changefreq>weekly</changefreq>
 <priority>1</priority>
 </url>
 <url>
 <loc>https://trackmate.lk/search/</loc>
-<lastmod>2026-04-07T10:55:50.752Z</lastmod>
+<image:image>
+<image:loc>https://trackmate.lk/dark.png</image:loc>
+</image:image>
+<lastmod>2026-04-07T11:12:26.941Z</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.7</priority>
 </url>
 <url>
 <loc>https://trackmate.lk/tracking/</loc>
-<lastmod>2026-04-07T10:55:50.752Z</lastmod>
+<image:image>
+<image:loc>https://trackmate.lk/dark.png</image:loc>
+</image:image>
+<lastmod>2026-04-07T11:12:26.941Z</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.7</priority>
 </url>
