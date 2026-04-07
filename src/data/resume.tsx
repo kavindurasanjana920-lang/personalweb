@@ -5,7 +5,7 @@ import { HomeIcon, NotebookIcon } from "lucide-react";
 export const DATA = {
   name: "TrackMate",
   initials: "KR",
-  url: "https://dillion.io",
+  url: "https://trackmate.lk",
   location: "Colombo, SL",
   description: "Track your packages with real-time delivery updates.",
   avatarUrl: "/dark.png",

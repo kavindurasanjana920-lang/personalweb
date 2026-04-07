@@ -1,3 +1,0 @@
-module.exports=[89221,a=>{"use strict";a.i(7997),a.i(99475);let b=a.i(56176).DATA.name;var c=a.i(52425);let d={alt:b,contentType:"image/png",dynamic:"force-static",runtime:"edge",size:{width:1200,height:630}};async function e(a){let{__metadata_id__:b,...e}=await a.params,f=(0,c.fillMetadataSegment)("/",e,"opengraph-image");return[function(a,b){let c={alt:a.alt,type:a.contentType||"image/png",url:f+"?b90f8c397b2b0c39"},{size:d}=a;return d&&(c.width=d.width,c.height=d.height),c}(d,0)]}a.s(["default",0,e],89221)},91227,a=>{a.v(b=>Promise.all(["server/chunks/ssr/[externals]_next_dist_compiled_@vercel_og_index_node_055f47ab.js"].map(b=>a.l(b))).then(()=>b(21425)))}];
-
-//# sourceMappingURL=%5Broot-of-the-server%5D__82b9383e._.js.map
