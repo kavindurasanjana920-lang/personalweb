@@ -2617,9 +2617,9 @@ const DATA = {
         {
             title: "Scoreness",
             href: "https://scoreness.com/",
-            dates: "March 2025 - June 2024",
+            dates: "March 2025 - June 2025",
             active: true,
-            description: "With the release of the [OpenAI GPT Store](https://openai.com/blog/introducing-the-gpt-store), I decided to build a SaaS which allows users to collect email addresses from their GPT users. This is a great way to build an audience and monetize your GPT API usage.",
+            description: "A comprehensive review platform built with React.js and Laravel, featuring automated business listing workflows, verified review submissions, scam reporting, and a side-by-side business comparison tool.",
             technologies: [
                 "React.js",
                 "TailwindCSS",
@@ -2627,7 +2627,7 @@ const DATA = {
                 "Laravel",
                 "MySQL",
                 "Genie",
-                "Teaxt.lk",
+                "OAuth",
                 "Geolocation API"
             ],
             links: [
@@ -2643,29 +2643,29 @@ const DATA = {
                     }, ("TURBOPACK compile-time value", void 0))
                 }
             ],
-            image: "/Saas Landing Pages (5).svg",
+            image: "/Scoreness.svg",
             video: ""
         },
         {
-            title: "Magic UI",
-            href: "https://magicui.design",
-            dates: "June 2023 - Present",
+            title: "Nextrimo",
+            href: "https://nextrimo.com/",
+            dates: "May 2025 - Sep 2025",
             active: true,
-            description: "Designed, developed and sold animated UI components for developers.",
+            description: "A matrimony platform with matchmaking search, real-time messaging, profile privacy, and secure online payments — built with Laravel and MySQL.",
             technologies: [
-                "Next.js",
-                "Typescript",
-                "PostgreSQL",
-                "Prisma",
+                "HTML",
                 "TailwindCSS",
-                "Stripe",
-                "Shadcn UI",
-                "Magic UI"
+                "JavaScript",
+                "Laravel",
+                "MySQL",
+                "Genie",
+                "OAuth",
+                "Booststrap"
             ],
             links: [
                 {
                     type: "Website",
-                    href: "https://magicui.design",
+                    href: "https://nextrimo.com/",
                     icon: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$icons$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Icons"].globe, {
                         className: "size-3"
                     }, void 0, false, {
@@ -2673,98 +2673,74 @@ const DATA = {
                         lineNumber: 239,
                         columnNumber: 17
                     }, ("TURBOPACK compile-time value", void 0))
-                },
-                {
-                    type: "Source",
-                    href: "https://github.com/magicuidesign/magicui",
-                    icon: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$icons$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Icons"].github, {
-                        className: "size-3"
-                    }, void 0, false, {
-                        fileName: "[project]/src/data/resume.tsx",
-                        lineNumber: 244,
-                        columnNumber: 17
-                    }, ("TURBOPACK compile-time value", void 0))
                 }
             ],
-            image: "",
-            video: "https://cdn.magicui.design/bento-grid.mp4"
+            image: "/Nextrimo.jpg",
+            video: ""
         },
         {
-            title: "llm.report",
-            href: "https://llm.report",
-            dates: "April 2023 - September 2023",
+            title: "Nextrimo Mobile App",
+            href: "https://play.google.com/store/apps/details?id=com.nextrimo.nextrimo_app&hl=en-US&ah=eCRiJMhsVxHFQ0oupM1qyy3_Iis&pli=1",
+            dates: "Dec 2025 - Feb 2026",
             active: true,
-            description: "Developed an open-source logging and analytics platform for OpenAI: Log your ChatGPT API requests, analyze costs, and improve your prompts.",
+            description: "Built a cross-platform matrimony app using Flutter, integrated with a Laravel REST API and MySQL. Enabled real-time data sync with the web platform and handled full deployment to both Google Play Store and Apple App Store.",
             technologies: [
-                "Next.js",
-                "Typescript",
-                "PostgreSQL",
-                "Prisma",
-                "TailwindCSS",
-                "Shadcn UI",
-                "Magic UI",
-                "Stripe",
-                "Cloudflare Workers"
+                "Flutter",
+                "Laravel",
+                "JavaScript",
+                "MySQL",
+                "Apple Pay",
+                "Genie",
+                "Figma",
+                "Firebase"
             ],
             links: [
                 {
-                    type: "Website",
-                    href: "https://llm.report",
+                    type: "Mobile App",
+                    href: "https://play.google.com/store/apps/details?id=com.nextrimo.nextrimo_app&hl=en-US&ah=eCRiJMhsVxHFQ0oupM1qyy3_Iis&pli=1",
                     icon: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$icons$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Icons"].globe, {
                         className: "size-3"
                     }, void 0, false, {
                         fileName: "[project]/src/data/resume.tsx",
-                        lineNumber: 272,
-                        columnNumber: 17
-                    }, ("TURBOPACK compile-time value", void 0))
-                },
-                {
-                    type: "Source",
-                    href: "https://github.com/dillionverma/llm.report",
-                    icon: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$icons$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Icons"].github, {
-                        className: "size-3"
-                    }, void 0, false, {
-                        fileName: "[project]/src/data/resume.tsx",
-                        lineNumber: 277,
+                        lineNumber: 266,
                         columnNumber: 17
                     }, ("TURBOPACK compile-time value", void 0))
                 }
             ],
-            image: "",
-            video: "https://cdn.llm.report/openai-demo.mp4"
+            image: "/group-48.png",
+            video: ""
         },
         {
-            title: "Automatic Chat",
-            href: "https://automatic.chat",
-            dates: "April 2023 - March 2024",
+            title: "CIMA Cleaners",
+            href: "https://cimacleaners.com.au/",
+            dates: "March 2024 - May 2025",
             active: true,
-            description: "Developed an AI Customer Support Chatbot which automatically responds to customer support tickets using the latest GPT models.",
+            description: "Developed an automated lead generation and booking system with dynamic pricing and flexible date scheduling. Optimized for mobile-first experience and localized SEO, targeting residential and commercial clients in the Australian market.",
             technologies: [
-                "Next.js",
-                "Typescript",
-                "PostgreSQL",
-                "Prisma",
-                "TailwindCSS",
-                "Shadcn UI",
-                "Magic UI",
-                "Stripe",
-                "Cloudflare Workers"
+                "WordPress",
+                "Php",
+                "MySQL",
+                "GTM",
+                "Custom CSS",
+                "JavaScript",
+                "GSC",
+                "GA"
             ],
             links: [
                 {
                     type: "Website",
-                    href: "https://automatic.chat",
+                    href: "https://cimacleaners.com.au/",
                     icon: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$icons$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Icons"].globe, {
                         className: "size-3"
                     }, void 0, false, {
                         fileName: "[project]/src/data/resume.tsx",
-                        lineNumber: 305,
+                        lineNumber: 298,
                         columnNumber: 17
                     }, ("TURBOPACK compile-time value", void 0))
                 }
             ],
-            image: "",
-            video: "https://pub-83c5db439b40468498f97946200806f7.r2.dev/automatic-chat.mp4"
+            image: "/cima-cleaners.jpg",
+            video: ""
         }
     ],
     hackathons: [
@@ -2808,7 +2784,7 @@ const DATA = {
                         className: "h-4 w-4"
                     }, void 0, false, {
                         fileName: "[project]/src/data/resume.tsx",
-                        lineNumber: 358,
+                        lineNumber: 351,
                         columnNumber: 17
                     }, ("TURBOPACK compile-time value", void 0)),
                     href: "https://github.com/cryptotrends/cryptotrends"
@@ -2830,7 +2806,7 @@ const DATA = {
                         className: "h-4 w-4"
                     }, void 0, false, {
                         fileName: "[project]/src/data/resume.tsx",
-                        lineNumber: 376,
+                        lineNumber: 369,
                         columnNumber: 17
                     }, ("TURBOPACK compile-time value", void 0)),
                     href: "https://devpost.com/software/my6footprint"
@@ -2841,7 +2817,7 @@ const DATA = {
                         className: "h-4 w-4"
                     }, void 0, false, {
                         fileName: "[project]/src/data/resume.tsx",
-                        lineNumber: 381,
+                        lineNumber: 374,
                         columnNumber: 17
                     }, ("TURBOPACK compile-time value", void 0)),
                     href: "https://github.com/Wallet6/my6footprint-machine-learning"
@@ -2852,7 +2828,7 @@ const DATA = {
                         className: "h-4 w-4"
                     }, void 0, false, {
                         fileName: "[project]/src/data/resume.tsx",
-                        lineNumber: 386,
+                        lineNumber: 379,
                         columnNumber: 17
                     }, ("TURBOPACK compile-time value", void 0)),
                     href: "https://github.com/Wallet6/CarbonWallet"
@@ -2863,7 +2839,7 @@ const DATA = {
                         className: "h-4 w-4"
                     }, void 0, false, {
                         fileName: "[project]/src/data/resume.tsx",
-                        lineNumber: 391,
+                        lineNumber: 384,
                         columnNumber: 17
                     }, ("TURBOPACK compile-time value", void 0)),
                     href: "https://github.com/Wallet6/wallet6-server"
@@ -2883,7 +2859,7 @@ const DATA = {
                         className: "h-4 w-4"
                     }, void 0, false, {
                         fileName: "[project]/src/data/resume.tsx",
-                        lineNumber: 407,
+                        lineNumber: 400,
                         columnNumber: 17
                     }, ("TURBOPACK compile-time value", void 0)),
                     href: "https://github.com/ethdocnet"
@@ -2904,7 +2880,7 @@ const DATA = {
                         className: "h-4 w-4"
                     }, void 0, false, {
                         fileName: "[project]/src/data/resume.tsx",
-                        lineNumber: 424,
+                        lineNumber: 417,
                         columnNumber: 17
                     }, ("TURBOPACK compile-time value", void 0)),
                     href: "https://github.com/justinmichaud/htn2017"
@@ -2915,7 +2891,7 @@ const DATA = {
                         className: "h-4 w-4"
                     }, void 0, false, {
                         fileName: "[project]/src/data/resume.tsx",
-                        lineNumber: 429,
+                        lineNumber: 422,
                         columnNumber: 17
                     }, ("TURBOPACK compile-time value", void 0)),
                     href: "https://github.com/dillionverma/RTSPClient"
@@ -2936,7 +2912,7 @@ const DATA = {
                         className: "h-4 w-4"
                     }, void 0, false, {
                         fileName: "[project]/src/data/resume.tsx",
-                        lineNumber: 446,
+                        lineNumber: 439,
                         columnNumber: 17
                     }, ("TURBOPACK compile-time value", void 0)),
                     href: "https://github.com/ShareShip/ShareShip"
@@ -2947,7 +2923,7 @@ const DATA = {
                         className: "h-4 w-4"
                     }, void 0, false, {
                         fileName: "[project]/src/data/resume.tsx",
-                        lineNumber: 451,
+                        lineNumber: 444,
                         columnNumber: 17
                     }, ("TURBOPACK compile-time value", void 0)),
                     href: "https://share-ship.herokuapp.com/"
@@ -2967,7 +2943,7 @@ const DATA = {
                         className: "h-4 w-4"
                     }, void 0, false, {
                         fileName: "[project]/src/data/resume.tsx",
-                        lineNumber: 467,
+                        lineNumber: 460,
                         columnNumber: 17
                     }, ("TURBOPACK compile-time value", void 0)),
                     href: "https://github.com/nsagirlfriend/nsagirlfriend"
@@ -2988,7 +2964,7 @@ const DATA = {
                         className: "h-4 w-4"
                     }, void 0, false, {
                         fileName: "[project]/src/data/resume.tsx",
-                        lineNumber: 484,
+                        lineNumber: 477,
                         columnNumber: 17
                     }, ("TURBOPACK compile-time value", void 0)),
                     href: "https://syncedreview.com/2017/06/26/global-ai-hackathon-in-toronto/"
@@ -2999,7 +2975,7 @@ const DATA = {
                         className: "h-4 w-4"
                     }, void 0, false, {
                         fileName: "[project]/src/data/resume.tsx",
-                        lineNumber: 489,
+                        lineNumber: 482,
                         columnNumber: 17
                     }, ("TURBOPACK compile-time value", void 0)),
                     href: "https://github.com/TinySamosas/"
@@ -3028,7 +3004,7 @@ const DATA = {
                         className: "h-4 w-4"
                     }, void 0, false, {
                         fileName: "[project]/src/data/resume.tsx",
-                        lineNumber: 516,
+                        lineNumber: 509,
                         columnNumber: 17
                     }, ("TURBOPACK compile-time value", void 0)),
                     href: "https://github.com/dillionverma/genecis"
@@ -3049,7 +3025,7 @@ const DATA = {
                         className: "h-4 w-4"
                     }, void 0, false, {
                         fileName: "[project]/src/data/resume.tsx",
-                        lineNumber: 532,
+                        lineNumber: 525,
                         columnNumber: 17
                     }, ("TURBOPACK compile-time value", void 0)),
                     href: "https://medium.com/make-school/the-winners-of-make-schools-student-app-competition-2017-a6b0e72f190a"
@@ -3060,7 +3036,7 @@ const DATA = {
                         className: "h-4 w-4"
                     }, void 0, false, {
                         fileName: "[project]/src/data/resume.tsx",
-                        lineNumber: 537,
+                        lineNumber: 530,
                         columnNumber: 17
                     }, ("TURBOPACK compile-time value", void 0)),
                     href: "https://devpost.com/software/pocketdoc-react-native"
@@ -3071,7 +3047,7 @@ const DATA = {
                         className: "h-4 w-4"
                     }, void 0, false, {
                         fileName: "[project]/src/data/resume.tsx",
-                        lineNumber: 542,
+                        lineNumber: 535,
                         columnNumber: 17
                     }, ("TURBOPACK compile-time value", void 0)),
                     href: "https://www.youtube.com/watch?v=XwFdn5Rmx68"
@@ -3082,7 +3058,7 @@ const DATA = {
                         className: "h-4 w-4"
                     }, void 0, false, {
                         fileName: "[project]/src/data/resume.tsx",
-                        lineNumber: 547,
+                        lineNumber: 540,
                         columnNumber: 17
                     }, ("TURBOPACK compile-time value", void 0)),
                     href: "https://github.com/dillionverma/pocketdoc-react-native"
@@ -3110,7 +3086,7 @@ const DATA = {
                         className: "h-4 w-4"
                     }, void 0, false, {
                         fileName: "[project]/src/data/resume.tsx",
-                        lineNumber: 572,
+                        lineNumber: 565,
                         columnNumber: 17
                     }, ("TURBOPACK compile-time value", void 0)),
                     href: "https://devpost.com/software/pocketdoc-react-native"
@@ -3121,7 +3097,7 @@ const DATA = {
                         className: "h-4 w-4"
                     }, void 0, false, {
                         fileName: "[project]/src/data/resume.tsx",
-                        lineNumber: 577,
+                        lineNumber: 570,
                         columnNumber: 17
                     }, ("TURBOPACK compile-time value", void 0)),
                     href: "https://www.youtube.com/watch?v=XwFdn5Rmx68"
@@ -3132,7 +3108,7 @@ const DATA = {
                         className: "h-4 w-4"
                     }, void 0, false, {
                         fileName: "[project]/src/data/resume.tsx",
-                        lineNumber: 582,
+                        lineNumber: 575,
                         columnNumber: 17
                     }, ("TURBOPACK compile-time value", void 0)),
                     href: "https://github.com/dillionverma/pocketdoc-react-native"
@@ -3152,7 +3128,7 @@ const DATA = {
                         className: "h-4 w-4"
                     }, void 0, false, {
                         fileName: "[project]/src/data/resume.tsx",
-                        lineNumber: 598,
+                        lineNumber: 591,
                         columnNumber: 17
                     }, ("TURBOPACK compile-time value", void 0)),
                     href: "https://github.com/dillionverma/earthwatch"
@@ -3173,7 +3149,7 @@ const DATA = {
                         className: "h-4 w-4"
                     }, void 0, false, {
                         fileName: "[project]/src/data/resume.tsx",
-                        lineNumber: 615,
+                        lineNumber: 608,
                         columnNumber: 17
                     }, ("TURBOPACK compile-time value", void 0)),
                     href: "https://github.com/dillionverma/threejs-planes"
@@ -3195,7 +3171,7 @@ const DATA = {
                         className: "h-4 w-4"
                     }, void 0, false, {
                         fileName: "[project]/src/data/resume.tsx",
-                        lineNumber: 633,
+                        lineNumber: 626,
                         columnNumber: 17
                     }, ("TURBOPACK compile-time value", void 0)),
                     href: "https://github.com/mattBlackDesign/recipic-ionic"
@@ -3206,7 +3182,7 @@ const DATA = {
                         className: "h-4 w-4"
                     }, void 0, false, {
                         fileName: "[project]/src/data/resume.tsx",
-                        lineNumber: 638,
+                        lineNumber: 631,
                         columnNumber: 17
                     }, ("TURBOPACK compile-time value", void 0)),
                     href: "https://github.com/mattBlackDesign/recipic-rails"
@@ -3227,7 +3203,7 @@ const DATA = {
                         className: "h-4 w-4"
                     }, void 0, false, {
                         fileName: "[project]/src/data/resume.tsx",
-                        lineNumber: 655,
+                        lineNumber: 648,
                         columnNumber: 17
                     }, ("TURBOPACK compile-time value", void 0)),
                     href: "https://github.com/dillionverma/human-huntr-react-native"
@@ -3238,7 +3214,7 @@ const DATA = {
                         className: "h-4 w-4"
                     }, void 0, false, {
                         fileName: "[project]/src/data/resume.tsx",
-                        lineNumber: 660,
+                        lineNumber: 653,
                         columnNumber: 17
                     }, ("TURBOPACK compile-time value", void 0)),
                     href: "https://github.com/mattBlackDesign/human-huntr-rails"
@@ -3258,7 +3234,7 @@ const DATA = {
                         className: "h-4 w-4"
                     }, void 0, false, {
                         fileName: "[project]/src/data/resume.tsx",
-                        lineNumber: 676,
+                        lineNumber: 669,
                         columnNumber: 17
                     }, ("TURBOPACK compile-time value", void 0)),
                     href: "https://github.com/justinmichaud/TerribleHacks2016-Windows11"
@@ -3278,7 +3254,7 @@ const DATA = {
                         className: "h-4 w-4"
                     }, void 0, false, {
                         fileName: "[project]/src/data/resume.tsx",
-                        lineNumber: 692,
+                        lineNumber: 685,
                         columnNumber: 17
                     }, ("TURBOPACK compile-time value", void 0)),
                     href: "https://github.com/UWPortalSDK/crowmark"
