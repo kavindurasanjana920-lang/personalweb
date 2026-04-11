@@ -1046,6 +1046,10 @@
     right: calc(var(--spacing) * 3);
   }
 
+  .bottom-0 {
+    bottom: calc(var(--spacing) * 0);
+  }
+
   .bottom-4 {
     bottom: calc(var(--spacing) * 4);
   }
@@ -3714,6 +3718,12 @@
   @media (min-width: 48rem) {
     .md\:order-2 {
       order: 2;
+    }
+  }
+
+  @media (min-width: 48rem) {
+    .md\:block {
+      display: block;
     }
   }
 

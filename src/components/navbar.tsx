@@ -80,7 +80,7 @@ export default function Navbar() {
         }`}
       >
         <div
-          className={`absolute inset-x-0 bottom-20 mx-auto flex w-full max-w-2xl flex-col rounded-t-3xl border border-border bg-background px-6 pt-6 pb-8 shadow-2xl transition-transform duration-300 ${
+          className={`absolute inset-x-0 bottom-0 mx-auto flex w-full max-w-2xl flex-col rounded-t-3xl border border-border bg-background px-6 pt-6 pb-24 shadow-2xl transition-transform duration-300 ${
             isMenuOpen ? "translate-y-0" : "translate-y-full"
           }`}
         >
@@ -94,14 +94,14 @@ export default function Navbar() {
               <XIcon className="size-5" />
             </button>
           </div>
-          <div className="flex items-start justify-center pt-4">
+          <div className="flex items-start justify-center pt-4 pb-4">
             <div className="grid w-full gap-8 md:grid-cols-[minmax(0,0.95fr)_minmax(0,1.05fr)]">
               <div className="rounded-2xl border border-border/60 bg-card/70 p-6">
                 <p className="text-2xl font-semibold tracking-tight">Menu</p>
                 <p className="mt-2 text-sm text-muted-foreground">
-                  Quick navigation across key sections of this portfolio.
+                  Quick navigation across key pages of this portfolio website.
                 </p>
-                <div className="mt-8 space-y-3">
+                <div className="mt-8 hidden space-y-3 md:block">
                   <p className="text-xl font-semibold">Kavindu Portfolio</p>
                   <p className="text-muted-foreground leading-relaxed">
                     Building scalable AI systems, automation workflows, and

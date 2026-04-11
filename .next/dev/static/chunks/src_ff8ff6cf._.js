@@ -3266,7 +3266,7 @@ function Navbar() {
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                 className: `pointer-events-auto fixed inset-0 z-40 bg-orange-60/75 dark:bg-background/60 backdrop-blur-sm transition-opacity duration-300 ${isMenuOpen ? "opacity-100" : "opacity-0 pointer-events-none"}`,
                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                    className: `absolute inset-x-0 bottom-20 mx-auto flex w-full max-w-2xl flex-col rounded-t-3xl border border-border bg-background px-6 pt-6 pb-8 shadow-2xl transition-transform duration-300 ${isMenuOpen ? "translate-y-0" : "translate-y-full"}`,
+                    className: `absolute inset-x-0 bottom-0 mx-auto flex w-full max-w-2xl flex-col rounded-t-3xl border border-border bg-background px-6 pt-6 pb-24 shadow-2xl transition-transform duration-300 ${isMenuOpen ? "translate-y-0" : "translate-y-full"}`,
                     children: [
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                             className: "flex justify-end",
@@ -3293,7 +3293,7 @@ function Navbar() {
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                            className: "flex items-start justify-center pt-4",
+                            className: "flex items-start justify-center pt-4 pb-4",
                             children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                 className: "grid w-full gap-8 md:grid-cols-[minmax(0,0.95fr)_minmax(0,1.05fr)]",
                                 children: [
@@ -3310,14 +3310,14 @@ function Navbar() {
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                                                 className: "mt-2 text-sm text-muted-foreground",
-                                                children: "Quick navigation across key sections of this portfolio."
+                                                children: "Quick navigation across key pages of this portfolio website."
                                             }, void 0, false, {
                                                 fileName: "[project]/src/components/navbar.tsx",
                                                 lineNumber: 101,
                                                 columnNumber: 17
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                className: "mt-8 space-y-3",
+                                                className: "mt-8 hidden space-y-3 md:block",
                                                 children: [
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                                                         className: "text-xl font-semibold",
