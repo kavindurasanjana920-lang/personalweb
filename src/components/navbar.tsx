@@ -98,7 +98,7 @@ export default function Navbar() {
             <div className="grid w-full gap-8 md:grid-cols-[minmax(0,0.95fr)_minmax(0,1.05fr)]">
               <div className="rounded-2xl border border-border/60 bg-card/70 p-6">
                 <p className="text-2xl font-semibold tracking-tight">Menu</p>
-                <p className="mt-2 text-sm text-muted-foreground">
+                <p className="mt-2 hidden text-sm text-muted-foreground md:block">
                   Quick navigation across key pages of this portfolio website.
                 </p>
                 <div className="mt-8 hidden space-y-3 md:block">
