@@ -8,5 +8,6 @@
   "/favicon.ico/route": "app/favicon.ico/route.js",
   "/opengraph-image/route": "app-edge-has-no-entrypoint",
   "/page": "app/page.js",
-  "/projects/page": "app/projects/page.js"
+  "/projects/page": "app/projects/page.js",
+  "/services/page": "app/services/page.js"
 }

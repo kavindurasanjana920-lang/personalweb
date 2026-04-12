@@ -48,7 +48,7 @@ export default function Navbar() {
   const menuItems = [
     {
       label: "Services",
-      href: "/#services",
+      href: "/services",
       icon: BriefcaseBusinessIcon,
       description: "Explore automation, AI, and full-stack solutions.",
     },
