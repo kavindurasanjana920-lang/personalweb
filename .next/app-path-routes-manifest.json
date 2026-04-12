@@ -7,5 +7,6 @@
   "/blog/page": "/blog",
   "/favicon.ico/route": "/favicon.ico",
   "/opengraph-image/route": "/opengraph-image",
-  "/page": "/"
+  "/page": "/",
+  "/projects/page": "/projects"
 }

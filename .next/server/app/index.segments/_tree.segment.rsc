@@ -1,4 +1,4 @@
-:HL["/_next/static/chunks/0d6db8f7d41140d6.css","style"]
+:HL["/_next/static/chunks/cea17df3ec5dd2ff.css","style"]
 :HL["/_next/static/media/797e433ab948586e-s.p.dbea232f.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
 :HL["/_next/static/media/caa3a2e1cccd8315-s.p.853070df.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
 :HL["/horizon-campus-logo.png","image"]
@@ -24,4 +24,4 @@
 :HL["https://pub-83c5db439b40468498f97946200806f7.r2.dev/hackline/qhacks.png","image"]
 :HL["https://pub-83c5db439b40468498f97946200806f7.r2.dev/hackline/terrible-hacks-v.png","image"]
 :HL["https://pub-83c5db439b40468498f97946200806f7.r2.dev/hackline/portal-hackathon.png","image"]
-0:{"buildId":"7sDnzBKaoaev4QTqg4kuu","tree":{"name":"","paramType":null,"paramKey":"","hasRuntimePrefetch":false,"slots":{"children":{"name":"__PAGE__","paramType":null,"paramKey":"__PAGE__","hasRuntimePrefetch":false,"slots":null,"isRootLayout":false}},"isRootLayout":true},"staleTime":300}
+0:{"buildId":"JJWo5GccE4T8mKu76rTR7","tree":{"name":"","paramType":null,"paramKey":"","hasRuntimePrefetch":false,"slots":{"children":{"name":"__PAGE__","paramType":null,"paramKey":"__PAGE__","hasRuntimePrefetch":false,"slots":null,"isRootLayout":false}},"isRootLayout":true},"staleTime":300}

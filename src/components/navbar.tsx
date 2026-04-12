@@ -54,7 +54,7 @@ export default function Navbar() {
     },
     {
       label: "Projects",
-      href: "/#projects",
+      href: "/projects",
       icon: FolderKanbanIcon,
       description: "See selected products and real-world builds.",
     },

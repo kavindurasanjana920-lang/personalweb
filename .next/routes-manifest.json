@@ -94,6 +94,12 @@
       "regex": "^/opengraph\\-image(?:/)?$",
       "routeKeys": {},
       "namedRegex": "^/opengraph\\-image(?:/)?$"
+    },
+    {
+      "page": "/projects",
+      "regex": "^/projects(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/projects(?:/)?$"
     }
   ],
   "dataRoutes": [],

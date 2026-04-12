@@ -1695,6 +1695,10 @@
     margin-left: calc(var(--spacing) * 1);
   }
 
+  .ml-2 {
+    margin-left: calc(var(--spacing) * 2);
+  }
+
   .ml-13 {
     margin-left: calc(var(--spacing) * 13);
   }
@@ -1960,6 +1964,10 @@
 
   .max-w-\[800px\] {
     max-width: 800px;
+  }
+
+  .max-w-\[900px\] {
+    max-width: 900px;
   }
 
   .max-w-full {

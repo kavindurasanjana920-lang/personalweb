@@ -303,6 +303,226 @@ export const DATA = {
         "",
     },
   ],
+  projectsPageOnly: [
+    {
+      title: "Orbit Capital",
+      href: "https://orbitcapital.live/",
+      dates: "Oct 2025 - Jan 2026",
+      active: true,
+      description:
+        "Designed a secure FinTech portal with tiered investment plans and an automated profit calculation engine. Implemented strong user authentication and secure transaction handling to ensure data integrity and platform transparency.",
+      technologies: [
+        "HTML",
+        "Boostrap",
+        "Figma",
+        "JavaScript",
+        "Laravel",
+        "MySQL",
+        "OAuth"
+
+      ],
+      links: [
+        {
+          type: "Website",
+          href: "https://orbitcapital.live/",
+          icon: <Icons.globe className="size-3" />,
+        },
+      ],
+      image: "/group-3-2.jpg",
+      video: "",
+    },
+
+    {
+      title: "ForexRobotic",
+      href: "https://www.forexrobotic.com/",
+      dates: "Aug 2025 - Dec 2026",
+      active: true,
+      description:
+        "Built a Laravel-based e-commerce platform for AI trading tools with MySQL and JavaScript. Integrated Binance crypto payments and implemented a secure system for instant digital delivery of MT4/MT5 indicators and Expert Advisors.",
+      
+        technologies: [
+        "HTML",
+        "Boostrap",
+        "Figma",
+        "JavaScript",
+        "Laravel",
+        "MySQL",
+        "Binance Pay"
+
+      ],
+      links: [
+        {
+          type: "Website",
+          href: "https://www.forexrobotic.com/",
+          icon: <Icons.globe className="size-3" />,
+        },
+      ],
+      image: "/group-3-3.jpg",
+      video: "",
+    },
+
+{
+      title: "Forex Circles",
+      href: "https://forexcircles.com/",
+      dates: "Jan 2026 - April 2026",
+      active: true,
+      description:
+        "Built a forex broker listing and review platform with a business dashboard, subscription packages, and broker awards. Enabled broker management, user reviews, and SEO optimization using Laravel and MySQL.",
+      technologies: [
+        "React.js",
+        "TailwindCSS",
+        "Figma",
+        "Laravel",
+        "MySQL",
+        "Genie",
+        "OAuth",
+        "Geolocation API",
+
+      ],
+      links: [
+        {
+          type: "Website",
+          href: "https://forexcircles.com/",
+          icon: <Icons.globe className="size-3" />,
+        },
+      ],
+      image: "/group-3-4-1.jpg",
+      video: "",
+    },
+    {
+      title: "Health First",
+      href: "https://github.com/kavindurs8/health-first-webapplication",
+      dates: "Oct 2025 - Dec 2025",
+      active: true,
+      description:
+        "Developed a web-based doctor appointment booking platform that allows patients to view doctors, schedule appointments, and manage bookings efficiently. Completed as a freelance project focused on improving healthcare accessibility.",
+      technologies: [
+        "React.js",
+        "TailwindCSS",
+        "Figma",
+        "Laravel",
+        "MySQL",
+        "Stripe",
+        "OAuth"
+      ],
+      links: [
+        {
+          type: "Website",
+          href: "https://github.com/kavindurs8/health-first-webapplication",
+          icon: <Icons.github className="size-3" />,
+        },
+      ],
+      image: "/group-3-6.jpg",
+      video:
+        "",
+    },
+    {
+      title: "Studify - R&D",
+      href: "https://github.com/kavindurs8/studifynew",
+      dates: "Dec 2024 - Dec 2025",
+      active: true,
+      description:
+        "R&D an e-learning platform with live classes, course marketplace, and student community. Includes AI-based recommendations, real-time progress tracking, and exam management as a final-year university project.",
+      technologies: [
+        "React.js",
+        "TailwindCSS",
+        "Figma",
+        "OAuth",
+        "Laravel",
+        "MySQL",
+        "Stripe",     
+        "DNNs",
+        "AutoML",
+        "LLMs",
+        "RAG AI"
+
+      ],
+      links: [
+        {
+          type: "Website",
+          href: "https://github.com/kavindurs8/studifynew",
+          icon: <Icons.github className="size-3" />,
+        },
+      ],
+      image: "/group-3-5.jpg",
+      video: "",
+    },
+    {
+      title: "Weather App",
+      href: "https://github.com/kavindurs8/E2145285_WeatherApp",
+      dates: "May 2024 - June 2024",
+      active: true,
+      description:
+        "Developed a simple Android app that displays real-time weather data using the OpenWeather API based on the user’s location, including temperature, humidity, and address details, completed as a university project.",
+      technologies: [
+        "Java (Android)",
+        "OpenWeather API",
+        "GPS",
+        "Geocoder",
+        "SQLite"
+      ],
+      links: [
+        {
+          type: "Mobile App",
+          href: "https://github.com/kavindurs8/E2145285_WeatherApp",
+          icon: <Icons.github className="size-3" />,
+        },
+      ],
+      image: "/group-48-1.jpg",
+      video: "",
+    }, 
+    {
+      title: "TO-Do App",
+      href: "https://github.com/kavindurs8/ToDoList-App",
+      dates: "May 2024 - June 2024",
+      active: true,
+      description:
+        "Built a simple Android task management app with add, view, and delete features using SQLite for local storage. Completed as a university project.",
+      technologies: [
+        "Java (Android)",
+        "OpenWeather API",
+        "GPS",
+        "Geocoder",
+        "SQLite"
+      ],
+      links: [
+        {
+          type: "Mobile App",
+          href: "https://github.com/kavindurs8/ToDoList-App",
+          icon: <Icons.github className="size-3" />,
+        },
+      ],
+      image: "/group-52-1.jpg",
+      video: "",
+    }, 
+    {
+      title: "CourseCrafters",
+      href: "https://github.com/kavindurs8/CourseCrafters",
+      dates: "Jan 2024 - July 2024",
+      active: true,
+      description:
+        "Led a group project to develop an online course marketplace for creating, managing, and selling courses. Built with PHP, MySQL, HTML, CSS, and JavaScript, featuring course management, secure payments, analytics, and student progress tracking as a 2rd-year university project.",
+      technologies: [
+        "HTML",
+        "Boostrap",
+        "Figma",
+        "JavaScript",
+        "Php",
+        "MySQL",
+        "PayHere"
+      ],
+      links: [
+        {
+          type: "Website",
+          href: "https://github.com/kavindurs8/CourseCrafters",
+          icon: <Icons.github className="size-3" />,
+        },
+      ],
+      image: "/group-3-7.jpg",
+      video: "",
+    },     
+
+  ],
   hackathons: [
     {
       title: "Hack Western 5",
