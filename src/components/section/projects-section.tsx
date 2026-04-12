@@ -1,6 +1,9 @@
 import BlurFade from "@/components/magicui/blur-fade";
 import { ProjectCard } from "@/components/project-card";
 import { DATA } from "@/data/resume";
+import { Button } from "@/components/ui/button";
+import Link from "next/link";
+import { ArrowRight } from "lucide-react";
 
 const BLUR_FADE_DELAY = 0.04;
 
@@ -51,6 +54,14 @@ export default function ProjectsSection() {
                             />
                         </BlurFade>
                     ))}
+                </div>
+                <div className="flex justify-center mt-8">
+                    <Link href="/projects">
+                        <Button className="px-8 py-2 group">
+                            View All Projects
+                            <ArrowRight className="size-4 ml-2 group-hover:translate-x-1 transition-transform" />
+                        </Button>
+                    </Link>
                 </div>
             </div>
         </section>
