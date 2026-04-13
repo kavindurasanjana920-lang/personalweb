@@ -1,11 +1,1 @@
-{
-  "version": 4,
-  "routes": {},
-  "dynamicRoutes": {},
-  "notFoundRoutes": [],
-  "preview": {
-    "previewModeId": "d5257fe66365efc4ea2815cad03bfc00",
-    "previewModeSigningKey": "a26be80666fe1ecaf8ca79527cd4e00ace5c2df9cccb218980cca1e4a5058067",
-    "previewModeEncryptionKey": "90420c103f08a7ad719be011b8b33b0498b2209f120eae2b9ff2ea7aab5a1dfa"
-  }
-}
+{"version":4,"routes":{"/blog/api-design-principles":{},"/blog/building-design-systems":{},"/blog/git-workflow-guide":{},"/blog/nextjs-performance-tips":{},"/blog/remote-work-productivity":{},"/blog/testing-react-apps":{},"/blog/typescript-best-practices":{}},"dynamicRoutes":{"/blog/[slug]":{"dataRoute":null,"dataRouteRegex":null,"fallback":null,"fallbackRevalidate":false,"fallbackSourceRoute":"/blog/[slug]","routeRegex":"^\\/blog\\/([^/]+?)(?:\\/)?$","allowHeader":[]}},"notFoundRoutes":[],"preview":{"previewModeId":"64f623f43ed16f7391ec31f3fae3aa59","previewModeSigningKey":"206f88b400d5826fdc881e7f1909c573e665db7a98d0a67d93ca41acb1199e93","previewModeEncryptionKey":"bdbb3596a25f593e027b40d06573342ce12400a8f34fb5204387117f94229112"}}
