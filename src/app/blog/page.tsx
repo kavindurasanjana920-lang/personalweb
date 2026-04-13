@@ -1,6 +1,5 @@
 import BlurFade from "@/components/magicui/blur-fade";
 import { allPosts } from "content-collections";
-import Link from "next/link";
 import type { Metadata } from "next";
 import { ChevronRight } from "lucide-react";
 
@@ -49,9 +48,9 @@ export default function BlogPage() {
                 const indexNumber = id + 1;
                 return (
                   <BlurFade delay={BLUR_FADE_DELAY * 3 + id * 0.05} key={slug}>
-                    <Link
+                    <a
                       className="flex items-start gap-x-2 group cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
-                      href={`/blog/${slug}`}
+                      href={`/blog/${slug}/`}
                     >
                       <span className="text-xs font-mono tabular-nums font-medium mt-[5px]">
                         {String(indexNumber).padStart(2, "0")}.
@@ -70,7 +69,7 @@ export default function BlogPage() {
                           {post.publishedAt}
                         </p>
                       </div>
-                    </Link>
+                    </a>
                   </BlurFade>
                 );
               })}

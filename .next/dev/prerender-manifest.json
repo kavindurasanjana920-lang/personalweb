@@ -1,1 +1,11 @@
-{"version":4,"routes":{"/blog/api-design-principles":{},"/blog/building-design-systems":{},"/blog/git-workflow-guide":{},"/blog/nextjs-performance-tips":{},"/blog/remote-work-productivity":{},"/blog/testing-react-apps":{},"/blog/typescript-best-practices":{}},"dynamicRoutes":{"/blog/[slug]":{"dataRoute":null,"dataRouteRegex":null,"fallback":null,"fallbackRevalidate":false,"fallbackSourceRoute":"/blog/[slug]","routeRegex":"^\\/blog\\/([^/]+?)(?:\\/)?$","allowHeader":[]}},"notFoundRoutes":[],"preview":{"previewModeId":"64f623f43ed16f7391ec31f3fae3aa59","previewModeSigningKey":"206f88b400d5826fdc881e7f1909c573e665db7a98d0a67d93ca41acb1199e93","previewModeEncryptionKey":"bdbb3596a25f593e027b40d06573342ce12400a8f34fb5204387117f94229112"}}
+{
+  "version": 4,
+  "routes": {},
+  "dynamicRoutes": {},
+  "notFoundRoutes": [],
+  "preview": {
+    "previewModeId": "c4205ff09d971b440daf407ca45a2664",
+    "previewModeSigningKey": "ccb1a97a04b0387df8084d6f8191279756fa585f92777bf22e706cc1e9871448",
+    "previewModeEncryptionKey": "cf29757d7423d1fd96feb31347b7fad5a5808c7ca41a9a4cffee46652bb02d40"
+  }
+}
