@@ -60,7 +60,7 @@ export default function Navbar() {
     },
     {
       label: "About",
-      href: "/#about",
+      href: "/about",
       icon: UserIcon,
       description: "Get to know my background and core strengths.",
     },

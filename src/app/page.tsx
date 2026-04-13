@@ -2,6 +2,7 @@
 import BlurFade from "@/components/magicui/blur-fade";
 import BlurFadeText from "@/components/magicui/blur-fade-text";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import { Button } from "@/components/ui/button";
 import { DATA } from "@/data/resume";
 import Link from "next/link";
 import Markdown from "react-markdown";
@@ -9,7 +10,7 @@ import ContactSection from "@/components/section/contact-section";
 import HackathonsSection from "@/components/section/hackathons-section";
 import ProjectsSection from "@/components/section/projects-section";
 import WorkSection from "@/components/section/work-section";
-import { ArrowUpRight } from "lucide-react";
+import { ArrowRight, ArrowUpRight, BriefcaseBusiness } from "lucide-react";
 
 const BLUR_FADE_DELAY = 0.04;
 
@@ -31,6 +32,22 @@ export default function Page() {
                 delay={BLUR_FADE_DELAY}
                 text={DATA.description}
               />
+              <BlurFade delay={BLUR_FADE_DELAY * 1.5}>
+                <div className="flex flex-row gap-3 pt-1">
+                  <Button asChild className="group px-4 sm:px-6">
+                    <Link href="/#contact">
+                      Contact Me
+                      <ArrowRight className="ml-2 size-4 transition-transform group-hover:translate-x-1" />
+                    </Link>
+                  </Button>
+                  <Button asChild variant="outline" className="group px-4 sm:px-6">
+                    <Link href="/services">
+                      Services
+                      <BriefcaseBusiness className="ml-2 size-4 transition-transform group-hover:scale-110" />
+                    </Link>
+                  </Button>
+                </div>
+              </BlurFade>
             </div>
             <BlurFade delay={BLUR_FADE_DELAY} className="order-1 md:order-2">
               <Avatar className="size-24 md:size-32 border rounded-full shadow-lg ring-4 ring-muted">

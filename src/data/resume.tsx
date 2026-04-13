@@ -25,13 +25,13 @@ import { Kubernetes } from "@/components/ui/svgs/kubernetes";
 export const DATA = {
   name: "Kavindu Rasanjana",
   initials: "KR",
-  url: "https://dillion.io",
+  url: "https://thekavindu.me",
   location: "Colombo, SL",
   locationLink: "https://www.google.com/maps/place/colombo",
   description:
     "Software Automation Engineer, Building Scalable AI Systems, Open to Collaborateions Passionate about AI, Software Development, and Tech Innovation.",
   summary:
-    "At the end of 2022, I quit my job as a software engineer to go fulltime into building and scaling my own SaaS businesses. In the past, [I pursued a double degree in computer science and business](/#education), [interned at big tech companies in Silicon Valley](https://www.youtube.com/watch?v=d-LJ2e5qKdE), and [competed in over 21 hackathons for fun](/#hackathons). I also had the pleasure of being a part of the first ever in-person cohort of buildspace called [buildspace sf1](https://buildspace.so/sf1).",
+    "I'm currently working as a [Software Automation Engineer](/#work) while actively building and scaling real-world software solutions. I have completed my [Bachelor's degree in Information Technology](/#education) and have delivered [10+ projects for international clients](/projects), including AI-powered FinTech platforms and cross-platform mobile applications. With strong experience in full-stack development, I continuously explore AI and machine learning to solve real-world problems and build [scalable, impactful digital products](/services).",
   avatarUrl: "/kavindu.png",
   skills: [
     { name: "React", icon: ReactLight },
@@ -61,8 +61,8 @@ export const DATA = {
     { href: "/blog", icon: NotebookIcon, label: "Blog" },
   ],
   contact: {
-    email: "hello@example.com",
-    tel: "+123456789",
+    email: "info@thekavindu.me",
+    tel: "+94772003045",
     social: {
       GitHub: {
         name: "GitHub",

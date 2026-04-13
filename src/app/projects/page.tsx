@@ -16,15 +16,16 @@ export default function ProjectsPage() {
   return (
     <section id="projects-page">
       <BlurFade delay={BLUR_FADE_DELAY}>
-        <h1 className="text-2xl font-semibold tracking-tight mb-2">
-          Projects
-          <span className="ml-2 bg-card border border-border rounded-md px-2 py-1 text-muted-foreground text-sm">
-            {allProjects.length} items
-          </span>
-        </h1>
-        <p className="text-sm text-muted-foreground mb-8">
-          A complete view of my projects and product work.
-        </p>
+        <div className="space-y-4 mb-8">
+          <h1 className="text-3xl font-semibold tracking-tighter sm:text-4xl lg:text-5xl">
+            Projects that ship real product outcomes.
+          </h1>
+          <p className="max-w-2xl text-pretty text-muted-foreground md:text-lg">
+            A complete view of my end-to-end project work across products,
+            automations, and scalable systems. This page includes {allProjects.length}
+            builds with practical delivery details and implementation depth.
+          </p>
+        </div>
       </BlurFade>
 
       <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 max-w-[900px] mx-auto auto-rows-fr">

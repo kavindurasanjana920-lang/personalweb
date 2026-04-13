@@ -1,10 +1,13 @@
 {
   "/_global-error/page": "/_global-error",
   "/_not-found/page": "/_not-found",
+  "/about/page": "/about",
+  "/api/contact/route": "/api/contact",
   "/blog/[slug]/opengraph-image/route": "/blog/[slug]/opengraph-image",
   "/blog/[slug]/page": "/blog/[slug]",
   "/blog/opengraph-image/route": "/blog/opengraph-image",
   "/blog/page": "/blog",
+  "/contact/page": "/contact",
   "/favicon.ico/route": "/favicon.ico",
   "/opengraph-image/route": "/opengraph-image",
   "/page": "/",

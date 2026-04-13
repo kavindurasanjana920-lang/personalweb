@@ -72,6 +72,18 @@
       "namedRegex": "^/_not\\-found(?:/)?$"
     },
     {
+      "page": "/about",
+      "regex": "^/about(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/about(?:/)?$"
+    },
+    {
+      "page": "/api/contact",
+      "regex": "^/api/contact(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/api/contact(?:/)?$"
+    },
+    {
       "page": "/blog",
       "regex": "^/blog(?:/)?$",
       "routeKeys": {},
@@ -82,6 +94,12 @@
       "regex": "^/blog/opengraph\\-image(?:/)?$",
       "routeKeys": {},
       "namedRegex": "^/blog/opengraph\\-image(?:/)?$"
+    },
+    {
+      "page": "/contact",
+      "regex": "^/contact(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/contact(?:/)?$"
     },
     {
       "page": "/favicon.ico",
