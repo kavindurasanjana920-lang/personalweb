@@ -97,3 +97,6 @@
 [00:17:19.022] Server  LOG     ... error "EPERM: operation not permitted, watch"
 [00:17:19.023] Server  LOG     ... error "EPERM: operation not permitted, watch"
 [00:17:19.023] Server  LOG     ... error "EPERM: operation not permitted, watch"
+[00:55:02.289] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:55:03.106] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[01:10:22.437] Server  LOG       Reload env: .env.local
