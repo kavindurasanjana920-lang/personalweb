@@ -34,24 +34,7 @@
     "afterFiles": [],
     "fallback": []
   },
-  "dynamicRoutes": [
-    {
-      "page": "/blog/[slug]",
-      "regex": "^/blog/([^/]+?)(?:/)?$",
-      "routeKeys": {
-        "nxtPslug": "nxtPslug"
-      },
-      "namedRegex": "^/blog/(?<nxtPslug>[^/]+?)(?:/)?$"
-    },
-    {
-      "page": "/blog/[slug]/opengraph-image",
-      "regex": "^/blog/([^/]+?)/opengraph\\-image(?:/)?$",
-      "routeKeys": {
-        "nxtPslug": "nxtPslug"
-      },
-      "namedRegex": "^/blog/(?<nxtPslug>[^/]+?)/opengraph\\-image(?:/)?$"
-    }
-  ],
+  "dynamicRoutes": [],
   "staticRoutes": [
     {
       "page": "/",
@@ -76,6 +59,18 @@
       "regex": "^/about(?:/)?$",
       "routeKeys": {},
       "namedRegex": "^/about(?:/)?$"
+    },
+    {
+      "page": "/admin/login",
+      "regex": "^/admin/login(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/admin/login(?:/)?$"
+    },
+    {
+      "page": "/admin/posts",
+      "regex": "^/admin/posts(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/admin/posts(?:/)?$"
     },
     {
       "page": "/api/contact",

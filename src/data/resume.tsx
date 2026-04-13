@@ -22,6 +22,8 @@ import { Mysql } from "@/components/ui/svgs/mysql";
 import { Docker } from "@/components/ui/svgs/docker";
 import { Kubernetes } from "@/components/ui/svgs/kubernetes";
 
+const BLOG_URL = process.env.NEXT_PUBLIC_BLOG_URL || "/blog/";
+
 export const DATA = {
   name: "Kavindu Rasanjana",
   initials: "KR",
@@ -58,7 +60,7 @@ export const DATA = {
   ],
   navbar: [
     { href: "/", icon: HomeIcon, label: "Home" },
-    { href: "/blog", icon: NotebookIcon, label: "Blog" },
+    { href: BLOG_URL, icon: NotebookIcon, label: "Blog" },
   ],
   contact: {
     email: "info@thekavindu.me",

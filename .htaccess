@@ -10,6 +10,9 @@ Options -Indexes
   RewriteEngine On
   RewriteBase /
 
+  # Serve pretty blog slugs with the static blog shell page.
+  RewriteRule ^blog/[^/]+/?$ blog/index.html [L]
+
   # Serve existing files and directories directly
   RewriteCond %{REQUEST_FILENAME} -f [OR]
   RewriteCond %{REQUEST_FILENAME} -d

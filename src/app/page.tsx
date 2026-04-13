@@ -35,7 +35,7 @@ export default function Page() {
               <BlurFade delay={BLUR_FADE_DELAY * 1.5}>
                 <div className="flex flex-row gap-3 pt-1">
                   <Button asChild className="group px-4 sm:px-6">
-                    <Link href="/#contact">
+                    <Link href="/contact">
                       Contact Me
                       <ArrowRight className="ml-2 size-4 transition-transform group-hover:translate-x-1" />
                     </Link>
