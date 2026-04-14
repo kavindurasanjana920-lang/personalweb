@@ -8,12 +8,24 @@ import {
   publicListPosts,
 } from "@/lib/blog-api";
 import { formatDate } from "@/lib/utils";
-import { ChevronLeft, ChevronRight } from "lucide-react";
-import { useEffect, useState } from "react";
+import { Check, ChevronLeft, ChevronRight, Copy } from "lucide-react";
+import {
+  isValidElement,
+  type ComponentPropsWithoutRef,
+  type ReactNode,
+  useEffect,
+  useState,
+} from "react";
+import rehypeHighlight from "rehype-highlight";
+import rehypeRaw from "rehype-raw";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 
 const BLUR_FADE_DELAY = 0.04;
+
+function getPostHref(slug: string): string {
+  return `/blog/?slug=${encodeURIComponent(slug)}`;
+}
 
 function readSlugFromLocation(): string | null {
   if (typeof window === "undefined") {
@@ -34,6 +46,67 @@ function readSlugFromLocation(): string | null {
   }
 
   return decodeURIComponent(segments[1]);
+}
+
+function readNodeText(node: ReactNode): string {
+  if (typeof node === "string" || typeof node === "number") {
+    return String(node);
+  }
+
+  if (Array.isArray(node)) {
+    return node.map(readNodeText).join("");
+  }
+
+  if (isValidElement<{ children?: ReactNode }>(node)) {
+    return readNodeText(node.props.children);
+  }
+
+  return "";
+}
+
+function MarkdownPre({ children, ...props }: ComponentPropsWithoutRef<"pre">) {
+  const [copied, setCopied] = useState(false);
+  const codeText = readNodeText(children).replace(/\n$/, "");
+
+  useEffect(() => {
+    if (!copied) {
+      return;
+    }
+
+    const timeoutId = window.setTimeout(() => {
+      setCopied(false);
+    }, 1400);
+
+    return () => window.clearTimeout(timeoutId);
+  }, [copied]);
+
+  async function copyCode(): Promise<void> {
+    if (!codeText.trim()) {
+      return;
+    }
+
+    try {
+      await navigator.clipboard.writeText(codeText);
+      setCopied(true);
+    } catch {
+      setCopied(false);
+    }
+  }
+
+  return (
+    <div className="relative">
+      <button
+        type="button"
+        className="code-copy-btn"
+        onClick={() => void copyCode()}
+        aria-label={copied ? "Code copied" : "Copy code"}
+      >
+        {copied ? <Check className="size-3" aria-hidden /> : <Copy className="size-3" aria-hidden />}
+        {copied ? "Copied" : "Copy"}
+      </button>
+      <pre {...props}>{children}</pre>
+    </div>
+  );
 }
 
 export default function BlogApiShell() {
@@ -68,10 +141,16 @@ export default function BlogApiShell() {
 
       try {
         if (activeSlug) {
-          const post = await publicGetPostBySlug(activeSlug);
+          const [post, list] = await Promise.all([
+            publicGetPostBySlug(activeSlug),
+            publicListPosts().catch(() => []),
+          ]);
+
           if (!cancelled) {
             setSelectedPost(post);
+            setPosts(list);
           }
+
           return;
         }
 
@@ -102,34 +181,18 @@ export default function BlogApiShell() {
     };
   }, [locationReady, activeSlug]);
 
+  const currentPostIndex = selectedPost
+    ? posts.findIndex((post) => post.slug === selectedPost.slug)
+    : -1;
+
+  const previousPost = currentPostIndex > 0 ? posts[currentPostIndex - 1] : null;
+  const nextPost =
+    currentPostIndex >= 0 && currentPostIndex < posts.length - 1
+      ? posts[currentPostIndex + 1]
+      : null;
+
   return (
     <section id="blog">
-      <BlurFade delay={BLUR_FADE_DELAY}>
-        <div className="flex items-center justify-between gap-4">
-          <h1 className="text-2xl font-semibold tracking-tight">Blog</h1>
-          {selectedPost ? (
-            <a
-              href="/blog/"
-              className="inline-flex items-center gap-1 rounded-lg border border-border px-2 py-1 text-sm text-muted-foreground transition-colors hover:text-foreground"
-              aria-label="Back to Blog"
-            >
-              <ChevronLeft className="size-3" />
-              Back
-            </a>
-          ) : (
-            <span className="rounded-md border border-border bg-card px-2 py-1 text-sm text-muted-foreground">
-              {posts?.length ?? 0} posts
-            </span>
-          )}
-        </div>
-      </BlurFade>
-
-      <BlurFade delay={BLUR_FADE_DELAY * 2}>
-        <p className="mt-2 mb-8 text-sm text-muted-foreground">
-          Insights, technical lessons, and practical notes.
-        </p>
-      </BlurFade>
-
       {isLoading ? (
         <BlurFade delay={BLUR_FADE_DELAY * 3}>
           <div className="rounded-xl border border-border px-4 py-6 text-sm text-muted-foreground">
@@ -147,12 +210,23 @@ export default function BlogApiShell() {
       ) : null}
 
       {!isLoading && !error && selectedPost ? (
-        <div className="space-y-6">
+        <>
+          <div className="flex justify-start gap-4 items-center">
+            <a
+              href="/blog/"
+              className="text-sm text-muted-foreground hover:text-foreground transition-colors border border-border rounded-lg px-2 py-1 inline-flex items-center gap-1 mb-6 group"
+              aria-label="Back to Blog"
+            >
+              <ChevronLeft className="size-3 group-hover:-translate-x-px transition-transform" />
+              Back to Blog
+            </a>
+          </div>
+
           <BlurFade delay={BLUR_FADE_DELAY * 3}>
-            <div className="space-y-2">
-              <h2 className="text-3xl font-semibold tracking-tight leading-tight">
+            <div className="flex flex-col gap-4">
+              <h1 className="title font-semibold text-3xl md:text-4xl tracking-tighter leading-tight">
                 {selectedPost.title}
-              </h2>
+              </h1>
               <p className="text-sm text-muted-foreground">
                 {selectedPost.published_at
                   ? formatDate(selectedPost.published_at)
@@ -161,48 +235,118 @@ export default function BlogApiShell() {
             </div>
           </BlurFade>
 
+          <div className="my-6 flex w-full items-center">
+            <div
+              className="flex-1 h-px bg-border"
+              style={{
+                maskImage:
+                  "linear-gradient(90deg, transparent, black 8%, black 92%, transparent)",
+                WebkitMaskImage:
+                  "linear-gradient(90deg, transparent, black 8%, black 92%, transparent)",
+              }}
+            />
+          </div>
+
           <BlurFade delay={BLUR_FADE_DELAY * 4}>
             <article className="prose max-w-full text-pretty font-sans leading-relaxed text-muted-foreground dark:prose-invert">
-              <ReactMarkdown remarkPlugins={[remarkGfm]}>
+              <ReactMarkdown
+                remarkPlugins={[remarkGfm]}
+                rehypePlugins={[rehypeRaw, rehypeHighlight]}
+                components={{
+                  pre: MarkdownPre,
+                }}
+              >
                 {selectedPost.content}
               </ReactMarkdown>
             </article>
           </BlurFade>
-        </div>
+
+          <nav className="mt-12 pt-8 max-w-2xl">
+            <div className="flex flex-col sm:flex-row justify-between gap-4">
+              {previousPost ? (
+                <a
+                  href={getPostHref(previousPost.slug)}
+                  className="group flex-1 flex flex-col gap-1 p-4 rounded-lg border border-border hover:bg-accent/50 transition-colors"
+                >
+                  <span className="flex items-center gap-1 text-xs text-muted-foreground">
+                    <ChevronLeft className="size-3" />
+                    Previous
+                  </span>
+                  <span className="text-sm font-medium group-hover:text-foreground transition-colors break-words">
+                    {previousPost.title}
+                  </span>
+                </a>
+              ) : (
+                <div className="hidden sm:block flex-1" />
+              )}
+
+              {nextPost ? (
+                <a
+                  href={getPostHref(nextPost.slug)}
+                  className="group flex-1 flex flex-col gap-1 p-4 rounded-lg border border-border hover:bg-accent/50 transition-colors text-right"
+                >
+                  <span className="flex items-center justify-end gap-1 text-xs text-muted-foreground">
+                    Next
+                    <ChevronRight className="size-3" />
+                  </span>
+                  <span className="text-sm font-medium group-hover:text-foreground transition-colors break-words">
+                    {nextPost.title}
+                  </span>
+                </a>
+              ) : (
+                <div className="hidden sm:block flex-1" />
+              )}
+            </div>
+          </nav>
+        </>
       ) : null}
 
       {!isLoading && !error && !selectedPost ? (
         (posts?.length ?? 0) > 0 ? (
-          <BlurFade delay={BLUR_FADE_DELAY * 3}>
-            <div className="flex flex-col gap-5">
-              {(posts ?? []).map((post, index) => (
-                <BlurFade delay={BLUR_FADE_DELAY * 4 + index * 0.03} key={post.id}>
-                  <a
-                    href={`/blog/?slug=${encodeURIComponent(post.slug)}`}
-                    className="group flex items-start gap-x-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
-                  >
-                    <span className="mt-[5px] text-xs font-mono tabular-nums font-medium">
-                      {String(index + 1).padStart(2, "0")}.
-                    </span>
-                    <div className="flex flex-1 flex-col gap-y-2">
-                      <p className="text-lg font-medium tracking-tight">
-                        <span className="transition-colors group-hover:text-foreground">
-                          {post.title}
-                          <ChevronRight
-                            className="ml-1 inline-block size-4 -translate-x-2 stroke-3 text-muted-foreground opacity-0 transition-all duration-200 group-hover:translate-x-0 group-hover:opacity-100"
-                            aria-hidden
-                          />
-                        </span>
-                      </p>
-                      <p className="text-xs text-muted-foreground">
-                        {post.published_at ? formatDate(post.published_at) : "Draft"}
-                      </p>
-                    </div>
-                  </a>
-                </BlurFade>
-              ))}
-            </div>
-          </BlurFade>
+          <>
+            <BlurFade delay={BLUR_FADE_DELAY}>
+              <h1 className="text-2xl font-semibold tracking-tight mb-2">
+                Blog{" "}
+                <span className="ml-1 bg-card border border-border rounded-md px-2 py-1 text-muted-foreground text-sm">
+                  {posts.length} posts
+                </span>
+              </h1>
+              <p className="text-sm text-muted-foreground mb-8">
+                My thoughts on software development, life, and more.
+              </p>
+            </BlurFade>
+
+            <BlurFade delay={BLUR_FADE_DELAY * 2}>
+              <div className="flex flex-col gap-5">
+                {(posts ?? []).map((post, index) => (
+                  <BlurFade delay={BLUR_FADE_DELAY * 3 + index * 0.05} key={post.id}>
+                    <a
+                      className="flex items-start gap-x-2 group cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
+                      href={getPostHref(post.slug)}
+                    >
+                      <span className="text-xs font-mono tabular-nums font-medium mt-[5px]">
+                        {String(index + 1).padStart(2, "0")}.
+                      </span>
+                      <div className="flex flex-col gap-y-2 flex-1">
+                        <p className="tracking-tight text-lg font-medium">
+                          <span className="group-hover:text-foreground transition-colors">
+                            {post.title}
+                            <ChevronRight
+                              className="ml-1 inline-block size-4 stroke-3 text-muted-foreground opacity-0 -translate-x-2 transition-all duration-200 group-hover:opacity-100 group-hover:translate-x-0"
+                              aria-hidden
+                            />
+                          </span>
+                        </p>
+                        <p className="text-xs text-muted-foreground">
+                          {post.published_at ? formatDate(post.published_at) : "Draft"}
+                        </p>
+                      </div>
+                    </a>
+                  </BlurFade>
+                ))}
+              </div>
+            </BlurFade>
+          </>
         ) : (
           <BlurFade delay={BLUR_FADE_DELAY * 3}>
             <div className="rounded-xl border border-border px-4 py-10 text-center text-muted-foreground">

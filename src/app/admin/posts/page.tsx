@@ -22,7 +22,7 @@ import {
   isBlogApiConfigured,
 } from "@/lib/blog-api";
 import { formatDate } from "@/lib/utils";
-import { FormEvent, useEffect, useMemo, useState } from "react";
+import { FormEvent, useEffect, useMemo, useRef, useState } from "react";
 
 interface PostFormState {
   title: string;
@@ -69,6 +69,94 @@ function toIsoOrNull(value: string): string | null {
   return parsed.toISOString();
 }
 
+type EditorAction =
+  | "headingLarge"
+  | "headingMedium"
+  | "numberedList"
+  | "bulletedList"
+  | "highlight"
+  | "bold"
+  | "inlineCode"
+  | "codeBlock";
+
+interface EditorTransformResult {
+  nextValue: string;
+  selectionStart: number;
+  selectionEnd: number;
+}
+
+function stripHeadingPrefix(value: string): string {
+  return value.replace(/^#{1,6}\s+/, "").trim();
+}
+
+function stripListPrefix(value: string): string {
+  return value.replace(/^\s*(?:[-*+]|\d+\.)\s+/, "").trim();
+}
+
+function wrapSelection(
+  value: string,
+  selectionStart: number,
+  selectionEnd: number,
+  before: string,
+  after: string,
+  fallbackText: string
+): EditorTransformResult {
+  const selectedText = value.slice(selectionStart, selectionEnd);
+  const body = selectedText || fallbackText;
+  const inserted = `${before}${body}${after}`;
+
+  return {
+    nextValue: `${value.slice(0, selectionStart)}${inserted}${value.slice(selectionEnd)}`,
+    selectionStart: selectionStart + before.length,
+    selectionEnd: selectionStart + before.length + body.length,
+  };
+}
+
+function transformSelectedLines(
+  value: string,
+  selectionStart: number,
+  selectionEnd: number,
+  mapLine: (line: string, index: number) => string,
+  fallbackLine: string
+): EditorTransformResult {
+  const selectedText = value.slice(selectionStart, selectionEnd);
+  const lines = (selectedText || fallbackLine).split("\n");
+  const transformed = lines.map((line, index) => mapLine(line, index)).join("\n");
+
+  return {
+    nextValue: `${value.slice(0, selectionStart)}${transformed}${value.slice(selectionEnd)}`,
+    selectionStart,
+    selectionEnd: selectionStart + transformed.length,
+  };
+}
+
+function wrapCodeBlock(
+  value: string,
+  selectionStart: number,
+  selectionEnd: number,
+  language: string,
+  fallbackCode: string
+): EditorTransformResult {
+  const selectedText = value.slice(selectionStart, selectionEnd);
+  const body = selectedText || fallbackCode;
+
+  const prefixNeedsGap = selectionStart > 0 && value[selectionStart - 1] !== "\n";
+  const suffixNeedsGap = selectionEnd < value.length && value[selectionEnd] !== "\n";
+
+  const prefix = prefixNeedsGap ? "\n\n" : "";
+  const suffix = suffixNeedsGap ? "\n\n" : "\n";
+  const opening = "```" + language + "\n";
+  const closing = "\n```";
+  const inserted = prefix + opening + body + closing + suffix;
+  const start = selectionStart + prefix.length + opening.length;
+
+  return {
+    nextValue: `${value.slice(0, selectionStart)}${inserted}${value.slice(selectionEnd)}`,
+    selectionStart: start,
+    selectionEnd: start + body.length,
+  };
+}
+
 export default function AdminPostsPage() {
   const [authToken, setAuthToken] = useState<string | null>(null);
   const [isCheckingSession, setIsCheckingSession] = useState(true);
@@ -78,6 +166,7 @@ export default function AdminPostsPage() {
   const [posts, setPosts] = useState<BlogPost[]>([]);
   const [formState, setFormState] = useState<PostFormState>(EMPTY_FORM);
   const [editingPostId, setEditingPostId] = useState<number | null>(null);
+  const contentTextareaRef = useRef<HTMLTextAreaElement | null>(null);
 
   useEffect(() => {
     const token = getStoredAdminToken();
@@ -163,6 +252,111 @@ export default function AdminPostsPage() {
       content: post.content,
       isPublished: post.is_published,
       publishedAt: toDateTimeLocal(post.published_at),
+    });
+  }
+
+  function applyEditorAction(action: EditorAction): void {
+    const textarea = contentTextareaRef.current;
+    if (!textarea) {
+      return;
+    }
+
+    const value = textarea.value;
+    const selectionStart = textarea.selectionStart ?? 0;
+    const selectionEnd = textarea.selectionEnd ?? selectionStart;
+
+    let transformed: EditorTransformResult;
+
+    switch (action) {
+      case "headingLarge":
+        transformed = transformSelectedLines(
+          value,
+          selectionStart,
+          selectionEnd,
+          (line) => `# ${stripHeadingPrefix(line) || "Heading"}`,
+          "Heading"
+        );
+        break;
+      case "headingMedium":
+        transformed = transformSelectedLines(
+          value,
+          selectionStart,
+          selectionEnd,
+          (line) => `### ${stripHeadingPrefix(line) || "Subheading"}`,
+          "Subheading"
+        );
+        break;
+      case "numberedList":
+        transformed = transformSelectedLines(
+          value,
+          selectionStart,
+          selectionEnd,
+          (line, index) => `${index + 1}. ${stripListPrefix(line) || "List item"}`,
+          "List item"
+        );
+        break;
+      case "bulletedList":
+        transformed = transformSelectedLines(
+          value,
+          selectionStart,
+          selectionEnd,
+          (line) => `- ${stripListPrefix(line) || "List item"}`,
+          "List item"
+        );
+        break;
+      case "highlight":
+        transformed = wrapSelection(
+          value,
+          selectionStart,
+          selectionEnd,
+          "<mark>",
+          "</mark>",
+          "highlight text"
+        );
+        break;
+      case "bold":
+        transformed = wrapSelection(
+          value,
+          selectionStart,
+          selectionEnd,
+          "**",
+          "**",
+          "bold text"
+        );
+        break;
+      case "inlineCode":
+        transformed = wrapSelection(
+          value,
+          selectionStart,
+          selectionEnd,
+          "`",
+          "`",
+          "main"
+        );
+        break;
+      case "codeBlock":
+        transformed = wrapCodeBlock(
+          value,
+          selectionStart,
+          selectionEnd,
+          "tsx",
+          "// your code here"
+        );
+        break;
+      default:
+        return;
+    }
+
+    setFormState((prev) => ({ ...prev, content: transformed.nextValue }));
+
+    requestAnimationFrame(() => {
+      const editor = contentTextareaRef.current;
+      if (!editor) {
+        return;
+      }
+
+      editor.focus();
+      editor.setSelectionRange(transformed.selectionStart, transformed.selectionEnd);
     });
   }
 
@@ -366,8 +560,88 @@ export default function AdminPostsPage() {
               <label htmlFor="content" className="text-sm font-medium">
                 Content (Markdown)
               </label>
+              <div className="flex flex-wrap gap-2">
+                <Button
+                  type="button"
+                  variant="outline"
+                  size="sm"
+                  onMouseDown={(event) => event.preventDefault()}
+                  onClick={() => applyEditorAction("headingLarge")}
+                >
+                  Heading L
+                </Button>
+                <Button
+                  type="button"
+                  variant="outline"
+                  size="sm"
+                  onMouseDown={(event) => event.preventDefault()}
+                  onClick={() => applyEditorAction("headingMedium")}
+                >
+                  Heading M
+                </Button>
+                <Button
+                  type="button"
+                  variant="outline"
+                  size="sm"
+                  onMouseDown={(event) => event.preventDefault()}
+                  onClick={() => applyEditorAction("numberedList")}
+                >
+                  Numbering
+                </Button>
+                <Button
+                  type="button"
+                  variant="outline"
+                  size="sm"
+                  onMouseDown={(event) => event.preventDefault()}
+                  onClick={() => applyEditorAction("bulletedList")}
+                >
+                  Pointing
+                </Button>
+                <Button
+                  type="button"
+                  variant="outline"
+                  size="sm"
+                  onMouseDown={(event) => event.preventDefault()}
+                  onClick={() => applyEditorAction("highlight")}
+                >
+                  Highlight
+                </Button>
+                <Button
+                  type="button"
+                  variant="outline"
+                  size="sm"
+                  onMouseDown={(event) => event.preventDefault()}
+                  onClick={() => applyEditorAction("bold")}
+                >
+                  Bold
+                </Button>
+                <Button
+                  type="button"
+                  variant="outline"
+                  size="sm"
+                  onMouseDown={(event) => event.preventDefault()}
+                  onClick={() => applyEditorAction("inlineCode")}
+                >
+                  Inline Code
+                </Button>
+                <Button
+                  type="button"
+                  variant="outline"
+                  size="sm"
+                  onMouseDown={(event) => event.preventDefault()}
+                  onClick={() => applyEditorAction("codeBlock")}
+                >
+                  Code Block
+                </Button>
+              </div>
+              <p className="text-xs text-muted-foreground">
+                Select text and click a formatting button. Heading L and Heading M
+                are two different font sizes in your blog view. Code Block inserts
+                fenced markdown with language support.
+              </p>
               <textarea
                 id="content"
+                ref={contentTextareaRef}
                 rows={14}
                 required
                 value={formState.content}

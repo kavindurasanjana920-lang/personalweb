@@ -75,6 +75,15 @@
   --sidebar-accent-foreground: oklch(0.205 0 0);
   --sidebar-border: oklch(0.922 0 0);
   --sidebar-ring: oklch(0.708 0 0);
+  --code-block-base: #111111;
+  --code-comment: #5f6b7d;
+  --code-keyword: #e9466b;
+  --code-function: #6e47c7;
+  --code-string: #1559b9;
+  --code-number: #a86f23;
+  --code-tag: #de4d69;
+  --code-name: #175dbe;
+  --code-bracket: #111111;
 }
 
 .dark {
@@ -109,6 +118,15 @@
   --sidebar-accent-foreground: oklch(0.985 0 0);
   --sidebar-border: oklch(1 0 0 / 10%);
   --sidebar-ring: oklch(0.556 0 0);
+  --code-block-base: #c8daf4;
+  --code-comment: #74839c;
+  --code-keyword: #ef6fa6;
+  --code-function: #ab85e8;
+  --code-string: #7bc6ef;
+  --code-number: #e7b46f;
+  --code-tag: #ff8098;
+  --code-name: #6dbaf3;
+  --code-bracket: #dbe8ff;
 }
 
 @layer base {
@@ -133,16 +151,116 @@
     background-color: transparent;
   }
 
-.prose pre {
-    @apply leading-relaxed bg-transparent! font-mono!;
+  .prose pre {
+    @apply relative! leading-relaxed! bg-transparent! font-mono! border! border-border! rounded-2xl! px-6! py-5! overflow-x-auto!;
   }
 
-  .prose code {
+  .prose :where(.code-copy-btn):not(:where([class~="not-prose"] *)) {
+    @apply absolute right-3 top-3 z-10 inline-flex items-center gap-1 rounded-md border border-border bg-background/90 px-2 py-1 text-[11px] font-medium text-muted-foreground backdrop-blur-sm transition-colors hover:bg-background hover:text-foreground;
+  }
+
+  .prose :where(:not(pre) > code):not(:where([class~="not-prose"] *)) {
     @apply m-0! mx-1! border rounded-md! px-1.5 py-0.5 bg-muted/60 dark:bg-muted/40 text-[13px]! font-mono text-foreground/90!;
+  }
+
+  .prose :where(pre > code):not(:where([class~="not-prose"] *)) {
+    @apply m-0! border-0! rounded-none! bg-transparent! p-0!;
+    color: var(--code-block-base);
+  }
+
+  .prose :where(pre > code span):not(:where([class~="not-prose"] *)) {
+    color: var(--code-block-base);
   }
 
   .prose code::before, .prose code::after {
     @apply content-none!;
+  }
+
+  .prose :where(pre > code.hljs):not(:where([class~="not-prose"] *)) {
+    @apply block!;
+    font-family: "JetBrains Mono", "Cascadia Code", "Fira Code", ui-monospace,
+      SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New",
+      monospace;
+    font-weight: 300 !important;
+    font-size: 13px !important;
+    line-height: 1.85 !important;
+    color: var(--code-block-base) !important;
+  }
+
+  .prose :where(pre > code.hljs span):not(:where([class~="not-prose"] *)) {
+    color: var(--code-block-base);
+  }
+
+  .prose
+    :where(code.hljs .hljs-comment, code.hljs .hljs-quote):not(
+      :where([class~="not-prose"] *)
+    ) {
+      color: var(--code-comment) !important;
+      font-style: normal;
+    font-family: "IBM Plex Mono", "JetBrains Mono", "Cascadia Code",
+      ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
+      "Courier New", monospace;
+    letter-spacing: 0.01em;
+  }
+
+  .prose
+    :where(
+      code.hljs .hljs-keyword,
+      code.hljs .hljs-selector-tag,
+      code.hljs .hljs-literal,
+      code.hljs .hljs-title.class_,
+      code.hljs .hljs-type
+    ):not(:where([class~="not-prose"] *)) {
+    color: var(--code-keyword) !important;
+  }
+
+  .prose
+    :where(
+      code.hljs .hljs-title.function_,
+      code.hljs .hljs-function .hljs-title,
+      code.hljs .hljs-attr,
+      code.hljs .hljs-property
+    ):not(:where([class~="not-prose"] *)) {
+    color: var(--code-function) !important;
+  }
+
+  .prose
+    :where(
+      code.hljs .hljs-string,
+      code.hljs .hljs-regexp,
+      code.hljs .hljs-symbol,
+      code.hljs .hljs-meta .hljs-string
+    ):not(:where([class~="not-prose"] *)) {
+    color: var(--code-string) !important;
+  }
+
+  .prose
+    :where(
+      code.hljs .hljs-number,
+      code.hljs .hljs-built_in,
+      code.hljs .hljs-bullet,
+      code.hljs .hljs-template-tag,
+      code.hljs .hljs-variable,
+      code.hljs .hljs-params
+    ):not(:where([class~="not-prose"] *)) {
+    color: var(--code-number) !important;
+  }
+
+  .prose :where(code.hljs .hljs-tag):not(:where([class~="not-prose"] *)) {
+    color: var(--code-bracket) !important;
+  }
+
+  .prose :where(code.hljs .hljs-name):not(:where([class~="not-prose"] *)) {
+    color: var(--code-name) !important;
+  }
+
+  .prose
+    :where(
+      code.hljs .hljs-punctuation,
+      code.hljs .hljs-operator,
+      code.hljs .hljs-subst
+    ):not(:where([class~="not-prose"] *)) {
+    color: var(--code-bracket) !important;
   }
 
   .prose h1 {
