@@ -100,9 +100,11 @@ function MarkdownPre({ children, ...props }: ComponentPropsWithoutRef<"pre">) {
         className="code-copy-btn"
         onClick={() => void copyCode()}
         aria-label={copied ? "Code copied" : "Copy code"}
+        title={copied ? "Copied" : "Copy code"}
+        data-copied={copied ? "true" : "false"}
       >
-        {copied ? <Check className="size-3" aria-hidden /> : <Copy className="size-3" aria-hidden />}
-        {copied ? "Copied" : "Copy"}
+        {copied ? <Check className="size-4" aria-hidden /> : <Copy className="size-4" aria-hidden />}
+        <span className="sr-only">{copied ? "Copied" : "Copy code"}</span>
       </button>
       <pre {...props}>{children}</pre>
     </div>

@@ -1,6 +1,78 @@
-[00:00:10.199] Server  LOG     ✓ Ready in 9.7s
-[00:01:37.443] Server  LOG     ○ Compiling /admin/posts ...
-[00:01:41.437] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:01:45.869] Server  WARN    ⚠ Fast Refresh had to perform a full reload. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
-[00:01:46.537] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:03:09.731] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:00:10.765] Server  LOG     ✓ Ready in 10.3s
+[00:00:17.007] Server  LOG     ○ Compiling /admin/login ...
+[00:00:18.980] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:00:25.306] Server  LOG     ○ Compiling /blog ...
+[00:00:29.661] Server  WARN    ⚠ Fast Refresh had to perform a full reload. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+[00:00:30.387] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:00:41.731] Server  LOG       Reload env: .env.local
+[00:00:47.352] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:00:52.855] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:01:03.090] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:01:25.877] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:01:29.836] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:02:07.114] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:02:20.529] Server  WARN    ⚠ Fast Refresh had to perform a full reload. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+[00:02:21.124] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:02:25.544] Server  WARN    ⚠ Fast Refresh had to perform a full reload. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+[00:02:26.120] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:02:30.046] Server  WARN    ⚠ Fast Refresh had to perform a full reload. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+[00:02:31.226] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:02:37.291] Server  WARN    ⚠ Fast Refresh had to perform a full reload. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+[00:02:37.819] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:02:40.493] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:02:44.192] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:02:49.553] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:30:49.534] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:40:25.346] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:40:26.224] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:42:06.036] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:56:37.141] Server  WARN    ⚠ Fast Refresh had to perform a full reload. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+[00:56:38.143] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:56:38.895] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:56:44.522] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[01:03:18.847] Server  LOG       Reload env: .env.local
+[01:03:30.824] Server  LOG     ... error "EPERM: operation not permitted, watch"
+[01:03:30.824] Server  LOG     ... error "EPERM: operation not permitted, watch"
+[01:03:30.825] Server  LOG     ... error "EPERM: operation not permitted, watch"
+[01:03:30.825] Server  LOG     ... error "EPERM: operation not permitted, watch"
+[01:03:30.825] Server  LOG     ... error "EPERM: operation not permitted, watch"
+[01:03:30.826] Server  LOG     ... error "EPERM: operation not permitted, watch"
+[01:03:30.826] Server  LOG     ... error "EPERM: operation not permitted, watch"
+[01:03:30.827] Server  LOG     ... error "EPERM: operation not permitted, watch"
+[01:03:30.827] Server  LOG     ... error "EPERM: operation not permitted, watch"
+[01:03:30.856] Server  LOG     ... error "EPERM: operation not permitted, watch"
+[01:03:30.856] Server  LOG     ... error "EPERM: operation not permitted, watch"
+[01:03:30.857] Server  LOG     ... error "EPERM: operation not permitted, watch"
+[01:03:30.857] Server  LOG     ... error "EPERM: operation not permitted, watch"
+[01:03:30.857] Server  LOG     ... error "EPERM: operation not permitted, watch"
+[01:03:30.858] Server  LOG     ... error "EPERM: operation not permitted, watch"
+[01:03:30.858] Server  LOG     ... error "EPERM: operation not permitted, watch"
+[01:03:30.858] Server  LOG     ... error "EPERM: operation not permitted, watch"
+[01:03:30.858] Server  LOG     ... error "EPERM: operation not permitted, watch"
+[01:03:30.859] Server  LOG     ... error "EPERM: operation not permitted, watch"
+[01:03:30.859] Server  LOG     ... error "EPERM: operation not permitted, watch"
+[01:03:30.859] Server  LOG     ... error "EPERM: operation not permitted, watch"
+[01:03:30.859] Server  LOG     ... error "EPERM: operation not permitted, watch"
+[01:03:30.860] Server  LOG     ... error "EPERM: operation not permitted, watch"
+[01:03:30.860] Server  LOG     ... error "EPERM: operation not permitted, watch"
+[01:03:30.860] Server  LOG     ... error "EPERM: operation not permitted, watch"
+[01:03:30.860] Server  LOG     ... error "EPERM: operation not permitted, watch"
+[01:03:30.861] Server  LOG     ... error "EPERM: operation not permitted, watch"
+[01:03:30.862] Server  LOG     ... error "EPERM: operation not permitted, watch"
+[01:03:30.862] Server  LOG     ... error "EPERM: operation not permitted, watch"
+[01:03:30.862] Server  LOG     ... error "EPERM: operation not permitted, watch"
+[01:03:30.862] Server  LOG     ... error "EPERM: operation not permitted, watch"
+[01:03:30.863] Server  LOG     ... error "EPERM: operation not permitted, watch"
+[01:03:30.863] Server  LOG     ... error "EPERM: operation not permitted, watch"
+[01:03:30.863] Server  LOG     ... error "EPERM: operation not permitted, watch"
+[01:03:30.864] Server  LOG     ... error "EPERM: operation not permitted, watch"
+[01:03:30.864] Server  LOG     ... error "EPERM: operation not permitted, watch"
+[01:03:30.864] Server  LOG     ... error "EPERM: operation not permitted, watch"
+[01:03:30.865] Server  LOG     ... error "EPERM: operation not permitted, watch"
+[01:03:30.865] Server  LOG     ... error "EPERM: operation not permitted, watch"
+[01:03:30.865] Server  LOG     ... error "EPERM: operation not permitted, watch"
+[01:03:30.866] Server  LOG     ... error "EPERM: operation not permitted, watch"
+[01:03:30.866] Server  LOG     ... error "EPERM: operation not permitted, watch"
+[01:09:43.759] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[01:09:44.577] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[01:10:01.312] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
