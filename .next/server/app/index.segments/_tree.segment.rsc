@@ -6,4 +6,4 @@
 :HL["/mtf-logo.png","image"]
 :HL["/udemy-logo.png","image"]
 :HL["/great-learning-logo.png","image"]
-0:{"buildId":"yHHJHiZ5MUSm8BxOQYl9L","tree":{"name":"","paramType":null,"paramKey":"","hasRuntimePrefetch":false,"slots":{"children":{"name":"__PAGE__","paramType":null,"paramKey":"__PAGE__","hasRuntimePrefetch":false,"slots":null,"isRootLayout":false}},"isRootLayout":true},"staleTime":300}
+0:{"buildId":"GZ7JZqe-pAVTrzKfTyKsY","tree":{"name":"","paramType":null,"paramKey":"","hasRuntimePrefetch":false,"slots":{"children":{"name":"__PAGE__","paramType":null,"paramKey":"__PAGE__","hasRuntimePrefetch":false,"slots":null,"isRootLayout":false}},"isRootLayout":true},"staleTime":300}
