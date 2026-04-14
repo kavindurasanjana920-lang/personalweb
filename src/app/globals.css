@@ -319,6 +319,10 @@
     @apply mr-2 align-middle!;
   }
 
+  .prose img {
+    @apply rounded-2xl border border-border/40 shadow-sm mx-auto my-8 block max-w-full;
+  }
+
   .prose :where(table):not(:where([class~="not-prose"]) *) {
     @apply w-full min-w-full;
     border-collapse: separate;

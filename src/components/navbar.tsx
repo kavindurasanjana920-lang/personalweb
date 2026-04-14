@@ -66,7 +66,7 @@ export default function Navbar() {
     },
     {
       label: "Contact",
-      href: "/#contact",
+      href: "/contact",
       icon: MailIcon,
       description: "Reach out for collaboration and project inquiries.",
     },

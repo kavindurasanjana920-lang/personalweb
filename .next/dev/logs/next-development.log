@@ -1,4 +1,2259 @@
-[00:00:10.088] Server  LOG     ✓ Ready in 9.6s
-[00:00:13.323] Server  LOG     ○ Compiling /blog ...
-[00:00:19.191] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:00:19.257] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:00:09.884] Server  LOG     ✓ Ready in 9.4s
+[00:00:12.978] Server  LOG     ○ Compiling / ...
+[00:00:18.337] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:00:18.416] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:00:22.286] Server  LOG     ○ Compiling /blog ...
+[00:00:23.803] Server  WARN    ⚠ Fast Refresh had to perform a full reload. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+[00:00:23.812] Server  WARN    ⚠ Fast Refresh had to perform a full reload. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+[00:00:24.588] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:00:24.602] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:01:25.842] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:01:27.782] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:01:28.580] Browser ERROR   An empty string ("") was passed to the %s attribute. This may cause the browser to download the whole page again over the network. To fix this, either do not render the element at all or pass null to %s instead of an empty string. src src
+[00:20:30.634] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:29:27.772] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:29:28.506] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:29:58.643] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:30:20.145] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:30:25.917] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:30:27.129] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:30:31.222] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:31:33.523] Browser ERROR   ./src/app/admin/posts/page.tsx
+Error:   × Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+     ╭─[C:\Users\kavin\Downloads\portfolio-nextjs-16-tailwindcss-v4\portfolio-nextjs-16-tailwindcss-v4\src\app\admin\posts\page.tsx:827:1]
+ 824 │       </Card>
+ 825 │     </section>
+ 826 │   );
+ 827 │ }
+     · ▲
+     ╰────
+  × Expected '</', got 'jsx text (
+  │   );
+  │ }
+  │ )'
+     ╭─[C:\Users\kavin\Downloads\portfolio-nextjs-16-tailwindcss-v4\portfolio-nextjs-16-tailwindcss-v4\src\app\admin\posts\page.tsx:825:1]
+ 822 │                 : null}
+ 823 │             </CardContent>
+ 824 │           </Card>
+ 825 │ ╭─▶     </section>
+ 826 │ │     );
+ 827 │ ╰─▶ }
+     ╰────
+
+Caused by:
+    Syntax Error
+
+Import trace for requested module:
+./src/app/admin/posts/page.tsx
+[00:31:33.935] Browser ERROR   ./src/app/admin/posts/page.tsx
+Error:   × Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+     ╭─[C:\Users\kavin\Downloads\portfolio-nextjs-16-tailwindcss-v4\portfolio-nextjs-16-tailwindcss-v4\src\app\admin\posts\page.tsx:827:1]
+ 824 │       </Card>
+ 825 │     </section>
+ 826 │   );
+ 827 │ }
+     · ▲
+     ╰────
+  × Expected '</', got 'jsx text (
+  │   );
+  │ }
+  │ )'
+     ╭─[C:\Users\kavin\Downloads\portfolio-nextjs-16-tailwindcss-v4\portfolio-nextjs-16-tailwindcss-v4\src\app\admin\posts\page.tsx:825:1]
+ 822 │                 : null}
+ 823 │             </CardContent>
+ 824 │           </Card>
+ 825 │ ╭─▶     </section>
+ 826 │ │     );
+ 827 │ ╰─▶ }
+     ╰────
+
+Caused by:
+    Syntax Error
+
+Import trace for requested module:
+./src/app/admin/posts/page.tsx
+[00:31:34.204] Server  ERROR   ⨯ ./src/app/admin/posts/page.tsx
+Error:   × Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+     ╭─[C:\Users\kavin\Downloads\portfolio-nextjs-16-tailwindcss-v4\portfolio-nextjs-16-tailwindcss-v4\src\app\admin\posts\page.tsx:827:1]
+ 824 │       </Card>
+ 825 │     </section>
+ 826 │   );
+ 827 │ }
+     · ▲
+     ╰────
+  × Expected '</', got 'jsx text (
+  │   );
+  │ }
+  │ )'
+     ╭─[C:\Users\kavin\Downloads\portfolio-nextjs-16-tailwindcss-v4\portfolio-nextjs-16-tailwindcss-v4\src\app\admin\posts\page.tsx:825:1]
+ 822 │                 : null}
+ 823 │             </CardContent>
+ 824 │           </Card>
+ 825 │ ╭─▶     </section>
+ 826 │ │     );
+ 827 │ ╰─▶ }
+     ╰────
+
+Caused by:
+    Syntax Error
+
+Import trace for requested module:
+./src/app/admin/posts/page.tsx
+[00:31:34.326] Browser ERROR   ./src/app/admin/posts/page.tsx
+Error:   × Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+     ╭─[C:\Users\kavin\Downloads\portfolio-nextjs-16-tailwindcss-v4\portfolio-nextjs-16-tailwindcss-v4\src\app\admin\posts\page.tsx:827:1]
+ 824 │       </Card>
+ 825 │     </section>
+ 826 │   );
+ 827 │ }
+     · ▲
+     ╰────
+  × Expected '</', got 'jsx text (
+  │   );
+  │ }
+  │ )'
+     ╭─[C:\Users\kavin\Downloads\portfolio-nextjs-16-tailwindcss-v4\portfolio-nextjs-16-tailwindcss-v4\src\app\admin\posts\page.tsx:825:1]
+ 822 │                 : null}
+ 823 │             </CardContent>
+ 824 │           </Card>
+ 825 │ ╭─▶     </section>
+ 826 │ │     );
+ 827 │ ╰─▶ }
+     ╰────
+
+Caused by:
+    Syntax Error
+
+Import trace for requested module:
+./src/app/admin/posts/page.tsx
+[00:31:34.326] Browser ERROR   ./src/app/admin/posts/page.tsx
+Error:   × Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+     ╭─[C:\Users\kavin\Downloads\portfolio-nextjs-16-tailwindcss-v4\portfolio-nextjs-16-tailwindcss-v4\src\app\admin\posts\page.tsx:827:1]
+ 824 │       </Card>
+ 825 │     </section>
+ 826 │   );
+ 827 │ }
+     · ▲
+     ╰────
+  × Expected '</', got 'jsx text (
+  │   );
+  │ }
+  │ )'
+     ╭─[C:\Users\kavin\Downloads\portfolio-nextjs-16-tailwindcss-v4\portfolio-nextjs-16-tailwindcss-v4\src\app\admin\posts\page.tsx:825:1]
+ 822 │                 : null}
+ 823 │             </CardContent>
+ 824 │           </Card>
+ 825 │ ╭─▶     </section>
+ 826 │ │     );
+ 827 │ ╰─▶ }
+     ╰────
+
+Caused by:
+    Syntax Error
+
+Import trace for requested module:
+./src/app/admin/posts/page.tsx
+[00:31:43.133] Browser ERROR   ./src/app/admin/posts/page.tsx
+Error:   × Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+     ╭─[C:\Users\kavin\Downloads\portfolio-nextjs-16-tailwindcss-v4\portfolio-nextjs-16-tailwindcss-v4\src\app\admin\posts\page.tsx:827:1]
+ 824 │       </Card>
+ 825 │     </section>
+ 826 │   );
+ 827 │ }
+     · ▲
+     ╰────
+  × Expected '</', got 'jsx text (
+  │   );
+  │ }
+  │ )'
+     ╭─[C:\Users\kavin\Downloads\portfolio-nextjs-16-tailwindcss-v4\portfolio-nextjs-16-tailwindcss-v4\src\app\admin\posts\page.tsx:825:1]
+ 822 │                 : null}
+ 823 │             </CardContent>
+ 824 │           </Card>
+ 825 │ ╭─▶     </section>
+ 826 │ │     );
+ 827 │ ╰─▶ }
+     ╰────
+
+Caused by:
+    Syntax Error
+
+Import trace for requested module:
+./src/app/admin/posts/page.tsx
+[00:31:43.305] Browser ERROR   ./src/app/admin/posts/page.tsx
+Error:   × Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+     ╭─[C:\Users\kavin\Downloads\portfolio-nextjs-16-tailwindcss-v4\portfolio-nextjs-16-tailwindcss-v4\src\app\admin\posts\page.tsx:827:1]
+ 824 │       </Card>
+ 825 │     </section>
+ 826 │   );
+ 827 │ }
+     · ▲
+     ╰────
+  × Expected '</', got 'jsx text (
+  │   );
+  │ }
+  │ )'
+     ╭─[C:\Users\kavin\Downloads\portfolio-nextjs-16-tailwindcss-v4\portfolio-nextjs-16-tailwindcss-v4\src\app\admin\posts\page.tsx:825:1]
+ 822 │                 : null}
+ 823 │             </CardContent>
+ 824 │           </Card>
+ 825 │ ╭─▶     </section>
+ 826 │ │     );
+ 827 │ ╰─▶ }
+     ╰────
+
+Caused by:
+    Syntax Error
+
+Import trace for requested module:
+./src/app/admin/posts/page.tsx
+[00:31:43.866] Server  LOG     ○ Compiling /_error ...
+[00:31:43.884] Server  ERROR   ⨯ ./src/app/admin/posts/page.tsx
+Error:   × Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+     ╭─[C:\Users\kavin\Downloads\portfolio-nextjs-16-tailwindcss-v4\portfolio-nextjs-16-tailwindcss-v4\src\app\admin\posts\page.tsx:827:1]
+ 824 │       </Card>
+ 825 │     </section>
+ 826 │   );
+ 827 │ }
+     · ▲
+     ╰────
+  × Expected '</', got 'jsx text (
+  │   );
+  │ }
+  │ )'
+     ╭─[C:\Users\kavin\Downloads\portfolio-nextjs-16-tailwindcss-v4\portfolio-nextjs-16-tailwindcss-v4\src\app\admin\posts\page.tsx:825:1]
+ 822 │                 : null}
+ 823 │             </CardContent>
+ 824 │           </Card>
+ 825 │ ╭─▶     </section>
+ 826 │ │     );
+ 827 │ ╰─▶ }
+     ╰────
+
+Caused by:
+    Syntax Error
+
+Import trace for requested module:
+./src/app/admin/posts/page.tsx
+[00:31:44.834] Browser ERROR   uncaughtError: ModuleBuildError: Module build failed (from ./node_modules/next/dist/build/webpack/loaders/next-swc-loader.js):
+Error:   × Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+     ╭─[C:\Users\kavin\Downloads\portfolio-nextjs-16-tailwindcss-v4\portfolio-nextjs-16-tailwindcss-v4\src\app\admin\posts\page.tsx:827:1]
+ 824 │       </Card>
+ 825 │     </section>
+ 826 │   );
+ 827 │ }
+     · ▲
+     ╰────
+  × Expected '</', got 'jsx text (
+  │   );
+  │ }
+  │ )'
+     ╭─[C:\Users\kavin\Downloads\portfolio-nextjs-16-tailwindcss-v4\portfolio-nextjs-16-tailwindcss-v4\src\app\admin\posts\page.tsx:825:1]
+ 822 │                 : null}
+ 823 │             </CardContent>
+ 824 │           </Card>
+ 825 │ ╭─▶     </section>
+ 826 │ │     );
+ 827 │ ╰─▶ }
+     ╰────
+
+
+Caused by:
+    Syntax Error
+[00:31:44.875] Browser ERROR   uncaughtError: ModuleBuildError: Module build failed (from ./node_modules/next/dist/build/webpack/loaders/next-swc-loader.js):
+Error:   × Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+     ╭─[C:\Users\kavin\Downloads\portfolio-nextjs-16-tailwindcss-v4\portfolio-nextjs-16-tailwindcss-v4\src\app\admin\posts\page.tsx:827:1]
+ 824 │       </Card>
+ 825 │     </section>
+ 826 │   );
+ 827 │ }
+     · ▲
+     ╰────
+  × Expected '</', got 'jsx text (
+  │   );
+  │ }
+  │ )'
+     ╭─[C:\Users\kavin\Downloads\portfolio-nextjs-16-tailwindcss-v4\portfolio-nextjs-16-tailwindcss-v4\src\app\admin\posts\page.tsx:825:1]
+ 822 │                 : null}
+ 823 │             </CardContent>
+ 824 │           </Card>
+ 825 │ ╭─▶     </section>
+ 826 │ │     );
+ 827 │ ╰─▶ }
+     ╰────
+
+
+Caused by:
+    Syntax Error
+[00:31:45.022] Browser ERROR   ./src/app/admin/posts/page.tsx
+Error:   × Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+     ╭─[C:\Users\kavin\Downloads\portfolio-nextjs-16-tailwindcss-v4\portfolio-nextjs-16-tailwindcss-v4\src\app\admin\posts\page.tsx:827:1]
+ 824 │       </Card>
+ 825 │     </section>
+ 826 │   );
+ 827 │ }
+     · ▲
+     ╰────
+  × Expected '</', got 'jsx text (
+  │   );
+  │ }
+  │ )'
+     ╭─[C:\Users\kavin\Downloads\portfolio-nextjs-16-tailwindcss-v4\portfolio-nextjs-16-tailwindcss-v4\src\app\admin\posts\page.tsx:825:1]
+ 822 │                 : null}
+ 823 │             </CardContent>
+ 824 │           </Card>
+ 825 │ ╭─▶     </section>
+ 826 │ │     );
+ 827 │ ╰─▶ }
+     ╰────
+
+Caused by:
+    Syntax Error
+[00:31:45.299] Browser ERROR   ./src/app/admin/posts/page.tsx
+Error:   × Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+     ╭─[C:\Users\kavin\Downloads\portfolio-nextjs-16-tailwindcss-v4\portfolio-nextjs-16-tailwindcss-v4\src\app\admin\posts\page.tsx:827:1]
+ 824 │       </Card>
+ 825 │     </section>
+ 826 │   );
+ 827 │ }
+     · ▲
+     ╰────
+  × Expected '</', got 'jsx text (
+  │   );
+  │ }
+  │ )'
+     ╭─[C:\Users\kavin\Downloads\portfolio-nextjs-16-tailwindcss-v4\portfolio-nextjs-16-tailwindcss-v4\src\app\admin\posts\page.tsx:825:1]
+ 822 │                 : null}
+ 823 │             </CardContent>
+ 824 │           </Card>
+ 825 │ ╭─▶     </section>
+ 826 │ │     );
+ 827 │ ╰─▶ }
+     ╰────
+
+Caused by:
+    Syntax Error
+[00:31:45.299] Browser ERROR   ./src/app/admin/posts/page.tsx
+Error:   × Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+     ╭─[C:\Users\kavin\Downloads\portfolio-nextjs-16-tailwindcss-v4\portfolio-nextjs-16-tailwindcss-v4\src\app\admin\posts\page.tsx:827:1]
+ 824 │       </Card>
+ 825 │     </section>
+ 826 │   );
+ 827 │ }
+     · ▲
+     ╰────
+  × Expected '</', got 'jsx text (
+  │   );
+  │ }
+  │ )'
+     ╭─[C:\Users\kavin\Downloads\portfolio-nextjs-16-tailwindcss-v4\portfolio-nextjs-16-tailwindcss-v4\src\app\admin\posts\page.tsx:825:1]
+ 822 │                 : null}
+ 823 │             </CardContent>
+ 824 │           </Card>
+ 825 │ ╭─▶     </section>
+ 826 │ │     );
+ 827 │ ╰─▶ }
+     ╰────
+
+Caused by:
+    Syntax Error
+[00:31:57.331] Server  WARN    ⚠ Fast Refresh had to perform a full reload. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+[00:31:57.550] Server  WARN    ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[00:31:57.778] Server  WARN    ⚠ Fast Refresh had to perform a full reload. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+[00:31:57.797] Server  WARN    ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[00:31:58.169] Server  WARN    ⚠ Fast Refresh had to perform a full reload. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+[00:31:58.169] Browser ERROR   ./src/app/admin/posts/page.tsx
+Error:   × Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+     ╭─[C:\Users\kavin\Downloads\portfolio-nextjs-16-tailwindcss-v4\portfolio-nextjs-16-tailwindcss-v4\src\app\admin\posts\page.tsx:865:1]
+ 862 │       </div>
+ 863 │     </section>
+ 864 │   );
+ 865 │ }
+     · ▲
+     ╰────
+  × Expected '</', got 'jsx text (
+  │   );
+  │ }
+  │ )'
+     ╭─[C:\Users\kavin\Downloads\portfolio-nextjs-16-tailwindcss-v4\portfolio-nextjs-16-tailwindcss-v4\src\app\admin\posts\page.tsx:863:1]
+ 860 │               </CardContent>
+ 861 │             </Card>
+ 862 │           </div>
+ 863 │ ╭─▶     </section>
+ 864 │ │     );
+ 865 │ ╰─▶ }
+     ╰────
+
+Caused by:
+    Syntax Error
+
+Import trace for requested module:
+./src/app/admin/posts/page.tsx
+[00:31:58.232] Server  WARN    ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[00:31:58.232] Browser ERROR   ./src/app/admin/posts/page.tsx
+Error:   × Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+     ╭─[C:\Users\kavin\Downloads\portfolio-nextjs-16-tailwindcss-v4\portfolio-nextjs-16-tailwindcss-v4\src\app\admin\posts\page.tsx:865:1]
+ 862 │       </div>
+ 863 │     </section>
+ 864 │   );
+ 865 │ }
+     · ▲
+     ╰────
+  × Expected '</', got 'jsx text (
+  │   );
+  │ }
+  │ )'
+     ╭─[C:\Users\kavin\Downloads\portfolio-nextjs-16-tailwindcss-v4\portfolio-nextjs-16-tailwindcss-v4\src\app\admin\posts\page.tsx:863:1]
+ 860 │               </CardContent>
+ 861 │             </Card>
+ 862 │           </div>
+ 863 │ ╭─▶     </section>
+ 864 │ │     );
+ 865 │ ╰─▶ }
+     ╰────
+
+Caused by:
+    Syntax Error
+
+Import trace for requested module:
+./src/app/admin/posts/page.tsx
+[00:31:58.558] Browser ERROR   ./src/app/admin/posts/page.tsx
+Error:   × Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+     ╭─[C:\Users\kavin\Downloads\portfolio-nextjs-16-tailwindcss-v4\portfolio-nextjs-16-tailwindcss-v4\src\app\admin\posts\page.tsx:865:1]
+ 862 │       </div>
+ 863 │     </section>
+ 864 │   );
+ 865 │ }
+     · ▲
+     ╰────
+  × Expected '</', got 'jsx text (
+  │   );
+  │ }
+  │ )'
+     ╭─[C:\Users\kavin\Downloads\portfolio-nextjs-16-tailwindcss-v4\portfolio-nextjs-16-tailwindcss-v4\src\app\admin\posts\page.tsx:863:1]
+ 860 │               </CardContent>
+ 861 │             </Card>
+ 862 │           </div>
+ 863 │ ╭─▶     </section>
+ 864 │ │     );
+ 865 │ ╰─▶ }
+     ╰────
+
+Caused by:
+    Syntax Error
+
+Import trace for requested module:
+./src/app/admin/posts/page.tsx
+[00:31:58.860] Server  ERROR   ⨯ ./src/app/admin/posts/page.tsx
+Error:   × Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+     ╭─[C:\Users\kavin\Downloads\portfolio-nextjs-16-tailwindcss-v4\portfolio-nextjs-16-tailwindcss-v4\src\app\admin\posts\page.tsx:865:1]
+ 862 │       </div>
+ 863 │     </section>
+ 864 │   );
+ 865 │ }
+     · ▲
+     ╰────
+  × Expected '</', got 'jsx text (
+  │   );
+  │ }
+  │ )'
+     ╭─[C:\Users\kavin\Downloads\portfolio-nextjs-16-tailwindcss-v4\portfolio-nextjs-16-tailwindcss-v4\src\app\admin\posts\page.tsx:863:1]
+ 860 │               </CardContent>
+ 861 │             </Card>
+ 862 │           </div>
+ 863 │ ╭─▶     </section>
+ 864 │ │     );
+ 865 │ ╰─▶ }
+     ╰────
+
+Caused by:
+    Syntax Error
+
+Import trace for requested module:
+./src/app/admin/posts/page.tsx
+[00:31:58.878] Browser ERROR   ./src/app/admin/posts/page.tsx
+Error:   × Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+     ╭─[C:\Users\kavin\Downloads\portfolio-nextjs-16-tailwindcss-v4\portfolio-nextjs-16-tailwindcss-v4\src\app\admin\posts\page.tsx:865:1]
+ 862 │       </div>
+ 863 │     </section>
+ 864 │   );
+ 865 │ }
+     · ▲
+     ╰────
+  × Expected '</', got 'jsx text (
+  │   );
+  │ }
+  │ )'
+     ╭─[C:\Users\kavin\Downloads\portfolio-nextjs-16-tailwindcss-v4\portfolio-nextjs-16-tailwindcss-v4\src\app\admin\posts\page.tsx:863:1]
+ 860 │               </CardContent>
+ 861 │             </Card>
+ 862 │           </div>
+ 863 │ ╭─▶     </section>
+ 864 │ │     );
+ 865 │ ╰─▶ }
+     ╰────
+
+Caused by:
+    Syntax Error
+
+Import trace for requested module:
+./src/app/admin/posts/page.tsx
+[00:31:59.040] Server  ERROR   ⨯ ./src/app/admin/posts/page.tsx
+Error:   × Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+     ╭─[C:\Users\kavin\Downloads\portfolio-nextjs-16-tailwindcss-v4\portfolio-nextjs-16-tailwindcss-v4\src\app\admin\posts\page.tsx:865:1]
+ 862 │       </div>
+ 863 │     </section>
+ 864 │   );
+ 865 │ }
+     · ▲
+     ╰────
+  × Expected '</', got 'jsx text (
+  │   );
+  │ }
+  │ )'
+     ╭─[C:\Users\kavin\Downloads\portfolio-nextjs-16-tailwindcss-v4\portfolio-nextjs-16-tailwindcss-v4\src\app\admin\posts\page.tsx:863:1]
+ 860 │               </CardContent>
+ 861 │             </Card>
+ 862 │           </div>
+ 863 │ ╭─▶     </section>
+ 864 │ │     );
+ 865 │ ╰─▶ }
+     ╰────
+
+Caused by:
+    Syntax Error
+
+Import trace for requested module:
+./src/app/admin/posts/page.tsx
+[00:31:59.534] Browser ERROR   uncaughtError: ModuleBuildError: Module build failed (from ./node_modules/next/dist/build/webpack/loaders/next-swc-loader.js):
+Error:   × Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+     ╭─[C:\Users\kavin\Downloads\portfolio-nextjs-16-tailwindcss-v4\portfolio-nextjs-16-tailwindcss-v4\src\app\admin\posts\page.tsx:865:1]
+ 862 │       </div>
+ 863 │     </section>
+ 864 │   );
+ 865 │ }
+     · ▲
+     ╰────
+  × Expected '</', got 'jsx text (
+  │   );
+  │ }
+  │ )'
+     ╭─[C:\Users\kavin\Downloads\portfolio-nextjs-16-tailwindcss-v4\portfolio-nextjs-16-tailwindcss-v4\src\app\admin\posts\page.tsx:863:1]
+ 860 │               </CardContent>
+ 861 │             </Card>
+ 862 │           </div>
+ 863 │ ╭─▶     </section>
+ 864 │ │     );
+ 865 │ ╰─▶ }
+     ╰────
+
+
+Caused by:
+    Syntax Error
+[00:31:59.584] Browser ERROR   uncaughtError: ModuleBuildError: Module build failed (from ./node_modules/next/dist/build/webpack/loaders/next-swc-loader.js):
+Error:   × Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+     ╭─[C:\Users\kavin\Downloads\portfolio-nextjs-16-tailwindcss-v4\portfolio-nextjs-16-tailwindcss-v4\src\app\admin\posts\page.tsx:865:1]
+ 862 │       </div>
+ 863 │     </section>
+ 864 │   );
+ 865 │ }
+     · ▲
+     ╰────
+  × Expected '</', got 'jsx text (
+  │   );
+  │ }
+  │ )'
+     ╭─[C:\Users\kavin\Downloads\portfolio-nextjs-16-tailwindcss-v4\portfolio-nextjs-16-tailwindcss-v4\src\app\admin\posts\page.tsx:863:1]
+ 860 │               </CardContent>
+ 861 │             </Card>
+ 862 │           </div>
+ 863 │ ╭─▶     </section>
+ 864 │ │     );
+ 865 │ ╰─▶ }
+     ╰────
+
+
+Caused by:
+    Syntax Error
+[00:31:59.648] Browser ERROR   ./src/app/admin/posts/page.tsx
+Error:   × Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+     ╭─[C:\Users\kavin\Downloads\portfolio-nextjs-16-tailwindcss-v4\portfolio-nextjs-16-tailwindcss-v4\src\app\admin\posts\page.tsx:865:1]
+ 862 │       </div>
+ 863 │     </section>
+ 864 │   );
+ 865 │ }
+     · ▲
+     ╰────
+  × Expected '</', got 'jsx text (
+  │   );
+  │ }
+  │ )'
+     ╭─[C:\Users\kavin\Downloads\portfolio-nextjs-16-tailwindcss-v4\portfolio-nextjs-16-tailwindcss-v4\src\app\admin\posts\page.tsx:863:1]
+ 860 │               </CardContent>
+ 861 │             </Card>
+ 862 │           </div>
+ 863 │ ╭─▶     </section>
+ 864 │ │     );
+ 865 │ ╰─▶ }
+     ╰────
+
+Caused by:
+    Syntax Error
+[00:31:59.648] Browser ERROR   ./src/app/admin/posts/page.tsx
+Error:   × Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+     ╭─[C:\Users\kavin\Downloads\portfolio-nextjs-16-tailwindcss-v4\portfolio-nextjs-16-tailwindcss-v4\src\app\admin\posts\page.tsx:865:1]
+ 862 │       </div>
+ 863 │     </section>
+ 864 │   );
+ 865 │ }
+     · ▲
+     ╰────
+  × Expected '</', got 'jsx text (
+  │   );
+  │ }
+  │ )'
+     ╭─[C:\Users\kavin\Downloads\portfolio-nextjs-16-tailwindcss-v4\portfolio-nextjs-16-tailwindcss-v4\src\app\admin\posts\page.tsx:863:1]
+ 860 │               </CardContent>
+ 861 │             </Card>
+ 862 │           </div>
+ 863 │ ╭─▶     </section>
+ 864 │ │     );
+ 865 │ ╰─▶ }
+     ╰────
+
+Caused by:
+    Syntax Error
+[00:32:00.307] Browser ERROR   ./src/app/admin/posts/page.tsx
+Error:   × Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+     ╭─[C:\Users\kavin\Downloads\portfolio-nextjs-16-tailwindcss-v4\portfolio-nextjs-16-tailwindcss-v4\src\app\admin\posts\page.tsx:865:1]
+ 862 │       </div>
+ 863 │     </section>
+ 864 │   );
+ 865 │ }
+     · ▲
+     ╰────
+  × Expected '</', got 'jsx text (
+  │   );
+  │ }
+  │ )'
+     ╭─[C:\Users\kavin\Downloads\portfolio-nextjs-16-tailwindcss-v4\portfolio-nextjs-16-tailwindcss-v4\src\app\admin\posts\page.tsx:863:1]
+ 860 │               </CardContent>
+ 861 │             </Card>
+ 862 │           </div>
+ 863 │ ╭─▶     </section>
+ 864 │ │     );
+ 865 │ ╰─▶ }
+     ╰────
+
+Caused by:
+    Syntax Error
+[00:32:48.776] Server  WARN    ⚠ Fast Refresh had to perform a full reload. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+[00:32:48.843] Server  WARN    ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[00:32:49.194] Server  WARN    ⚠ Fast Refresh had to perform a full reload. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+[00:32:49.214] Server  WARN    ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[00:32:49.509] Server  WARN    ⚠ Fast Refresh had to perform a full reload. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+[00:32:49.510] Browser ERROR   ./src/app/admin/posts/page.tsx
+Error:   × Expected '</', got 'jsx text (
+  │       )'
+     ╭─[C:\Users\kavin\Downloads\portfolio-nextjs-16-tailwindcss-v4\portfolio-nextjs-16-tailwindcss-v4\src\app\admin\posts\page.tsx:765:1]
+ 762 │                   </div>
+ 763 │                 </div>
+ 764 │               </form>
+ 765 │ ╭─▶         </CardContent>
+ 766 │ ╰─▶       </Card>
+ 767 │     
+ 768 │           <div className="space-y-6">
+ 768 │             <Card className="border-border/60 shadow-sm dark:bg-card/50 h-max sticky top-6">
+     ╰────
+
+Caused by:
+    Syntax Error
+
+Import trace for requested module:
+./src/app/admin/posts/page.tsx
+[00:32:49.550] Server  WARN    ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[00:32:49.551] Browser ERROR   ./src/app/admin/posts/page.tsx
+Error:   × Expected '</', got 'jsx text (
+  │       )'
+     ╭─[C:\Users\kavin\Downloads\portfolio-nextjs-16-tailwindcss-v4\portfolio-nextjs-16-tailwindcss-v4\src\app\admin\posts\page.tsx:765:1]
+ 762 │                   </div>
+ 763 │                 </div>
+ 764 │               </form>
+ 765 │ ╭─▶         </CardContent>
+ 766 │ ╰─▶       </Card>
+ 767 │     
+ 768 │           <div className="space-y-6">
+ 768 │             <Card className="border-border/60 shadow-sm dark:bg-card/50 h-max sticky top-6">
+     ╰────
+
+Caused by:
+    Syntax Error
+
+Import trace for requested module:
+./src/app/admin/posts/page.tsx
+[00:32:50.046] Server  ERROR   ⨯ ./src/app/admin/posts/page.tsx
+Error:   × Expected '</', got 'jsx text (
+  │       )'
+     ╭─[C:\Users\kavin\Downloads\portfolio-nextjs-16-tailwindcss-v4\portfolio-nextjs-16-tailwindcss-v4\src\app\admin\posts\page.tsx:765:1]
+ 762 │                   </div>
+ 763 │                 </div>
+ 764 │               </form>
+ 765 │ ╭─▶         </CardContent>
+ 766 │ ╰─▶       </Card>
+ 767 │     
+ 768 │           <div className="space-y-6">
+ 768 │             <Card className="border-border/60 shadow-sm dark:bg-card/50 h-max sticky top-6">
+     ╰────
+
+Caused by:
+    Syntax Error
+
+Import trace for requested module:
+./src/app/admin/posts/page.tsx
+[00:32:50.066] Browser ERROR   ./src/app/admin/posts/page.tsx
+Error:   × Expected '</', got 'jsx text (
+  │       )'
+     ╭─[C:\Users\kavin\Downloads\portfolio-nextjs-16-tailwindcss-v4\portfolio-nextjs-16-tailwindcss-v4\src\app\admin\posts\page.tsx:765:1]
+ 762 │                   </div>
+ 763 │                 </div>
+ 764 │               </form>
+ 765 │ ╭─▶         </CardContent>
+ 766 │ ╰─▶       </Card>
+ 767 │     
+ 768 │           <div className="space-y-6">
+ 768 │             <Card className="border-border/60 shadow-sm dark:bg-card/50 h-max sticky top-6">
+     ╰────
+
+Caused by:
+    Syntax Error
+
+Import trace for requested module:
+./src/app/admin/posts/page.tsx
+[00:32:50.066] Browser ERROR   ./src/app/admin/posts/page.tsx
+Error:   × Expected '</', got 'jsx text (
+  │       )'
+     ╭─[C:\Users\kavin\Downloads\portfolio-nextjs-16-tailwindcss-v4\portfolio-nextjs-16-tailwindcss-v4\src\app\admin\posts\page.tsx:765:1]
+ 762 │                   </div>
+ 763 │                 </div>
+ 764 │               </form>
+ 765 │ ╭─▶         </CardContent>
+ 766 │ ╰─▶       </Card>
+ 767 │     
+ 768 │           <div className="space-y-6">
+ 768 │             <Card className="border-border/60 shadow-sm dark:bg-card/50 h-max sticky top-6">
+     ╰────
+
+Caused by:
+    Syntax Error
+
+Import trace for requested module:
+./src/app/admin/posts/page.tsx
+[00:32:50.737] Browser ERROR   uncaughtError: ModuleBuildError: Module build failed (from ./node_modules/next/dist/build/webpack/loaders/next-swc-loader.js):
+Error:   × Expected '</', got 'jsx text (
+  │       )'
+     ╭─[C:\Users\kavin\Downloads\portfolio-nextjs-16-tailwindcss-v4\portfolio-nextjs-16-tailwindcss-v4\src\app\admin\posts\page.tsx:765:1]
+ 762 │                   </div>
+ 763 │                 </div>
+ 764 │               </form>
+ 765 │ ╭─▶         </CardContent>
+ 766 │ ╰─▶       </Card>
+ 767 │     
+ 768 │           <div className="space-y-6">
+ 768 │             <Card className="border-border/60 shadow-sm dark:bg-card/50 h-max sticky top-6">
+     ╰────
+
+
+Caused by:
+    Syntax Error
+[00:32:50.764] Browser ERROR   uncaughtError: ModuleBuildError: Module build failed (from ./node_modules/next/dist/build/webpack/loaders/next-swc-loader.js):
+Error:   × Expected '</', got 'jsx text (
+  │       )'
+     ╭─[C:\Users\kavin\Downloads\portfolio-nextjs-16-tailwindcss-v4\portfolio-nextjs-16-tailwindcss-v4\src\app\admin\posts\page.tsx:765:1]
+ 762 │                   </div>
+ 763 │                 </div>
+ 764 │               </form>
+ 765 │ ╭─▶         </CardContent>
+ 766 │ ╰─▶       </Card>
+ 767 │     
+ 768 │           <div className="space-y-6">
+ 768 │             <Card className="border-border/60 shadow-sm dark:bg-card/50 h-max sticky top-6">
+     ╰────
+
+
+Caused by:
+    Syntax Error
+[00:32:50.843] Browser ERROR   ./src/app/admin/posts/page.tsx
+Error:   × Expected '</', got 'jsx text (
+  │       )'
+     ╭─[C:\Users\kavin\Downloads\portfolio-nextjs-16-tailwindcss-v4\portfolio-nextjs-16-tailwindcss-v4\src\app\admin\posts\page.tsx:765:1]
+ 762 │                   </div>
+ 763 │                 </div>
+ 764 │               </form>
+ 765 │ ╭─▶         </CardContent>
+ 766 │ ╰─▶       </Card>
+ 767 │     
+ 768 │           <div className="space-y-6">
+ 768 │             <Card className="border-border/60 shadow-sm dark:bg-card/50 h-max sticky top-6">
+     ╰────
+
+Caused by:
+    Syntax Error
+[00:32:50.843] Browser ERROR   ./src/app/admin/posts/page.tsx
+Error:   × Expected '</', got 'jsx text (
+  │       )'
+     ╭─[C:\Users\kavin\Downloads\portfolio-nextjs-16-tailwindcss-v4\portfolio-nextjs-16-tailwindcss-v4\src\app\admin\posts\page.tsx:765:1]
+ 762 │                   </div>
+ 763 │                 </div>
+ 764 │               </form>
+ 765 │ ╭─▶         </CardContent>
+ 766 │ ╰─▶       </Card>
+ 767 │     
+ 768 │           <div className="space-y-6">
+ 768 │             <Card className="border-border/60 shadow-sm dark:bg-card/50 h-max sticky top-6">
+     ╰────
+
+Caused by:
+    Syntax Error
+[00:32:51.309] Browser ERROR   ./src/app/admin/posts/page.tsx
+Error:   × Expected '</', got 'jsx text (
+  │       )'
+     ╭─[C:\Users\kavin\Downloads\portfolio-nextjs-16-tailwindcss-v4\portfolio-nextjs-16-tailwindcss-v4\src\app\admin\posts\page.tsx:765:1]
+ 762 │                   </div>
+ 763 │                 </div>
+ 764 │               </form>
+ 765 │ ╭─▶         </CardContent>
+ 766 │ ╰─▶       </Card>
+ 767 │     
+ 768 │           <div className="space-y-6">
+ 768 │             <Card className="border-border/60 shadow-sm dark:bg-card/50 h-max sticky top-6">
+     ╰────
+
+Caused by:
+    Syntax Error
+[00:33:04.335] Server  WARN    ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[00:33:04.352] Server  WARN    ⚠ Fast Refresh had to perform a full reload. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+[00:33:04.528] Server  WARN    ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[00:33:04.547] Server  WARN    ⚠ Fast Refresh had to perform a full reload. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+[00:33:04.854] Server  WARN    ⚠ Fast Refresh had to perform a full reload. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+[00:33:04.854] Browser ERROR   ./src/app/admin/posts/page.tsx
+Error:   × Expected '</', got 'jsx text (
+  │       )'
+     ╭─[C:\Users\kavin\Downloads\portfolio-nextjs-16-tailwindcss-v4\portfolio-nextjs-16-tailwindcss-v4\src\app\admin\posts\page.tsx:765:1]
+ 762 │                   </div>
+ 763 │                 </div>
+ 764 │               </form>
+ 765 │ ╭─▶         </CardContent>
+ 766 │ ╰─▶       </Card>
+ 767 │     
+ 768 │           <div className="space-y-6">
+ 768 │             <Card className="border-border/60 shadow-sm dark:bg-card/50 h-max sticky top-6">
+     ╰────
+
+Caused by:
+    Syntax Error
+
+Import trace for requested module:
+./src/app/admin/posts/page.tsx
+[00:33:04.964] Server  WARN    ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[00:33:04.964] Browser ERROR   ./src/app/admin/posts/page.tsx
+Error:   × Expected '</', got 'jsx text (
+  │       )'
+     ╭─[C:\Users\kavin\Downloads\portfolio-nextjs-16-tailwindcss-v4\portfolio-nextjs-16-tailwindcss-v4\src\app\admin\posts\page.tsx:765:1]
+ 762 │                   </div>
+ 763 │                 </div>
+ 764 │               </form>
+ 765 │ ╭─▶         </CardContent>
+ 766 │ ╰─▶       </Card>
+ 767 │     
+ 768 │           <div className="space-y-6">
+ 768 │             <Card className="border-border/60 shadow-sm dark:bg-card/50 h-max sticky top-6">
+     ╰────
+
+Caused by:
+    Syntax Error
+
+Import trace for requested module:
+./src/app/admin/posts/page.tsx
+[00:33:05.149] Server  WARN    ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[00:33:05.190] Server  WARN    ⚠ Fast Refresh had to perform a full reload. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+[00:33:05.446] Server  WARN    ⚠ Fast Refresh had to perform a full reload. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+[00:33:05.627] Server  WARN    ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[00:33:06.174] Server  ERROR   ⨯ ./src/app/admin/posts/page.tsx
+Error:   × Expected '</', got 'jsx text (
+  │       )'
+     ╭─[C:\Users\kavin\Downloads\portfolio-nextjs-16-tailwindcss-v4\portfolio-nextjs-16-tailwindcss-v4\src\app\admin\posts\page.tsx:765:1]
+ 762 │                   </div>
+ 763 │                 </div>
+ 764 │               </form>
+ 765 │ ╭─▶         </CardContent>
+ 766 │ ╰─▶       </Card>
+ 767 │     
+ 768 │           <div className="space-y-6">
+ 768 │             <Card className="border-border/60 shadow-sm dark:bg-card/50 h-max sticky top-6">
+     ╰────
+
+Caused by:
+    Syntax Error
+
+Import trace for requested module:
+./src/app/admin/posts/page.tsx
+[00:33:06.221] Browser ERROR   ./src/app/admin/posts/page.tsx
+Error:   × Expected '</', got 'jsx text (
+  │       )'
+     ╭─[C:\Users\kavin\Downloads\portfolio-nextjs-16-tailwindcss-v4\portfolio-nextjs-16-tailwindcss-v4\src\app\admin\posts\page.tsx:765:1]
+ 762 │                   </div>
+ 763 │                 </div>
+ 764 │               </form>
+ 765 │ ╭─▶         </CardContent>
+ 766 │ ╰─▶       </Card>
+ 767 │     
+ 768 │           <div className="space-y-6">
+ 768 │             <Card className="border-border/60 shadow-sm dark:bg-card/50 h-max sticky top-6">
+     ╰────
+
+Caused by:
+    Syntax Error
+
+Import trace for requested module:
+./src/app/admin/posts/page.tsx
+[00:33:06.221] Browser ERROR   ./src/app/admin/posts/page.tsx
+Error:   × Expected '</', got 'jsx text (
+  │       )'
+     ╭─[C:\Users\kavin\Downloads\portfolio-nextjs-16-tailwindcss-v4\portfolio-nextjs-16-tailwindcss-v4\src\app\admin\posts\page.tsx:765:1]
+ 762 │                   </div>
+ 763 │                 </div>
+ 764 │               </form>
+ 765 │ ╭─▶         </CardContent>
+ 766 │ ╰─▶       </Card>
+ 767 │     
+ 768 │           <div className="space-y-6">
+ 768 │             <Card className="border-border/60 shadow-sm dark:bg-card/50 h-max sticky top-6">
+     ╰────
+
+Caused by:
+    Syntax Error
+
+Import trace for requested module:
+./src/app/admin/posts/page.tsx
+[00:33:07.030] Browser ERROR   uncaughtError: ModuleBuildError: Module build failed (from ./node_modules/next/dist/build/webpack/loaders/next-swc-loader.js):
+Error:   × Expected '</', got 'jsx text (
+  │       )'
+     ╭─[C:\Users\kavin\Downloads\portfolio-nextjs-16-tailwindcss-v4\portfolio-nextjs-16-tailwindcss-v4\src\app\admin\posts\page.tsx:765:1]
+ 762 │                   </div>
+ 763 │                 </div>
+ 764 │               </form>
+ 765 │ ╭─▶         </CardContent>
+ 766 │ ╰─▶       </Card>
+ 767 │     
+ 768 │           <div className="space-y-6">
+ 768 │             <Card className="border-border/60 shadow-sm dark:bg-card/50 h-max sticky top-6">
+     ╰────
+
+
+Caused by:
+    Syntax Error
+[00:33:07.053] Browser ERROR   uncaughtError: ModuleBuildError: Module build failed (from ./node_modules/next/dist/build/webpack/loaders/next-swc-loader.js):
+Error:   × Expected '</', got 'jsx text (
+  │       )'
+     ╭─[C:\Users\kavin\Downloads\portfolio-nextjs-16-tailwindcss-v4\portfolio-nextjs-16-tailwindcss-v4\src\app\admin\posts\page.tsx:765:1]
+ 762 │                   </div>
+ 763 │                 </div>
+ 764 │               </form>
+ 765 │ ╭─▶         </CardContent>
+ 766 │ ╰─▶       </Card>
+ 767 │     
+ 768 │           <div className="space-y-6">
+ 768 │             <Card className="border-border/60 shadow-sm dark:bg-card/50 h-max sticky top-6">
+     ╰────
+
+
+Caused by:
+    Syntax Error
+[00:33:07.310] Browser ERROR   ./src/app/admin/posts/page.tsx
+Error:   × Expected '</', got 'jsx text (
+  │       )'
+     ╭─[C:\Users\kavin\Downloads\portfolio-nextjs-16-tailwindcss-v4\portfolio-nextjs-16-tailwindcss-v4\src\app\admin\posts\page.tsx:765:1]
+ 762 │                   </div>
+ 763 │                 </div>
+ 764 │               </form>
+ 765 │ ╭─▶         </CardContent>
+ 766 │ ╰─▶       </Card>
+ 767 │     
+ 768 │           <div className="space-y-6">
+ 768 │             <Card className="border-border/60 shadow-sm dark:bg-card/50 h-max sticky top-6">
+     ╰────
+
+Caused by:
+    Syntax Error
+[00:33:07.317] Browser ERROR   ./src/app/admin/posts/page.tsx
+Error:   × Expected '</', got 'jsx text (
+  │       )'
+     ╭─[C:\Users\kavin\Downloads\portfolio-nextjs-16-tailwindcss-v4\portfolio-nextjs-16-tailwindcss-v4\src\app\admin\posts\page.tsx:765:1]
+ 762 │                   </div>
+ 763 │                 </div>
+ 764 │               </form>
+ 765 │ ╭─▶         </CardContent>
+ 766 │ ╰─▶       </Card>
+ 767 │     
+ 768 │           <div className="space-y-6">
+ 768 │             <Card className="border-border/60 shadow-sm dark:bg-card/50 h-max sticky top-6">
+     ╰────
+
+Caused by:
+    Syntax Error
+[00:33:07.317] Browser ERROR   ./src/app/admin/posts/page.tsx
+Error:   × Expected '</', got 'jsx text (
+  │       )'
+     ╭─[C:\Users\kavin\Downloads\portfolio-nextjs-16-tailwindcss-v4\portfolio-nextjs-16-tailwindcss-v4\src\app\admin\posts\page.tsx:765:1]
+ 762 │                   </div>
+ 763 │                 </div>
+ 764 │               </form>
+ 765 │ ╭─▶         </CardContent>
+ 766 │ ╰─▶       </Card>
+ 767 │     
+ 768 │           <div className="space-y-6">
+ 768 │             <Card className="border-border/60 shadow-sm dark:bg-card/50 h-max sticky top-6">
+     ╰────
+
+Caused by:
+    Syntax Error
+[00:33:54.527] Server  WARN    ⚠ Fast Refresh had to perform a full reload. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+[00:33:54.756] Server  WARN    ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[00:33:55.220] Server  WARN    ⚠ Fast Refresh had to perform a full reload. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+[00:33:55.241] Server  WARN    ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[00:33:55.577] Server  WARN    ⚠ Fast Refresh had to perform a full reload. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+[00:33:55.577] Browser ERROR   ./src/app/admin/posts/page.tsx
+Error:   × Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+     ╭─[C:\Users\kavin\Downloads\portfolio-nextjs-16-tailwindcss-v4\portfolio-nextjs-16-tailwindcss-v4\src\app\admin\posts\page.tsx:865:1]
+ 862 │       </div>
+ 863 │     </section>
+ 864 │   );
+ 865 │ }
+     · ▲
+     ╰────
+  × Expected '</', got 'jsx text (
+  │   );
+  │ }
+  │ )'
+     ╭─[C:\Users\kavin\Downloads\portfolio-nextjs-16-tailwindcss-v4\portfolio-nextjs-16-tailwindcss-v4\src\app\admin\posts\page.tsx:863:1]
+ 860 │               </CardContent>
+ 861 │             </Card>
+ 862 │           </div>
+ 863 │ ╭─▶     </section>
+ 864 │ │     );
+ 865 │ ╰─▶ }
+     ╰────
+
+Caused by:
+    Syntax Error
+
+Import trace for requested module:
+./src/app/admin/posts/page.tsx
+[00:33:55.624] Server  WARN    ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[00:33:55.625] Browser ERROR   ./src/app/admin/posts/page.tsx
+Error:   × Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+     ╭─[C:\Users\kavin\Downloads\portfolio-nextjs-16-tailwindcss-v4\portfolio-nextjs-16-tailwindcss-v4\src\app\admin\posts\page.tsx:865:1]
+ 862 │       </div>
+ 863 │     </section>
+ 864 │   );
+ 865 │ }
+     · ▲
+     ╰────
+  × Expected '</', got 'jsx text (
+  │   );
+  │ }
+  │ )'
+     ╭─[C:\Users\kavin\Downloads\portfolio-nextjs-16-tailwindcss-v4\portfolio-nextjs-16-tailwindcss-v4\src\app\admin\posts\page.tsx:863:1]
+ 860 │               </CardContent>
+ 861 │             </Card>
+ 862 │           </div>
+ 863 │ ╭─▶     </section>
+ 864 │ │     );
+ 865 │ ╰─▶ }
+     ╰────
+
+Caused by:
+    Syntax Error
+
+Import trace for requested module:
+./src/app/admin/posts/page.tsx
+[00:33:56.098] Server  ERROR   ⨯ ./src/app/admin/posts/page.tsx
+Error:   × Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+     ╭─[C:\Users\kavin\Downloads\portfolio-nextjs-16-tailwindcss-v4\portfolio-nextjs-16-tailwindcss-v4\src\app\admin\posts\page.tsx:865:1]
+ 862 │       </div>
+ 863 │     </section>
+ 864 │   );
+ 865 │ }
+     · ▲
+     ╰────
+  × Expected '</', got 'jsx text (
+  │   );
+  │ }
+  │ )'
+     ╭─[C:\Users\kavin\Downloads\portfolio-nextjs-16-tailwindcss-v4\portfolio-nextjs-16-tailwindcss-v4\src\app\admin\posts\page.tsx:863:1]
+ 860 │               </CardContent>
+ 861 │             </Card>
+ 862 │           </div>
+ 863 │ ╭─▶     </section>
+ 864 │ │     );
+ 865 │ ╰─▶ }
+     ╰────
+
+Caused by:
+    Syntax Error
+
+Import trace for requested module:
+./src/app/admin/posts/page.tsx
+[00:33:56.110] Browser ERROR   ./src/app/admin/posts/page.tsx
+Error:   × Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+     ╭─[C:\Users\kavin\Downloads\portfolio-nextjs-16-tailwindcss-v4\portfolio-nextjs-16-tailwindcss-v4\src\app\admin\posts\page.tsx:865:1]
+ 862 │       </div>
+ 863 │     </section>
+ 864 │   );
+ 865 │ }
+     · ▲
+     ╰────
+  × Expected '</', got 'jsx text (
+  │   );
+  │ }
+  │ )'
+     ╭─[C:\Users\kavin\Downloads\portfolio-nextjs-16-tailwindcss-v4\portfolio-nextjs-16-tailwindcss-v4\src\app\admin\posts\page.tsx:863:1]
+ 860 │               </CardContent>
+ 861 │             </Card>
+ 862 │           </div>
+ 863 │ ╭─▶     </section>
+ 864 │ │     );
+ 865 │ ╰─▶ }
+     ╰────
+
+Caused by:
+    Syntax Error
+
+Import trace for requested module:
+./src/app/admin/posts/page.tsx
+[00:33:56.111] Browser ERROR   ./src/app/admin/posts/page.tsx
+Error:   × Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+     ╭─[C:\Users\kavin\Downloads\portfolio-nextjs-16-tailwindcss-v4\portfolio-nextjs-16-tailwindcss-v4\src\app\admin\posts\page.tsx:865:1]
+ 862 │       </div>
+ 863 │     </section>
+ 864 │   );
+ 865 │ }
+     · ▲
+     ╰────
+  × Expected '</', got 'jsx text (
+  │   );
+  │ }
+  │ )'
+     ╭─[C:\Users\kavin\Downloads\portfolio-nextjs-16-tailwindcss-v4\portfolio-nextjs-16-tailwindcss-v4\src\app\admin\posts\page.tsx:863:1]
+ 860 │               </CardContent>
+ 861 │             </Card>
+ 862 │           </div>
+ 863 │ ╭─▶     </section>
+ 864 │ │     );
+ 865 │ ╰─▶ }
+     ╰────
+
+Caused by:
+    Syntax Error
+
+Import trace for requested module:
+./src/app/admin/posts/page.tsx
+[00:33:56.256] Server  ERROR   ⨯ ./src/app/admin/posts/page.tsx
+Error:   × Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+     ╭─[C:\Users\kavin\Downloads\portfolio-nextjs-16-tailwindcss-v4\portfolio-nextjs-16-tailwindcss-v4\src\app\admin\posts\page.tsx:865:1]
+ 862 │       </div>
+ 863 │     </section>
+ 864 │   );
+ 865 │ }
+     · ▲
+     ╰────
+  × Expected '</', got 'jsx text (
+  │   );
+  │ }
+  │ )'
+     ╭─[C:\Users\kavin\Downloads\portfolio-nextjs-16-tailwindcss-v4\portfolio-nextjs-16-tailwindcss-v4\src\app\admin\posts\page.tsx:863:1]
+ 860 │               </CardContent>
+ 861 │             </Card>
+ 862 │           </div>
+ 863 │ ╭─▶     </section>
+ 864 │ │     );
+ 865 │ ╰─▶ }
+     ╰────
+
+Caused by:
+    Syntax Error
+
+Import trace for requested module:
+./src/app/admin/posts/page.tsx
+[00:33:56.805] Browser ERROR   uncaughtError: ModuleBuildError: Module build failed (from ./node_modules/next/dist/build/webpack/loaders/next-swc-loader.js):
+Error:   × Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+     ╭─[C:\Users\kavin\Downloads\portfolio-nextjs-16-tailwindcss-v4\portfolio-nextjs-16-tailwindcss-v4\src\app\admin\posts\page.tsx:865:1]
+ 862 │       </div>
+ 863 │     </section>
+ 864 │   );
+ 865 │ }
+     · ▲
+     ╰────
+  × Expected '</', got 'jsx text (
+  │   );
+  │ }
+  │ )'
+     ╭─[C:\Users\kavin\Downloads\portfolio-nextjs-16-tailwindcss-v4\portfolio-nextjs-16-tailwindcss-v4\src\app\admin\posts\page.tsx:863:1]
+ 860 │               </CardContent>
+ 861 │             </Card>
+ 862 │           </div>
+ 863 │ ╭─▶     </section>
+ 864 │ │     );
+ 865 │ ╰─▶ }
+     ╰────
+
+
+Caused by:
+    Syntax Error
+[00:33:56.806] Browser ERROR   uncaughtError: ModuleBuildError: Module build failed (from ./node_modules/next/dist/build/webpack/loaders/next-swc-loader.js):
+Error:   × Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+     ╭─[C:\Users\kavin\Downloads\portfolio-nextjs-16-tailwindcss-v4\portfolio-nextjs-16-tailwindcss-v4\src\app\admin\posts\page.tsx:865:1]
+ 862 │       </div>
+ 863 │     </section>
+ 864 │   );
+ 865 │ }
+     · ▲
+     ╰────
+  × Expected '</', got 'jsx text (
+  │   );
+  │ }
+  │ )'
+     ╭─[C:\Users\kavin\Downloads\portfolio-nextjs-16-tailwindcss-v4\portfolio-nextjs-16-tailwindcss-v4\src\app\admin\posts\page.tsx:863:1]
+ 860 │               </CardContent>
+ 861 │             </Card>
+ 862 │           </div>
+ 863 │ ╭─▶     </section>
+ 864 │ │     );
+ 865 │ ╰─▶ }
+     ╰────
+
+
+Caused by:
+    Syntax Error
+[00:33:57.300] Browser ERROR   ./src/app/admin/posts/page.tsx
+Error:   × Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+     ╭─[C:\Users\kavin\Downloads\portfolio-nextjs-16-tailwindcss-v4\portfolio-nextjs-16-tailwindcss-v4\src\app\admin\posts\page.tsx:865:1]
+ 862 │       </div>
+ 863 │     </section>
+ 864 │   );
+ 865 │ }
+     · ▲
+     ╰────
+  × Expected '</', got 'jsx text (
+  │   );
+  │ }
+  │ )'
+     ╭─[C:\Users\kavin\Downloads\portfolio-nextjs-16-tailwindcss-v4\portfolio-nextjs-16-tailwindcss-v4\src\app\admin\posts\page.tsx:863:1]
+ 860 │               </CardContent>
+ 861 │             </Card>
+ 862 │           </div>
+ 863 │ ╭─▶     </section>
+ 864 │ │     );
+ 865 │ ╰─▶ }
+     ╰────
+
+Caused by:
+    Syntax Error
+[00:33:57.300] Browser ERROR   ./src/app/admin/posts/page.tsx
+Error:   × Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+     ╭─[C:\Users\kavin\Downloads\portfolio-nextjs-16-tailwindcss-v4\portfolio-nextjs-16-tailwindcss-v4\src\app\admin\posts\page.tsx:865:1]
+ 862 │       </div>
+ 863 │     </section>
+ 864 │   );
+ 865 │ }
+     · ▲
+     ╰────
+  × Expected '</', got 'jsx text (
+  │   );
+  │ }
+  │ )'
+     ╭─[C:\Users\kavin\Downloads\portfolio-nextjs-16-tailwindcss-v4\portfolio-nextjs-16-tailwindcss-v4\src\app\admin\posts\page.tsx:863:1]
+ 860 │               </CardContent>
+ 861 │             </Card>
+ 862 │           </div>
+ 863 │ ╭─▶     </section>
+ 864 │ │     );
+ 865 │ ╰─▶ }
+     ╰────
+
+Caused by:
+    Syntax Error
+[00:33:57.300] Browser ERROR   ./src/app/admin/posts/page.tsx
+Error:   × Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+     ╭─[C:\Users\kavin\Downloads\portfolio-nextjs-16-tailwindcss-v4\portfolio-nextjs-16-tailwindcss-v4\src\app\admin\posts\page.tsx:865:1]
+ 862 │       </div>
+ 863 │     </section>
+ 864 │   );
+ 865 │ }
+     · ▲
+     ╰────
+  × Expected '</', got 'jsx text (
+  │   );
+  │ }
+  │ )'
+     ╭─[C:\Users\kavin\Downloads\portfolio-nextjs-16-tailwindcss-v4\portfolio-nextjs-16-tailwindcss-v4\src\app\admin\posts\page.tsx:863:1]
+ 860 │               </CardContent>
+ 861 │             </Card>
+ 862 │           </div>
+ 863 │ ╭─▶     </section>
+ 864 │ │     );
+ 865 │ ╰─▶ }
+     ╰────
+
+Caused by:
+    Syntax Error
+[00:34:15.397] Server  WARN    ⚠ Fast Refresh had to perform a full reload. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+[00:34:15.415] Server  WARN    ⚠ Fast Refresh had to perform a full reload. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+[00:34:15.588] Server  WARN    ⚠ Fast Refresh had to perform a full reload. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+[00:34:15.608] Server  WARN    ⚠ Fast Refresh had to perform a full reload. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+[00:34:15.899] Server  WARN    ⚠ Fast Refresh had to perform a full reload. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+[00:34:15.899] Browser ERROR   ./src/app/admin/posts/page.tsx
+Error:   × Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+     ╭─[C:\Users\kavin\Downloads\portfolio-nextjs-16-tailwindcss-v4\portfolio-nextjs-16-tailwindcss-v4\src\app\admin\posts\page.tsx:865:1]
+ 862 │       </div>
+ 863 │     </section>
+ 864 │   );
+ 865 │ }
+     · ▲
+     ╰────
+  × Expected '</', got 'jsx text (
+  │   );
+  │ }
+  │ )'
+     ╭─[C:\Users\kavin\Downloads\portfolio-nextjs-16-tailwindcss-v4\portfolio-nextjs-16-tailwindcss-v4\src\app\admin\posts\page.tsx:863:1]
+ 860 │               </CardContent>
+ 861 │             </Card>
+ 862 │           </div>
+ 863 │ ╭─▶     </section>
+ 864 │ │     );
+ 865 │ ╰─▶ }
+     ╰────
+
+Caused by:
+    Syntax Error
+
+Import trace for requested module:
+./src/app/admin/posts/page.tsx
+[00:34:15.964] Server  WARN    ⚠ Fast Refresh had to perform a full reload. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+[00:34:15.967] Browser ERROR   ./src/app/admin/posts/page.tsx
+Error:   × Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+     ╭─[C:\Users\kavin\Downloads\portfolio-nextjs-16-tailwindcss-v4\portfolio-nextjs-16-tailwindcss-v4\src\app\admin\posts\page.tsx:865:1]
+ 862 │       </div>
+ 863 │     </section>
+ 864 │   );
+ 865 │ }
+     · ▲
+     ╰────
+  × Expected '</', got 'jsx text (
+  │   );
+  │ }
+  │ )'
+     ╭─[C:\Users\kavin\Downloads\portfolio-nextjs-16-tailwindcss-v4\portfolio-nextjs-16-tailwindcss-v4\src\app\admin\posts\page.tsx:863:1]
+ 860 │               </CardContent>
+ 861 │             </Card>
+ 862 │           </div>
+ 863 │ ╭─▶     </section>
+ 864 │ │     );
+ 865 │ ╰─▶ }
+     ╰────
+
+Caused by:
+    Syntax Error
+
+Import trace for requested module:
+./src/app/admin/posts/page.tsx
+[00:34:16.470] Server  WARN    ⚠ Fast Refresh had to perform a full reload. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+[00:34:16.520] Server  WARN    ⚠ Fast Refresh had to perform a full reload. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+[00:34:17.283] Server  ERROR   ⨯ ./src/app/admin/posts/page.tsx
+Error:   × Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+     ╭─[C:\Users\kavin\Downloads\portfolio-nextjs-16-tailwindcss-v4\portfolio-nextjs-16-tailwindcss-v4\src\app\admin\posts\page.tsx:865:1]
+ 862 │       </div>
+ 863 │     </section>
+ 864 │   );
+ 865 │ }
+     · ▲
+     ╰────
+  × Expected '</', got 'jsx text (
+  │   );
+  │ }
+  │ )'
+     ╭─[C:\Users\kavin\Downloads\portfolio-nextjs-16-tailwindcss-v4\portfolio-nextjs-16-tailwindcss-v4\src\app\admin\posts\page.tsx:863:1]
+ 860 │               </CardContent>
+ 861 │             </Card>
+ 862 │           </div>
+ 863 │ ╭─▶     </section>
+ 864 │ │     );
+ 865 │ ╰─▶ }
+     ╰────
+
+Caused by:
+    Syntax Error
+
+Import trace for requested module:
+./src/app/admin/posts/page.tsx
+[00:34:17.309] Browser ERROR   ./src/app/admin/posts/page.tsx
+Error:   × Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+     ╭─[C:\Users\kavin\Downloads\portfolio-nextjs-16-tailwindcss-v4\portfolio-nextjs-16-tailwindcss-v4\src\app\admin\posts\page.tsx:865:1]
+ 862 │       </div>
+ 863 │     </section>
+ 864 │   );
+ 865 │ }
+     · ▲
+     ╰────
+  × Expected '</', got 'jsx text (
+  │   );
+  │ }
+  │ )'
+     ╭─[C:\Users\kavin\Downloads\portfolio-nextjs-16-tailwindcss-v4\portfolio-nextjs-16-tailwindcss-v4\src\app\admin\posts\page.tsx:863:1]
+ 860 │               </CardContent>
+ 861 │             </Card>
+ 862 │           </div>
+ 863 │ ╭─▶     </section>
+ 864 │ │     );
+ 865 │ ╰─▶ }
+     ╰────
+
+Caused by:
+    Syntax Error
+
+Import trace for requested module:
+./src/app/admin/posts/page.tsx
+[00:34:17.309] Browser ERROR   ./src/app/admin/posts/page.tsx
+Error:   × Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+     ╭─[C:\Users\kavin\Downloads\portfolio-nextjs-16-tailwindcss-v4\portfolio-nextjs-16-tailwindcss-v4\src\app\admin\posts\page.tsx:865:1]
+ 862 │       </div>
+ 863 │     </section>
+ 864 │   );
+ 865 │ }
+     · ▲
+     ╰────
+  × Expected '</', got 'jsx text (
+  │   );
+  │ }
+  │ )'
+     ╭─[C:\Users\kavin\Downloads\portfolio-nextjs-16-tailwindcss-v4\portfolio-nextjs-16-tailwindcss-v4\src\app\admin\posts\page.tsx:863:1]
+ 860 │               </CardContent>
+ 861 │             </Card>
+ 862 │           </div>
+ 863 │ ╭─▶     </section>
+ 864 │ │     );
+ 865 │ ╰─▶ }
+     ╰────
+
+Caused by:
+    Syntax Error
+
+Import trace for requested module:
+./src/app/admin/posts/page.tsx
+[00:34:18.588] Browser ERROR   uncaughtError: ModuleBuildError: Module build failed (from ./node_modules/next/dist/build/webpack/loaders/next-swc-loader.js):
+Error:   × Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+     ╭─[C:\Users\kavin\Downloads\portfolio-nextjs-16-tailwindcss-v4\portfolio-nextjs-16-tailwindcss-v4\src\app\admin\posts\page.tsx:865:1]
+ 862 │       </div>
+ 863 │     </section>
+ 864 │   );
+ 865 │ }
+     · ▲
+     ╰────
+  × Expected '</', got 'jsx text (
+  │   );
+  │ }
+  │ )'
+     ╭─[C:\Users\kavin\Downloads\portfolio-nextjs-16-tailwindcss-v4\portfolio-nextjs-16-tailwindcss-v4\src\app\admin\posts\page.tsx:863:1]
+ 860 │               </CardContent>
+ 861 │             </Card>
+ 862 │           </div>
+ 863 │ ╭─▶     </section>
+ 864 │ │     );
+ 865 │ ╰─▶ }
+     ╰────
+
+
+Caused by:
+    Syntax Error
+[00:34:18.645] Browser ERROR   uncaughtError: ModuleBuildError: Module build failed (from ./node_modules/next/dist/build/webpack/loaders/next-swc-loader.js):
+Error:   × Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+     ╭─[C:\Users\kavin\Downloads\portfolio-nextjs-16-tailwindcss-v4\portfolio-nextjs-16-tailwindcss-v4\src\app\admin\posts\page.tsx:865:1]
+ 862 │       </div>
+ 863 │     </section>
+ 864 │   );
+ 865 │ }
+     · ▲
+     ╰────
+  × Expected '</', got 'jsx text (
+  │   );
+  │ }
+  │ )'
+     ╭─[C:\Users\kavin\Downloads\portfolio-nextjs-16-tailwindcss-v4\portfolio-nextjs-16-tailwindcss-v4\src\app\admin\posts\page.tsx:863:1]
+ 860 │               </CardContent>
+ 861 │             </Card>
+ 862 │           </div>
+ 863 │ ╭─▶     </section>
+ 864 │ │     );
+ 865 │ ╰─▶ }
+     ╰────
+
+
+Caused by:
+    Syntax Error
+[00:34:19.297] Browser ERROR   ./src/app/admin/posts/page.tsx
+Error:   × Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+     ╭─[C:\Users\kavin\Downloads\portfolio-nextjs-16-tailwindcss-v4\portfolio-nextjs-16-tailwindcss-v4\src\app\admin\posts\page.tsx:865:1]
+ 862 │       </div>
+ 863 │     </section>
+ 864 │   );
+ 865 │ }
+     · ▲
+     ╰────
+  × Expected '</', got 'jsx text (
+  │   );
+  │ }
+  │ )'
+     ╭─[C:\Users\kavin\Downloads\portfolio-nextjs-16-tailwindcss-v4\portfolio-nextjs-16-tailwindcss-v4\src\app\admin\posts\page.tsx:863:1]
+ 860 │               </CardContent>
+ 861 │             </Card>
+ 862 │           </div>
+ 863 │ ╭─▶     </section>
+ 864 │ │     );
+ 865 │ ╰─▶ }
+     ╰────
+
+Caused by:
+    Syntax Error
+[00:34:19.298] Browser ERROR   ./src/app/admin/posts/page.tsx
+Error:   × Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+     ╭─[C:\Users\kavin\Downloads\portfolio-nextjs-16-tailwindcss-v4\portfolio-nextjs-16-tailwindcss-v4\src\app\admin\posts\page.tsx:865:1]
+ 862 │       </div>
+ 863 │     </section>
+ 864 │   );
+ 865 │ }
+     · ▲
+     ╰────
+  × Expected '</', got 'jsx text (
+  │   );
+  │ }
+  │ )'
+     ╭─[C:\Users\kavin\Downloads\portfolio-nextjs-16-tailwindcss-v4\portfolio-nextjs-16-tailwindcss-v4\src\app\admin\posts\page.tsx:863:1]
+ 860 │               </CardContent>
+ 861 │             </Card>
+ 862 │           </div>
+ 863 │ ╭─▶     </section>
+ 864 │ │     );
+ 865 │ ╰─▶ }
+     ╰────
+
+Caused by:
+    Syntax Error
+[00:34:19.298] Browser ERROR   ./src/app/admin/posts/page.tsx
+Error:   × Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+     ╭─[C:\Users\kavin\Downloads\portfolio-nextjs-16-tailwindcss-v4\portfolio-nextjs-16-tailwindcss-v4\src\app\admin\posts\page.tsx:865:1]
+ 862 │       </div>
+ 863 │     </section>
+ 864 │   );
+ 865 │ }
+     · ▲
+     ╰────
+  × Expected '</', got 'jsx text (
+  │   );
+  │ }
+  │ )'
+     ╭─[C:\Users\kavin\Downloads\portfolio-nextjs-16-tailwindcss-v4\portfolio-nextjs-16-tailwindcss-v4\src\app\admin\posts\page.tsx:863:1]
+ 860 │               </CardContent>
+ 861 │             </Card>
+ 862 │           </div>
+ 863 │ ╭─▶     </section>
+ 864 │ │     );
+ 865 │ ╰─▶ }
+     ╰────
+
+Caused by:
+    Syntax Error
+[00:34:37.946] Server  WARN    ⚠ Fast Refresh had to perform a full reload. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+[00:34:38.022] Server  WARN    ⚠ Fast Refresh had to perform a full reload. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+[00:34:39.935] Server  WARN    ⚠ Fast Refresh had to perform a full reload. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+[00:34:39.977] Server  WARN    ⚠ Fast Refresh had to perform a full reload. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+[00:34:41.303] Server  WARN    ⚠ Fast Refresh had to perform a full reload. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+[00:34:41.304] Server  WARN    ⚠ Fast Refresh had to perform a full reload. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+[00:34:42.535] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:34:42.600] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:35:06.006] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:36:56.480] Browser ERROR   ./src/app/admin/posts/page.tsx
+Error:   × Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+     ╭─[C:\Users\kavin\Downloads\portfolio-nextjs-16-tailwindcss-v4\portfolio-nextjs-16-tailwindcss-v4\src\app\admin\posts\page.tsx:803:1]
+ 800 │       </Card>
+ 801 │     </section>
+ 802 │   );
+ 803 │ }
+     · ▲
+     ╰────
+  × Expected '</', got 'jsx text (
+  │   );
+  │ }
+  │ )'
+     ╭─[C:\Users\kavin\Downloads\portfolio-nextjs-16-tailwindcss-v4\portfolio-nextjs-16-tailwindcss-v4\src\app\admin\posts\page.tsx:801:1]
+ 798 │                 : null}
+ 799 │             </CardContent>
+ 800 │           </Card>
+ 801 │ ╭─▶     </section>
+ 802 │ │     );
+ 803 │ ╰─▶ }
+     ╰────
+
+Caused by:
+    Syntax Error
+
+Import trace for requested module:
+./src/app/admin/posts/page.tsx
+[00:36:56.480] Browser ERROR   ./src/app/admin/posts/page.tsx
+Error:   × Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+     ╭─[C:\Users\kavin\Downloads\portfolio-nextjs-16-tailwindcss-v4\portfolio-nextjs-16-tailwindcss-v4\src\app\admin\posts\page.tsx:803:1]
+ 800 │       </Card>
+ 801 │     </section>
+ 802 │   );
+ 803 │ }
+     · ▲
+     ╰────
+  × Expected '</', got 'jsx text (
+  │   );
+  │ }
+  │ )'
+     ╭─[C:\Users\kavin\Downloads\portfolio-nextjs-16-tailwindcss-v4\portfolio-nextjs-16-tailwindcss-v4\src\app\admin\posts\page.tsx:801:1]
+ 798 │                 : null}
+ 799 │             </CardContent>
+ 800 │           </Card>
+ 801 │ ╭─▶     </section>
+ 802 │ │     );
+ 803 │ ╰─▶ }
+     ╰────
+
+Caused by:
+    Syntax Error
+
+Import trace for requested module:
+./src/app/admin/posts/page.tsx
+[00:36:56.958] Server  ERROR   ⨯ ./src/app/admin/posts/page.tsx
+Error:   × Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+     ╭─[C:\Users\kavin\Downloads\portfolio-nextjs-16-tailwindcss-v4\portfolio-nextjs-16-tailwindcss-v4\src\app\admin\posts\page.tsx:803:1]
+ 800 │       </Card>
+ 801 │     </section>
+ 802 │   );
+ 803 │ }
+     · ▲
+     ╰────
+  × Expected '</', got 'jsx text (
+  │   );
+  │ }
+  │ )'
+     ╭─[C:\Users\kavin\Downloads\portfolio-nextjs-16-tailwindcss-v4\portfolio-nextjs-16-tailwindcss-v4\src\app\admin\posts\page.tsx:801:1]
+ 798 │                 : null}
+ 799 │             </CardContent>
+ 800 │           </Card>
+ 801 │ ╭─▶     </section>
+ 802 │ │     );
+ 803 │ ╰─▶ }
+     ╰────
+
+Caused by:
+    Syntax Error
+
+Import trace for requested module:
+./src/app/admin/posts/page.tsx
+[00:36:56.993] Browser ERROR   ./src/app/admin/posts/page.tsx
+Error:   × Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+     ╭─[C:\Users\kavin\Downloads\portfolio-nextjs-16-tailwindcss-v4\portfolio-nextjs-16-tailwindcss-v4\src\app\admin\posts\page.tsx:803:1]
+ 800 │       </Card>
+ 801 │     </section>
+ 802 │   );
+ 803 │ }
+     · ▲
+     ╰────
+  × Expected '</', got 'jsx text (
+  │   );
+  │ }
+  │ )'
+     ╭─[C:\Users\kavin\Downloads\portfolio-nextjs-16-tailwindcss-v4\portfolio-nextjs-16-tailwindcss-v4\src\app\admin\posts\page.tsx:801:1]
+ 798 │                 : null}
+ 799 │             </CardContent>
+ 800 │           </Card>
+ 801 │ ╭─▶     </section>
+ 802 │ │     );
+ 803 │ ╰─▶ }
+     ╰────
+
+Caused by:
+    Syntax Error
+
+Import trace for requested module:
+./src/app/admin/posts/page.tsx
+[00:36:57.185] Browser ERROR   ./src/app/admin/posts/page.tsx
+Error:   × Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+     ╭─[C:\Users\kavin\Downloads\portfolio-nextjs-16-tailwindcss-v4\portfolio-nextjs-16-tailwindcss-v4\src\app\admin\posts\page.tsx:803:1]
+ 800 │       </Card>
+ 801 │     </section>
+ 802 │   );
+ 803 │ }
+     · ▲
+     ╰────
+  × Expected '</', got 'jsx text (
+  │   );
+  │ }
+  │ )'
+     ╭─[C:\Users\kavin\Downloads\portfolio-nextjs-16-tailwindcss-v4\portfolio-nextjs-16-tailwindcss-v4\src\app\admin\posts\page.tsx:801:1]
+ 798 │                 : null}
+ 799 │             </CardContent>
+ 800 │           </Card>
+ 801 │ ╭─▶     </section>
+ 802 │ │     );
+ 803 │ ╰─▶ }
+     ╰────
+
+Caused by:
+    Syntax Error
+
+Import trace for requested module:
+./src/app/admin/posts/page.tsx
+[00:36:57.476] Browser ERROR   uncaughtError: ModuleBuildError: Module build failed (from ./node_modules/next/dist/build/webpack/loaders/next-swc-loader.js):
+Error:   × Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+     ╭─[C:\Users\kavin\Downloads\portfolio-nextjs-16-tailwindcss-v4\portfolio-nextjs-16-tailwindcss-v4\src\app\admin\posts\page.tsx:803:1]
+ 800 │       </Card>
+ 801 │     </section>
+ 802 │   );
+ 803 │ }
+     · ▲
+     ╰────
+  × Expected '</', got 'jsx text (
+  │   );
+  │ }
+  │ )'
+     ╭─[C:\Users\kavin\Downloads\portfolio-nextjs-16-tailwindcss-v4\portfolio-nextjs-16-tailwindcss-v4\src\app\admin\posts\page.tsx:801:1]
+ 798 │                 : null}
+ 799 │             </CardContent>
+ 800 │           </Card>
+ 801 │ ╭─▶     </section>
+ 802 │ │     );
+ 803 │ ╰─▶ }
+     ╰────
+
+
+Caused by:
+    Syntax Error
+[00:36:58.303] Browser ERROR   ./src/app/admin/posts/page.tsx
+Error:   × Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+     ╭─[C:\Users\kavin\Downloads\portfolio-nextjs-16-tailwindcss-v4\portfolio-nextjs-16-tailwindcss-v4\src\app\admin\posts\page.tsx:803:1]
+ 800 │       </Card>
+ 801 │     </section>
+ 802 │   );
+ 803 │ }
+     · ▲
+     ╰────
+  × Expected '</', got 'jsx text (
+  │   );
+  │ }
+  │ )'
+     ╭─[C:\Users\kavin\Downloads\portfolio-nextjs-16-tailwindcss-v4\portfolio-nextjs-16-tailwindcss-v4\src\app\admin\posts\page.tsx:801:1]
+ 798 │                 : null}
+ 799 │             </CardContent>
+ 800 │           </Card>
+ 801 │ ╭─▶     </section>
+ 802 │ │     );
+ 803 │ ╰─▶ }
+     ╰────
+
+Caused by:
+    Syntax Error
+[00:36:59.820] Browser ERROR   uncaughtError: ModuleBuildError: Module build failed (from ./node_modules/next/dist/build/webpack/loaders/next-swc-loader.js):
+Error:   × Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+     ╭─[C:\Users\kavin\Downloads\portfolio-nextjs-16-tailwindcss-v4\portfolio-nextjs-16-tailwindcss-v4\src\app\admin\posts\page.tsx:803:1]
+ 800 │       </Card>
+ 801 │     </section>
+ 802 │   );
+ 803 │ }
+     · ▲
+     ╰────
+  × Expected '</', got 'jsx text (
+  │   );
+  │ }
+  │ )'
+     ╭─[C:\Users\kavin\Downloads\portfolio-nextjs-16-tailwindcss-v4\portfolio-nextjs-16-tailwindcss-v4\src\app\admin\posts\page.tsx:801:1]
+ 798 │                 : null}
+ 799 │             </CardContent>
+ 800 │           </Card>
+ 801 │ ╭─▶     </section>
+ 802 │ │     );
+ 803 │ ╰─▶ }
+     ╰────
+
+
+Caused by:
+    Syntax Error
+[00:37:00.303] Browser ERROR   ./src/app/admin/posts/page.tsx
+Error:   × Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+     ╭─[C:\Users\kavin\Downloads\portfolio-nextjs-16-tailwindcss-v4\portfolio-nextjs-16-tailwindcss-v4\src\app\admin\posts\page.tsx:803:1]
+ 800 │       </Card>
+ 801 │     </section>
+ 802 │   );
+ 803 │ }
+     · ▲
+     ╰────
+  × Expected '</', got 'jsx text (
+  │   );
+  │ }
+  │ )'
+     ╭─[C:\Users\kavin\Downloads\portfolio-nextjs-16-tailwindcss-v4\portfolio-nextjs-16-tailwindcss-v4\src\app\admin\posts\page.tsx:801:1]
+ 798 │                 : null}
+ 799 │             </CardContent>
+ 800 │           </Card>
+ 801 │ ╭─▶     </section>
+ 802 │ │     );
+ 803 │ ╰─▶ }
+     ╰────
+
+Caused by:
+    Syntax Error
+[00:37:00.308] Browser ERROR   ./src/app/admin/posts/page.tsx
+Error:   × Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+     ╭─[C:\Users\kavin\Downloads\portfolio-nextjs-16-tailwindcss-v4\portfolio-nextjs-16-tailwindcss-v4\src\app\admin\posts\page.tsx:803:1]
+ 800 │       </Card>
+ 801 │     </section>
+ 802 │   );
+ 803 │ }
+     · ▲
+     ╰────
+  × Expected '</', got 'jsx text (
+  │   );
+  │ }
+  │ )'
+     ╭─[C:\Users\kavin\Downloads\portfolio-nextjs-16-tailwindcss-v4\portfolio-nextjs-16-tailwindcss-v4\src\app\admin\posts\page.tsx:801:1]
+ 798 │                 : null}
+ 799 │             </CardContent>
+ 800 │           </Card>
+ 801 │ ╭─▶     </section>
+ 802 │ │     );
+ 803 │ ╰─▶ }
+     ╰────
+
+Caused by:
+    Syntax Error
+[00:39:03.005] Server  WARN    ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[00:39:03.256] Server  WARN    ⚠ Fast Refresh had to perform a full reload. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+[00:39:03.696] Server  WARN    ⚠ Fast Refresh had to perform a full reload. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+[00:39:03.724] Server  WARN    ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[00:39:05.652] Server  WARN    ⚠ Fast Refresh had to perform a full reload. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+[00:39:05.746] Server  WARN    ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[00:39:06.758] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:39:06.853] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:43:34.557] Server  ERROR   ⨯ ./src/app/admin/posts/page.tsx
+Error:   × Expected '</', got 'jsx text (
+  │       )'
+     ╭─[C:\Users\kavin\Downloads\portfolio-nextjs-16-tailwindcss-v4\portfolio-nextjs-16-tailwindcss-v4\src\app\admin\posts\page.tsx:729:1]
+ 726 │                   ) : null}
+ 727 │                 </div>
+ 728 │               </form>
+ 729 │ ╭─▶         </CardContent>
+ 730 │ ╰─▶       </Card>
+ 731 │     
+ 732 │           <div className="space-y-6">
+ 732 │             <h2 className="text-2xl font-bold tracking-tight px-1">Your Posts</h2>
+     ╰────
+
+Caused by:
+    Syntax Error
+
+Import trace for requested module:
+./src/app/admin/posts/page.tsx
+[00:43:34.607] Browser ERROR   ./src/app/admin/posts/page.tsx
+Error:   × Expected '</', got 'jsx text (
+  │       )'
+     ╭─[C:\Users\kavin\Downloads\portfolio-nextjs-16-tailwindcss-v4\portfolio-nextjs-16-tailwindcss-v4\src\app\admin\posts\page.tsx:729:1]
+ 726 │                   ) : null}
+ 727 │                 </div>
+ 728 │               </form>
+ 729 │ ╭─▶         </CardContent>
+ 730 │ ╰─▶       </Card>
+ 731 │     
+ 732 │           <div className="space-y-6">
+ 732 │             <h2 className="text-2xl font-bold tracking-tight px-1">Your Posts</h2>
+     ╰────
+
+Caused by:
+    Syntax Error
+
+Import trace for requested module:
+./src/app/admin/posts/page.tsx
+[00:43:34.607] Browser ERROR   ./src/app/admin/posts/page.tsx
+Error:   × Expected '</', got 'jsx text (
+  │       )'
+     ╭─[C:\Users\kavin\Downloads\portfolio-nextjs-16-tailwindcss-v4\portfolio-nextjs-16-tailwindcss-v4\src\app\admin\posts\page.tsx:729:1]
+ 726 │                   ) : null}
+ 727 │                 </div>
+ 728 │               </form>
+ 729 │ ╭─▶         </CardContent>
+ 730 │ ╰─▶       </Card>
+ 731 │     
+ 732 │           <div className="space-y-6">
+ 732 │             <h2 className="text-2xl font-bold tracking-tight px-1">Your Posts</h2>
+     ╰────
+
+Caused by:
+    Syntax Error
+
+Import trace for requested module:
+./src/app/admin/posts/page.tsx
+[00:43:34.615] Browser ERROR   ./src/app/admin/posts/page.tsx
+Error:   × Expected '</', got 'jsx text (
+  │       )'
+     ╭─[C:\Users\kavin\Downloads\portfolio-nextjs-16-tailwindcss-v4\portfolio-nextjs-16-tailwindcss-v4\src\app\admin\posts\page.tsx:729:1]
+ 726 │                   ) : null}
+ 727 │                 </div>
+ 728 │               </form>
+ 729 │ ╭─▶         </CardContent>
+ 730 │ ╰─▶       </Card>
+ 731 │     
+ 732 │           <div className="space-y-6">
+ 732 │             <h2 className="text-2xl font-bold tracking-tight px-1">Your Posts</h2>
+     ╰────
+
+Caused by:
+    Syntax Error
+
+Import trace for requested module:
+./src/app/admin/posts/page.tsx
+[00:43:34.615] Browser ERROR   ./src/app/admin/posts/page.tsx
+Error:   × Expected '</', got 'jsx text (
+  │       )'
+     ╭─[C:\Users\kavin\Downloads\portfolio-nextjs-16-tailwindcss-v4\portfolio-nextjs-16-tailwindcss-v4\src\app\admin\posts\page.tsx:729:1]
+ 726 │                   ) : null}
+ 727 │                 </div>
+ 728 │               </form>
+ 729 │ ╭─▶         </CardContent>
+ 730 │ ╰─▶       </Card>
+ 731 │     
+ 732 │           <div className="space-y-6">
+ 732 │             <h2 className="text-2xl font-bold tracking-tight px-1">Your Posts</h2>
+     ╰────
+
+Caused by:
+    Syntax Error
+
+Import trace for requested module:
+./src/app/admin/posts/page.tsx
+[00:43:35.030] Browser ERROR   uncaughtError: ModuleBuildError: Module build failed (from ./node_modules/next/dist/build/webpack/loaders/next-swc-loader.js):
+Error:   × Expected '</', got 'jsx text (
+  │       )'
+     ╭─[C:\Users\kavin\Downloads\portfolio-nextjs-16-tailwindcss-v4\portfolio-nextjs-16-tailwindcss-v4\src\app\admin\posts\page.tsx:729:1]
+ 726 │                   ) : null}
+ 727 │                 </div>
+ 728 │               </form>
+ 729 │ ╭─▶         </CardContent>
+ 730 │ ╰─▶       </Card>
+ 731 │     
+ 732 │           <div className="space-y-6">
+ 732 │             <h2 className="text-2xl font-bold tracking-tight px-1">Your Posts</h2>
+     ╰────
+
+
+Caused by:
+    Syntax Error
+[00:43:35.054] Browser ERROR   uncaughtError: ModuleBuildError: Module build failed (from ./node_modules/next/dist/build/webpack/loaders/next-swc-loader.js):
+Error:   × Expected '</', got 'jsx text (
+  │       )'
+     ╭─[C:\Users\kavin\Downloads\portfolio-nextjs-16-tailwindcss-v4\portfolio-nextjs-16-tailwindcss-v4\src\app\admin\posts\page.tsx:729:1]
+ 726 │                   ) : null}
+ 727 │                 </div>
+ 728 │               </form>
+ 729 │ ╭─▶         </CardContent>
+ 730 │ ╰─▶       </Card>
+ 731 │     
+ 732 │           <div className="space-y-6">
+ 732 │             <h2 className="text-2xl font-bold tracking-tight px-1">Your Posts</h2>
+     ╰────
+
+
+Caused by:
+    Syntax Error
+[00:43:35.302] Browser ERROR   ./src/app/admin/posts/page.tsx
+Error:   × Expected '</', got 'jsx text (
+  │       )'
+     ╭─[C:\Users\kavin\Downloads\portfolio-nextjs-16-tailwindcss-v4\portfolio-nextjs-16-tailwindcss-v4\src\app\admin\posts\page.tsx:729:1]
+ 726 │                   ) : null}
+ 727 │                 </div>
+ 728 │               </form>
+ 729 │ ╭─▶         </CardContent>
+ 730 │ ╰─▶       </Card>
+ 731 │     
+ 732 │           <div className="space-y-6">
+ 732 │             <h2 className="text-2xl font-bold tracking-tight px-1">Your Posts</h2>
+     ╰────
+
+Caused by:
+    Syntax Error
+[00:43:35.302] Browser ERROR   ./src/app/admin/posts/page.tsx
+Error:   × Expected '</', got 'jsx text (
+  │       )'
+     ╭─[C:\Users\kavin\Downloads\portfolio-nextjs-16-tailwindcss-v4\portfolio-nextjs-16-tailwindcss-v4\src\app\admin\posts\page.tsx:729:1]
+ 726 │                   ) : null}
+ 727 │                 </div>
+ 728 │               </form>
+ 729 │ ╭─▶         </CardContent>
+ 730 │ ╰─▶       </Card>
+ 731 │     
+ 732 │           <div className="space-y-6">
+ 732 │             <h2 className="text-2xl font-bold tracking-tight px-1">Your Posts</h2>
+     ╰────
+
+Caused by:
+    Syntax Error
+[00:43:35.302] Browser ERROR   ./src/app/admin/posts/page.tsx
+Error:   × Expected '</', got 'jsx text (
+  │       )'
+     ╭─[C:\Users\kavin\Downloads\portfolio-nextjs-16-tailwindcss-v4\portfolio-nextjs-16-tailwindcss-v4\src\app\admin\posts\page.tsx:729:1]
+ 726 │                   ) : null}
+ 727 │                 </div>
+ 728 │               </form>
+ 729 │ ╭─▶         </CardContent>
+ 730 │ ╰─▶       </Card>
+ 731 │     
+ 732 │           <div className="space-y-6">
+ 732 │             <h2 className="text-2xl font-bold tracking-tight px-1">Your Posts</h2>
+     ╰────
+
+Caused by:
+    Syntax Error
+[00:43:55.371] Server  WARN    ⚠ Fast Refresh had to perform a full reload. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+[00:43:55.398] Server  WARN    ⚠ Fast Refresh had to perform a full reload. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+[00:43:55.842] Server  WARN    ⚠ Fast Refresh had to perform a full reload. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+[00:43:55.843] Browser ERROR   ./src/app/admin/posts/page.tsx
+Error:   × Expected '</', got 'jsx text (
+  │       )'
+     ╭─[C:\Users\kavin\Downloads\portfolio-nextjs-16-tailwindcss-v4\portfolio-nextjs-16-tailwindcss-v4\src\app\admin\posts\page.tsx:729:1]
+ 726 │                   ) : null}
+ 727 │                 </div>
+ 728 │               </form>
+ 729 │ ╭─▶         </CardContent>
+ 730 │ ╰─▶       </Card>
+ 731 │     
+ 732 │           <div className="space-y-6">
+ 732 │             <h2 className="text-2xl font-bold tracking-tight px-1">Your Posts</h2>
+     ╰────
+
+Caused by:
+    Syntax Error
+
+Import trace for requested module:
+./src/app/admin/posts/page.tsx
+[00:43:56.011] Server  WARN    ⚠ Fast Refresh had to perform a full reload. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+[00:43:56.011] Browser ERROR   ./src/app/admin/posts/page.tsx
+Error:   × Expected '</', got 'jsx text (
+  │       )'
+     ╭─[C:\Users\kavin\Downloads\portfolio-nextjs-16-tailwindcss-v4\portfolio-nextjs-16-tailwindcss-v4\src\app\admin\posts\page.tsx:729:1]
+ 726 │                   ) : null}
+ 727 │                 </div>
+ 728 │               </form>
+ 729 │ ╭─▶         </CardContent>
+ 730 │ ╰─▶       </Card>
+ 731 │     
+ 732 │           <div className="space-y-6">
+ 732 │             <h2 className="text-2xl font-bold tracking-tight px-1">Your Posts</h2>
+     ╰────
+
+Caused by:
+    Syntax Error
+
+Import trace for requested module:
+./src/app/admin/posts/page.tsx
+[00:43:56.408] Server  WARN    ⚠ Fast Refresh had to perform a full reload. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+[00:43:56.455] Server  WARN    ⚠ Fast Refresh had to perform a full reload. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+[00:43:56.775] Server  ERROR   ⨯ ./src/app/admin/posts/page.tsx
+Error:   × Expected '</', got 'jsx text (
+  │       )'
+     ╭─[C:\Users\kavin\Downloads\portfolio-nextjs-16-tailwindcss-v4\portfolio-nextjs-16-tailwindcss-v4\src\app\admin\posts\page.tsx:729:1]
+ 726 │                   ) : null}
+ 727 │                 </div>
+ 728 │               </form>
+ 729 │ ╭─▶         </CardContent>
+ 730 │ ╰─▶       </Card>
+ 731 │     
+ 732 │           <div className="space-y-6">
+ 732 │             <h2 className="text-2xl font-bold tracking-tight px-1">Your Posts</h2>
+     ╰────
+
+Caused by:
+    Syntax Error
+
+Import trace for requested module:
+./src/app/admin/posts/page.tsx
+[00:43:56.787] Browser ERROR   ./src/app/admin/posts/page.tsx
+Error:   × Expected '</', got 'jsx text (
+  │       )'
+     ╭─[C:\Users\kavin\Downloads\portfolio-nextjs-16-tailwindcss-v4\portfolio-nextjs-16-tailwindcss-v4\src\app\admin\posts\page.tsx:729:1]
+ 726 │                   ) : null}
+ 727 │                 </div>
+ 728 │               </form>
+ 729 │ ╭─▶         </CardContent>
+ 730 │ ╰─▶       </Card>
+ 731 │     
+ 732 │           <div className="space-y-6">
+ 732 │             <h2 className="text-2xl font-bold tracking-tight px-1">Your Posts</h2>
+     ╰────
+
+Caused by:
+    Syntax Error
+
+Import trace for requested module:
+./src/app/admin/posts/page.tsx
+[00:43:56.787] Browser ERROR   ./src/app/admin/posts/page.tsx
+Error:   × Expected '</', got 'jsx text (
+  │       )'
+     ╭─[C:\Users\kavin\Downloads\portfolio-nextjs-16-tailwindcss-v4\portfolio-nextjs-16-tailwindcss-v4\src\app\admin\posts\page.tsx:729:1]
+ 726 │                   ) : null}
+ 727 │                 </div>
+ 728 │               </form>
+ 729 │ ╭─▶         </CardContent>
+ 730 │ ╰─▶       </Card>
+ 731 │     
+ 732 │           <div className="space-y-6">
+ 732 │             <h2 className="text-2xl font-bold tracking-tight px-1">Your Posts</h2>
+     ╰────
+
+Caused by:
+    Syntax Error
+
+Import trace for requested module:
+./src/app/admin/posts/page.tsx
+[00:43:57.120] Browser ERROR   uncaughtError: ModuleBuildError: Module build failed (from ./node_modules/next/dist/build/webpack/loaders/next-swc-loader.js):
+Error:   × Expected '</', got 'jsx text (
+  │       )'
+     ╭─[C:\Users\kavin\Downloads\portfolio-nextjs-16-tailwindcss-v4\portfolio-nextjs-16-tailwindcss-v4\src\app\admin\posts\page.tsx:729:1]
+ 726 │                   ) : null}
+ 727 │                 </div>
+ 728 │               </form>
+ 729 │ ╭─▶         </CardContent>
+ 730 │ ╰─▶       </Card>
+ 731 │     
+ 732 │           <div className="space-y-6">
+ 732 │             <h2 className="text-2xl font-bold tracking-tight px-1">Your Posts</h2>
+     ╰────
+
+
+Caused by:
+    Syntax Error
+[00:43:57.230] Browser ERROR   uncaughtError: ModuleBuildError: Module build failed (from ./node_modules/next/dist/build/webpack/loaders/next-swc-loader.js):
+Error:   × Expected '</', got 'jsx text (
+  │       )'
+     ╭─[C:\Users\kavin\Downloads\portfolio-nextjs-16-tailwindcss-v4\portfolio-nextjs-16-tailwindcss-v4\src\app\admin\posts\page.tsx:729:1]
+ 726 │                   ) : null}
+ 727 │                 </div>
+ 728 │               </form>
+ 729 │ ╭─▶         </CardContent>
+ 730 │ ╰─▶       </Card>
+ 731 │     
+ 732 │           <div className="space-y-6">
+ 732 │             <h2 className="text-2xl font-bold tracking-tight px-1">Your Posts</h2>
+     ╰────
+
+
+Caused by:
+    Syntax Error
+[00:43:57.299] Browser ERROR   ./src/app/admin/posts/page.tsx
+Error:   × Expected '</', got 'jsx text (
+  │       )'
+     ╭─[C:\Users\kavin\Downloads\portfolio-nextjs-16-tailwindcss-v4\portfolio-nextjs-16-tailwindcss-v4\src\app\admin\posts\page.tsx:729:1]
+ 726 │                   ) : null}
+ 727 │                 </div>
+ 728 │               </form>
+ 729 │ ╭─▶         </CardContent>
+ 730 │ ╰─▶       </Card>
+ 731 │     
+ 732 │           <div className="space-y-6">
+ 732 │             <h2 className="text-2xl font-bold tracking-tight px-1">Your Posts</h2>
+     ╰────
+
+Caused by:
+    Syntax Error
+[00:43:57.299] Browser ERROR   ./src/app/admin/posts/page.tsx
+Error:   × Expected '</', got 'jsx text (
+  │       )'
+     ╭─[C:\Users\kavin\Downloads\portfolio-nextjs-16-tailwindcss-v4\portfolio-nextjs-16-tailwindcss-v4\src\app\admin\posts\page.tsx:729:1]
+ 726 │                   ) : null}
+ 727 │                 </div>
+ 728 │               </form>
+ 729 │ ╭─▶         </CardContent>
+ 730 │ ╰─▶       </Card>
+ 731 │     
+ 732 │           <div className="space-y-6">
+ 732 │             <h2 className="text-2xl font-bold tracking-tight px-1">Your Posts</h2>
+     ╰────
+
+Caused by:
+    Syntax Error
+[00:43:58.299] Browser ERROR   ./src/app/admin/posts/page.tsx
+Error:   × Expected '</', got 'jsx text (
+  │       )'
+     ╭─[C:\Users\kavin\Downloads\portfolio-nextjs-16-tailwindcss-v4\portfolio-nextjs-16-tailwindcss-v4\src\app\admin\posts\page.tsx:729:1]
+ 726 │                   ) : null}
+ 727 │                 </div>
+ 728 │               </form>
+ 729 │ ╭─▶         </CardContent>
+ 730 │ ╰─▶       </Card>
+ 731 │     
+ 732 │           <div className="space-y-6">
+ 732 │             <h2 className="text-2xl font-bold tracking-tight px-1">Your Posts</h2>
+     ╰────
+
+Caused by:
+    Syntax Error
+[00:44:23.712] Server  WARN    ⚠ Fast Refresh had to perform a full reload. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+[00:44:23.731] Server  WARN    ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[00:44:25.021] Server  WARN    ⚠ Fast Refresh had to perform a full reload. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+[00:44:25.069] Server  WARN    ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[00:44:26.161] Server  WARN    ⚠ Fast Refresh had to perform a full reload. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+[00:44:26.301] Server  WARN    ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[00:44:27.192] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:44:27.201] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[01:08:18.385] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[01:08:20.427] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[01:08:23.929] Server  WARN    ⚠ Fast Refresh had to perform a full reload. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+[01:08:24.677] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[01:08:25.378] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[01:08:44.595] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[01:08:45.298] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[01:09:37.031] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[01:09:44.000] Server  ERROR   ⨯ ./node_modules/next/dist/build/webpack/loaders/next-metadata-image-loader.js?type=favicon&segment=&basePath=&pageExtensions=tsx&pageExtensions=ts&pageExtensions=jsx&pageExtensions=js!./src/app/favicon.ico?__next_metadata__
+Error: Process image "/favicon.ico" failed: TypeError: unsupported file type: undefined (file: undefined)
+Import trace for requested module:
+./node_modules/next/dist/build/webpack/loaders/next-metadata-image-loader.js?type=favicon&segment=&basePath=&pageExtensions=tsx&pageExtensions=ts&pageExtensions=jsx&pageExtensions=js!./src/app/favicon.ico?__next_metadata__
+[01:09:44.053] Browser ERROR   ./node_modules/next/dist/build/webpack/loaders/next-metadata-image-loader.js?type=favicon&segment=&basePath=&pageExtensions=tsx&pageExtensions=ts&pageExtensions=jsx&pageExtensions=js!./src/app/favicon.ico?__next_metadata__
+Error: Process image "/favicon.ico" failed: TypeError: unsupported file type: undefined (file: undefined)
+Import trace for requested module:
+./node_modules/next/dist/build/webpack/loaders/next-metadata-image-loader.js?type=favicon&segment=&basePath=&pageExtensions=tsx&pageExtensions=ts&pageExtensions=jsx&pageExtensions=js!./src/app/favicon.ico?__next_metadata__
+[01:09:44.056] Browser ERROR   ./node_modules/next/dist/build/webpack/loaders/next-metadata-image-loader.js?type=favicon&segment=&basePath=&pageExtensions=tsx&pageExtensions=ts&pageExtensions=jsx&pageExtensions=js!./src/app/favicon.ico?__next_metadata__
+Error: Process image "/favicon.ico" failed: TypeError: unsupported file type: undefined (file: undefined)
+Import trace for requested module:
+./node_modules/next/dist/build/webpack/loaders/next-metadata-image-loader.js?type=favicon&segment=&basePath=&pageExtensions=tsx&pageExtensions=ts&pageExtensions=jsx&pageExtensions=js!./src/app/favicon.ico?__next_metadata__
+[01:09:44.525] Browser ERROR   uncaughtError: ModuleBuildError: Module build failed (from ./node_modules/next/dist/build/webpack/loaders/next-metadata-image-loader.js):
+Error: Process image "/favicon.ico" failed: TypeError: unsupported file type: undefined (file: undefined)
+    at C:\Users\kavin\Downloads\portfolio-nextjs-16-tailwindcss-v4\portfolio-nextjs-16-tailwindcss-v4\node_modules\next\dist\build\webpack\loaders\next-metadata-image-loader.js:115:44
+    at async Object.nextMetadataImageLoader (C:\Users\kavin\Downloads\portfolio-nextjs-16-tailwindcss-v4\portfolio-nextjs-16-tailwindcss-v4\node_modules\next\dist\build\webpack\loaders\next-metadata-image-loader.js:113:23)
+[01:09:44.541] Browser ERROR   uncaughtError: ModuleBuildError: Module build failed (from ./node_modules/next/dist/build/webpack/loaders/next-metadata-image-loader.js):
+Error: Process image "/favicon.ico" failed: TypeError: unsupported file type: undefined (file: undefined)
+    at C:\Users\kavin\Downloads\portfolio-nextjs-16-tailwindcss-v4\portfolio-nextjs-16-tailwindcss-v4\node_modules\next\dist\build\webpack\loaders\next-metadata-image-loader.js:115:44
+    at async Object.nextMetadataImageLoader (C:\Users\kavin\Downloads\portfolio-nextjs-16-tailwindcss-v4\portfolio-nextjs-16-tailwindcss-v4\node_modules\next\dist\build\webpack\loaders\next-metadata-image-loader.js:113:23)
+[01:09:45.304] Browser ERROR   ./node_modules/next/dist/build/webpack/loaders/next-metadata-image-loader.js?type=favicon&segment=&basePath=&pageExtensions=tsx&pageExtensions=ts&pageExtensions=jsx&pageExtensions=js!./src/app/favicon.ico?__next_metadata__
+Error: Process image "/favicon.ico" failed: TypeError: unsupported file type: undefined (file: undefined)
+[01:09:45.304] Browser ERROR   ./node_modules/next/dist/build/webpack/loaders/next-metadata-image-loader.js?type=favicon&segment=&basePath=&pageExtensions=tsx&pageExtensions=ts&pageExtensions=jsx&pageExtensions=js!./src/app/favicon.ico?__next_metadata__
+Error: Process image "/favicon.ico" failed: TypeError: unsupported file type: undefined (file: undefined)
+[01:09:45.304] Browser ERROR   ./node_modules/next/dist/build/webpack/loaders/next-metadata-image-loader.js?type=favicon&segment=&basePath=&pageExtensions=tsx&pageExtensions=ts&pageExtensions=jsx&pageExtensions=js!./src/app/favicon.ico?__next_metadata__
+Error: Process image "/favicon.ico" failed: TypeError: unsupported file type: undefined (file: undefined)
+[01:09:51.395] Server  WARN    ⚠ Fast Refresh had to perform a full reload. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+[01:09:51.412] Server  WARN    ⚠ Fast Refresh had to perform a full reload. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+[01:09:52.044] Server  WARN    ⚠ Fast Refresh had to perform a full reload. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+[01:09:52.090] Server  WARN    ⚠ Fast Refresh had to perform a full reload. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+[01:09:53.098] Server  WARN    ⚠ Fast Refresh had to perform a full reload. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+[01:09:53.099] Server  WARN    ⚠ Fast Refresh had to perform a full reload. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+[01:09:53.835] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[01:09:53.854] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[01:09:59.381] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold

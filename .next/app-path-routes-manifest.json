@@ -9,6 +9,7 @@
   "/blog/page": "/blog",
   "/contact/page": "/contact",
   "/favicon.ico/route": "/favicon.ico",
+  "/icon.png/route": "/icon.png",
   "/opengraph-image/route": "/opengraph-image",
   "/page": "/",
   "/projects/page": "/projects",
