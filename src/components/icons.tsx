@@ -23,6 +23,15 @@ export const Icons = {
       />
     </svg>
   ),
+  medium: (props: IconProps) => (
+    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" {...props}>
+      <title>Medium</title>
+      <path
+        fill="currentColor"
+        d="M6.98 9.22a5.88 5.88 0 1 0 0 11.76 5.88 5.88 0 0 0 0-11.76m9.08.34a5.47 5.47 0 0 0-.42.01v10.9q.21.01.42.01c2.33 0 4.22-2.45 4.22-5.46s-1.89-5.46-4.22-5.46m6.41.27V20.2c1.13-.53 1.9-2.71 1.9-5.19s-.77-4.65-1.9-5.18"
+      />
+    </svg>
+  ),
   youtube: (props: IconProps) => (
     <svg
       width="32px"

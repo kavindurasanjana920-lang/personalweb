@@ -68,7 +68,7 @@ export const DATA = {
     social: {
       GitHub: {
         name: "GitHub",
-        url: "https://dub.sh/dillion-github",
+        url: "https://github.com/kavindurs8",
         icon: Icons.github,
         navbar: true,
       },
@@ -80,10 +80,10 @@ export const DATA = {
 
         navbar: true,
       },
-      X: {
-        name: "X",
-        url: "https://dub.sh/dillion-twitter",
-        icon: Icons.x,
+      Medium: {
+        name: "Medium",
+        url: "https://medium.com/@kavindurs8",
+        icon: Icons.medium,
 
         navbar: true,
       },
