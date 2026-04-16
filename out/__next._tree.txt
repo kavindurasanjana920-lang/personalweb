@@ -1,5 +1,5 @@
 :HL["/_next/static/chunks/07d9c26a92d6ecf5.css","style"]
-:HL["/_next/static/chunks/d08dde7e81c782e9.css","style"]
+:HL["/_next/static/chunks/654b28480c05e2df.css","style"]
 :HL["/_next/static/media/797e433ab948586e-s.p.dbea232f.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
 :HL["/_next/static/media/caa3a2e1cccd8315-s.p.853070df.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
 :HL["/horizon-campus-logo.png","image"]
@@ -7,4 +7,4 @@
 :HL["/mtf-logo.png","image"]
 :HL["/udemy-logo.png","image"]
 :HL["/great-learning-logo.png","image"]
-0:{"buildId":"9ZOOgTkXaeHu23aSbtupr","tree":{"name":"","paramType":null,"paramKey":"","hasRuntimePrefetch":false,"slots":{"children":{"name":"__PAGE__","paramType":null,"paramKey":"__PAGE__","hasRuntimePrefetch":false,"slots":null,"isRootLayout":false}},"isRootLayout":true},"staleTime":300}
+0:{"buildId":"OWLu8A1YIGrlHxJHASDK8","tree":{"name":"","paramType":null,"paramKey":"","hasRuntimePrefetch":false,"slots":{"children":{"name":"__PAGE__","paramType":null,"paramKey":"__PAGE__","hasRuntimePrefetch":false,"slots":null,"isRootLayout":false}},"isRootLayout":true},"staleTime":300}

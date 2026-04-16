@@ -28,7 +28,7 @@ export function LoadingScreen() {
           key="loading-screen"
           initial={{ opacity: 1 }}
           exit={{ opacity: 0, transition: { duration: 0.8, ease: "easeInOut" } }}
-          className="fixed inset-0 z-[100] flex items-center justify-center bg-background"
+          className="fixed inset-0 z-[100] flex flex-col items-center justify-center bg-background space-y-8"
         >
           <motion.h1
             animate={{ scale: [1, 1.2, 1] }}
@@ -41,6 +41,11 @@ export function LoadingScreen() {
           >
             the kavindu
           </motion.h1>
+          <motion.div
+            animate={{ rotate: 360 }}
+            transition={{ repeat: Infinity, duration: 1, ease: "linear" }}
+            className="w-10 h-10 border-4 border-primary border-t-transparent rounded-full"
+          />
         </motion.div>
       )}
     </AnimatePresence>

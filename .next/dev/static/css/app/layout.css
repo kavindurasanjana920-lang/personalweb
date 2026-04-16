@@ -1773,6 +1773,10 @@
     border-style: var(--tw-border-style);
     border-width: 1px;
   }
+  .border-4 {
+    border-style: var(--tw-border-style);
+    border-width: 4px;
+  }
   .border-x {
     border-inline-style: var(--tw-border-style);
     border-inline-width: 1px;
@@ -1857,8 +1861,14 @@
   .border-input {
     border-color: var(--input);
   }
+  .border-primary {
+    border-color: var(--primary);
+  }
   .border-transparent {
     border-color: transparent;
+  }
+  .border-t-transparent {
+    border-top-color: transparent;
   }
   .bg-amber-500\/10 {
     background-color: color-mix(in srgb, oklch(76.9% 0.188 70.08) 10%, transparent);
