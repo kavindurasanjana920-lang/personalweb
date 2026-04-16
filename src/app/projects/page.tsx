@@ -1,5 +1,6 @@
 import BlurFade from "@/components/magicui/blur-fade";
 import { ProjectCard } from "@/components/project-card";
+import ContactSection from "@/components/section/contact-section";
 import { DATA } from "@/data/resume";
 import type { Metadata } from "next";
 
@@ -14,9 +15,10 @@ export default function ProjectsPage() {
   const allProjects = [...DATA.projects, ...DATA.projectsPageOnly];
 
   return (
-    <section id="projects-page">
-      <BlurFade delay={BLUR_FADE_DELAY}>
-        <div className="space-y-4 mb-8">
+    <main className="flex flex-col gap-14 min-h-dvh">
+      <section id="projects-page">
+        <BlurFade delay={BLUR_FADE_DELAY}>
+          <div className="space-y-4 mb-8">
           <h1 className="text-3xl font-semibold tracking-tighter sm:text-4xl lg:text-5xl">
             Projects that ship real product outcomes.
           </h1>
@@ -48,6 +50,13 @@ export default function ProjectsPage() {
           </BlurFade>
         ))}
       </div>
-    </section>
+      </section>
+
+      <section id="contact" className="mt-8">
+        <BlurFade delay={BLUR_FADE_DELAY * 4}>
+          <ContactSection />
+        </BlurFade>
+      </section>
+    </main>
   );
 }

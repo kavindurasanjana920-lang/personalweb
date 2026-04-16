@@ -1,3 +1,273 @@
-[00:00:12.606] Server  LOG     ✓ Ready in 12.1s
-[00:00:15.632] Server  LOG     ○ Compiling / ...
-[00:00:19.814] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:00:09.857] Server  LOG     ✓ Ready in 9.5s
+[00:00:13.291] Server  LOG     ○ Compiling / ...
+[00:00:16.416] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:00:21.936] Browser ERROR   ./src/app/projects/page.tsx
+Error:   × Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+    ╭─[C:\Users\kavin\Downloads\portfolio-nextjs-16-tailwindcss-v4\portfolio-nextjs-16-tailwindcss-v4\src\app\projects\page.tsx:61:1]
+ 58 │       </section>
+ 59 │     </main>
+ 60 │   );
+ 61 │ }
+    · ▲
+    ╰────
+  × Expected '</', got 'jsx text (
+  │   );
+  │ }
+  │ )'
+    ╭─[C:\Users\kavin\Downloads\portfolio-nextjs-16-tailwindcss-v4\portfolio-nextjs-16-tailwindcss-v4\src\app\projects\page.tsx:59:1]
+ 56 │               <ContactSection />
+ 57 │             </BlurFade>
+ 58 │           </section>
+ 59 │ ╭─▶     </main>
+ 60 │ │     );
+ 61 │ ╰─▶ }
+    ╰────
+
+Caused by:
+    Syntax Error
+
+Import trace for requested module:
+./src/app/projects/page.tsx
+[00:00:22.662] Browser ERROR   ./src/app/projects/page.tsx
+Error:   × Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+    ╭─[C:\Users\kavin\Downloads\portfolio-nextjs-16-tailwindcss-v4\portfolio-nextjs-16-tailwindcss-v4\src\app\projects\page.tsx:61:1]
+ 58 │       </section>
+ 59 │     </main>
+ 60 │   );
+ 61 │ }
+    · ▲
+    ╰────
+  × Expected '</', got 'jsx text (
+  │   );
+  │ }
+  │ )'
+    ╭─[C:\Users\kavin\Downloads\portfolio-nextjs-16-tailwindcss-v4\portfolio-nextjs-16-tailwindcss-v4\src\app\projects\page.tsx:59:1]
+ 56 │               <ContactSection />
+ 57 │             </BlurFade>
+ 58 │           </section>
+ 59 │ ╭─▶     </main>
+ 60 │ │     );
+ 61 │ ╰─▶ }
+    ╰────
+
+Caused by:
+    Syntax Error
+
+Import trace for requested module:
+./src/app/projects/page.tsx
+[00:00:22.798] Server  ERROR   ⨯ ./src/app/projects/page.tsx
+Error:   × Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+    ╭─[C:\Users\kavin\Downloads\portfolio-nextjs-16-tailwindcss-v4\portfolio-nextjs-16-tailwindcss-v4\src\app\projects\page.tsx:61:1]
+ 58 │       </section>
+ 59 │     </main>
+ 60 │   );
+ 61 │ }
+    · ▲
+    ╰────
+  × Expected '</', got 'jsx text (
+  │   );
+  │ }
+  │ )'
+    ╭─[C:\Users\kavin\Downloads\portfolio-nextjs-16-tailwindcss-v4\portfolio-nextjs-16-tailwindcss-v4\src\app\projects\page.tsx:59:1]
+ 56 │               <ContactSection />
+ 57 │             </BlurFade>
+ 58 │           </section>
+ 59 │ ╭─▶     </main>
+ 60 │ │     );
+ 61 │ ╰─▶ }
+    ╰────
+
+Caused by:
+    Syntax Error
+
+Import trace for requested module:
+./src/app/projects/page.tsx
+[00:00:23.787] Server  LOG     ○ Compiling /_not-found ...
+[00:00:26.215] Browser ERROR   ./src/app/projects/page.tsx
+Error:   × Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+    ╭─[C:\Users\kavin\Downloads\portfolio-nextjs-16-tailwindcss-v4\portfolio-nextjs-16-tailwindcss-v4\src\app\projects\page.tsx:61:1]
+ 58 │       </section>
+ 59 │     </main>
+ 60 │   );
+ 61 │ }
+    · ▲
+    ╰────
+  × Expected '</', got 'jsx text (
+  │   );
+  │ }
+  │ )'
+    ╭─[C:\Users\kavin\Downloads\portfolio-nextjs-16-tailwindcss-v4\portfolio-nextjs-16-tailwindcss-v4\src\app\projects\page.tsx:59:1]
+ 56 │               <ContactSection />
+ 57 │             </BlurFade>
+ 58 │           </section>
+ 59 │ ╭─▶     </main>
+ 60 │ │     );
+ 61 │ ╰─▶ }
+    ╰────
+
+Caused by:
+    Syntax Error
+
+Import trace for requested module:
+./src/app/projects/page.tsx
+[00:00:27.778] Browser ERROR   ./src/app/projects/page.tsx
+Error:   × Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+    ╭─[C:\Users\kavin\Downloads\portfolio-nextjs-16-tailwindcss-v4\portfolio-nextjs-16-tailwindcss-v4\src\app\projects\page.tsx:61:1]
+ 58 │       </section>
+ 59 │     </main>
+ 60 │   );
+ 61 │ }
+    · ▲
+    ╰────
+  × Expected '</', got 'jsx text (
+  │   );
+  │ }
+  │ )'
+    ╭─[C:\Users\kavin\Downloads\portfolio-nextjs-16-tailwindcss-v4\portfolio-nextjs-16-tailwindcss-v4\src\app\projects\page.tsx:59:1]
+ 56 │               <ContactSection />
+ 57 │             </BlurFade>
+ 58 │           </section>
+ 59 │ ╭─▶     </main>
+ 60 │ │     );
+ 61 │ ╰─▶ }
+    ╰────
+
+Caused by:
+    Syntax Error
+
+Import trace for requested module:
+./src/app/projects/page.tsx
+[00:00:29.430] Browser ERROR   ./src/app/projects/page.tsx
+Error:   × Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+    ╭─[C:\Users\kavin\Downloads\portfolio-nextjs-16-tailwindcss-v4\portfolio-nextjs-16-tailwindcss-v4\src\app\projects\page.tsx:61:1]
+ 58 │       </section>
+ 59 │     </main>
+ 60 │   );
+ 61 │ }
+    · ▲
+    ╰────
+  × Expected '</', got 'jsx text (
+  │   );
+  │ }
+  │ )'
+    ╭─[C:\Users\kavin\Downloads\portfolio-nextjs-16-tailwindcss-v4\portfolio-nextjs-16-tailwindcss-v4\src\app\projects\page.tsx:59:1]
+ 56 │               <ContactSection />
+ 57 │             </BlurFade>
+ 58 │           </section>
+ 59 │ ╭─▶     </main>
+ 60 │ │     );
+ 61 │ ╰─▶ }
+    ╰────
+
+Caused by:
+    Syntax Error
+
+Import trace for requested module:
+./src/app/projects/page.tsx
+[00:00:30.063] Server  ERROR   ⨯ ./src/app/projects/page.tsx
+Error:   × Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+    ╭─[C:\Users\kavin\Downloads\portfolio-nextjs-16-tailwindcss-v4\portfolio-nextjs-16-tailwindcss-v4\src\app\projects\page.tsx:61:1]
+ 58 │       </section>
+ 59 │     </main>
+ 60 │   );
+ 61 │ }
+    · ▲
+    ╰────
+  × Expected '</', got 'jsx text (
+  │   );
+  │ }
+  │ )'
+    ╭─[C:\Users\kavin\Downloads\portfolio-nextjs-16-tailwindcss-v4\portfolio-nextjs-16-tailwindcss-v4\src\app\projects\page.tsx:59:1]
+ 56 │               <ContactSection />
+ 57 │             </BlurFade>
+ 58 │           </section>
+ 59 │ ╭─▶     </main>
+ 60 │ │     );
+ 61 │ ╰─▶ }
+    ╰────
+
+Caused by:
+    Syntax Error
+
+Import trace for requested module:
+./src/app/projects/page.tsx
+[00:00:30.217] Server  ERROR   ⨯ ./src/app/projects/page.tsx
+Error:   × Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+    ╭─[C:\Users\kavin\Downloads\portfolio-nextjs-16-tailwindcss-v4\portfolio-nextjs-16-tailwindcss-v4\src\app\projects\page.tsx:61:1]
+ 58 │       </section>
+ 59 │     </main>
+ 60 │   );
+ 61 │ }
+    · ▲
+    ╰────
+  × Expected '</', got 'jsx text (
+  │   );
+  │ }
+  │ )'
+    ╭─[C:\Users\kavin\Downloads\portfolio-nextjs-16-tailwindcss-v4\portfolio-nextjs-16-tailwindcss-v4\src\app\projects\page.tsx:59:1]
+ 56 │               <ContactSection />
+ 57 │             </BlurFade>
+ 58 │           </section>
+ 59 │ ╭─▶     </main>
+ 60 │ │     );
+ 61 │ ╰─▶ }
+    ╰────
+
+Caused by:
+    Syntax Error
+
+Import trace for requested module:
+./src/app/projects/page.tsx
+[00:00:31.597] Browser ERROR   uncaughtError: ModuleBuildError: Module build failed (from ./node_modules/next/dist/build/webpack/loaders/next-swc-loader.js):
+Error:   × Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+    ╭─[C:\Users\kavin\Downloads\portfolio-nextjs-16-tailwindcss-v4\portfolio-nextjs-16-tailwindcss-v4\src\app\projects\page.tsx:61:1]
+ 58 │       </section>
+ 59 │     </main>
+ 60 │   );
+ 61 │ }
+    · ▲
+    ╰────
+  × Expected '</', got 'jsx text (
+  │   );
+  │ }
+  │ )'
+    ╭─[C:\Users\kavin\Downloads\portfolio-nextjs-16-tailwindcss-v4\portfolio-nextjs-16-tailwindcss-v4\src\app\projects\page.tsx:59:1]
+ 56 │               <ContactSection />
+ 57 │             </BlurFade>
+ 58 │           </section>
+ 59 │ ╭─▶     </main>
+ 60 │ │     );
+ 61 │ ╰─▶ }
+    ╰────
+
+
+Caused by:
+    Syntax Error
+[00:00:31.722] Browser ERROR   ./src/app/projects/page.tsx
+Error:   × Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+    ╭─[C:\Users\kavin\Downloads\portfolio-nextjs-16-tailwindcss-v4\portfolio-nextjs-16-tailwindcss-v4\src\app\projects\page.tsx:61:1]
+ 58 │       </section>
+ 59 │     </main>
+ 60 │   );
+ 61 │ }
+    · ▲
+    ╰────
+  × Expected '</', got 'jsx text (
+  │   );
+  │ }
+  │ )'
+    ╭─[C:\Users\kavin\Downloads\portfolio-nextjs-16-tailwindcss-v4\portfolio-nextjs-16-tailwindcss-v4\src\app\projects\page.tsx:59:1]
+ 56 │               <ContactSection />
+ 57 │             </BlurFade>
+ 58 │           </section>
+ 59 │ ╭─▶     </main>
+ 60 │ │     );
+ 61 │ ╰─▶ }
+    ╰────
+
+Caused by:
+    Syntax Error
+[00:01:03.630] Server  WARN    ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[00:01:04.170] Server  WARN    ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[00:01:06.823] Server  WARN    ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[00:01:08.002] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
