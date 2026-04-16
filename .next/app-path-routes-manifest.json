@@ -13,5 +13,7 @@
   "/opengraph-image/route": "/opengraph-image",
   "/page": "/",
   "/projects/page": "/projects",
-  "/services/page": "/services"
+  "/robots.txt/route": "/robots.txt",
+  "/services/page": "/services",
+  "/sitemap.xml/route": "/sitemap.xml"
 }
