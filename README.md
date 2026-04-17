@@ -16,11 +16,11 @@ Built with next.js, [shadcn/ui](https://ui.shadcn.com/), and [magic ui](https://
 
 ## Laravel API Backend + Next Frontend (Web Hosting Ready)
 
-This repository includes a Laravel API app at [laravel-blog](laravel-blog) and a static Next.js frontend.
+This repository includes a Laravel API app at [laravel-blog](laravel-blog) and a Next.js frontend running on a Node.js server.
 
 ### Architecture
 
-- Next.js app (root project): public blog UI + admin UI (`/admin/login`, `/admin/posts`).
+- Next.js app (root project): public blog UI + admin UI (`/admin/login`, `/admin/posts`) served by Node.js.
 - Laravel app ([laravel-blog](laravel-blog)): auth + blog CRUD API (Sanctum token auth).
 
 ### Laravel API Quick Start
@@ -66,6 +66,7 @@ Set these in the root Next.js app environment:
 ```bash
 NEXT_PUBLIC_BLOG_URL=/blog/
 NEXT_PUBLIC_LARAVEL_API_URL=http://localhost:8000/api
+CONTACT_FORM_WEBHOOK_URL=https://hook.eu1.make.com/your-webhook-id
 ```
 
 ### API Endpoints
@@ -80,10 +81,28 @@ NEXT_PUBLIC_LARAVEL_API_URL=http://localhost:8000/api
 - `PUT /api/admin/posts/{id}` (Bearer token + admin)
 - `DELETE /api/admin/posts/{id}` (Bearer token + admin)
 
-### Shared Hosting Rewrite
+### Node.js Deployment + Apache (.htaccess)
 
-For static hosting, pretty blog URLs like `/blog/my-post` are handled by rewriting to the static blog shell page (`/blog/index.html`).
-The project root [.htaccess](.htaccess) already includes this rule.
+This project is configured for Node.js runtime (not static export).
+
+1. Build and run Next.js:
+
+   ```bash
+   npm install
+   npm run build
+   npm run start -- -p 3000
+   ```
+
+2. Keep the process alive in production (example with PM2):
+
+   ```bash
+   pm2 start npm --name portfolio-next -- start -- -p 3000
+   pm2 save
+   ```
+
+3. Use the root [.htaccess](.htaccess) as an Apache reverse proxy to forward web traffic to `127.0.0.1:3000`.
+
+4. Ensure Apache modules are enabled: `mod_rewrite`, `mod_proxy`, `mod_proxy_http`, `mod_headers`.
 
 # Getting Started Locally
 

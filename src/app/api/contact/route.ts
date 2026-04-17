@@ -36,9 +36,14 @@ export async function POST(request: Request) {
     );
   }
 
-  const webhookUrl =
-    process.env.CONTACT_FORM_WEBHOOK_URL ??
-    "https://hook.eu1.make.com/5a9upjh2n891sduuhiuc36dt8nwhjju4";
+  const webhookUrl = process.env.CONTACT_FORM_WEBHOOK_URL?.trim();
+
+  if (!webhookUrl) {
+    return NextResponse.json(
+      { error: "Contact form webhook is not configured." },
+      { status: 500 }
+    );
+  }
 
   try {
     const webhookResponse = await fetch(webhookUrl, {

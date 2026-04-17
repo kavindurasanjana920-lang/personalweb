@@ -37,24 +37,19 @@ export default function ContactForm() {
     setFeedback("");
 
     try {
-      // The Next.js API route (/api/contact) doesn't work when output is set to "export"
-      // because the site is fully static. We post directly to the Make.com webhook instead.
-      const webhookUrl = process.env.NEXT_PUBLIC_CONTACT_FORM_WEBHOOK_URL ?? "https://hook.eu1.make.com/5a9upjh2n891sduuhiuc36dt8nwhjju4";
-      
-      const response = await fetch(webhookUrl, {
+      const response = await fetch("/api/contact", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify({
-          ...fields,
-          source: "portfolio-contact-form",
-          submittedAt: new Date().toISOString(),
-        }),
+        body: JSON.stringify(fields),
       });
 
       if (!response.ok) {
-        throw new Error("Unable to send your message right now.");
+        const payload = (await response.json().catch(() => null)) as
+          | { error?: string }
+          | null;
+        throw new Error(payload?.error ?? "Unable to send your message right now.");
       }
 
       setStatus("success");
