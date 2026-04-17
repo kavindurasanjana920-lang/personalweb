@@ -12,9 +12,8 @@ Options -Indexes
   RewriteEngine On
   RewriteBase /
 
-  # If Apache has a real file/folder, serve it directly.
-  RewriteCond %{REQUEST_FILENAME} -f [OR]
-  RewriteCond %{REQUEST_FILENAME} -d
+  # Serve only real files directly. Directories (including /) should be proxied to Next.js.
+  RewriteCond %{REQUEST_FILENAME} -f
   RewriteRule ^ - [L]
 
   # Forward all app routes to the local Next.js process.
