@@ -1,9 +1,8 @@
- 
+/* eslint-disable @next/next/no-img-element */
 import { ImageResponse } from "next/og";
 import { DATA } from "@/data/resume";
 
 export const runtime = "edge";
-export const dynamic = "force-static";
 
 export const alt = "Blog";
 export const size = {

@@ -1,0 +1,4 @@
+Key,Value
+NEXT_PUBLIC_LARAVEL_API_URL,https://red-hummingbird-717869.hostingersite.com/api
+CONTACT_FORM_WEBHOOK_URL,https://hook.eu1.make.com/your-webhook-id
+NEXT_PUBLIC_BLOG_URL,/blog/

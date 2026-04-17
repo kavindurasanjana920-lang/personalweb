@@ -32,7 +32,7 @@ export default function ContactSection() {
             Get in Touch
           </h2>
           <p className="mx-auto max-w-lg text-muted-foreground text-balance text-base mb-2">
-            Want to discuss a project, ask a question, or just say hi? Head over to my contact page to get in touch—I'd love to hear from you.
+            Want to discuss a project, ask a question, or just say hi? Head over to my contact page to get in touch. I would love to hear from you.
           </p>
         </div>
       </div>
