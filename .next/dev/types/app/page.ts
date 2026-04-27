@@ -1,4 +1,4 @@
-// File: E:\portfolio-nextjs-16-tailwindcss-v4\portfolio-nextjs-16-tailwindcss-v4\portfolio-nextjs-16-tailwindcss-v4\src\app\page.tsx
+// File: E:\portfolio-nextjs-16-tailwindcss-v4\src\app\page.tsx
 import * as entry from '../../../../src/app/page.js'
 import type { ResolvingMetadata, ResolvingViewport } from 'next/dist/lib/metadata/types/metadata-interface.js'
 

@@ -38,7 +38,7 @@ const NAV_ITEMS = [
   { href: "https://facebook.com", label: "Facebook", icon: Facebook },
   { href: "https://www.youtube.com/@Storemate", label: "YouTube", icon: Youtube },
   { href: "https://play.google.com/store/apps/details?id=com.parallax.storemate_oms", label: "Playstore", icon: GooglePlayIcon },
-  { href: "https://apps.apple.com/gh/app/trackmate/id6754271406", label: "Appstore", icon: Store },
+  { href: "https://apps.apple.com/ua/app/trackmate/id6754271406", label: "Appstore", icon: Store },
   { href: "#contact", label: "Contact Us", icon: Mail },
 ];
 
