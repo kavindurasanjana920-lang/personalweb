@@ -8,9 +8,8 @@ import {
   TooltipTrigger,
 } from "@/components/ui/tooltip";
 import {
-  Facebook,
   Home,
-  Mail,
+  Search,
   Store,
   Youtube,
 } from "lucide-react";
@@ -35,11 +34,10 @@ function GooglePlayIcon({ className }: { className?: string }) {
 
 const NAV_ITEMS = [
   { href: "/", label: "Home", icon: Home },
-  { href: "https://facebook.com", label: "Facebook", icon: Facebook },
   { href: "https://www.youtube.com/@Storemate", label: "YouTube", icon: Youtube },
   { href: "https://play.google.com/store/apps/details?id=com.parallax.storemate_oms", label: "Playstore", icon: GooglePlayIcon },
   { href: "https://apps.apple.com/ua/app/trackmate/id6754271406", label: "Appstore", icon: Store },
-  { href: "#contact", label: "Contact Us", icon: Mail },
+  { href: "https://trackmate.lk/search/", label: "Search", icon: Search },
 ];
 
 export default function Navbar() {
