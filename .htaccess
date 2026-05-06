@@ -1,0 +1,55 @@
+# Hostinger/Apache config for static Next.js deployment
+
+# Always serve index.html at the site root
+DirectoryIndex index.html
+
+# Prevent directory listing (avoids raw folder exposure)
+Options -Indexes
+
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteBase /
+
+  # Serve pretty blog slugs with the static blog shell page.
+  RewriteRule ^blog/[^/]+/?$ blog/index.html [L]
+
+  # Serve existing files and directories directly
+  RewriteCond %{REQUEST_FILENAME} -f [OR]
+  RewriteCond %{REQUEST_FILENAME} -d
+  RewriteRule ^ - [L]
+
+  # Fallback for client-side routes
+  RewriteRule ^ index.html [L]
+</IfModule>
+
+# Text compression
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/plain text/css text/html text/javascript application/javascript application/json application/xml image/svg+xml font/woff font/woff2 font/ttf application/font-woff application/font-woff2
+  Header append Vary Accept-Encoding
+</IfModule>
+
+# 1-year immutable cache for hashed Next.js static assets
+<IfModule mod_headers.c>
+  <FilesMatch "\.(js|css|woff2|woff|ttf)$">
+    Header set Cache-Control "public, max-age=31536000, immutable"
+  </FilesMatch>
+</IfModule>
+
+# Fallback caching via mod_expires
+<IfModule mod_expires.c>
+  ExpiresActive On
+  # Hashed JS/CSS — 1 year
+  ExpiresByType text/css "access plus 1 year"
+  ExpiresByType application/javascript "access plus 1 year"
+  # Fonts — 1 year
+  ExpiresByType font/woff2 "access plus 1 year"
+  ExpiresByType font/woff "access plus 1 year"
+  ExpiresByType font/ttf "access plus 1 year"
+  # Images — 30 days
+  ExpiresByType image/svg+xml "access plus 30 days"
+  ExpiresByType image/webp "access plus 30 days"
+  ExpiresByType image/png "access plus 30 days"
+  ExpiresByType image/jpeg "access plus 30 days"
+  ExpiresByType image/gif "access plus 30 days"
+  ExpiresByType image/x-icon "access plus 30 days"
+</IfModule>
