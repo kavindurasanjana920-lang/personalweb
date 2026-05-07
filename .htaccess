@@ -1,4 +1,4 @@
-# Hostinger/Apache config for static Next.js deployment
+﻿# Hostinger/Apache config for static Next.js deployment
 
 # Always serve index.html at the site root
 DirectoryIndex index.html
