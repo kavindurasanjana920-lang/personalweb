@@ -102,7 +102,6 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <head>
         <link rel="preload" href={DATA.avatarUrl} as="image" fetchPriority="high" />
-        <link rel="preload" href={DATA.avatarUrlLight ?? DATA.avatarUrl} as="image" fetchPriority="high" />
         <Script
           id="google-tag-manager"
           strategy="afterInteractive"
