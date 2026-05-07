@@ -34,9 +34,9 @@ export const DATA = {
     "Software Automation Engineer, Building Scalable AI Systems, Open to Collaborateions Passionate about AI, Software Development, and Tech Innovation.",
   summary:
     "I'm currently working as a [Software Automation Engineer](/#work) while actively building and scaling real-world software solutions. I have completed my [Bachelor's degree in Information Technology](/#education) and have delivered [10+ projects for international clients](/projects), including AI-powered FinTech platforms and cross-platform mobile applications. With strong experience in full-stack development, I continuously explore AI and machine learning to solve real-world problems and build [scalable, impactful digital products](/services).",
-  avatarUrl: "/kavindu-hero.png",
-  avatarUrlLight: "/kavindu-hero-light.png",
-  avatarUrlOptional: "/kavindu-hero-optional.png",
+  avatarUrl: "/kavindu-hero.webp",
+  avatarUrlLight: "/kavindu-hero-light.webp",
+  avatarUrlOptional: "/kavindu-hero-optional.webp",
   skills: [
     { name: "React", icon: ReactLight },
     { name: "Next.js", icon: NextjsIconDark },
@@ -112,7 +112,7 @@ export const DATA = {
       badges: [],
       location: "Remote",
       title: "Software Automation Engineer",
-      logoUrl: "/group-1.png",
+      logoUrl: "/group-1.webp",
       start: "Feb 2026",
       end: "Present",
       description:
@@ -124,7 +124,7 @@ export const DATA = {
       badges: [],
       location: "Remote",
       title: "Trainee Software Engineer",
-      logoUrl: "/group-1.png",
+      logoUrl: "/group-1.webp",
       start: "Aug 2025",
       end: "Feb 2026",
       description:
@@ -136,7 +136,7 @@ export const DATA = {
       badges: [],
       location: "Remote",
       title: "Intern Software Engineer",
-      logoUrl: "/group-1.png",
+      logoUrl: "/group-1.webp",
       start: "Aug 2024",
       end: "Aug 2025",
       description:
@@ -148,7 +148,7 @@ export const DATA = {
       badges: [],
       location: "Colomob, SL",
       title: "Web  Developer",
-      logoUrl: "/fiverr-logo.png",
+      logoUrl: "/fiverr-logo.webp",
       start: "Jan 2024",
       end: "Present",
       description:
@@ -161,7 +161,7 @@ export const DATA = {
       school: "Horizon Campus",
       href: "https://horizoncampus.edu.lk/",
       degree: "Bachelor’s Degree in Information Technology",
-      logoUrl: "/horizon-campus-logo.png",
+      logoUrl: "/horizon-campus-logo.webp",
       start: "2022",
       end: "2025",
     },
@@ -169,7 +169,7 @@ export const DATA = {
       school: "University of Moratuwa",
       href: "https://uom.lk/",
       degree: "Bachelor's Degree of Information Technology",
-      logoUrl: "/uom-logo.png",
+      logoUrl: "/uom-logo.webp",
       start: "2022",
       end: "2025",
     },
@@ -177,7 +177,7 @@ export const DATA = {
       school: "MTF Institute of Management",
       href: "https://gtf.pt/en",
       degree: "Professional Diploma of Marketing Manager Business Partner",
-      logoUrl: "/mtf-logo.png",
+      logoUrl: "/mtf-logo.webp",
       start: "2024",
       end: "2024",
     },
@@ -185,7 +185,7 @@ export const DATA = {
       school: "MTF Institute of Management",
       href: "https://gtf.pt/en",
       degree: "Diploma of Microsoft Dynamics 365 CRM Business Architect",
-      logoUrl: "/mtf-logo.png",
+      logoUrl: "/mtf-logo.webp",
       start: "2024",
       end: "2024",
     },
@@ -243,7 +243,7 @@ export const DATA = {
           icon: <Icons.globe className="size-3" />,
         },
       ],
-      image: "/Nextrimo.jpg",
+      image: "/Nextrimo.webp",
       video: "",
     },
     {
@@ -275,7 +275,7 @@ export const DATA = {
         //   icon: <Icons.github className="size-3" />,
         // },
       ],
-      image: "/group-48.png",
+      image: "/group-48.webp",
       video: "",
     },
     {
@@ -302,7 +302,7 @@ export const DATA = {
           icon: <Icons.globe className="size-3" />,
         },
       ],
-      image: "/cima-cleaners.jpg",
+      image: "/cima-cleaners.webp",
       video:
         "",
     },
@@ -332,7 +332,7 @@ export const DATA = {
           icon: <Icons.globe className="size-3" />,
         },
       ],
-      image: "/group-3-2.jpg",
+      image: "/group-3-2.webp",
       video: "",
     },
 
@@ -361,7 +361,7 @@ export const DATA = {
           icon: <Icons.globe className="size-3" />,
         },
       ],
-      image: "/group-3-3.jpg",
+      image: "/group-3-3.webp",
       video: "",
     },
 
@@ -390,7 +390,7 @@ export const DATA = {
           icon: <Icons.globe className="size-3" />,
         },
       ],
-      image: "/group-3-4-1.jpg",
+      image: "/group-3-4-1.webp",
       video: "",
     },
     {
@@ -416,7 +416,7 @@ export const DATA = {
           icon: <Icons.github className="size-3" />,
         },
       ],
-      image: "/group-3-6.jpg",
+      image: "/group-3-6.webp",
       video:
         "",
     },
@@ -448,7 +448,7 @@ export const DATA = {
           icon: <Icons.github className="size-3" />,
         },
       ],
-      image: "/group-3-5.jpg",
+      image: "/group-3-5.webp",
       video: "",
     },
     {
@@ -472,7 +472,7 @@ export const DATA = {
           icon: <Icons.github className="size-3" />,
         },
       ],
-      image: "/group-48-1.jpg",
+      image: "/group-48-1.webp",
       video: "",
     }, 
     {
@@ -496,7 +496,7 @@ export const DATA = {
           icon: <Icons.github className="size-3" />,
         },
       ],
-      image: "/group-52-1.jpg",
+      image: "/group-52-1.webp",
       video: "",
     }, 
     {
@@ -522,7 +522,7 @@ export const DATA = {
           icon: <Icons.github className="size-3" />,
         },
       ],
-      image: "/group-3-7.jpg",
+      image: "/group-3-7.webp",
       video: "",
     },     
 
@@ -534,7 +534,7 @@ export const DATA = {
       location: "Udemy",
       description:
         "Completed hands-on AWS serverless mini projects covering API development, static hosting, event-driven architecture, messaging systems, and cloud monitoring.",
-      image: "/udemy-logo.png",
+      image: "/udemy-logo.webp",
       mlh: "https://s3.amazonaws.com/logged-assets/trust-badge/2019/mlh-trust-badge-2019-white.svg",
       links: [
                 {
@@ -550,7 +550,7 @@ export const DATA = {
       location: "Udemy",
       description:
         "Completed a course on building scalable REST APIs using PHP 8 with N-Tier architecture, covering API design, authentication, database integration, and best practices for secure and maintainable backend development.",
-      image: "/udemy-logo.png",
+      image: "/udemy-logo.webp",
       mlh: "https://s3.amazonaws.com/logged-assets/trust-badge/2019/mlh-trust-badge-2019-white.svg",
       links: [
                 {
@@ -566,7 +566,7 @@ export const DATA = {
       location: "MTF Institute of Management",
       description:
         "Completed a course on Marketing Manager Business Partner (MMBP), covering product development, marketing strategy, and business planning with a focus on aligning marketing with business goals.",
-      image: "/mtf-logo.png",
+      image: "/mtf-logo.webp",
       mlh: "https://s3.amazonaws.com/logged-assets/trust-badge/2019/mlh-trust-badge-2019-white.svg",
       links: [
                 {
@@ -582,7 +582,7 @@ export const DATA = {
       location: "MTF Institute of Management",
       description:
         "Completed a course on process architecture and solution design, focusing on mapping business processes, scope management, requirements alignment, and end-to-end workflow design for effective system implementation.",
-      image: "/mtf-logo.png",
+      image: "/mtf-logo.webp",
       mlh: "https://s3.amazonaws.com/logged-assets/trust-badge/2019/mlh-trust-badge-2019-white.svg",
       links: [
                 {
@@ -598,7 +598,7 @@ export const DATA = {
       location: "Udemy ",
       description:
         "Completed an advanced WordPress course focused on professional website development, including e-commerce, e-learning platforms, forums, and Elementor.",
-      image: "/udemy-logo.png",
+      image: "/udemy-logo.webp",
       mlh: "https://s3.amazonaws.com/logged-assets/trust-badge/2019/mlh-trust-badge-2019-white.svg",
       links: [
                 {
@@ -614,7 +614,7 @@ export const DATA = {
       location: "Udemy ",
       description:
         "Completed a course on WordPress and Elementor, learning to build responsive websites and start freelancing with SEO and client management basics.",
-      image: "/udemy-logo.png",
+      image: "/udemy-logo.webp",
       mlh: "https://s3.amazonaws.com/logged-assets/trust-badge/2019/mlh-trust-badge-2019-white.svg",
       links: [
                 {
@@ -630,7 +630,7 @@ export const DATA = {
       location: "Udemy ",
       description:
         "Completed a comprehensive C# course covering .NET, ASP.NET, APIs, OOP concepts, and application development for web, desktop, and game development.",
-      image: "/udemy-logo.png",
+      image: "/udemy-logo.webp",
       mlh: "https://s3.amazonaws.com/logged-assets/trust-badge/2019/mlh-trust-badge-2019-white.svg",
       links: [
                 {
@@ -646,7 +646,7 @@ export const DATA = {
       location: "Great Learning",
       description:
         "Completed a course on Object-Oriented Programming in Java, covering core concepts such as OOP principles and inheritance with assessments.",
-      image: "/great-learning-logo.png",
+      image: "/great-learning-logo.webp",
       mlh: "https://s3.amazonaws.com/logged-assets/trust-badge/2019/mlh-trust-badge-2019-white.svg",
       links: [
                 {
@@ -662,7 +662,7 @@ export const DATA = {
       location: "Great Learning",
       description:
         "Completed a Java course covering core concepts like variables, control flow, arrays, and functions, with practical exercises and assessments.",
-      image: "/great-learning-logo.png",
+      image: "/great-learning-logo.webp",
       mlh: "https://s3.amazonaws.com/logged-assets/trust-badge/2019/mlh-trust-badge-2019-white.svg",
       links: [
                 {
