@@ -33,6 +33,7 @@ export default function HackathonsSection() {
                   <img
                     src={hackathon.image}
                     alt={hackathon.title}
+                    loading="lazy"
                     className="size-10 bg-card z-10 shrink-0 overflow-hidden p-1 border rounded-full shadow ring-2 ring-border object-contain flex-none"
                   />
                 ) : (

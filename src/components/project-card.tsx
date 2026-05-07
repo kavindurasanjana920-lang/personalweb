@@ -19,6 +19,7 @@ function ProjectImage({ src, alt }: { src: string; alt: string }) {
     <img
       src={src}
       alt={alt}
+      loading="lazy"
       className="w-full h-48 object-cover"
       onError={() => setImageError(true)}
     />

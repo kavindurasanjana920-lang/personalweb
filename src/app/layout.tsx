@@ -8,7 +8,7 @@ import type { Metadata } from "next";
 import Script from "next/script";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import { FlickeringGrid } from "@/components/magicui/flickering-grid";
+import { FlickeringGridClient } from "@/components/flickering-grid-client";
 
 const geist = Geist({
   subsets: ["latin"],
@@ -101,6 +101,8 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
+        <link rel="preload" href={DATA.avatarUrl} as="image" fetchPriority="high" />
+        <link rel="preload" href={DATA.avatarUrlLight ?? DATA.avatarUrl} as="image" fetchPriority="high" />
         <Script
           id="google-tag-manager"
           strategy="afterInteractive"
@@ -134,7 +136,7 @@ export default function RootLayout({
         <ThemeProvider attribute="class" defaultTheme="dark">
           <TooltipProvider delayDuration={0}>
             <div className="absolute inset-0 top-0 left-0 right-0 h-[100px] overflow-hidden z-0">
-              <FlickeringGrid
+              <FlickeringGridClient
                 className="h-full w-full"
                 squareSize={2}
                 gridGap={2}
