@@ -31,7 +31,7 @@ export const DATA = {
   location: "Colombo, SL",
   locationLink: "https://www.google.com/maps/place/colombo",
   description:
-    "Software Automation Engineer, Building Scalable AI Systems, Open to Collaborateions Passionate about AI, Software Development, and Tech Innovation.",
+    "Software Automation Engineer, Building Scalable AI Systems, Open to Collaborations. Passionate about AI, Software Development, and Tech Innovation.",
   summary:
     "I'm currently working as a [Software Automation Engineer](/#work) while actively building and scaling real-world software solutions. I have completed my [Bachelor's degree in Information Technology](/#education) and have delivered [10+ projects for international clients](/projects), including AI-powered FinTech platforms and cross-platform mobile applications. With strong experience in full-stack development, I continuously explore AI and machine learning to solve real-world problems and build [scalable, impactful digital products](/services).",
   avatarUrl: "/kavindu-hero.webp",
