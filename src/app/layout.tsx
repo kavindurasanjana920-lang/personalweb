@@ -9,7 +9,6 @@ import Script from "next/script";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { FlickeringGridClient } from "@/components/flickering-grid-client";
-import AwardsBadges from "@/components/ui/awards-badges";
 
 const geist = Geist({
   subsets: ["latin"],
@@ -148,14 +147,6 @@ export default function RootLayout({
             </div>
             <div className="relative z-10 max-w-2xl mx-auto py-12 pb-24 sm:py-24 px-6">
               {children}
-            </div>
-            {/* Mobile floating awards */}
-            <div className="fixed right-2 top-3 z-20 md:hidden flex flex-col items-center gap-2 p-2 rounded-2xl bg-background/70 backdrop-blur-md border border-border/30 shadow-lg">
-              <AwardsBadges size="sm" className="flex-col gap-2" />
-            </div>
-            {/* Desktop floating awards */}
-            <div className="fixed right-4 top-4 z-20 hidden md:flex flex-col items-center gap-3 p-3 rounded-2xl bg-background/70 backdrop-blur-md border border-border/30 shadow-lg">
-              <AwardsBadges size="xl" className="flex-col gap-3" />
             </div>
             <Navbar />
           </TooltipProvider>
