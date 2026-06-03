@@ -63,21 +63,21 @@ const categories = [
     key: "necessary" as const,
     label: "Necessary",
     description:
-      "Necessary cookies are required to enable the basic features of this site, such as providing secure log-in or adjusting your consent preferences. These cookies do not store any personally identifiable data.",
+      "These cookies are essential for thekavindu.lk to function correctly. They store your dark/light theme preference and your cookie consent choice so the site behaves as you expect on every visit. No personally identifiable data is collected.",
     alwaysActive: true,
   },
   {
     key: "functional" as const,
     label: "Functional",
     description:
-      "Functional cookies help perform certain functionalities like sharing the content of the website on social media platforms, collecting feedback, and other third-party features.",
+      "Functional cookies enable enhanced features such as remembering which blog posts you have read and preserving your navigation state between pages. Disabling these will not break the site but may reduce convenience.",
     alwaysActive: false,
   },
   {
     key: "analytics" as const,
     label: "Analytics",
     description:
-      "Analytical cookies are used to understand how visitors interact with the website. These cookies help provide information on metrics such as the number of visitors, bounce rate, traffic source, etc.",
+      "Analytics cookies (via Google Tag Manager) help understand how visitors find and use thekavindu.lk — including page views, time on site, and traffic sources. This data is used to improve content and performance. No data is sold to third parties.",
     alwaysActive: false,
   },
 ];
@@ -163,13 +163,12 @@ export function CookieConsent() {
                 >
                   <div className="flex flex-col gap-3">
                     <h2 className="text-base font-semibold tracking-tight text-foreground">
-                      We value your privacy
+                      Cookie Preferences
                     </h2>
                     <p className="text-sm text-muted-foreground leading-relaxed">
-                      We use cookies to enhance your browsing experience, serve
-                      personalised ads or content, and analyse our traffic. By
-                      clicking &quot;Accept All&quot;, you consent to our use of
-                      cookies.
+                      thekavindu.lk uses cookies to remember your preferences
+                      and measure site traffic via Google Analytics. No personal
+                      data is sold or shared with third parties.
                     </p>
                   </div>
 
@@ -221,15 +220,18 @@ export function CookieConsent() {
                   {/* Scrollable body */}
                   <div className="overflow-y-auto flex-1 px-5 py-4 flex flex-col gap-3">
                     <p className="text-sm text-muted-foreground leading-relaxed">
-                      We use cookies to help you navigate efficiently and perform
-                      certain functions. Detailed information about all cookies
-                      is listed under each category below.
+                      This is a personal portfolio site for{" "}
+                      <span className="text-foreground font-medium">
+                        Kavindu Rasanjana
+                      </span>{" "}
+                      — Software Automation &amp; AI Engineer. Cookies are used
+                      only to improve your experience and understand how the
+                      site is used. Each category is explained below.
                     </p>
                     <p className="text-sm text-muted-foreground leading-relaxed">
-                      Cookies categorised as &quot;Necessary&quot; are stored on
-                      your browser as they are essential for the basic
-                      functionalities of the site. We also use third-party
-                      cookies that will only be stored with your prior consent.
+                      &quot;Necessary&quot; cookies are always active as they
+                      make the site work (theme, consent state). All other
+                      categories are optional and stored only with your consent.
                     </p>
 
                     {/* Category rows */}
