@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "motion/react";
 import { X, ChevronRight, ChevronDown, Cookie } from "lucide-react";
+import Link from "next/link";
 import { cn } from "@/lib/utils";
 
 interface ConsentState {
@@ -168,7 +169,14 @@ export function CookieConsent() {
                     <p className="text-sm text-muted-foreground leading-relaxed">
                       thekavindu.lk uses cookies to remember your preferences
                       and measure site traffic via Google Analytics. No personal
-                      data is sold or shared with third parties.
+                      data is sold or shared with third parties.{" "}
+                      <Link
+                        href="/privacy"
+                        onClick={() => setBannerVisible(false)}
+                        className="underline underline-offset-4 text-foreground/70 hover:text-foreground transition-colors"
+                      >
+                        Privacy Policy
+                      </Link>
                     </p>
                   </div>
 
