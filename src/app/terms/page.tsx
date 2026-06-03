@@ -6,6 +6,15 @@ export const metadata: Metadata = {
   title: "Terms & Conditions",
   description:
     "Terms and conditions for thekavindu.lk — the rules governing your use of Kavindu Rasanjana's website and professional services.",
+  keywords: [
+    "Terms and Conditions",
+    "thekavindu.lk",
+    "Website Terms",
+    "Service Terms",
+    "Legal",
+    "Refund Policy",
+    "Kavindu Rasanjana",
+  ],
 };
 
 const LAST_UPDATED = "June 3, 2026";

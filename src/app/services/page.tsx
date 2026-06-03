@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import {
   ArrowRight,
@@ -20,6 +21,24 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
+
+export const metadata: Metadata = {
+  title: "Services",
+  description:
+    "Professional services by Kavindu Rasanjana — AI automation, full-stack web development, mobile app development, and product system integrations tailored for modern businesses.",
+  keywords: [
+    "AI Automation Services",
+    "Full Stack Web Development",
+    "Mobile App Development",
+    "Product Integrations",
+    "Workflow Automation",
+    "Kavindu Rasanjana Services",
+    "Software Development Sri Lanka",
+    "Next.js Development",
+    "React Developer",
+    "Make.com Automation",
+  ],
+};
 
 const services = [
   {

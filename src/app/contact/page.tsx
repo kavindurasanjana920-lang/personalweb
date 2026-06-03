@@ -8,7 +8,18 @@ import { DATA } from "@/data/resume";
 
 export const metadata: Metadata = {
   title: "Contact",
-  description: "Get in touch to discuss projects, collaborations, and product ideas.",
+  description:
+    "Get in touch with Kavindu Rasanjana to discuss projects, collaborations, AI automation, and product development ideas.",
+  keywords: [
+    "Contact Kavindu Rasanjana",
+    "Hire Software Engineer",
+    "Hire AI Engineer",
+    "Project Collaboration",
+    "AI Automation Inquiry",
+    "Web Development Inquiry",
+    "Sri Lanka Software Engineer",
+    "Freelance Developer",
+  ],
 };
 
 export default function ContactPage() {

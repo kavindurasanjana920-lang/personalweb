@@ -6,6 +6,15 @@ export const metadata: Metadata = {
   title: "Privacy Policy",
   description:
     "Privacy policy for thekavindu.lk — how Kavindu Rasanjana collects, uses, and protects your personal data.",
+  keywords: [
+    "Privacy Policy",
+    "thekavindu.lk",
+    "Data Protection",
+    "Cookie Policy",
+    "GDPR",
+    "Personal Data",
+    "Kavindu Rasanjana",
+  ],
 };
 
 const LAST_UPDATED = "June 3, 2026";

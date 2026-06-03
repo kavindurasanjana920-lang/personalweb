@@ -14,6 +14,18 @@ export const metadata: Metadata = {
   title: "About",
   description:
     "Learn more about Kavindu Rasanjana, including experience, projects, skills, education, and certifications.",
+  keywords: [
+    "Kavindu Rasanjana",
+    "About",
+    "Software Engineer",
+    "AI Engineer",
+    "Experience",
+    "Skills",
+    "Education",
+    "Certifications",
+    "Sri Lanka Developer",
+    "Portfolio",
+  ],
 };
 
 export default function AboutPage() {

@@ -6,7 +6,19 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Projects",
-  description: "A full list of projects.",
+  description:
+    "Explore projects by Kavindu Rasanjana — real-world builds across web, mobile, AI automation, and product systems.",
+  keywords: [
+    "Kavindu Rasanjana Projects",
+    "Web Development Projects",
+    "AI Projects",
+    "Mobile App Projects",
+    "Software Portfolio",
+    "Automation Projects",
+    "Sri Lanka Developer",
+    "Next.js Projects",
+    "React Projects",
+  ],
 };
 
 const BLUR_FADE_DELAY = 0.04;

@@ -1,4 +1,5 @@
 /* eslint-disable @next/next/no-img-element */
+import type { Metadata } from "next";
 import BlurFade from "@/components/magicui/blur-fade";
 import BlurFadeText from "@/components/magicui/blur-fade-text";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
@@ -11,6 +12,27 @@ import HackathonsSection from "@/components/section/hackathons-section";
 import ProjectsSection from "@/components/section/projects-section";
 import WorkSection from "@/components/section/work-section";
 import { ArrowRight, ArrowUpRight, BriefcaseBusiness } from "lucide-react";
+
+export const metadata: Metadata = {
+  title: {
+    absolute: "Kavindu Rasanjana | Software Automation & AI Engineer",
+  },
+  description:
+    "Kavindu Rasanjana is a Software Automation & AI Engineer based in Sri Lanka, specialising in scalable AI systems, workflow automation, full-stack web development, and production-ready mobile applications.",
+  keywords: [
+    "Kavindu Rasanjana",
+    "Software Automation Engineer",
+    "AI Engineer",
+    "Machine Learning Engineer",
+    "Sri Lanka",
+    "Portfolio",
+    "AI Automation",
+    "Full Stack Developer",
+    "Next.js Developer",
+    "Workflow Automation",
+    "Web Development Sri Lanka",
+  ],
+};
 
 const BLUR_FADE_DELAY = 0.04;
 

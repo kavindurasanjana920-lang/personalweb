@@ -3,15 +3,27 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Blog",
-  description: "Thoughts on software development, life, and more.",
+  description:
+    "Articles and insights by Kavindu Rasanjana on software development, AI automation, engineering workflows, and tech.",
+  keywords: [
+    "Kavindu Rasanjana Blog",
+    "Software Development Articles",
+    "AI Engineering",
+    "Automation Blog",
+    "Tech Blog",
+    "Next.js",
+    "Sri Lanka Tech",
+  ],
   openGraph: {
     title: "Blog",
-    description: "Thoughts on software development, life, and more.",
+    description:
+      "Articles and insights by Kavindu Rasanjana on software development, AI automation, engineering workflows, and tech.",
   },
   twitter: {
     card: "summary_large_image",
     title: "Blog",
-    description: "Thoughts on software development, life, and more.",
+    description:
+      "Articles and insights by Kavindu Rasanjana on software development, AI automation, engineering workflows, and tech.",
   },
 };
 
