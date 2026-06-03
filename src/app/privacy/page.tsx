@@ -24,7 +24,7 @@ function Section({
   return (
     <section id={id} className="space-y-4 pt-2">
       <h2 className="text-xl font-bold tracking-tight text-foreground">{title}</h2>
-      <div className="space-y-3 text-sm leading-relaxed text-muted-foreground">
+      <div className="space-y-3 leading-relaxed text-muted-foreground">
         {children}
       </div>
     </section>
@@ -34,8 +34,8 @@ function Section({
 function SubSection({ title, children }: { title: string; children: React.ReactNode }) {
   return (
     <div className="space-y-2 pt-1">
-      <h3 className="text-base font-semibold text-foreground">{title}</h3>
-      <div className="space-y-2 text-sm leading-relaxed text-muted-foreground">
+      <h3 className="text-base font-semibold tracking-tight text-foreground">{title}</h3>
+      <div className="space-y-2 leading-relaxed text-muted-foreground">
         {children}
       </div>
     </div>
@@ -59,7 +59,7 @@ export default function PrivacyPage() {
             Last updated:{" "}
             <span className="font-medium text-foreground">{LAST_UPDATED}</span>
           </p>
-          <p className="text-sm leading-relaxed text-muted-foreground max-w-2xl">
+          <p className="leading-relaxed text-muted-foreground max-w-2xl">
             This Privacy Policy describes how {OWNER} (&quot;I&quot;, &quot;me&quot;, or
             &quot;my&quot;) collects, uses, and shares information when you visit{" "}
             <Link href={SITE_URL} className="text-foreground underline underline-offset-4 hover:text-muted-foreground transition-colors">
