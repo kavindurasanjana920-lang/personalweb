@@ -137,6 +137,14 @@ export default function Navbar() {
               </div>
             </div>
           </div>
+
+          <div className="border-t border-border/40 pt-4 flex items-center justify-center gap-3 text-xs text-muted-foreground/60">
+            <a href="/privacy" onClick={() => setIsMenuOpen(false)} className="hover:text-muted-foreground transition-colors">Privacy Policy</a>
+            <span aria-hidden="true">&middot;</span>
+            <a href="/terms" onClick={() => setIsMenuOpen(false)} className="hover:text-muted-foreground transition-colors">Terms &amp; Conditions</a>
+            <span aria-hidden="true">&middot;</span>
+            <a href="/sitemap.xml" className="hover:text-muted-foreground transition-colors">Sitemap</a>
+          </div>
         </div>
       </div>
       <Dock className="z-50 pointer-events-auto relative h-14 p-2 w-fit mx-auto flex gap-2 border bg-card/90 backdrop-blur-3xl shadow-[0_0_10px_3px] shadow-primary/5">
