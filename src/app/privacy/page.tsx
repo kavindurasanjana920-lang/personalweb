@@ -112,7 +112,7 @@ export default function PrivacyPage() {
               <Link href="/contact" className="text-foreground underline underline-offset-4 hover:text-muted-foreground transition-colors">Contact</Link>{" "}
               page, the following information is collected:
             </p>
-            <ul className="list-disc list-inside space-y-1 pl-2">
+            <ul className="list-disc list-outside space-y-1 pl-4">
               <li>Full name</li>
               <li>Email address</li>
               <li>Subject / project topic</li>
@@ -151,7 +151,7 @@ export default function PrivacyPage() {
               This Website uses browser <strong className="text-foreground">localStorage</strong> (not
               server-side cookies) to store:
             </p>
-            <ul className="list-disc list-inside space-y-1 pl-2">
+            <ul className="list-disc list-outside space-y-1 pl-4">
               <li>
                 <span className="text-foreground font-medium">Theme preference</span> — whether
                 you have selected dark or light mode.
@@ -178,7 +178,7 @@ export default function PrivacyPage() {
         {/* Use of Personal Data */}
         <Section id="use-of-data" title="Use of Your Personal Data">
           <p>The data collected is used for the following purposes:</p>
-          <ul className="list-disc list-inside space-y-2 pl-2">
+          <ul className="list-disc list-outside space-y-2 pl-4">
             <li>
               <span className="text-foreground font-medium">To respond to enquiries</span> —
               contact-form submissions are used exclusively to reply to project
@@ -257,7 +257,7 @@ export default function PrivacyPage() {
             You have the right to request deletion of any personal data I hold
             about you. To do so:
           </p>
-          <ul className="list-disc list-inside space-y-1 pl-2">
+          <ul className="list-disc list-outside space-y-1 pl-4">
             <li>
               Email{" "}
               <a
@@ -353,7 +353,7 @@ export default function PrivacyPage() {
             For professional services (web development, AI automation, mobile
             apps, and product integrations) engaged through this Website:
           </p>
-          <ul className="list-disc list-inside space-y-2 pl-2">
+          <ul className="list-disc list-outside space-y-2 pl-4">
             <li>
               <span className="text-foreground font-medium">Discovery / consultation fees</span> —
               non-refundable once the session has taken place.
