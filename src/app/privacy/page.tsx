@@ -82,22 +82,22 @@ export default function PrivacyPage() {
             </p>
           </SubSection>
           <SubSection title="Definitions">
-            <div className="space-y-2">
-              {[
-                ["Website", `The personal portfolio and professional services site accessible at ${SITE_URL}.`],
-                ["Owner / I / Me", `${OWNER}, the individual who operates this Website.`],
-                ["You", "Any person who accesses or uses this Website."],
-                ["Personal Data", "Any information that identifies or can identify a natural person directly or indirectly — for example, a name or email address."],
-                ["Usage Data", "Data collected automatically when you browse the Website, such as IP address, browser type, pages visited, and time spent."],
-                ["Cookies", "Small files placed on your device by a website. This Website uses localStorage equivalents and third-party analytics cookies."],
-                ["Third-Party Services", "External platforms used to operate the Website, including Google Analytics (via Google Tag Manager) and Make.com for contact-form processing."],
-              ].map(([term, def]) => (
-                <p key={term}>
-                  <span className="font-medium text-foreground">{term}:</span>{" "}
-                  <span>{def}</span>
-                </p>
-              ))}
-            </div>
+            <p>
+              <span className="font-medium text-foreground">Website:</span>{" "}
+              The personal portfolio and professional services site accessible at {SITE_URL}.{" "}
+              <span className="font-medium text-foreground">Owner / I / Me:</span>{" "}
+              {OWNER}, the individual who operates this Website.{" "}
+              <span className="font-medium text-foreground">You:</span>{" "}
+              Any person who accesses or uses this Website.{" "}
+              <span className="font-medium text-foreground">Personal Data:</span>{" "}
+              Any information that identifies or can identify a natural person directly or indirectly — for example, a name or email address.{" "}
+              <span className="font-medium text-foreground">Usage Data:</span>{" "}
+              Data collected automatically when you browse the Website, such as IP address, browser type, pages visited, and time spent.{" "}
+              <span className="font-medium text-foreground">Cookies:</span>{" "}
+              Small files placed on your device by a website. This Website uses localStorage equivalents and third-party analytics cookies.{" "}
+              <span className="font-medium text-foreground">Third-Party Services:</span>{" "}
+              External platforms used to operate the Website, including Google Analytics (via Google Tag Manager) and Make.com for contact-form processing.
+            </p>
           </SubSection>
         </Section>
 
