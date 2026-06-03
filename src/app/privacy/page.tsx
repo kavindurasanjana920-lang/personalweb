@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import ContactSection from "@/components/section/contact-section";
 
 export const metadata: Metadata = {
   title: "Privacy Policy",
@@ -383,42 +384,7 @@ export default function PrivacyPage() {
       <Divider />
 
       {/* Contact */}
-      <Section id="contact" title="Contact Us">
-        <p>
-          If you have any questions about this Privacy Policy or wish to
-          exercise your data rights, please contact:
-        </p>
-        <div className="rounded-xl border border-border bg-card/30 p-6 space-y-3 mt-2">
-          <p className="font-semibold text-foreground">{OWNER}</p>
-          <p>
-            Email:{" "}
-            <a
-              href={`mailto:${CONTACT_EMAIL}`}
-              className="text-foreground underline underline-offset-4 hover:text-muted-foreground transition-colors"
-            >
-              {CONTACT_EMAIL}
-            </a>
-          </p>
-          <p>
-            Website:{" "}
-            <Link
-              href={SITE_URL}
-              className="text-foreground underline underline-offset-4 hover:text-muted-foreground transition-colors"
-            >
-              {SITE_URL}
-            </Link>
-          </p>
-          <p>
-            Contact form:{" "}
-            <Link
-              href="/contact"
-              className="text-foreground underline underline-offset-4 hover:text-muted-foreground transition-colors"
-            >
-              thekavindu.lk/contact
-            </Link>
-          </p>
-        </div>
-      </Section>
+      <ContactSection />
 
       {/* Footer note */}
       <p className="text-xs text-muted-foreground/60 pb-4">
