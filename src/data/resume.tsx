@@ -65,7 +65,7 @@ export const DATA = {
     { href: BLOG_URL, icon: NotebookIcon, label: "Blog" },
   ],
   contact: {
-    email: "info@thekavindu.me",
+    email: "info@thekavindu.lk",
     tel: "+94772003045",
     social: {
       GitHub: {
