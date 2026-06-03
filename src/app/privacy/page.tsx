@@ -82,7 +82,7 @@ export default function PrivacyPage() {
             </p>
           </SubSection>
           <SubSection title="Definitions">
-            <ul className="space-y-2 list-none">
+            <div className="space-y-2">
               {[
                 ["Website", `The personal portfolio and professional services site accessible at ${SITE_URL}.`],
                 ["Owner / I / Me", `${OWNER}, the individual who operates this Website.`],
@@ -92,12 +92,12 @@ export default function PrivacyPage() {
                 ["Cookies", "Small files placed on your device by a website. This Website uses localStorage equivalents and third-party analytics cookies."],
                 ["Third-Party Services", "External platforms used to operate the Website, including Google Analytics (via Google Tag Manager) and Make.com for contact-form processing."],
               ].map(([term, def]) => (
-                <li key={term} className="flex flex-col gap-0.5 sm:flex-row sm:gap-2">
-                  <span className="font-medium text-foreground flex-shrink-0">{term}:</span>
+                <p key={term}>
+                  <span className="font-medium text-foreground">{term}:</span>{" "}
                   <span>{def}</span>
-                </li>
+                </p>
               ))}
-            </ul>
+            </div>
           </SubSection>
         </Section>
 
