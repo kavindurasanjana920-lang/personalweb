@@ -149,6 +149,10 @@ export default function RootLayout({
             </div>
             <div className="relative z-10 max-w-2xl mx-auto py-12 pb-24 sm:py-24 px-6">
               {children}
+              <footer className="mt-10 text-center text-xs text-muted-foreground/60">
+                <span className="hidden sm:inline">&copy; {new Date().getFullYear()} {DATA.name} &middot; thekavindu.lk &middot; All rights reserved.</span>
+                <span className="sm:hidden">&copy; {new Date().getFullYear()} {DATA.name} &middot; All rights reserved.</span>
+              </footer>
             </div>
             <Navbar />
           </TooltipProvider>

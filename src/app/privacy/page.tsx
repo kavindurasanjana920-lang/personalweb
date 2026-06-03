@@ -386,10 +386,6 @@ export default function PrivacyPage() {
       {/* Contact */}
       <ContactSection />
 
-      {/* Footer note */}
-      <p className="text-xs text-muted-foreground/60 pb-4">
-        &copy; {new Date().getFullYear()} {OWNER} · thekavindu.lk · All rights reserved.
-      </p>
     </main>
   );
 }
