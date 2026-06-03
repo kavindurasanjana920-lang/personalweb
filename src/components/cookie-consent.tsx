@@ -135,7 +135,7 @@ export function CookieConsent() {
           type="button"
           onClick={openSettings}
           aria-label="Cookie Settings"
-          className="fixed top-1/2 -translate-y-1/2 right-4 z-[150] flex items-center justify-center size-9 rounded-full bg-card border border-border text-muted-foreground shadow-md hover:text-foreground hover:bg-accent transition-colors sm:hidden"
+          className="fixed top-1/2 -translate-y-1/2 right-0 z-[150] flex items-center justify-center size-9 rounded-l-full border border-r-0 bg-card border-border text-muted-foreground shadow-md hover:text-foreground hover:bg-accent transition-colors sm:hidden"
         >
           <Cookie className="size-4" />
         </button>
