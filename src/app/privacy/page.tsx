@@ -82,22 +82,15 @@ export default function PrivacyPage() {
             </p>
           </SubSection>
           <SubSection title="Definitions">
-            <p>
-              <span className="font-medium text-foreground">Website:</span>{" "}
-              The personal portfolio and professional services site accessible at {SITE_URL}.{" "}
-              <span className="font-medium text-foreground">Owner / I / Me:</span>{" "}
-              {OWNER}, the individual who operates this Website.{" "}
-              <span className="font-medium text-foreground">You:</span>{" "}
-              Any person who accesses or uses this Website.{" "}
-              <span className="font-medium text-foreground">Personal Data:</span>{" "}
-              Any information that identifies or can identify a natural person directly or indirectly — for example, a name or email address.{" "}
-              <span className="font-medium text-foreground">Usage Data:</span>{" "}
-              Data collected automatically when you browse the Website, such as IP address, browser type, pages visited, and time spent.{" "}
-              <span className="font-medium text-foreground">Cookies:</span>{" "}
-              Small files placed on your device by a website. This Website uses localStorage equivalents and third-party analytics cookies.{" "}
-              <span className="font-medium text-foreground">Third-Party Services:</span>{" "}
-              External platforms used to operate the Website, including Google Analytics (via Google Tag Manager) and Make.com for contact-form processing.
-            </p>
+            <ol className="list-decimal list-outside space-y-2 pl-4">
+              <li><span className="font-medium text-foreground">Website:</span> The personal portfolio and professional services site accessible at {SITE_URL}.</li>
+              <li><span className="font-medium text-foreground">Owner / I / Me:</span> {OWNER}, the individual who operates this Website.</li>
+              <li><span className="font-medium text-foreground">You:</span> Any person who accesses or uses this Website.</li>
+              <li><span className="font-medium text-foreground">Personal Data:</span> Any information that identifies or can identify a natural person directly or indirectly — for example, a name or email address.</li>
+              <li><span className="font-medium text-foreground">Usage Data:</span> Data collected automatically when you browse the Website, such as IP address, browser type, pages visited, and time spent.</li>
+              <li><span className="font-medium text-foreground">Cookies:</span> Small files placed on your device by a website. This Website uses localStorage equivalents and third-party analytics cookies.</li>
+              <li><span className="font-medium text-foreground">Third-Party Services:</span> External platforms used to operate the Website, including Google Analytics (via Google Tag Manager) and Make.com for contact-form processing.</li>
+            </ol>
           </SubSection>
         </Section>
 
