@@ -9,6 +9,7 @@ import Script from "next/script";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { FlickeringGridClient } from "@/components/flickering-grid-client";
+import { CookieConsent } from "@/components/cookie-consent";
 
 const geist = Geist({
   subsets: ["latin"],
@@ -132,6 +133,7 @@ export default function RootLayout({
           />
         </noscript>
         <LoadingScreen />
+        <CookieConsent />
         <ThemeProvider attribute="class" defaultTheme="dark">
           <TooltipProvider delayDuration={0}>
             <div className="absolute inset-0 top-0 left-0 right-0 h-[100px] overflow-hidden z-0">
