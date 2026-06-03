@@ -89,7 +89,7 @@ export const metadata: Metadata = {
     images: [DATA.avatarUrl],
   },
   verification: {
-    google: "V0-lY22n-zS1L8X1I60h_D_T-X_H1H_-P9lX-m-z-10", // Replace this with your actual Google Verification Tag if needed.
+    google: "nXCd38fL4hknFmhA4rdoFp88qv8WeB9dCmeVF9ZZi2A",
     yandex: "",
   },
 };
