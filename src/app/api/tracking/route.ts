@@ -5,6 +5,7 @@ const SERVICE_MAP: Record<string, string> = {
   "citypak":       "citypak",
   "fardar":        "fardarexpress",
   "trans-express": "transexpress",
+  "koombiyo":      "koombiyodelivery",
   "domex":         "domex",
 };
 
@@ -47,10 +48,10 @@ function parseKoombiyoHtml(html: string): KoombiyoParsed {
   const timelineDivs = html.match(/<div[^>]+class="col-md-4 my-1"[^>]*>[\s\S]*?<\/div>/g) ?? [];
   for (const div of timelineDivs) {
     const text = stripTags(div);
-    if (text.includes("Collected Date:"))     collectedDate    = text.replace(/.*Collected Date:/, "").trim();
+    if (text.includes("Collected Date:"))         collectedDate     = text.replace(/.*Collected Date:/, "").trim();
     else if (text.includes("Destination Branch:")) destinationBranch = text.replace(/.*Destination Branch:/, "").trim();
-    else if (text.includes("Status:"))        status           = text.replace(/.*Status:/, "").trim();
-    else if (text.includes("Name:"))          receiverName     = text.replace(/.*Name:/, "").trim();
+    else if (text.includes("Status:"))             status            = text.replace(/.*Status:/, "").trim();
+    else if (text.includes("Name:"))               receiverName      = text.replace(/.*Name:/, "").trim();
   }
 
   const trackingHistory: Array<{ status: string; isActive: boolean }> = [];
@@ -88,7 +89,8 @@ async function trackKoombiyo(waybillId: string, phone: string): Promise<NextResp
     );
   }
 
-  const url = `https://koombiyodelivery.lk/Track/track_id?id=${encodeURIComponent(waybillId)}&phone=${encodeURIComponent(phone)}`;
+  const proxy = process.env.KOOMBIYO_PROXY_URL ?? "https://koombiyodelivery.lk/Track/track_id";
+  const url = `${proxy}?id=${encodeURIComponent(waybillId)}&phone=${encodeURIComponent(phone)}`;
 
   try {
     const res = await fetch(url, {
