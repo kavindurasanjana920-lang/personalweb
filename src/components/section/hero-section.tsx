@@ -18,6 +18,7 @@ export default function HeroSection({ className, selectedCourier }: HeroSectionP
   const router = useRouter();
   const phoneRef = useRef<HTMLInputElement>(null);
   const [phoneError, setPhoneError] = useState(false);
+  const [courierError, setCourierError] = useState(false);
 
   const handleSearch = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -29,9 +30,17 @@ export default function HeroSection({ className, selectedCourier }: HeroSectionP
     const waybillId = searchInput.trim().toUpperCase();
     if (!waybillId) return;
 
+    if (!selectedCourier) {
+      setCourierError(true);
+      document.getElementById("courier-partners")?.scrollIntoView({ behavior: "smooth", block: "center" });
+      return;
+    }
+    setCourierError(false);
+
+    const rawPhone = formData.get("phone");
+    const phone = typeof rawPhone === "string" ? rawPhone.trim() : "";
+
     if (selectedCourier === "koombiyo") {
-      const rawPhone = formData.get("phone");
-      const phone = typeof rawPhone === "string" ? rawPhone.trim() : "";
       if (!phone) {
         setPhoneError(true);
         phoneRef.current?.focus();
@@ -48,12 +57,16 @@ export default function HeroSection({ className, selectedCourier }: HeroSectionP
     setPhoneError(false);
     const params = new URLSearchParams({ q: waybillId });
     if (selectedCourier) params.set("courier", selectedCourier);
+    if (phone) params.set("phone", phone);
     const target = `/search/?${params.toString()}`;
     router.push(target);
     setTimeout(() => { if (window.location.pathname !== "/search/") window.location.href = target; }, 120);
   };
 
   const isKoombiyo = selectedCourier === "koombiyo";
+
+  // Clear courier error as soon as user selects one
+  if (courierError && selectedCourier) setCourierError(false);
 
   return (
     <section className={cn("group relative isolate overflow-visible pt-6", className)}>
@@ -114,14 +127,19 @@ export default function HeroSection({ className, selectedCourier }: HeroSectionP
                 </Button>
               </div>
             </div>
+            {courierError && (
+              <p className="text-sm font-medium text-red-500 text-left pl-1">
+                Please select a courier partner below before searching
+              </p>
+            )}
 
             <div className={[
               "rounded-2xl border p-2 backdrop-blur transition-colors",
-              isKoombiyo
-                ? phoneError
-                  ? "border-red-400 bg-red-50/80 dark:bg-red-950/30"
-                  : "border-orange-400 bg-background/90"
-                : "bg-background/90",
+              phoneError
+                ? "border-red-400 bg-red-50/80 dark:bg-red-950/30"
+                : isKoombiyo
+                  ? "border-orange-400 bg-background/90"
+                  : "bg-background/90",
             ].join(" ")}>
               <div className="relative z-20 flex items-center gap-2 pointer-events-auto">
                 <div className={[
@@ -134,23 +152,23 @@ export default function HeroSection({ className, selectedCourier }: HeroSectionP
                   ref={phoneRef}
                   type="tel"
                   name="phone"
-                  placeholder={
-                    isKoombiyo
-                      ? phoneError
-                        ? "Phone number is required for Koombiyo"
-                        : "Enter phone number (required for Koombiyo)"
-                      : "Phone number (Koombiyo only)"
-                  }
+                  placeholder={phoneError ? "Phone number is required for Koombiyo" : "Enter phone number..."}
                   aria-label="Phone number"
                   autoComplete="tel"
                   onChange={() => { if (phoneError) setPhoneError(false); }}
                   className={[
-                    "h-12 flex-1 bg-transparent text-base outline-none pointer-events-auto transition-opacity",
+                    "h-12 flex-1 bg-transparent text-base outline-none pointer-events-auto min-w-0",
                     phoneError ? "placeholder:text-red-400 text-red-600 dark:text-red-400" : "",
-                    isKoombiyo ? "opacity-100" : "opacity-40",
                   ].join(" ")}
-                  disabled={!isKoombiyo}
                 />
+                <span className={[
+                  "shrink-0 rounded-full px-2.5 py-1 text-xs font-semibold whitespace-nowrap transition-colors",
+                  phoneError
+                    ? "bg-red-100 text-red-500 dark:bg-red-900/40 dark:text-red-400"
+                    : "bg-orange-100 text-orange-500 dark:bg-orange-900/30 dark:text-orange-400",
+                ].join(" ")}>
+                  Required for Koombiyo
+                </span>
               </div>
             </div>
             {phoneError && (
