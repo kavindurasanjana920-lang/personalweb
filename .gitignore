@@ -1,0 +1,19 @@
+# dependencies
+node_modules/
+
+# Next.js build output
+.next/
+out/
+
+# environment files (set these on the server manually)
+.env
+.env.local
+.env.*.local
+
+# generated
+.content-collections/
+
+# misc
+.DS_Store
+*.pem
+npm-debug.log*
