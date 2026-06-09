@@ -37,19 +37,24 @@ interface ApiResponse {
   error?: string;
 }
 
-async function fetchTrackingData(waybillId: string, phone?: string, courier?: string): Promise<ApiResponse> {
-  const params = new URLSearchParams({ waybill_id: waybillId });
-  if (courier) {
-    params.set("courier", courier);
-  }
-  if (courier === "koombiyo" && phone) {
-    params.set("phone", phone);
-  }
+const KOOMBIYO_WORKER_URL = "https://koombiyo-proxy.kavindurs8.workers.dev";
 
+async function fetchTrackingData(waybillId: string, phone?: string, courier?: string): Promise<ApiResponse> {
   try {
-    const response = await fetch(`/api/tracking?${params.toString()}`, {
-      headers: { Accept: "application/json" },
-    });
+    let response: Response;
+
+    if (courier === "koombiyo") {
+      const params = new URLSearchParams({ id: waybillId, phone: phone ?? "" });
+      response = await fetch(`${KOOMBIYO_WORKER_URL}?${params.toString()}`, {
+        headers: { Accept: "application/json" },
+      });
+    } else {
+      const params = new URLSearchParams({ waybill_id: waybillId });
+      if (courier) params.set("courier", courier);
+      response = await fetch(`/api/tracking?${params.toString()}`, {
+        headers: { Accept: "application/json" },
+      });
+    }
 
     const parsed = await response.json() as ApiResponse;
 
