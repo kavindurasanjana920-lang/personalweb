@@ -10,10 +10,10 @@ type Project = {
   href?: string;
   description: string;
   dates: string;
-  technologies: string[];
+  technologies: readonly string[];
   image?: string;
   video?: string;
-  links?: ProjectLink[];
+  links?: readonly ProjectLink[];
 };
 
 interface ProjectsFilterProps {
