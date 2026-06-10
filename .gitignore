@@ -13,6 +13,9 @@ out/
 # generated
 .content-collections/
 
+# short link store (generated on server, not committed)
+data/
+
 # misc
 .DS_Store
 *.pem

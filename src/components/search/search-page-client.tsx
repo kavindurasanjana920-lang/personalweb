@@ -2,7 +2,7 @@
 
 import { useEffect, useMemo, useState } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
-import { ArrowLeft, ArrowRight, Package, Search } from "lucide-react";
+import { ArrowLeft, ArrowRight, Check, Copy, Link2, Package, Search } from "lucide-react";
 import Link from "next/link";
 
 import { Button } from "@/components/ui/button";
@@ -123,6 +123,8 @@ export default function SearchPageClient() {
   const [searched, setSearched] = useState(false);
   const [result, setResult] = useState<TrackingData | null>(null);
   const [error, setError] = useState("");
+  const [shortUrl, setShortUrl] = useState("");
+  const [copied, setCopied] = useState(false);
 
   const runSearch = async (waybillId: string, phone?: string, courier?: string) => {
     if (!waybillId) {
@@ -132,6 +134,8 @@ export default function SearchPageClient() {
     setLoading(true);
     setError("");
     setResult(null);
+    setShortUrl("");
+    setCopied(false);
 
     try {
       const data = await fetchTrackingData(waybillId, phone, courier);
@@ -178,6 +182,38 @@ export default function SearchPageClient() {
     setResult(null);
     setError("");
     router.replace("/search");
+  };
+
+  const handleCopyShortLink = async () => {
+    if (copied) return;
+
+    let url = shortUrl;
+    if (!url && result) {
+      try {
+        const res = await fetch("/api/links", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            courier: initialCourier,
+            waybill: result.waybill_id,
+            phone: initialPhone || undefined,
+          }),
+        });
+        if (res.ok) {
+          const data = (await res.json()) as { id: string };
+          url = `${window.location.origin}/t/${data.id}/`;
+          setShortUrl(url);
+        }
+      } catch {
+        return;
+      }
+    }
+
+    if (url) {
+      await navigator.clipboard.writeText(url);
+      setCopied(true);
+      setTimeout(() => setCopied(false), 2000);
+    }
   };
 
   const trackingHref = (waybillId: string) => {
@@ -278,6 +314,31 @@ export default function SearchPageClient() {
                   </div>
                 </div>
               </Link>
+
+              <div className="flex items-center justify-end gap-2 pt-1">
+                {shortUrl ? (
+                  <>
+                    <span className="truncate font-mono text-xs text-muted-foreground">{shortUrl}</span>
+                    <button
+                      type="button"
+                      onClick={handleCopyShortLink}
+                      className="inline-flex shrink-0 items-center gap-1.5 rounded-lg border px-3 py-1.5 text-xs font-semibold text-orange-500 hover:bg-orange-50 dark:hover:bg-orange-900/20"
+                    >
+                      {copied ? <Check className="size-3.5 text-green-500" /> : <Copy className="size-3.5" />}
+                      {copied ? "Copied!" : "Copy"}
+                    </button>
+                  </>
+                ) : (
+                  <button
+                    type="button"
+                    onClick={handleCopyShortLink}
+                    className="inline-flex items-center gap-1.5 rounded-lg border px-3 py-1.5 text-xs font-semibold text-muted-foreground hover:border-orange-300 hover:text-orange-500 dark:hover:bg-orange-900/20"
+                  >
+                    <Link2 className="size-3.5" />
+                    Short link for SMS
+                  </button>
+                )}
+              </div>
             ) : (
               <div className="rounded-3xl border bg-card px-5 py-12 text-center sm:px-10">
                 <div className="mx-auto mb-5 grid size-24 place-items-center rounded-full bg-muted/50">
