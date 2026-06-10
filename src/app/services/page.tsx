@@ -16,11 +16,11 @@ import {
 import { Button } from "@/components/ui/button";
 import ContactSection from "@/components/section/contact-section";
 import {
-  Card,
-  CardDescription,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
 
 export const metadata: Metadata = {
   title: "Services",
@@ -374,7 +374,7 @@ export default function ServicesPage() {
               </p>
             </div>
           </div>
-          <div className="space-y-4 max-w-3xl mx-auto w-full">
+          <Accordion type="single" collapsible className="max-w-3xl mx-auto w-full">
             {[
               {
                 q: "What services do you offer?",
@@ -400,13 +400,17 @@ export default function ServicesPage() {
                 q: "How do I get started?",
                 a: "Fill in the contact form with your project details, goals, and timeline. I will respond within 1–2 business days with next steps.",
               },
-            ].map(({ q, a }) => (
-              <div key={q} className="border border-border rounded-xl p-5 space-y-2">
-                <p className="font-semibold text-foreground">{q}</p>
-                <p className="text-muted-foreground leading-relaxed text-sm">{a}</p>
-              </div>
+            ].map(({ q, a }, i) => (
+              <AccordionItem key={q} value={`faq-${i}`}>
+                <AccordionTrigger className="text-left font-semibold">
+                  {q}
+                </AccordionTrigger>
+                <AccordionContent className="text-muted-foreground leading-relaxed">
+                  {a}
+                </AccordionContent>
+              </AccordionItem>
             ))}
-          </div>
+          </Accordion>
         </div>
       </section>
 
