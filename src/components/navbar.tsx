@@ -87,11 +87,13 @@ export default function Navbar() {
         }`}
       >
         <div
-          className={`absolute inset-x-0 bottom-0 mx-auto flex w-full max-w-2xl flex-col rounded-t-3xl border border-border bg-background px-6 pt-6 pb-24 shadow-2xl transition-transform duration-300 ${
+          className={`absolute inset-x-0 bottom-0 mx-auto flex w-full max-w-2xl flex-col rounded-t-3xl border border-border bg-background shadow-2xl transition-transform duration-300 max-h-[85vh] ${
             isMenuOpen ? "translate-y-0" : "translate-y-full"
           }`}
         >
-          <div className="flex justify-end">
+          {/* Fixed header */}
+          <div className="flex items-center justify-between px-6 pt-6 pb-2 shrink-0">
+            <p className="text-2xl font-semibold tracking-tight">Menu</p>
             <button
               type="button"
               aria-label="Close menu"
@@ -101,14 +103,16 @@ export default function Navbar() {
               <XIcon className="size-5" />
             </button>
           </div>
-          <div className="flex items-start justify-center pt-4 pb-4">
+
+          {/* Scrollable content */}
+          <div className="overflow-y-auto flex-1 px-6 py-4">
             <div className="grid w-full gap-8 md:grid-cols-[minmax(0,0.95fr)_minmax(0,1.05fr)]">
-              <div className="rounded-2xl border border-border/60 bg-card/70 p-6">
+              <div className="hidden md:block rounded-2xl border border-border/60 bg-card/70 p-6">
                 <p className="text-2xl font-semibold tracking-tight">Menu</p>
-                <p className="mt-2 hidden text-sm text-muted-foreground md:block">
+                <p className="mt-2 text-sm text-muted-foreground">
                   Quick navigation across key pages of this portfolio website.
                 </p>
-                <div className="mt-8 hidden space-y-3 md:block">
+                <div className="mt-8 space-y-3">
                   <p className="text-xl font-semibold">Kavindu Portfolio</p>
                   <p className="text-muted-foreground leading-relaxed">
                     Building scalable AI systems, automation workflows, and
@@ -117,7 +121,7 @@ export default function Navbar() {
                 </div>
               </div>
 
-              <div className="space-y-5">
+              <div className="space-y-2">
                 {menuItems.map((item) => {
                   const ItemIcon = item.icon;
                   return (
@@ -133,7 +137,7 @@ export default function Navbar() {
                           <p className="font-semibold leading-none group-hover:text-primary transition-colors">
                             {item.label}
                           </p>
-                          <p className="mt-2 text-muted-foreground leading-relaxed group-hover:text-foreground/90 transition-colors">
+                          <p className="mt-1.5 text-sm text-muted-foreground leading-relaxed group-hover:text-foreground/90 transition-colors">
                             {item.description}
                           </p>
                         </div>
@@ -145,7 +149,8 @@ export default function Navbar() {
             </div>
           </div>
 
-          <div className="border-t border-border/40 pt-4 flex items-center justify-center gap-3 text-xs text-muted-foreground/60">
+          {/* Fixed footer */}
+          <div className="border-t border-border/40 px-6 py-4 shrink-0 flex items-center justify-center gap-3 text-xs text-muted-foreground/60">
             <a href="/privacy" onClick={() => setIsMenuOpen(false)} className="hover:text-muted-foreground transition-colors">Privacy Policy</a>
             <span aria-hidden="true">&middot;</span>
             <a href="/terms" onClick={() => setIsMenuOpen(false)} className="hover:text-muted-foreground transition-colors">Terms &amp; Conditions</a>
