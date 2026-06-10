@@ -1,4 +1,5 @@
 import BlogApiShell from "@/components/blog/blog-api-shell";
+import ContactSection from "@/components/section/contact-section";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -28,5 +29,12 @@ export const metadata: Metadata = {
 };
 
 export default function BlogPage() {
-  return <BlogApiShell />;
+  return (
+    <>
+      <BlogApiShell />
+      <div className="mt-16">
+        <ContactSection />
+      </div>
+    </>
+  );
 }
