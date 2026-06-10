@@ -36,28 +36,31 @@ export function NewsletterForm() {
 
   return (
     <div className="flex flex-col items-center gap-2">
-      <form onSubmit={handleSubmit} className="relative w-full max-w-xs">
-        <input
-          type="email"
-          placeholder="your@email.com"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-          required
-          disabled={status === "loading"}
-          className="h-10 w-full rounded-full border border-border bg-background/60 pl-4 pr-11 text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-1 focus:ring-ring disabled:opacity-50"
-        />
-        <button
-          type="submit"
-          disabled={status === "loading" || !email}
-          className="absolute right-1.5 top-1/2 -translate-y-1/2 flex size-7 items-center justify-center rounded-full bg-foreground text-background transition-opacity disabled:opacity-40 hover:opacity-80"
-          aria-label="Subscribe"
-        >
-          {status === "loading" ? (
-            <Loader2 className="size-3.5 animate-spin" />
-          ) : (
-            <Bell className="size-3.5" />
-          )}
-        </button>
+      <form onSubmit={handleSubmit} className="w-full max-w-xs flex flex-col items-center gap-1.5">
+        <div className="relative w-full">
+          <input
+            type="email"
+            placeholder="your@email.com"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            required
+            disabled={status === "loading"}
+            className="h-10 w-full rounded-full border border-border bg-background/60 pl-4 pr-11 text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-1 focus:ring-ring disabled:opacity-50"
+          />
+          <button
+            type="submit"
+            disabled={status === "loading" || !email}
+            className="absolute right-1.5 top-1/2 -translate-y-1/2 flex size-7 items-center justify-center rounded-full bg-foreground text-background transition-opacity disabled:opacity-40 hover:opacity-80"
+            aria-label="Subscribe"
+          >
+            {status === "loading" ? (
+              <Loader2 className="size-3.5 animate-spin" />
+            ) : (
+              <Bell className="size-3.5" />
+            )}
+          </button>
+        </div>
+        <span className="text-[11px] text-muted-foreground/50 tracking-wide">Subscribe Newsletter</span>
       </form>
       {status === "error" && (
         <p className="text-xs text-red-500">Something went wrong. Please try again.</p>
