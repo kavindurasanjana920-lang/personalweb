@@ -101,6 +101,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
+        <link rel="alternate" type="application/rss+xml" title={`${DATA.name} — Blog`} href="/rss.xml" />
         <Script
           id="google-tag-manager"
           strategy="afterInteractive"
