@@ -152,6 +152,8 @@ export default function RootLayout({
                   <span aria-hidden="true">&middot;</span>
                   <a href="/terms" className="hover:text-muted-foreground transition-colors">Terms &amp; Conditions</a>
                   <span aria-hidden="true">&middot;</span>
+                  <a href="/help" className="hover:text-muted-foreground transition-colors">Help</a>
+                  <span aria-hidden="true">&middot;</span>
                   <a href="/site-map" className="hover:text-muted-foreground transition-colors">Sitemap</a>
                 </div>
                 <div>

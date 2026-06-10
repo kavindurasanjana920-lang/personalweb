@@ -42,6 +42,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     { url: `${DATA.url}/blog`, lastModified: new Date().toISOString().split("T")[0], changeFrequency: "daily", priority: 0.9 },
     { url: `${DATA.url}/contact`, lastModified: new Date().toISOString().split("T")[0], changeFrequency: "monthly", priority: 0.7 },
     { url: `${DATA.url}/services`, lastModified: new Date().toISOString().split("T")[0], changeFrequency: "monthly", priority: 0.8 },
+    { url: `${DATA.url}/help`, lastModified: new Date().toISOString().split("T")[0], changeFrequency: "monthly", priority: 0.6 },
     { url: `${DATA.url}/site-map`, lastModified: new Date().toISOString().split("T")[0], changeFrequency: "monthly", priority: 0.4 },
     { url: `${DATA.url}/privacy`, lastModified: new Date().toISOString().split("T")[0], changeFrequency: "yearly", priority: 0.3 },
     { url: `${DATA.url}/terms`, lastModified: new Date().toISOString().split("T")[0], changeFrequency: "yearly", priority: 0.3 },

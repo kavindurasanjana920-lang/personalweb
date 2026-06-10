@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import {
   BriefcaseBusinessIcon,
   FolderKanbanIcon,
+  HelpCircleIcon,
   MailIcon,
   UserIcon,
   XIcon,
@@ -69,6 +70,12 @@ export default function Navbar() {
       href: "/contact",
       icon: MailIcon,
       description: "Reach out for collaboration and project inquiries.",
+    },
+    {
+      label: "Help",
+      href: "/help",
+      icon: HelpCircleIcon,
+      description: "FAQs, quick links, and answers to common questions.",
     },
   ];
 
