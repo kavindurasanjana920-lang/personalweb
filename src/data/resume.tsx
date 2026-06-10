@@ -27,7 +27,7 @@ const BLOG_URL = process.env.NEXT_PUBLIC_BLOG_URL || "/blog/";
 export const DATA = {
   name: "Kavindu Rasanjana",
   initials: "KR",
-  url: "https://thekavindu.me",
+  url: "https://thekavindu.lk",
   location: "Colombo, SL",
   locationLink: "https://www.google.com/maps/place/colombo",
   description:

@@ -292,6 +292,124 @@ export default function ServicesPage() {
         </div>
       </section>
 
+      {/* FAQ */}
+      <section id="faq">
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "FAQPage",
+              "mainEntity": [
+                {
+                  "@type": "Question",
+                  "name": "What services do you offer?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "I offer AI automation, full-stack web development, mobile app development (iOS & Android), and product system integrations — connecting payments, CRMs, analytics, and internal tools into cohesive workflows."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "How does a project engagement typically work?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Every engagement follows three stages: Discover (define scope and architecture), Build (iterative development with clear feedback loops), and Launch (deploy, refine, and support). You will receive a written proposal before any development work begins."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "What technologies do you work with?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "I work with React, Next.js, Laravel, Python, TensorFlow, PyTorch, Flutter, Docker, and automation platforms including n8n, Zapier, and Make.com, among others."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "Do you work with international clients?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes. I have delivered projects for clients across multiple countries including AI-powered FinTech platforms and cross-platform mobile applications. All communication and delivery is handled remotely."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "What is your refund policy?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Project deposits are refundable within 7 days if no development work has commenced. Once work begins, deposits are non-refundable. Milestone payments are non-refundable once the deliverable has been accepted. If you are unsatisfied, contact me within 7 days of delivery and I will work to resolve it through reasonable revisions."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "How do I get started?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Fill in the contact form at thekavindu.lk/contact with your project details, goals, and timeline. I will respond within 1–2 business days with next steps."
+                  }
+                },
+              ]
+            })
+          }}
+        />
+        <div className="flex min-h-0 flex-col gap-y-6">
+          <div className="flex flex-col gap-y-4 items-center justify-center pb-8 pt-8">
+            <div className="flex items-center w-full max-w-3xl mx-auto">
+              <div className="flex-1 h-px bg-linear-to-r from-transparent from-5% via-border via-95% to-transparent" />
+              <div className="border bg-foreground z-10 rounded-xl px-4 py-1.5 mx-4">
+                <span className="text-background text-sm font-medium">FAQ</span>
+              </div>
+              <div className="flex-1 h-px bg-linear-to-l from-transparent from-5% via-border via-95% to-transparent" />
+            </div>
+            <div className="flex flex-col gap-y-3 items-center justify-center">
+              <h2 className="text-center text-3xl font-bold tracking-tighter sm:text-4xl">
+                Frequently asked questions
+              </h2>
+              <p className="text-muted-foreground md:text-lg/relaxed text-balance text-center max-w-2xl">
+                Common questions about working together. Still have questions?{" "}
+                <Link href="/contact" className="text-foreground underline underline-offset-4 hover:text-muted-foreground transition-colors">
+                  Get in touch.
+                </Link>
+              </p>
+            </div>
+          </div>
+          <div className="space-y-4 max-w-3xl mx-auto w-full">
+            {[
+              {
+                q: "What services do you offer?",
+                a: "AI automation, full-stack web development, mobile app development (iOS & Android), and product system integrations — connecting payments, CRMs, analytics, and internal tools into cohesive workflows.",
+              },
+              {
+                q: "How does a project engagement work?",
+                a: "Every engagement follows three stages: Discover (define scope and architecture), Build (iterative development with clear feedback loops), and Launch (deploy, refine, and support). You will receive a written proposal before any development begins.",
+              },
+              {
+                q: "What technologies do you work with?",
+                a: "React, Next.js, Laravel, Python, TensorFlow, PyTorch, Flutter, Docker, and automation platforms including n8n, Zapier, and Make.com, among others.",
+              },
+              {
+                q: "Do you work with international clients?",
+                a: "Yes. I have delivered projects for clients across multiple countries including AI-powered FinTech platforms and cross-platform mobile applications. All communication and delivery is handled remotely.",
+              },
+              {
+                q: "What is your refund policy?",
+                a: "Deposits are refundable within 7 days if no work has commenced. Once development begins, deposits are non-refundable. Milestone payments are non-refundable once a deliverable is accepted. If you are unsatisfied, contact me within 7 days for resolution through reasonable revisions.",
+              },
+              {
+                q: "How do I get started?",
+                a: "Fill in the contact form with your project details, goals, and timeline. I will respond within 1–2 business days with next steps.",
+              },
+            ].map(({ q, a }) => (
+              <div key={q} className="border border-border rounded-xl p-5 space-y-2">
+                <p className="font-semibold text-foreground">{q}</p>
+                <p className="text-muted-foreground leading-relaxed text-sm">{a}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       <section id="contact">
         <ContactSection />
       </section>

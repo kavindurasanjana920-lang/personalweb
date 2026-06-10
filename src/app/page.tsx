@@ -74,11 +74,11 @@ export default function Page() {
 
             <BlurFade delay={BLUR_FADE_DELAY} className="order-1 md:order-2">
               <Avatar className="size-24 md:size-32 border rounded-full shadow-lg ring-4 ring-muted dark:hidden">
-                <AvatarImage alt={`${DATA.name} - Software Engineer`} src={DATA.avatarUrlLight ?? DATA.avatarUrl} loading="lazy" />
+                <AvatarImage alt={`${DATA.name} - Software Engineer`} src={DATA.avatarUrlLight ?? DATA.avatarUrl} fetchPriority="high" />
                 <AvatarFallback>{DATA.initials}</AvatarFallback>
               </Avatar>
               <Avatar className="hidden size-24 md:size-32 border rounded-full shadow-lg ring-4 ring-muted dark:flex">
-                <AvatarImage alt={`${DATA.name} - Software Engineer`} src={DATA.avatarUrl} />
+                <AvatarImage alt={`${DATA.name} - Software Engineer`} src={DATA.avatarUrl} fetchPriority="high" />
                 <AvatarFallback>{DATA.initials}</AvatarFallback>
               </Avatar>
             </BlurFade>
