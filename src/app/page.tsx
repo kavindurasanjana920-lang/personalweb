@@ -1,17 +1,19 @@
 /* eslint-disable @next/next/no-img-element */
 import type { Metadata } from "next";
+import dynamic from "next/dynamic";
+import Image from "next/image";
 import BlurFade from "@/components/magicui/blur-fade";
 import BlurFadeText from "@/components/magicui/blur-fade-text";
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Button } from "@/components/ui/button";
 import { DATA } from "@/data/resume";
 import Link from "next/link";
 import Markdown from "react-markdown";
 import ContactSection from "@/components/section/contact-section";
-import HackathonsSection from "@/components/section/hackathons-section";
-import ProjectsSection from "@/components/section/projects-section";
-import WorkSection from "@/components/section/work-section";
 import { ArrowRight, ArrowUpRight, BriefcaseBusiness } from "lucide-react";
+
+const HackathonsSection = dynamic(() => import("@/components/section/hackathons-section"));
+const ProjectsSection = dynamic(() => import("@/components/section/projects-section"));
+const WorkSection = dynamic(() => import("@/components/section/work-section"));
 
 export const metadata: Metadata = {
   title: {
@@ -72,15 +74,27 @@ export default function Page() {
               </BlurFade>
             </div>
 
-            <BlurFade delay={BLUR_FADE_DELAY} className="order-1 md:order-2">
-              <Avatar className="size-24 md:size-32 border rounded-full shadow-lg ring-4 ring-muted dark:hidden">
-                <AvatarImage alt={`${DATA.name} - Software Engineer`} src={DATA.avatarUrlLight ?? DATA.avatarUrl} fetchPriority="high" />
-                <AvatarFallback>{DATA.initials}</AvatarFallback>
-              </Avatar>
-              <Avatar className="hidden size-24 md:size-32 border rounded-full shadow-lg ring-4 ring-muted dark:flex">
-                <AvatarImage alt={`${DATA.name} - Software Engineer`} src={DATA.avatarUrl} fetchPriority="high" />
-                <AvatarFallback>{DATA.initials}</AvatarFallback>
-              </Avatar>
+            <BlurFade delay={BLUR_FADE_DELAY} className="order-1 md:order-2 flex-none">
+              <div className="size-24 md:size-32 border rounded-full shadow-lg ring-4 ring-muted overflow-hidden relative dark:hidden">
+                <Image
+                  src={DATA.avatarUrlLight ?? DATA.avatarUrl}
+                  alt={`${DATA.name} - Software Engineer`}
+                  fill
+                  priority
+                  className="object-cover rounded-full"
+                  sizes="(max-width: 768px) 96px, 128px"
+                />
+              </div>
+              <div className="hidden size-24 md:size-32 border rounded-full shadow-lg ring-4 ring-muted overflow-hidden relative dark:flex">
+                <Image
+                  src={DATA.avatarUrl}
+                  alt={`${DATA.name} - Software Engineer`}
+                  fill
+                  priority
+                  className="object-cover rounded-full"
+                  sizes="(max-width: 768px) 96px, 128px"
+                />
+              </div>
             </BlurFade>
           </div>
         </div>
