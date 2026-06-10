@@ -150,7 +150,7 @@ export default function Navbar() {
           </div>
 
           {/* Fixed footer */}
-          <div className="border-t border-border/40 px-6 py-4 shrink-0 flex items-center justify-center gap-3 text-xs text-muted-foreground/60">
+          <div className="border-t border-border/40 px-6 pt-4 pb-24 shrink-0 flex items-center justify-center gap-3 text-xs text-muted-foreground/60">
             <a href="/privacy" onClick={() => setIsMenuOpen(false)} className="hover:text-muted-foreground transition-colors">Privacy Policy</a>
             <span aria-hidden="true">&middot;</span>
             <a href="/terms" onClick={() => setIsMenuOpen(false)} className="hover:text-muted-foreground transition-colors">Terms &amp; Conditions</a>
