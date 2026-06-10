@@ -2,6 +2,7 @@ import Link from "next/link";
 import { FlickeringGrid } from "@/components/magicui/flickering-grid";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
+import { NewsletterForm } from "./newsletter-form";
 
 export default function ContactSection() {
   return (
@@ -34,6 +35,9 @@ export default function ContactSection() {
           <p className="mx-auto max-w-lg text-muted-foreground text-balance text-base mb-2">
             Want to discuss a project, ask a question, or just say hi? Head over to my contact page to get in touch—I'd love to hear from you.
           </p>
+        </div>
+        <div className="w-full border-t border-border/40 pt-6">
+          <NewsletterForm />
         </div>
       </div>
     </div>
