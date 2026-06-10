@@ -4,7 +4,7 @@ import { useState, useMemo } from "react";
 import { ChevronDown } from "lucide-react";
 import { ProjectCard } from "@/components/project-card";
 
-type ProjectLink = { type: string; href: string; icon?: React.ReactNode };
+type ProjectLink = { type: string; href: string; icon: React.ReactNode };
 type Project = {
   title: string;
   href?: string;
