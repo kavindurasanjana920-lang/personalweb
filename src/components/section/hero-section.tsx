@@ -57,7 +57,7 @@ export default function HeroSection({ className, selectedCourier }: HeroSectionP
       });
       if (res.ok) {
         const { id } = (await res.json()) as { id: string };
-        router.push(`/t/${id}/`);
+        router.push(`/s/${id}/`);
         return;
       }
     } catch {

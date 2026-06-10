@@ -110,13 +110,20 @@ function isSuccessStatus(value: string) {
   return ["delivered", "success", "successful", "completed", "complete"].some((term) => normalized.includes(term));
 }
 
-export default function SearchPageClient() {
+interface Props {
+  initialQuery?: string;
+  initialCourier?: string;
+  initialPhone?: string;
+  shortId?: string;
+}
+
+export default function SearchPageClient({ initialQuery: propQuery, initialCourier: propCourier, initialPhone: propPhone, shortId }: Props = {}) {
   const router = useRouter();
   const searchParams = useSearchParams();
 
-  const initialQuery = useMemo(() => searchParams.get("q") ?? "", [searchParams]);
-  const initialPhone = useMemo(() => searchParams.get("phone") ?? "", [searchParams]);
-  const initialCourier = useMemo(() => searchParams.get("courier") ?? "", [searchParams]);
+  const initialQuery = useMemo(() => propQuery ?? searchParams.get("q") ?? "", [searchParams, propQuery]);
+  const initialPhone = useMemo(() => propPhone ?? searchParams.get("phone") ?? "", [searchParams, propPhone]);
+  const initialCourier = useMemo(() => propCourier ?? searchParams.get("courier") ?? "", [searchParams, propCourier]);
 
   const [searchInput, setSearchInput] = useState(initialQuery);
   const [loading, setLoading] = useState(false);
@@ -125,6 +132,10 @@ export default function SearchPageClient() {
   const [error, setError] = useState("");
   const [shortUrl, setShortUrl] = useState("");
   const [copied, setCopied] = useState(false);
+
+  useEffect(() => {
+    if (shortId) setShortUrl(`${window.location.origin}/s/${shortId}/`);
+  }, [shortId]);
 
   const runSearch = async (waybillId: string, phone?: string, courier?: string) => {
     if (!waybillId) {
@@ -216,8 +227,9 @@ export default function SearchPageClient() {
     }
   };
 
-  const trackingHref = (waybillId: string) => {
-    const params = new URLSearchParams({ q: waybillId });
+  const trackingHref = (_waybillId: string) => {
+    if (shortId) return `/t/${shortId}/`;
+    const params = new URLSearchParams({ q: _waybillId });
     if (initialCourier) params.set("courier", initialCourier);
     if (initialCourier === "koombiyo" && initialPhone) params.set("phone", initialPhone);
     return `/tracking/?${params.toString()}`;

@@ -132,9 +132,10 @@ interface Props {
   initialWaybill?: string;
   initialCourier?: string;
   initialPhone?: string;
+  searchShortId?: string;
 }
 
-export default function TrackingDetailsClient({ initialWaybill, initialCourier, initialPhone }: Props = {}) {
+export default function TrackingDetailsClient({ initialWaybill, initialCourier, initialPhone, searchShortId }: Props = {}) {
   const searchParams = useSearchParams();
   const waybill  = useMemo(() => (initialWaybill ?? searchParams.get("q") ?? "").trim().toUpperCase(), [searchParams, initialWaybill]);
   const courier  = useMemo(() => initialCourier ?? searchParams.get("courier") ?? "", [searchParams, initialCourier]);
@@ -186,7 +187,7 @@ export default function TrackingDetailsClient({ initialWaybill, initialCourier, 
     <main className="mx-auto w-full max-w-3xl space-y-6 px-0 text-slate-800 dark:text-zinc-100 sm:px-0">
       <div className="flex items-center justify-between">
         <Link
-          href={waybill ? `/search/?q=${encodeURIComponent(waybill)}` : "/search/"}
+          href={searchShortId ? `/s/${searchShortId}/` : waybill ? `/search/?q=${encodeURIComponent(waybill)}` : "/search/"}
           aria-label="Back to search"
           className="rounded-lg p-2 text-[#f08a00] transition hover:bg-[#fff4e8] dark:hover:bg-[#2a1b09]"
         >

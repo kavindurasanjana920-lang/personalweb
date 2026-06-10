@@ -1,24 +1,10 @@
-import { existsSync, readFileSync } from "fs";
-import { join } from "path";
 import { redirect } from "next/navigation";
 import { Suspense } from "react";
 
+import { resolveLink } from "@/lib/links-server";
 import TrackingDetailsClient from "@/components/search/tracking-details-client";
 
 export const dynamic = "force-dynamic";
-
-type LinkData = { courier: string; waybill: string; phone?: string };
-
-function resolveLink(id: string): LinkData | null {
-  try {
-    const file = join(process.cwd(), "data", "links.json");
-    if (!existsSync(file)) return null;
-    const links = JSON.parse(readFileSync(file, "utf8")) as Record<string, LinkData>;
-    return links[id] ?? null;
-  } catch {
-    return null;
-  }
-}
 
 function TrackingFallback() {
   return (
@@ -30,7 +16,7 @@ function TrackingFallback() {
   );
 }
 
-export default async function ShortLinkPage({ params }: { params: Promise<{ id: string }> }) {
+export default async function ShortTrackingPage({ params }: { params: Promise<{ id: string }> }) {
   const { id } = await params;
   const link = resolveLink(id);
 
@@ -42,6 +28,7 @@ export default async function ShortLinkPage({ params }: { params: Promise<{ id: 
         initialWaybill={link.waybill}
         initialCourier={link.courier}
         initialPhone={link.phone}
+        searchShortId={id}
       />
     </Suspense>
   );
