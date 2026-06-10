@@ -19,6 +19,7 @@ export default function HeroSection({ className, selectedCourier }: HeroSectionP
   const phoneRef = useRef<HTMLInputElement>(null);
   const [phoneError, setPhoneError] = useState(false);
   const [courierError, setCourierError] = useState(false);
+  const [navigating, setNavigating] = useState(false);
 
   const handleSearch = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -40,27 +41,35 @@ export default function HeroSection({ className, selectedCourier }: HeroSectionP
     const rawPhone = formData.get("phone");
     const phone = typeof rawPhone === "string" ? rawPhone.trim() : "";
 
-    if (selectedCourier === "koombiyo") {
-      if (!phone) {
-        setPhoneError(true);
-        phoneRef.current?.focus();
-        return;
-      }
-      setPhoneError(false);
-      const params = new URLSearchParams({ q: waybillId, courier: "koombiyo", phone });
-      const target = `/search/?${params.toString()}`;
-      router.push(target);
-      setTimeout(() => { if (window.location.pathname !== "/search/") window.location.href = target; }, 120);
+    if (selectedCourier === "koombiyo" && !phone) {
+      setPhoneError(true);
+      phoneRef.current?.focus();
       return;
     }
-
     setPhoneError(false);
-    const params = new URLSearchParams({ q: waybillId });
-    if (selectedCourier) params.set("courier", selectedCourier);
+
+    setNavigating(true);
+    try {
+      const res = await fetch("/api/links", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ courier: selectedCourier, waybill: waybillId, phone: phone || undefined }),
+      });
+      if (res.ok) {
+        const { id } = (await res.json()) as { id: string };
+        router.push(`/t/${id}/`);
+        return;
+      }
+    } catch {
+      // fall through to long URL
+    } finally {
+      setNavigating(false);
+    }
+
+    // Fallback if short link creation fails
+    const params = new URLSearchParams({ q: waybillId, courier: selectedCourier });
     if (phone) params.set("phone", phone);
-    const target = `/search/?${params.toString()}`;
-    router.push(target);
-    setTimeout(() => { if (window.location.pathname !== "/search/") window.location.href = target; }, 120);
+    router.push(`/tracking/?${params.toString()}`);
   };
 
   const isKoombiyo = selectedCourier === "koombiyo";
@@ -121,7 +130,8 @@ export default function HeroSection({ className, selectedCourier }: HeroSectionP
                 />
                 <Button
                   type="submit"
-                  className="h-12 rounded-xl bg-orange-500 px-5 text-white hover:bg-orange-500/90"
+                  disabled={navigating}
+                  className="h-12 rounded-xl bg-orange-500 px-5 text-white hover:bg-orange-500/90 disabled:opacity-70"
                 >
                   <Search className="size-5" />
                 </Button>

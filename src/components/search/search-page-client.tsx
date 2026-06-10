@@ -274,6 +274,7 @@ export default function SearchPageClient() {
             </div>
 
             {result ? (
+              <>
               <Link
                 href={trackingHref(result.waybill_id)}
                 className="block overflow-hidden rounded-3xl border bg-card transition hover:shadow-sm"
@@ -339,6 +340,7 @@ export default function SearchPageClient() {
                   </button>
                 )}
               </div>
+              </>
             ) : (
               <div className="rounded-3xl border bg-card px-5 py-12 text-center sm:px-10">
                 <div className="mx-auto mb-5 grid size-24 place-items-center rounded-full bg-muted/50">

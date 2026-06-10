@@ -128,11 +128,17 @@ function splitRemarks(remarks?: string | null) {
   };
 }
 
-export default function TrackingDetailsClient() {
+interface Props {
+  initialWaybill?: string;
+  initialCourier?: string;
+  initialPhone?: string;
+}
+
+export default function TrackingDetailsClient({ initialWaybill, initialCourier, initialPhone }: Props = {}) {
   const searchParams = useSearchParams();
-  const waybill  = useMemo(() => (searchParams.get("q") ?? "").trim().toUpperCase(), [searchParams]);
-  const courier  = useMemo(() => searchParams.get("courier") ?? "", [searchParams]);
-  const phone    = useMemo(() => searchParams.get("phone") ?? "", [searchParams]);
+  const waybill  = useMemo(() => (initialWaybill ?? searchParams.get("q") ?? "").trim().toUpperCase(), [searchParams, initialWaybill]);
+  const courier  = useMemo(() => initialCourier ?? searchParams.get("courier") ?? "", [searchParams, initialCourier]);
+  const phone    = useMemo(() => initialPhone ?? searchParams.get("phone") ?? "", [searchParams, initialPhone]);
 
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");

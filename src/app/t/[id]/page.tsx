@@ -1,6 +1,9 @@
 import { existsSync, readFileSync } from "fs";
 import { join } from "path";
 import { redirect } from "next/navigation";
+import { Suspense } from "react";
+
+import TrackingDetailsClient from "@/components/search/tracking-details-client";
 
 export const dynamic = "force-dynamic";
 
@@ -17,14 +20,29 @@ function resolveLink(id: string): LinkData | null {
   }
 }
 
+function TrackingFallback() {
+  return (
+    <main className="mx-auto w-full max-w-3xl space-y-6">
+      <div className="h-10 w-48 animate-pulse rounded bg-muted/40" />
+      <div className="h-32 w-full animate-pulse rounded-3xl bg-muted/40" />
+      <div className="h-64 w-full animate-pulse rounded-3xl bg-muted/40" />
+    </main>
+  );
+}
+
 export default async function ShortLinkPage({ params }: { params: Promise<{ id: string }> }) {
   const { id } = await params;
   const link = resolveLink(id);
 
   if (!link) redirect("/");
 
-  const qs = new URLSearchParams({ q: link.waybill, courier: link.courier });
-  if (link.phone) qs.set("phone", link.phone);
-
-  redirect(`/tracking/?${qs.toString()}`);
+  return (
+    <Suspense fallback={<TrackingFallback />}>
+      <TrackingDetailsClient
+        initialWaybill={link.waybill}
+        initialCourier={link.courier}
+        initialPhone={link.phone}
+      />
+    </Suspense>
+  );
 }
