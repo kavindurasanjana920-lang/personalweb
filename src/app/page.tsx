@@ -3,7 +3,6 @@ import type { Metadata } from "next";
 import dynamic from "next/dynamic";
 import Image from "next/image";
 import BlurFade from "@/components/magicui/blur-fade";
-import BlurFadeText from "@/components/magicui/blur-fade-text";
 import { Button } from "@/components/ui/button";
 import { DATA } from "@/data/resume";
 import Link from "next/link";
@@ -45,17 +44,12 @@ export default function Page() {
         <div className="mx-auto w-full max-w-2xl space-y-8">
           <div className="gap-2 gap-y-6 flex flex-col md:flex-row justify-between">
             <div className="gap-2 flex flex-col order-2 md:order-1">
-              <BlurFadeText
-                delay={BLUR_FADE_DELAY}
-                className="text-3xl font-semibold tracking-tighter sm:text-4xl lg:text-5xl"
-                yOffset={8}
-                text={`Hi, I'm ${DATA.name.split(" ")[0]}`}
-              />
-              <BlurFadeText
-                className="text-muted-foreground max-w-[600px] md:text-lg lg:text-xl"
-                delay={BLUR_FADE_DELAY}
-                text={DATA.description}
-              />
+              <h1 className="text-3xl font-semibold tracking-tighter sm:text-4xl lg:text-5xl">
+                {`Hi, I'm ${DATA.name.split(" ")[0]}`}
+              </h1>
+              <p className="text-muted-foreground max-w-[600px] md:text-lg lg:text-xl">
+                {DATA.description}
+              </p>
               <BlurFade delay={BLUR_FADE_DELAY * 1.5}>
                 <div className="flex flex-row gap-3 pt-1">
                   <Button asChild className="group px-4 sm:px-6">
