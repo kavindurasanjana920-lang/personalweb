@@ -2,7 +2,7 @@
 
 import { useEffect, useMemo, useState } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
-import { ArrowLeft, ArrowRight, Check, Copy, Link2, Package, Search } from "lucide-react";
+import { ArrowLeft, ArrowRight, Check, Copy, Package, Search } from "lucide-react";
 import Link from "next/link";
 
 import { Button } from "@/components/ui/button";
@@ -246,7 +246,18 @@ export default function SearchPageClient({ initialQuery: propQuery, initialCouri
           <ArrowLeft className="size-7" />
         </Link>
         <h1 className="text-2xl font-semibold tracking-tight sm:text-3xl">Search Results</h1>
-        <div className="size-11" aria-hidden />
+        {shortId ? (
+          <button
+            type="button"
+            onClick={handleCopyShortLink}
+            aria-label="Copy short link"
+            className="grid size-11 place-items-center rounded-full bg-orange-500 text-white shadow-sm transition hover:bg-orange-500/90"
+          >
+            {copied ? <Check className="size-5" /> : <Copy className="size-5" />}
+          </button>
+        ) : (
+          <div className="size-11" aria-hidden />
+        )}
       </div>
 
       <form onSubmit={handleSearch} className="space-y-5">
@@ -327,31 +338,6 @@ export default function SearchPageClient({ initialQuery: propQuery, initialCouri
                   </div>
                 </div>
               </Link>
-
-              <div className="flex items-center justify-end gap-2 pt-1">
-                {shortUrl ? (
-                  <>
-                    <span className="truncate font-mono text-xs text-muted-foreground">{shortUrl}</span>
-                    <button
-                      type="button"
-                      onClick={handleCopyShortLink}
-                      className="inline-flex shrink-0 items-center gap-1.5 rounded-lg border px-3 py-1.5 text-xs font-semibold text-orange-500 hover:bg-orange-50 dark:hover:bg-orange-900/20"
-                    >
-                      {copied ? <Check className="size-3.5 text-green-500" /> : <Copy className="size-3.5" />}
-                      {copied ? "Copied!" : "Copy"}
-                    </button>
-                  </>
-                ) : (
-                  <button
-                    type="button"
-                    onClick={handleCopyShortLink}
-                    className="inline-flex items-center gap-1.5 rounded-lg border px-3 py-1.5 text-xs font-semibold text-muted-foreground hover:border-orange-300 hover:text-orange-500 dark:hover:bg-orange-900/20"
-                  >
-                    <Link2 className="size-3.5" />
-                    Short link for SMS
-                  </button>
-                )}
-              </div>
               </>
             ) : (
               <div className="rounded-3xl border bg-card px-5 py-12 text-center sm:px-10">

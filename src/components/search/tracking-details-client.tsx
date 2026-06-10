@@ -3,7 +3,7 @@
 import { useEffect, useMemo, useState } from "react";
 import Link from "next/link";
 import { useSearchParams } from "next/navigation";
-import { ArrowLeft, CheckCircle2, Clock3, MapPin, Package, Search, Truck } from "lucide-react";
+import { ArrowLeft, Check, CheckCircle2, Clock3, Copy, MapPin, Package, Truck } from "lucide-react";
 
 interface TrackingHistory {
   status_name: string;
@@ -144,6 +144,14 @@ export default function TrackingDetailsClient({ initialWaybill, initialCourier, 
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
   const [result, setResult] = useState<TrackingData | null>(null);
+  const [copied, setCopied] = useState(false);
+
+  const handleCopy = async () => {
+    if (!searchShortId) return;
+    await navigator.clipboard.writeText(`${window.location.origin}/t/${searchShortId}/`);
+    setCopied(true);
+    setTimeout(() => setCopied(false), 2000);
+  };
 
   useEffect(() => {
     let active = true;
@@ -196,10 +204,11 @@ export default function TrackingDetailsClient({ initialWaybill, initialCourier, 
         <h1 className="text-2xl font-semibold tracking-tight text-slate-900 dark:text-zinc-100 sm:text-3xl">Tracking Details</h1>
         <button
           type="button"
-          aria-label="Search"
-          className="grid size-11 place-items-center rounded-full bg-[#ff7a00] text-white shadow-sm"
+          onClick={handleCopy}
+          aria-label="Copy short link"
+          className="grid size-11 place-items-center rounded-full bg-[#ff7a00] text-white shadow-sm transition hover:bg-orange-500/90"
         >
-          <Search className="size-5" />
+          {copied ? <Check className="size-5" /> : <Copy className="size-5" />}
         </button>
       </div>
 
