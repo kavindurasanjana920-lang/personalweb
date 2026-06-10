@@ -1,7 +1,7 @@
 "use client";
 
 import { Button } from "@/components/ui/button";
-import { MoonIcon, SunIcon } from "@radix-ui/react-icons";
+import { Moon, Sun } from "lucide-react";
 import { useTheme } from "next-themes";
 import { cn } from "@/lib/utils";
 
@@ -16,8 +16,11 @@ export function ModeToggle({ className }: { className?: string }) {
       className={cn(className)}
       onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
     >
-      <SunIcon className="h-full w-full" />
-      <MoonIcon className="hidden h-full w-full" />
+      {theme === "dark" ? (
+        <Sun className="h-full w-full" />
+      ) : (
+        <Moon className="h-full w-full" />
+      )}
     </Button>
   );
 }
