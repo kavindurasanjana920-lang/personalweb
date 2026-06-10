@@ -8,12 +8,13 @@ import {
   publicListPosts,
 } from "@/lib/blog-api";
 import { formatDate } from "@/lib/utils";
-import { Check, ChevronLeft, ChevronRight, Copy } from "lucide-react";
+import { Check, ChevronLeft, ChevronRight, Copy, Search, X } from "lucide-react";
 import {
   isValidElement,
   type ComponentPropsWithoutRef,
   type ReactNode,
   useEffect,
+  useMemo,
   useState,
 } from "react";
 import rehypeHighlight from "rehype-highlight";
@@ -118,6 +119,29 @@ export default function BlogApiShell() {
   const [error, setError] = useState<string | null>(null);
   const [posts, setPosts] = useState<BlogPost[]>([]);
   const [selectedPost, setSelectedPost] = useState<BlogPost | null>(null);
+  const [searchQuery, setSearchQuery] = useState("");
+  const [selectedYear, setSelectedYear] = useState<number | null>(null);
+
+  const years = useMemo(() => {
+    const set = new Set<number>();
+    posts.forEach((p) => {
+      if (p.published_at) set.add(new Date(p.published_at).getFullYear());
+    });
+    return Array.from(set).sort((a, b) => b - a);
+  }, [posts]);
+
+  const filteredPosts = useMemo(() => {
+    return posts.filter((p) => {
+      const matchesSearch =
+        !searchQuery ||
+        p.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+        (p.summary ?? "").toLowerCase().includes(searchQuery.toLowerCase());
+      const matchesYear =
+        !selectedYear ||
+        (p.published_at && new Date(p.published_at).getFullYear() === selectedYear);
+      return matchesSearch && matchesYear;
+    });
+  }, [posts, searchQuery, selectedYear]);
 
   useEffect(() => {
     setActiveSlug(readSlugFromLocation());
@@ -313,16 +337,74 @@ export default function BlogApiShell() {
                   {posts.length} posts
                 </span>
               </h1>
-              <p className="text-sm text-muted-foreground mb-8">
+              <p className="text-sm text-muted-foreground mb-6">
                 My thoughts on software development, life, and more.
               </p>
             </BlurFade>
 
             <BlurFade delay={BLUR_FADE_DELAY * 2}>
-              <div className="flex flex-col gap-5">
-                {(posts ?? []).map((post, index) => (
-                  <BlurFade delay={BLUR_FADE_DELAY * 3 + index * 0.05} key={post.id}>
+              <div className="flex flex-col gap-3 mb-6">
+                {/* Search */}
+                <div className="relative">
+                  <Search className="absolute left-3 top-1/2 -translate-y-1/2 size-4 text-muted-foreground pointer-events-none" />
+                  <input
+                    type="text"
+                    placeholder="Search articles..."
+                    value={searchQuery}
+                    onChange={(e) => setSearchQuery(e.target.value)}
+                    className="h-10 w-full rounded-lg border border-border bg-card/40 pl-9 pr-9 text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-1 focus:ring-ring"
+                  />
+                  {searchQuery && (
+                    <button
+                      type="button"
+                      onClick={() => setSearchQuery("")}
+                      className="absolute right-3 top-1/2 -translate-y-1/2 text-muted-foreground hover:text-foreground transition-colors"
+                      aria-label="Clear search"
+                    >
+                      <X className="size-3.5" />
+                    </button>
+                  )}
+                </div>
+
+                {/* Year filter */}
+                {years.length > 1 && (
+                  <div className="flex items-center gap-2 flex-wrap">
+                    <button
+                      type="button"
+                      onClick={() => setSelectedYear(null)}
+                      className={`rounded-full px-3 py-1 text-xs font-medium border transition-colors ${
+                        selectedYear === null
+                          ? "bg-foreground text-background border-foreground"
+                          : "bg-card/40 text-muted-foreground border-border hover:text-foreground"
+                      }`}
+                    >
+                      All
+                    </button>
+                    {years.map((year) => (
+                      <button
+                        key={year}
+                        type="button"
+                        onClick={() => setSelectedYear(selectedYear === year ? null : year)}
+                        className={`rounded-full px-3 py-1 text-xs font-medium border transition-colors ${
+                          selectedYear === year
+                            ? "bg-foreground text-background border-foreground"
+                            : "bg-card/40 text-muted-foreground border-border hover:text-foreground"
+                        }`}
+                      >
+                        {year}
+                      </button>
+                    ))}
+                  </div>
+                )}
+              </div>
+            </BlurFade>
+
+            <BlurFade delay={BLUR_FADE_DELAY * 3}>
+              {filteredPosts.length > 0 ? (
+                <div className="flex flex-col gap-5">
+                  {filteredPosts.map((post, index) => (
                     <a
+                      key={post.id}
                       className="flex items-start gap-x-2 group cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
                       href={getPostHref(post.slug)}
                     >
@@ -344,9 +426,13 @@ export default function BlogApiShell() {
                         </p>
                       </div>
                     </a>
-                  </BlurFade>
-                ))}
-              </div>
+                  ))}
+                </div>
+              ) : (
+                <div className="rounded-xl border border-border px-4 py-10 text-center text-muted-foreground text-sm">
+                  No articles match your search.
+                </div>
+              )}
             </BlurFade>
           </>
         ) : (
