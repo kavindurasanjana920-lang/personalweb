@@ -7,7 +7,10 @@ export const metadata: Metadata = {
   keywords: ["Sitemap", "thekavindu.lk", "Kavindu Rasanjana", "All Pages"],
 };
 
-const sections = [
+type SitemapLink = { label: string; href: string; description: string; external?: boolean };
+type SitemapSection = { title: string; links: SitemapLink[] };
+
+const sections: SitemapSection[] = [
   {
     title: "Main Pages",
     links: [
