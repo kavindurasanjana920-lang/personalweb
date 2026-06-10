@@ -152,7 +152,7 @@ export default function RootLayout({
                   <span aria-hidden="true">&middot;</span>
                   <a href="/terms" className="hover:text-muted-foreground transition-colors">Terms &amp; Conditions</a>
                   <span aria-hidden="true">&middot;</span>
-                  <a href="/sitemap.xml" className="hover:text-muted-foreground transition-colors">Sitemap</a>
+                  <a href="/site-map" className="hover:text-muted-foreground transition-colors">Sitemap</a>
                 </div>
                 <div>
                   <span className="hidden sm:inline">&copy; {new Date().getFullYear()} {DATA.name} &middot; thekavindu.lk &middot; All rights reserved.</span>

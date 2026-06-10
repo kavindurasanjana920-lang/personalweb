@@ -143,7 +143,7 @@ export default function Navbar() {
             <span aria-hidden="true">&middot;</span>
             <a href="/terms" onClick={() => setIsMenuOpen(false)} className="hover:text-muted-foreground transition-colors">Terms &amp; Conditions</a>
             <span aria-hidden="true">&middot;</span>
-            <a href="/sitemap.xml" className="hover:text-muted-foreground transition-colors">Sitemap</a>
+            <a href="/site-map" onClick={() => setIsMenuOpen(false)} className="hover:text-muted-foreground transition-colors">Sitemap</a>
           </div>
         </div>
       </div>
