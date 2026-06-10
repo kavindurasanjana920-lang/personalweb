@@ -61,9 +61,9 @@ export const metadata: Metadata = {
     siteName: `${DATA.name}`,
     images: [
       {
-        url: DATA.avatarUrl,
-        width: 800,
-        height: 600,
+        url: "/kavindu-hero-light.webp",
+        width: 1200,
+        height: 630,
         alt: `${DATA.name} - Software Automation Engineer`,
       },
     ],
@@ -85,7 +85,7 @@ export const metadata: Metadata = {
     title: `${DATA.name} | Software Automation Engineer`,
     card: "summary_large_image",
     description: DATA.description,
-    images: [DATA.avatarUrl],
+    images: ["/kavindu-hero-light.webp"],
   },
   verification: {
     google: "nXCd38fL4hknFmhA4rdoFp88qv8WeB9dCmeVF9ZZi2A",
