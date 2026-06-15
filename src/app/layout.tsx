@@ -148,28 +148,25 @@ export default function RootLayout({
             <div className="relative z-10 max-w-2xl mx-auto py-12 pb-24 sm:py-24 px-6">
               {children}
               <footer className="mt-10 space-y-3 text-center text-xs text-muted-foreground/60">
-                {/* Badge row on mobile only */}
-                <div className="flex items-center gap-4 lg:hidden w-full px-2">
+                {/* Badge on mobile only */}
+                <div className="lg:hidden">
                   {/* eslint-disable-next-line @next/next/no-img-element */}
                   <a
                     href="https://ebadge.bestweb.lk/api/v1/clicked/thekavindu.lk/TopWeb/2026-June/Qualified"
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label="TopWeb.LK Winner Badge"
-                    className="shrink-0"
+                    className="flex items-center gap-3 w-full rounded-full border border-border bg-card/40 px-4 py-2.5 hover:bg-card transition-colors"
                   >
                     <img
                       src="https://ebadge.bestweb.lk/eBadgeSystem/domainNames/thekavindu.lk/TopWeb/2026-June/Qualified/image.png"
                       alt="TopWeb.LK Winner 2026"
-                      width={80}
-                      height={80}
-                      className="opacity-90 hover:opacity-100 transition-opacity"
+                      width={48}
+                      height={48}
+                      className="rounded-full shrink-0"
                     />
+                    <span className="text-sm font-medium text-foreground/70">TopWeb.LK Winner 2026</span>
                   </a>
-                  <div className="text-left">
-                    <p className="text-[10px] uppercase tracking-widest text-muted-foreground/50">Recognition</p>
-                    <p className="text-sm font-semibold text-foreground/80 leading-tight mt-0.5">TopWeb.LK<br />Winner</p>
-                  </div>
                 </div>
                 <div className="flex items-center justify-center gap-3">
                   <a href="/privacy" className="hover:text-muted-foreground transition-colors">Privacy Policy</a>
