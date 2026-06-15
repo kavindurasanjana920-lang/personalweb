@@ -148,7 +148,8 @@ export default function RootLayout({
             <div className="relative z-10 max-w-2xl mx-auto py-12 pb-24 sm:py-24 px-6">
               {children}
               <footer className="mt-10 space-y-3 text-center text-xs text-muted-foreground/60">
-                <div className="flex justify-center">
+                {/* Badge in footer on mobile only */}
+                <div className="flex justify-center lg:hidden">
                   {/* eslint-disable-next-line @next/next/no-img-element */}
                   <a
                     href="https://ebadge.bestweb.lk/api/v1/clicked/thekavindu.lk/TopWeb/2026-June/Qualified"
@@ -180,6 +181,22 @@ export default function RootLayout({
                 </div>
               </footer>
             </div>
+            {/* Fixed left-side badge — desktop only */}
+            <a
+              href="https://ebadge.bestweb.lk/api/v1/clicked/thekavindu.lk/TopWeb/2026-June/Qualified"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="TopWeb.LK Winner Badge"
+              className="hidden lg:block fixed left-4 bottom-8 z-20 opacity-90 hover:opacity-100 transition-opacity"
+            >
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src="https://ebadge.bestweb.lk/eBadgeSystem/domainNames/thekavindu.lk/TopWeb/2026-June/Qualified/image.png"
+                alt="TopWeb.LK Winner 2026"
+                width={90}
+                height={90}
+              />
+            </a>
             <Navbar />
           </TooltipProvider>
         </ThemeProvider>
