@@ -149,7 +149,7 @@ export default function RootLayout({
               {children}
               <footer className="mt-10 space-y-3 text-center text-xs text-muted-foreground/60">
                 {/* Badge row on mobile only */}
-                <div className="flex items-center justify-center gap-4 lg:hidden">
+                <div className="flex items-center gap-4 lg:hidden w-full px-2">
                   {/* eslint-disable-next-line @next/next/no-img-element */}
                   <a
                     href="https://ebadge.bestweb.lk/api/v1/clicked/thekavindu.lk/TopWeb/2026-June/Qualified"
