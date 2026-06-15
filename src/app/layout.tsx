@@ -165,7 +165,7 @@ export default function RootLayout({
                       height={48}
                       className="rounded-full shrink-0"
                     />
-                    <span className="text-sm font-medium text-foreground/70">TopWeb.LK Winner 2026</span>
+                    <span className="text-sm font-medium text-foreground/70">TopWeb.LK June Winner 2026</span>
                   </a>
                 </div>
                 <div className="flex items-center justify-center gap-3">
