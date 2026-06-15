@@ -3,10 +3,14 @@
 import { Button } from "@/components/ui/button";
 import { Moon, Sun } from "lucide-react";
 import { useTheme } from "next-themes";
+import { useEffect, useState } from "react";
 import { cn } from "@/lib/utils";
 
 export function ModeToggle({ className }: { className?: string }) {
-  const { theme, setTheme } = useTheme();
+  const { resolvedTheme, setTheme } = useTheme();
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => setMounted(true), []);
 
   return (
     <Button
@@ -14,9 +18,9 @@ export function ModeToggle({ className }: { className?: string }) {
       variant="link"
       size="icon"
       className={cn(className)}
-      onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
+      onClick={() => setTheme(resolvedTheme === "dark" ? "light" : "dark")}
     >
-      {theme === "dark" ? (
+      {mounted && resolvedTheme === "dark" ? (
         <Sun className="h-full w-full" />
       ) : (
         <Moon className="h-full w-full" />
