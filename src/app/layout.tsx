@@ -147,7 +147,24 @@ export default function RootLayout({
             </div>
             <div className="relative z-10 max-w-2xl mx-auto py-12 pb-24 sm:py-24 px-6">
               {children}
-              <footer className="mt-10 space-y-2 text-center text-xs text-muted-foreground/60">
+              <footer className="mt-10 space-y-3 text-center text-xs text-muted-foreground/60">
+                <div className="flex justify-center">
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <a
+                    href="https://ebadge.bestweb.lk/api/v1/clicked/thekavindu.lk/TopWeb/2026-June/Qualified"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="TopWeb.LK Winner Badge"
+                  >
+                    <img
+                      src="https://ebadge.bestweb.lk/eBadgeSystem/domainNames/thekavindu.lk/TopWeb/2026-June/Qualified/image.png"
+                      alt="TopWeb.LK Winner 2026"
+                      width={100}
+                      height={100}
+                      className="opacity-90 hover:opacity-100 transition-opacity"
+                    />
+                  </a>
+                </div>
                 <div className="flex items-center justify-center gap-3">
                   <a href="/privacy" className="hover:text-muted-foreground transition-colors">Privacy Policy</a>
                   <span aria-hidden="true">&middot;</span>
