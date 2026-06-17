@@ -5,6 +5,16 @@ import { NextRequest, NextResponse } from "next/server";
 
 export const dynamic = "force-dynamic";
 
+const CORS_HEADERS = {
+  "Access-Control-Allow-Origin": "*",
+  "Access-Control-Allow-Methods": "GET, POST, OPTIONS",
+  "Access-Control-Allow-Headers": "Content-Type",
+};
+
+export async function OPTIONS() {
+  return new NextResponse(null, { status: 204, headers: CORS_HEADERS });
+}
+
 type LinkData = { courier: string; waybill: string; phone?: string };
 
 const LINKS_FILE = join(process.cwd(), "data", "links.json");
@@ -46,15 +56,15 @@ export async function POST(request: NextRequest) {
     writeLinks(links);
   }
 
-  return NextResponse.json({ id });
+  return NextResponse.json({ id }, { headers: CORS_HEADERS });
 }
 
 export async function GET(request: NextRequest) {
   const id = request.nextUrl.searchParams.get("id");
-  if (!id) return NextResponse.json({ error: "Missing id" }, { status: 400 });
+  if (!id) return NextResponse.json({ error: "Missing id" }, { status: 400, headers: CORS_HEADERS });
 
   const link = readLinks()[id];
-  if (!link) return NextResponse.json({ error: "Not found" }, { status: 404 });
+  if (!link) return NextResponse.json({ error: "Not found" }, { status: 404, headers: CORS_HEADERS });
 
-  return NextResponse.json(link);
+  return NextResponse.json(link, { headers: CORS_HEADERS });
 }
