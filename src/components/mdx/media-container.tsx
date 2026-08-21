@@ -5,6 +5,7 @@ interface MediaContainerProps {
   alt?: string;
   type?: "image" | "video";
   className?: string;
+  full?: boolean;
 }
 
 export function MediaContainer({
@@ -12,14 +13,15 @@ export function MediaContainer({
   alt = "",
   type = "image",
   className = "",
+  full = false,
 }: MediaContainerProps) {
   return (
-    <div className={`ring-4 ring-muted w-full h-[300px] rounded-lg overflow-hidden flex items-center justify-center ${className}`}>
+    <div className={`rounded-lg overflow-hidden border border-border ${full ? "w-full h-auto" : "w-full h-[440px]"} ${className}`}>
       {type === "image" ? (
         <img
           src={src}
           alt={alt}
-          className="w-full h-full object-cover object-center max-w-full max-h-full"
+          className={`w-full max-w-full block ${full ? "h-auto" : "h-full object-cover object-[center_25%]"}`}
         />
       ) : (
         <video

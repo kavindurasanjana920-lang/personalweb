@@ -11,7 +11,7 @@ import {
   Home,
   Search,
   Store,
-  Youtube,
+  BookOpen,
 } from "lucide-react";
 
 function GooglePlayIcon({ className }: { className?: string }) {
@@ -34,7 +34,7 @@ function GooglePlayIcon({ className }: { className?: string }) {
 
 const NAV_ITEMS = [
   { href: "/", label: "Home", icon: Home },
-  { href: "https://www.youtube.com/@Storemate", label: "YouTube", icon: Youtube },
+  { href: "/blog", label: "Blog", icon: BookOpen },
   { href: "https://play.google.com/store/apps/details?id=com.parallax.storemate_oms", label: "Playstore", icon: GooglePlayIcon },
   { href: "https://apps.apple.com/ua/app/trackmate/id6754271406", label: "Appstore", icon: Store },
   { href: "https://trackmate.lk/search/", label: "Search", icon: Search },

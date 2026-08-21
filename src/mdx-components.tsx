@@ -2,11 +2,39 @@ import { CodeBlock } from "@/components/mdx/code-block";
 import { MediaContainer } from "@/components/mdx/media-container";
 import type { ComponentProps } from "react";
 
+function TrackCTA({ href, children, official, officialHref }: { href: string; children: React.ReactNode; official?: string; officialHref?: string }) {
+  return (
+    <div className="not-prose my-6 flex flex-nowrap items-center gap-2">
+      <a
+        href={href}
+        className="inline-flex items-center gap-1.5 rounded-md bg-foreground px-3 py-1.5 text-xs font-semibold text-background no-underline transition-all hover:opacity-85 active:scale-95 whitespace-nowrap"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        {children}
+        <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg>
+      </a>
+      {official && officialHref && (
+        <a
+          href={officialHref}
+          className="inline-flex items-center gap-1.5 rounded-md border border-border px-3 py-1.5 text-xs font-medium text-muted-foreground no-underline transition-colors hover:border-foreground/30 hover:text-foreground whitespace-nowrap"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          {official}
+          <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg>
+        </a>
+      )}
+    </div>
+  );
+}
+
 type CodeProps = ComponentProps<"code"> & {
   "data-language"?: string;
 };
 
 export const mdxComponents = {
+  TrackCTA,
   MediaContainer,
   pre: (props: ComponentProps<"pre">) => <CodeBlock {...props} />,
   hr: (props: ComponentProps<"hr">) => (
