@@ -175,11 +175,14 @@ jobs:
 
       - name: Smoke test through nginx
         env:
-          VM_IP: ${{ steps.nsg.outputs.vm_ip }}
+          # Tested through the real hostname over TLS: hitting the bare IP now
+          # lands on certbot's 80 -> 443 redirect and a certificate that cannot
+          # match an IP, so it proves nothing about the release.
+          API_URL: https://backend.thekavindu.lk
         run: |
           set -euo pipefail
           for path in /up /api/posts; do
-            code="$(curl -s -o /dev/null -w '%{http_code}' --max-time 20 "http://${VM_IP}${path}")"
+            code="$(curl -s -o /dev/null -w '%{http_code}' -L --max-time 30 "${API_URL}${path}")"
             echo "${path} -> ${code}"
             [ "$code" = "200" ] || { echo "unexpected status for ${path}" >&2; exit 1; }
           done
