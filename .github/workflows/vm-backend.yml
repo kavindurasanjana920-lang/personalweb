@@ -1,0 +1,177 @@
+name: Deploy Laravel API to Azure VM
+
+on:
+  push:
+    branches: [azure-vm-backend]
+  workflow_dispatch:
+
+env:
+  AZURE_RG: Primary
+  AZURE_VM: PrimaryMachine
+  AZURE_NSG: PrimaryMachine-nsg
+  DEPLOY_USER: deploy
+  PHP_VERSION: "8.3"
+  RELEASE_ROOT: /var/www/laravel
+
+permissions:
+  id-token: write # azure/login OIDC
+  contents: read
+
+# Shares the NSG rule slot with the frontend workflow, so deploys must serialise.
+concurrency:
+  group: azure-vm-deploy
+  cancel-in-progress: false
+
+jobs:
+  build:
+    name: Build Laravel package
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: ${{ env.PHP_VERSION }}
+          extensions: mbstring, pdo_mysql, bcmath, intl, zip, openssl, tokenizer, xml, curl
+          coverage: none
+
+      - uses: actions/cache@v4
+        with:
+          path: ~/.cache/composer
+          key: composer-${{ runner.os }}-${{ hashFiles('composer.lock') }}
+          restore-keys: composer-${{ runner.os }}-
+
+      - name: Install production dependencies
+        run: composer install --no-dev --optimize-autoloader --no-interaction --prefer-dist --no-progress
+
+      - name: Assemble deployment bundle
+        run: |
+          set -euo pipefail
+          rm -rf deploy-bundle && mkdir -p deploy-bundle
+          rsync -a \
+            --exclude '.git' \
+            --exclude '.github' \
+            --exclude 'deploy-bundle' \
+            --exclude 'tests' \
+            --exclude 'node_modules' \
+            --exclude '.env' \
+            --exclude '.env.*' \
+            --exclude 'storage' \
+            --exclude 'bootstrap/cache/*.php' \
+            ./ deploy-bundle/
+          du -sh deploy-bundle
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: laravel-app
+          path: deploy-bundle
+          include-hidden-files: true
+          retention-days: 5
+
+  deploy:
+    name: Ship to the VM
+    needs: build
+    runs-on: ubuntu-latest
+    environment: production
+    steps:
+      - uses: actions/download-artifact@v4
+        with:
+          name: laravel-app
+          path: deploy-bundle
+
+      - name: Azure login (OIDC)
+        uses: azure/login@v2
+        with:
+          client-id: ${{ secrets.AZURE_CLIENT_ID }}
+          tenant-id: ${{ secrets.AZURE_TENANT_ID }}
+          subscription-id: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
+
+      - name: Open SSH to this runner
+        id: nsg
+        run: |
+          set -euo pipefail
+          RUNNER_IP="$(curl -s --max-time 10 https://api.ipify.org)"
+          echo "runner ip: ${RUNNER_IP}"
+
+          for stale in $(az network nsg rule list -g "$AZURE_RG" --nsg-name "$AZURE_NSG" \
+                          --query "[?starts_with(name,'gh-actions-')].name" -o tsv); do
+            echo "removing stale rule ${stale}"
+            az network nsg rule delete -g "$AZURE_RG" --nsg-name "$AZURE_NSG" -n "$stale"
+          done
+
+          RULE="gh-actions-${GITHUB_RUN_ID}"
+          echo "rule=${RULE}" >> "$GITHUB_OUTPUT"
+          az network nsg rule create \
+            -g "$AZURE_RG" --nsg-name "$AZURE_NSG" -n "$RULE" \
+            --priority 100 --direction Inbound --access Allow --protocol Tcp \
+            --source-address-prefixes "${RUNNER_IP}/32" \
+            --destination-port-ranges 22 -o none
+
+          VM_IP="$(az vm show -d -g "$AZURE_RG" -n "$AZURE_VM" --query publicIps -o tsv)"
+          echo "vm_ip=${VM_IP}" >> "$GITHUB_OUTPUT"
+
+      - name: Configure SSH
+        run: |
+          set -euo pipefail
+          mkdir -p ~/.ssh && chmod 700 ~/.ssh
+          echo "${{ secrets.VM_SSH_PRIVATE_KEY }}" > ~/.ssh/deploy_key
+          chmod 600 ~/.ssh/deploy_key
+          ssh-keyscan -H "${{ steps.nsg.outputs.vm_ip }}" >> ~/.ssh/known_hosts 2>/dev/null
+
+      - name: Upload release, migrate and cut over
+        env:
+          VM_IP: ${{ steps.nsg.outputs.vm_ip }}
+          RELEASE: ${{ github.sha }}
+        run: |
+          set -euo pipefail
+          SSH="ssh -i ~/.ssh/deploy_key -o BatchMode=yes ${DEPLOY_USER}@${VM_IP}"
+          TARGET="${RELEASE_ROOT}/releases/${RELEASE}"
+
+          $SSH "mkdir -p ${TARGET}"
+
+          rsync -az --delete \
+            -e "ssh -i ~/.ssh/deploy_key -o BatchMode=yes" \
+            deploy-bundle/ "${DEPLOY_USER}@${VM_IP}:${TARGET}/"
+
+          # Link the persistent pieces, then warm the caches and migrate BEFORE the
+          # symlink swap, so a failure leaves the previous release serving.
+          $SSH "set -e
+            cd ${TARGET}
+            ln -sfn ${RELEASE_ROOT}/shared/.env ${TARGET}/.env
+            rm -rf ${TARGET}/storage
+            ln -sfn ${RELEASE_ROOT}/shared/storage ${TARGET}/storage
+
+            # rsync writes files owned by ${DEPLOY_USER}; php-fpm runs as www-data
+            # and needs group write on the caches it maintains.
+            chgrp -R www-data ${TARGET}
+            find ${TARGET} -type d -exec chmod 2775 {} +
+            chmod -R g+w ${TARGET}/bootstrap/cache
+
+            php artisan config:clear
+            php artisan config:cache
+            php artisan route:cache
+            php artisan migrate --force --no-interaction
+
+            ln -sfn ${TARGET} ${RELEASE_ROOT}/current
+            sudo /bin/systemctl reload php8.3-fpm"
+
+          $SSH "cd ${RELEASE_ROOT}/releases && ls -1dt */ | tail -n +4 | xargs -r rm -rf"
+
+      - name: Smoke test through nginx
+        env:
+          VM_IP: ${{ steps.nsg.outputs.vm_ip }}
+        run: |
+          set -euo pipefail
+          for path in /up /api/posts; do
+            code="$(curl -s -o /dev/null -w '%{http_code}' --max-time 20 "http://${VM_IP}${path}")"
+            echo "${path} -> ${code}"
+            [ "$code" = "200" ] || { echo "unexpected status for ${path}" >&2; exit 1; }
+          done
+
+      - name: Close SSH
+        if: always()
+        run: |
+          az network nsg rule delete -g "$AZURE_RG" --nsg-name "$AZURE_NSG" \
+            -n "${{ steps.nsg.outputs.rule }}" -o none || true
+          rm -f ~/.ssh/deploy_key
