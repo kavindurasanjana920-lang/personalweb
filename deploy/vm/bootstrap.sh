@@ -85,8 +85,11 @@ touch "/home/${DEPLOY_USER}/.ssh/authorized_keys"
 chown "$DEPLOY_USER:$DEPLOY_USER" "/home/${DEPLOY_USER}/.ssh/authorized_keys"
 chmod 600 "/home/${DEPLOY_USER}/.ssh/authorized_keys"
 
-for d in /var/www/next/releases /var/www/next/shared \
-         /var/www/laravel/releases /var/www/laravel/shared; do
+# The parents matter as much as the children: the deploy user replaces the
+# `current` symlink inside /var/www/{next,laravel}, which needs write on the
+# directory itself, not just on releases/.
+for d in /var/www/next /var/www/next/releases /var/www/next/shared \
+         /var/www/laravel /var/www/laravel/releases /var/www/laravel/shared; do
   install -d -o "$DEPLOY_USER" -g www-data -m 2775 "$d"
 done
 
