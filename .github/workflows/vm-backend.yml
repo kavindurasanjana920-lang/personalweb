@@ -91,24 +91,39 @@ jobs:
         id: nsg
         run: |
           set -euo pipefail
+
+          # The runner's preinstalled Azure CLI intermittently dies with a Python
+          # import deadlock (_ModuleLock on requests.structures) while building the
+          # service principal credential. It is not deterministic, so retry.
+          az_retry() {
+            local n=1
+            while true; do
+              if az "$@"; then return 0; fi
+              if [ "$n" -ge 3 ]; then echo "az failed after ${n} attempts: $*" >&2; return 1; fi
+              echo "az attempt ${n} failed, retrying: $*" >&2
+              n=$((n + 1))
+              sleep 5
+            done
+          }
+
           RUNNER_IP="$(curl -s --max-time 10 https://api.ipify.org)"
           echo "runner ip: ${RUNNER_IP}"
 
-          for stale in $(az network nsg rule list -g "$AZURE_RG" --nsg-name "$AZURE_NSG" \
+          for stale in $(az_retry network nsg rule list -g "$AZURE_RG" --nsg-name "$AZURE_NSG" \
                           --query "[?starts_with(name,'gh-actions-')].name" -o tsv); do
             echo "removing stale rule ${stale}"
-            az network nsg rule delete -g "$AZURE_RG" --nsg-name "$AZURE_NSG" -n "$stale"
+            az_retry network nsg rule delete -g "$AZURE_RG" --nsg-name "$AZURE_NSG" -n "$stale"
           done
 
           RULE="gh-actions-${GITHUB_RUN_ID}"
           echo "rule=${RULE}" >> "$GITHUB_OUTPUT"
-          az network nsg rule create \
+          az_retry network nsg rule create \
             -g "$AZURE_RG" --nsg-name "$AZURE_NSG" -n "$RULE" \
             --priority 100 --direction Inbound --access Allow --protocol Tcp \
             --source-address-prefixes "${RUNNER_IP}/32" \
             --destination-port-ranges 22 -o none
 
-          VM_IP="$(az vm show -d -g "$AZURE_RG" -n "$AZURE_VM" --query publicIps -o tsv)"
+          VM_IP="$(az_retry vm show -d -g "$AZURE_RG" -n "$AZURE_VM" --query publicIps -o tsv)"
           echo "vm_ip=${VM_IP}" >> "$GITHUB_OUTPUT"
 
       - name: Configure SSH
