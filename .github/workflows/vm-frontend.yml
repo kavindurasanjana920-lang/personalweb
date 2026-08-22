@@ -59,6 +59,17 @@ jobs:
           cp -r .next/standalone/. deploy-bundle/
           cp -r .next/static deploy-bundle/.next/static
           if [ -d public ]; then cp -r public deploy-bundle/public; fi
+
+          # public/ still holds the PNG/JPG originals that scripts/optimize-images.mjs
+          # converted; the app references only the .webp results. Keep the originals in
+          # git so the script can be re-run, but do not ship them - they are several MB
+          # of files no request will ever ask for.
+          dropped=0
+          while IFS= read -r f; do
+            if [ -f "${f%.*}.webp" ]; then rm -f "$f"; dropped=$((dropped + 1)); fi
+          done < <(find deploy-bundle/public -type f \( -iname '*.png' -o -iname '*.jpg' -o -iname '*.jpeg' \))
+          echo "dropped ${dropped} original(s) that have a .webp twin"
+
           du -sh deploy-bundle
 
       - uses: actions/upload-artifact@v4
