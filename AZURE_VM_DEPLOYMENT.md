@@ -140,24 +140,41 @@ sudo mysql portfolioblog < /tmp/portfolioblog.sql && rm /tmp/portfolioblog.sql
 MySQL is bound to `127.0.0.1`, so it is never reachable from outside the VM — the dump has to
 travel over SSH rather than a direct connection.
 
-## Step 5 — Domain and TLS
+## Step 5 — Domains and TLS
 
-Point DNS at the static IP, then:
+Two hostnames are served from the VM:
+
+| Host | Serves | Status |
+|---|---|---|
+| `backend.thekavindu.lk` | Laravel at the root | **live, HTTPS** |
+| `thekavindu.lk` / `www` | portfolio, with the API at `/api` | waiting on DNS |
+
+DNS is on Cloudflare. `backend` is a DNS-only (grey cloud) A record to `172.198.161.39`, which
+is what let certbot complete the HTTP-01 challenge. The apex and `www` are still proxied
+(orange cloud) at Cloudflare's edge addresses and point at the old origin.
+
+To move the apex across, set both records to `172.198.161.39` **DNS only**, then:
 
 ```bash
-sudo certbot --nginx -d thekavindu.lk -d www.thekavindu.lk
+sudo certbot --nginx -d thekavindu.lk -d www.thekavindu.lk \
+  --non-interactive --agree-tos -m info@thekavindu.lk --redirect
 ```
 
-Certbot edits the site config in place and installs a renewal timer. Afterwards update, in
-order:
+Keeping the orange cloud instead also works, but then Cloudflare terminates TLS at its edge and
+the origin needs either a Cloudflare Origin Certificate or SSL mode set to Full — more moving
+parts than the DNS-only route, and inconsistent with how `backend` is already set up.
 
-1. `APP_URL`, `FRONTEND_URL`, `CORS_ALLOWED_ORIGINS` in `/var/www/laravel/shared/.env`
-2. `DATA.url` in [src/data/resume.tsx](src/data/resume.tsx#L30) — canonical URLs, OG tags,
-   sitemap and RSS all derive from it
-3. re-run both workflows
+Certbot edits the site config in place and installs a renewal timer (`certbot.timer`;
+`certbot renew --dry-run` verifies it). Afterwards:
+
+1. `APP_URL`, `FRONTEND_URL`, `CORS_ALLOWED_ORIGINS` in `/var/www/laravel/shared/.env`, then
+   `php artisan config:cache` and reload php-fpm
+2. `DATA.url` in [src/data/resume.tsx](src/data/resume.tsx#L30) is already `https://thekavindu.lk`
+   — canonical URLs, OG tags, sitemap and RSS all derive from it
 
 `NEXT_PUBLIC_LARAVEL_API_URL` and `LARAVEL_API_URL` need no change: one is relative, the other
-points at loopback.
+points at loopback. That is the whole point of those two values — a domain change never
+requires a rebuild.
 
 ---
 
