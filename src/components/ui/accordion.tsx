@@ -24,11 +24,15 @@ AccordionItem.displayName = "AccordionItem"
  * vertical one animates a plus into a minus, with no swap between two icons and
  * nothing to flicker mid-transition. Decorative, so it stays out of the
  * accessibility tree - Radix already exposes the state via aria-expanded.
+ *
+ * Sized in em rather than a fixed px step so the mark tracks whatever font size
+ * the question uses. The triggers are text-sm, where a size-4 icon comes out
+ * wider than the text is tall and visually outweighs it.
  */
 const AccordionPlusIcon = () => (
   <span
     aria-hidden="true"
-    className="relative ml-4 size-4 shrink-0 text-muted-foreground transition-colors group-hover:text-foreground"
+    className="relative size-[0.85em] shrink-0 text-muted-foreground transition-colors group-hover:text-foreground"
   >
     <span className="absolute top-1/2 left-0 h-[1.5px] w-full -translate-y-1/2 rounded-full bg-current" />
     <span className="absolute top-0 left-1/2 h-full w-[1.5px] -translate-x-1/2 rounded-full bg-current transition-transform duration-200 ease-out group-data-[state=open]:scale-y-0" />
