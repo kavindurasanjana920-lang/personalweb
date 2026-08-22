@@ -44,6 +44,11 @@ jobs:
           NEXT_PUBLIC_LARAVEL_API_URL: /api
           NEXT_PUBLIC_BLOG_URL: /blog/
           NEXT_PUBLIC_CONTACT_FORM_WEBHOOK_URL: ${{ secrets.CONTACT_FORM_WEBHOOK_URL }}
+          # Absolute, and only used server-side: it lets the runner reach the live
+          # API so /sitemap.xml and /rss.xml are prerendered WITH the posts. Without
+          # it those routes ship empty and stay that way until the first revalidate.
+          # At runtime the systemd unit overrides this with the loopback address.
+          LARAVEL_API_URL: https://backend.thekavindu.lk/api
         run: npm run build
 
       - name: Assemble standalone bundle
