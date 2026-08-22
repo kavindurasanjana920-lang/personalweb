@@ -1,4 +1,5 @@
 import { DATA } from "@/data/resume";
+import { serverApiUrl } from "@/lib/server-api-url";
 
 export const revalidate = 3600;
 
@@ -14,7 +15,7 @@ function escapeXml(str: string): string {
 async function fetchPosts(): Promise<
   { title: string; slug: string; summary: string | null; published_at: string | null; updated_at: string }[]
 > {
-  const apiUrl = process.env.NEXT_PUBLIC_LARAVEL_API_URL?.trim().replace(/\/+$/, "");
+  const apiUrl = serverApiUrl();
   if (!apiUrl) return [];
 
   try {

@@ -1,0 +1,166 @@
+name: Deploy frontend to Azure VM
+
+on:
+  push:
+    branches: [azure-vm]
+  workflow_dispatch:
+
+env:
+  AZURE_RG: Primary
+  AZURE_VM: PrimaryMachine
+  AZURE_NSG: PrimaryMachine-nsg
+  DEPLOY_USER: deploy
+  NODE_VERSION: "22.x"
+  RELEASE_ROOT: /var/www/next
+
+permissions:
+  id-token: write # azure/login OIDC
+  contents: read
+
+# SSH is opened to the runner by temporarily adding an NSG rule at a fixed
+# priority, so two deploys must never overlap.
+concurrency:
+  group: azure-vm-deploy
+  cancel-in-progress: false
+
+jobs:
+  build:
+    name: Build Next.js bundle
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          cache: npm
+
+      - run: npm ci
+
+      - name: Build
+        env:
+          # Relative on purpose: the API is served from the same origin by nginx,
+          # so this value does not change when DNS or TLS changes.
+          NEXT_PUBLIC_LARAVEL_API_URL: /api
+          NEXT_PUBLIC_BLOG_URL: /blog/
+          NEXT_PUBLIC_CONTACT_FORM_WEBHOOK_URL: ${{ secrets.CONTACT_FORM_WEBHOOK_URL }}
+        run: npm run build
+
+      - name: Assemble standalone bundle
+        run: |
+          set -euo pipefail
+          rm -rf deploy-bundle
+          mkdir -p deploy-bundle/.next
+          cp -r .next/standalone/. deploy-bundle/
+          cp -r .next/static deploy-bundle/.next/static
+          if [ -d public ]; then cp -r public deploy-bundle/public; fi
+          du -sh deploy-bundle
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: nextjs-standalone
+          path: deploy-bundle
+          include-hidden-files: true
+          retention-days: 5
+
+  deploy:
+    name: Ship to the VM
+    needs: build
+    runs-on: ubuntu-latest
+    environment: production
+    steps:
+      - uses: actions/download-artifact@v4
+        with:
+          name: nextjs-standalone
+          path: deploy-bundle
+
+      - name: Azure login (OIDC)
+        uses: azure/login@v2
+        with:
+          client-id: ${{ secrets.AZURE_CLIENT_ID }}
+          tenant-id: ${{ secrets.AZURE_TENANT_ID }}
+          subscription-id: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
+
+      - name: Open SSH to this runner
+        id: nsg
+        run: |
+          set -euo pipefail
+          RUNNER_IP="$(curl -s --max-time 10 https://api.ipify.org)"
+          echo "runner ip: ${RUNNER_IP}"
+
+          # Sweep any rule left behind by a cancelled run before claiming the slot.
+          for stale in $(az network nsg rule list -g "$AZURE_RG" --nsg-name "$AZURE_NSG" \
+                          --query "[?starts_with(name,'gh-actions-')].name" -o tsv); do
+            echo "removing stale rule ${stale}"
+            az network nsg rule delete -g "$AZURE_RG" --nsg-name "$AZURE_NSG" -n "$stale"
+          done
+
+          RULE="gh-actions-${GITHUB_RUN_ID}"
+          echo "rule=${RULE}" >> "$GITHUB_OUTPUT"
+          az network nsg rule create \
+            -g "$AZURE_RG" --nsg-name "$AZURE_NSG" -n "$RULE" \
+            --priority 100 --direction Inbound --access Allow --protocol Tcp \
+            --source-address-prefixes "${RUNNER_IP}/32" \
+            --destination-port-ranges 22 -o none
+
+          VM_IP="$(az vm show -d -g "$AZURE_RG" -n "$AZURE_VM" --query publicIps -o tsv)"
+          echo "vm_ip=${VM_IP}" >> "$GITHUB_OUTPUT"
+
+      - name: Configure SSH
+        run: |
+          set -euo pipefail
+          mkdir -p ~/.ssh && chmod 700 ~/.ssh
+          echo "${{ secrets.VM_SSH_PRIVATE_KEY }}" > ~/.ssh/deploy_key
+          chmod 600 ~/.ssh/deploy_key
+          ssh-keyscan -H "${{ steps.nsg.outputs.vm_ip }}" >> ~/.ssh/known_hosts 2>/dev/null
+
+      - name: Upload release and cut over
+        env:
+          VM_IP: ${{ steps.nsg.outputs.vm_ip }}
+          RELEASE: ${{ github.sha }}
+        run: |
+          set -euo pipefail
+          SSH="ssh -i ~/.ssh/deploy_key -o BatchMode=yes ${DEPLOY_USER}@${VM_IP}"
+          TARGET="${RELEASE_ROOT}/releases/${RELEASE}"
+
+          $SSH "mkdir -p ${TARGET}"
+
+          rsync -az --delete \
+            -e "ssh -i ~/.ssh/deploy_key -o BatchMode=yes" \
+            --chmod=Du=rwx,Dg=rwx,Do=rx,Fu=rw,Fg=rw,Fo=r \
+            deploy-bundle/ "${DEPLOY_USER}@${VM_IP}:${TARGET}/"
+
+          # Swap the symlink, restart, then verify the new process actually serves.
+          $SSH "set -e
+            ln -sfn ${TARGET} ${RELEASE_ROOT}/current
+            sudo /bin/systemctl restart nextjs
+            for i in \$(seq 1 20); do
+              if curl -fsS -o /dev/null http://127.0.0.1:3000/; then
+                echo 'nextjs is serving'; exit 0
+              fi
+              sleep 2
+            done
+            echo 'nextjs did not come up' >&2
+            journalctl -u nextjs -n 40 --no-pager >&2
+            exit 1"
+
+          # Keep the three most recent releases.
+          $SSH "cd ${RELEASE_ROOT}/releases && ls -1dt */ | tail -n +4 | xargs -r rm -rf"
+
+      - name: Smoke test through nginx
+        env:
+          VM_IP: ${{ steps.nsg.outputs.vm_ip }}
+        run: |
+          set -euo pipefail
+          for path in / /blog/ /robots.txt; do
+            code="$(curl -s -o /dev/null -w '%{http_code}' --max-time 20 "http://${VM_IP}${path}")"
+            echo "${path} -> ${code}"
+            [ "$code" = "200" ] || { echo "unexpected status for ${path}" >&2; exit 1; }
+          done
+
+      - name: Close SSH
+        if: always()
+        run: |
+          az network nsg rule delete -g "$AZURE_RG" --nsg-name "$AZURE_NSG" \
+            -n "${{ steps.nsg.outputs.rule }}" -o none || true
+          rm -f ~/.ssh/deploy_key

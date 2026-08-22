@@ -1,0 +1,42 @@
+# systemd unit for the Next.js standalone server.
+# Installed to /etc/systemd/system/nextjs.service by deploy/vm/bootstrap.sh.
+
+[Unit]
+Description=Next.js standalone server (thekavindu portfolio)
+Documentation=https://nextjs.org/docs/app/api-reference/config/next-config-js/output
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=www-data
+Group=www-data
+
+# WorkingDirectory resolves the symlink at start time, so a release swap plus a
+# restart is all that is needed to cut over.
+WorkingDirectory=/var/www/next/current
+EnvironmentFile=/var/www/next/shared/next.env
+ExecStart=/usr/bin/node server.js
+
+Restart=always
+RestartSec=5
+StandardOutput=journal
+StandardError=journal
+SyslogIdentifier=nextjs
+
+# The box has 2 GB total and also runs MySQL and PHP-FPM. Cap the Node process so
+# a runaway render cannot push the machine into the OOM killer.
+MemoryMax=768M
+
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=strict
+ProtectHome=true
+ProtectKernelTunables=true
+ProtectControlGroups=true
+RestrictSUIDSGID=true
+# ISR writes revalidated pages into .next/cache under the release directory.
+ReadWritePaths=/var/www/next
+
+[Install]
+WantedBy=multi-user.target

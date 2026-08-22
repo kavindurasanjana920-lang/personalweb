@@ -1,10 +1,11 @@
 import { MetadataRoute } from "next";
 import { DATA } from "@/data/resume";
+import { serverApiUrl } from "@/lib/server-api-url";
 
 export const revalidate = 3600; // regenerate sitemap at most once per hour
 
 async function fetchPublishedSlugs(): Promise<{ slug: string; updated_at: string }[]> {
-  const apiUrl = process.env.NEXT_PUBLIC_LARAVEL_API_URL?.trim().replace(/\/+$/, "");
+  const apiUrl = serverApiUrl();
   if (!apiUrl) return [];
 
   try {

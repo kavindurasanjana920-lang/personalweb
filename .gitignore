@@ -28,3 +28,8 @@ Thumbs.db
 !.vscode/extensions.json
 !.vscode/settings.json
 laravel-blog
+# Azure deployment bundle
+deploy-bundle/
+
+# TypeScript incremental build cache
+*.tsbuildinfo
