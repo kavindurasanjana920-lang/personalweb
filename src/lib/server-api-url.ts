@@ -14,5 +14,13 @@ export function serverApiUrl(): string {
     process.env.NEXT_PUBLIC_LARAVEL_API_URL?.trim() ||
     "";
 
+  // Only an absolute URL is usable from Node. The browser-facing value is
+  // deliberately relative ("/api") so it survives a domain change, but during the
+  // CI build that would leave fetch with nothing to connect to and stall the
+  // prerender until it times out. Returning "" makes callers degrade to their
+  // static output; on the server LARAVEL_API_URL supplies the loopback address,
+  // and the hourly revalidate fills the live data back in.
+  if (!/^https?:\/\//i.test(value)) return "";
+
   return value.replace(/\/+$/, "");
 }
