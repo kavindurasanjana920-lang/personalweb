@@ -8,6 +8,16 @@ import { mdxComponents } from "@/mdx-components";
 import Link from "next/link";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
+function readingTime(content: string) {
+  // Strip JSX tags and MDX frontmatter noise so component markup isn't counted as prose.
+  const words = content
+    .replace(/<[^>]+>/g, " ")
+    .replace(/[#*_`>|-]/g, " ")
+    .split(/\s+/)
+    .filter(Boolean).length;
+  return Math.max(1, Math.round(words / 220));
+}
+
 function getSortedPosts() {
   return [...allPosts].sort((a, b) => {
     if (new Date(a.publishedAt) > new Date(b.publishedAt)) {
@@ -132,10 +142,42 @@ export default async function Blog({
         <h1 className="title font-semibold text-3xl md:text-4xl tracking-tighter leading-tight">
           {post.title}
         </h1>
-        <p className="text-sm text-muted-foreground">
-          {formatDate(post.publishedAt)}
-        </p>
+        <div className="flex flex-wrap items-center gap-x-2.5 gap-y-1 text-sm text-muted-foreground">
+          {post.author && (
+            <>
+              <span className="font-medium text-foreground">{post.author}</span>
+              <span aria-hidden="true" className="text-border">·</span>
+            </>
+          )}
+          <time dateTime={post.publishedAt}>{formatDate(post.publishedAt)}</time>
+          <span aria-hidden="true" className="text-border">·</span>
+          <span className="inline-flex items-center gap-1">
+            <svg
+              width="13"
+              height="13"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              aria-hidden="true"
+            >
+              <circle cx="12" cy="12" r="10" />
+              <polyline points="12 6 12 12 16 14" />
+            </svg>
+            {readingTime(post.content)} min read
+          </span>
+        </div>
       </div>
+      {post.image && (
+        // eslint-disable-next-line @next/next/no-img-element
+        <img
+          src={post.image}
+          alt={post.title}
+          className="mt-6 block w-full rounded-xl border border-border"
+        />
+      )}
       <div className="my-6 flex w-full items-center">
         <div
           className="flex-1 h-px bg-border"
@@ -147,7 +189,7 @@ export default async function Blog({
           }}
         />
       </div>
-      <article className="prose max-w-full text-pretty font-sans leading-relaxed text-muted-foreground dark:prose-invert">
+      <article className="blog-article max-w-full text-pretty">
         <MDXContent code={post.mdx} components={mdxComponents} />
       </article>
 

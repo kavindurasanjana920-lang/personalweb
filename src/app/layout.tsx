@@ -4,7 +4,7 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { DATA } from "@/data/resume";
 import { cn } from "@/lib/utils";
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Geist, Geist_Mono, Fraunces, Source_Serif_4 } from "next/font/google";
 import Script from "next/script";
 import "./globals.css";
 import { FlickeringGrid } from "@/components/magicui/flickering-grid";
@@ -19,6 +19,19 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
   weight: ["300", "400", "500", "600", "700"],
   variable: "--font-mono",
+});
+
+// Blog-only editorial pairing: high-contrast display serif for headings,
+// warm reading serif for body copy.
+const fraunces = Fraunces({
+  subsets: ["latin"],
+  axes: ["SOFT", "WONK"],
+  variable: "--font-display",
+});
+
+const sourceSerif = Source_Serif_4({
+  subsets: ["latin"],
+  variable: "--font-reading",
 });
 
 export const metadata: Metadata = {
@@ -98,7 +111,9 @@ export default function RootLayout({
         className={cn(
           "min-h-screen bg-background font-sans antialiased relative",
           geist.variable,
-          geistMono.variable
+          geistMono.variable,
+          fraunces.variable,
+          sourceSerif.variable
         )}
       >
         <ThemeProvider attribute="class" defaultTheme="light">

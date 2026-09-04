@@ -1,5 +1,16 @@
 import { CodeBlock } from "@/components/mdx/code-block";
 import { MediaContainer } from "@/components/mdx/media-container";
+import {
+  TOC,
+  Callout,
+  StepCard,
+  CTABox,
+  FeatureGrid,
+  CourierHeader,
+  Comparison,
+  FAQ,
+  Figure,
+} from "@/components/mdx/blog-ui";
 import type { ComponentProps } from "react";
 
 function TrackCTA({ href, children, official, officialHref }: { href: string; children: React.ReactNode; official?: string; officialHref?: string }) {
@@ -7,7 +18,7 @@ function TrackCTA({ href, children, official, officialHref }: { href: string; ch
     <div className="not-prose my-6 flex flex-nowrap items-center gap-2">
       <a
         href={href}
-        className="inline-flex items-center gap-1.5 rounded-md bg-foreground px-3 py-1.5 text-xs font-semibold text-background no-underline transition-all hover:opacity-85 active:scale-95 whitespace-nowrap"
+        className="inline-flex items-center gap-1.5 rounded-md bg-brand px-3 py-1.5 text-xs font-semibold text-white no-underline transition-all hover:bg-brand-dark active:scale-95 whitespace-nowrap"
         target="_blank"
         rel="noopener noreferrer"
       >
@@ -17,7 +28,7 @@ function TrackCTA({ href, children, official, officialHref }: { href: string; ch
       {official && officialHref && (
         <a
           href={officialHref}
-          className="inline-flex items-center gap-1.5 rounded-md border border-border px-3 py-1.5 text-xs font-medium text-muted-foreground no-underline transition-colors hover:border-foreground/30 hover:text-foreground whitespace-nowrap"
+          className="inline-flex items-center gap-1.5 rounded-md border border-border px-3 py-1.5 text-xs font-medium text-muted-foreground no-underline transition-colors hover:border-brand/40 hover:text-brand whitespace-nowrap"
           target="_blank"
           rel="noopener noreferrer"
         >
@@ -36,6 +47,15 @@ type CodeProps = ComponentProps<"code"> & {
 export const mdxComponents = {
   TrackCTA,
   MediaContainer,
+  TOC,
+  Callout,
+  StepCard,
+  CTABox,
+  FeatureGrid,
+  CourierHeader,
+  Comparison,
+  FAQ,
+  Figure,
   pre: (props: ComponentProps<"pre">) => <CodeBlock {...props} />,
   hr: (props: ComponentProps<"hr">) => (
     <div className="my-10 flex w-full items-center" {...props}>
