@@ -175,7 +175,12 @@ export default async function Blog({
         <img
           src={post.image}
           alt={post.title}
-          className="mt-6 block w-full rounded-xl border border-border"
+          width={1344}
+          height={756}
+          loading="eager"
+          fetchPriority="high"
+          decoding="async"
+          className="mt-6 block h-auto w-full rounded-xl border border-border"
         />
       )}
       <div className="my-6 flex w-full items-center">

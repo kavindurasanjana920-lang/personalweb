@@ -152,9 +152,11 @@ export function StepCard({
         <img
           src={image}
           alt={alt ?? title}
+          width={1344}
+          height={756}
           loading="lazy"
           decoding="async"
-          className="block w-full border-t border-border"
+          className="block h-auto w-full border-t border-border"
         />
       )}
     </div>
@@ -468,19 +470,24 @@ export function Figure({
   src,
   alt,
   caption,
+  priority = false,
 }: {
   src: string;
   alt: string;
   caption?: string;
+  priority?: boolean;
 }) {
   return (
     <figure className="not-prose my-8">
       <img
         src={src}
         alt={alt}
-        loading="lazy"
+        width={1344}
+        height={756}
+        loading={priority ? "eager" : "lazy"}
+        fetchPriority={priority ? "high" : undefined}
         decoding="async"
-        className="block w-full rounded-xl border border-border"
+        className="block h-auto w-full rounded-xl border border-border"
       />
       {caption && (
         <figcaption className="mt-2.5 text-center text-xs text-muted-foreground">
